@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "strictNullChecks": false,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "types": ["node", "jest"],
+    "paths": {
+      "@components/*": ["src/components/*", "components/*"],
+      "@components": ["src/components", "components"],
+      "@shared/*": ["src/shared/*"],
+      "@shared": ["src/shared"],
+      "@styles/*": ["src/styles/*"],
+      "@styles": ["src/styles"],
+      "@pages/*": ["src/pages/*"],
+      "@pages": ["src/pages"],
+      "@public/*": ["public/*"],
+      "@public": ["public"],
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "global.d.ts", "types/**/*.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

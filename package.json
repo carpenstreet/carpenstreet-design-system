@@ -1,0 +1,48 @@
+{
+  "name": "carpenstreet-design-system",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "src/components",
+  "author": "상구너 <sanguneo@acon3d.com>, 애드 <mingeon@acon3d.com>, 플린 <flynn@acon3d.com>",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "ts-lint": "tsc --noEmit --incremental"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0",
+    "styled-components": "^5.3.10",
+    "@mui/material": "^5.12.1",
+    "@mui/styles": "^5.12.0",
+    "@mui/system": "^5.12.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@storybook/addon-docs": "^7.0.6",
+    "@storybook/addon-essentials": "^7.0.6",
+    "@storybook/addon-interactions": "^7.0.6",
+    "@storybook/addon-links": "^7.0.6",
+    "@storybook/blocks": "^7.0.6",
+    "@storybook/react": "^7.0.6",
+    "@storybook/react-vite": "^7.0.6",
+    "@types/node": "^18.16.0",
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
+    "@vitejs/plugin-react": "^4.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "storybook": "^7.0.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.1"
+  }
+}
