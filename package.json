@@ -11,17 +11,17 @@
     "ts-lint": "tsc --noEmit --incremental"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.12.1",
+    "@mui/styles": "^5.12.0",
+    "@mui/system": "^5.12.1",
     "dayjs": "^1.11.7",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
-    "styled-components": "^5.3.10",
-    "@mui/material": "^5.12.1",
-    "@mui/styles": "^5.12.0",
-    "@mui/system": "^5.12.1",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6"
+    "styled-components": "^5.3.10"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
@@ -39,6 +39,7 @@
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^4.0.0",
+    "chromatic": "^6.17.3",
     "identity-obj-proxy": "^3.0.0",
     "storybook": "^7.0.6",
     "ts-node": "^10.9.1",
