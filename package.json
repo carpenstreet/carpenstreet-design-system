@@ -4,11 +4,15 @@
   "version": "0.0.1",
   "type": "module",
   "main": "src/components",
-  "author": "상구너 <sanguneo@acon3d.com>, 애드 <mingeon@acon3d.com>, 플린 <flynn@acon3d.com>",
+  "author": {
+    "name": "상구너",
+    "email": "sanguneo@acon3d.com"
+  },
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "ts-lint": "tsc --noEmit --incremental"
+    "ts-lint": "tsc --noEmit --incremental",
+    "chromatic": "npx chromatic --project-token=026e0a654b0a --build-script-name build"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -45,5 +49,7 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
     "vite": "^4.3.1"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "carpenstreet-design-system@0.0.1"
 }
