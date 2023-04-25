@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/components",
   "author": "상구너 <sanguneo@acon3d.com>, 애드 <mingeon@acon3d.com>, 플린 <flynn@acon3d.com>",
-  "homepage": "https://carpenstreet-design-system.acon3d.com",
+  "homepage": "https://design-system.carpenstreet.com",
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
