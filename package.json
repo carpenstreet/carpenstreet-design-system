@@ -9,8 +9,8 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "predeploy": "storybook build && cp CNAME storybook-static/CNAME",
-    "deploy": "gh-pages -d storybook-static",
+    "predeploy": "storybook build && cp CNAME storybook-static/CNAME && cp .nojekyll storybook-static/.nojekyll",
+    "deploy": "gh-pages -t true -d storybook-static",
     "ts-lint": "tsc --noEmit --incremental"
   },
   "dependencies": {

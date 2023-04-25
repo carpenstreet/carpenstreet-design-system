@@ -6,14 +6,9 @@ export default {
     name: '@storybook/react-vite',
     options: {}
   },
-  async viteFinal(config) {
-    // Merge custom configuration into the default config
-    return mergeConfig(config, {
-      // Add dependencies to pre-optimization
-      optimizeDeps: {
-        // include: ['storybook-dark-mode']
-      }
-    });
+  async viteFinal(config, { configType }) {
+    config.base = process.env.BASE_PATH || config.base;
+    return mergeConfig(config, {});
   },
   docs: {
     autodocs: true
