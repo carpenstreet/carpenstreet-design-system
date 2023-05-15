@@ -1,6 +1,0 @@
-import{a as c,j as e}from"./jsx-runtime-91a467a5.js";import"./index-8db94870.js";import"./_commonjsHelpers-042e6b4d.js";const a=({size:t=12})=>c("svg",{width:t,height:t,viewBox:"0 0 12 12",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[e("rect",{x:"0.25",y:"0.25",width:"11.5",height:"11.5",rx:"1.75",fill:"#E6E6FF"}),e("path",{d:"M10.5 8L9 9L4.5 5.5L0 9V10C0 11.1046 0.895431 12 2 12H10C11.1046 12 12 11.1046 12 10V9L10.5 8Z",fill:"#6A6AFF"}),e("circle",{cx:"8.5",cy:"3.5",r:"1.5",fill:"#6A6AFF"}),e("rect",{x:"0.25",y:"0.25",width:"11.5",height:"11.5",rx:"1.75",stroke:"#6A6AFF",strokeWidth:"0.5"})]});try{a.displayName="ImageIcon",a.__docgenInfo={description:"상품 관련 페이지에서 쓰이는 '이미지' 아이콘입니다.",displayName:"ImageIcon",props:{size:{defaultValue:{value:"12"},description:"",name:"size",required:!1,type:{name:"number"}}}}}catch{}const l={title:"Icon/Product/ImageIcon",component:a,tags:["autodocs"]},r={args:{size:12}};var o,s,u;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
-  args: {
-    size: 12
-  }
-}`,...(u=(s=r.parameters)==null?void 0:s.docs)==null?void 0:u.source}}};const m=["Default"];export{r as Default,m as __namedExportsOrder,l as default};
-//# sourceMappingURL=ImageIcon.stories-e72875d4.js.map

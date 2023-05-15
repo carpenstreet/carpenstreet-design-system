@@ -1,6 +1,0 @@
-import{a as n,j as e}from"./jsx-runtime-91a467a5.js";import"./index-8db94870.js";import"./_commonjsHelpers-042e6b4d.js";const a=({size:t=16})=>n("svg",{width:t,height:t,viewBox:"0 0 16 16",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[e("path",{d:"M9 6H7V9H9V6Z",fill:"#EEEEFF"}),e("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M3 14H6V11H10V14H13V5.41421L9.58579 2H6.41421L3 5.41421V14ZM9 6H7V9H9V6Z",fill:"#EEEEFF"}),e("path",{d:"M9 6H7V9H9V6Z",fill:"#313135"}),e("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M2 14V7H1V6L6 1H10L15 6V7H14V14H15V15H9V12H7V15H1V14H2ZM10 11H6V14H3V5.41421L6.41421 2H9.58579L13 5.41421V14H10V11Z",fill:"#313135"})]});try{a.displayName="ResidenceIcon",a.__docgenInfo={description:"카테고리 컴포넌트에서 쓰이는 '거주지' 아이콘입니다.",displayName:"ResidenceIcon",props:{size:{defaultValue:{value:"16"},description:"",name:"size",required:!1,type:{name:"number"}}}}}catch{}const c={title:"Icon/Category/거주지",component:a,tags:["autodocs"]},o={args:{size:16}};var r,s,u;o.parameters={...o.parameters,docs:{...(r=o.parameters)==null?void 0:r.docs,source:{originalSource:`{
-  args: {
-    size: 16
-  }
-}`,...(u=(s=o.parameters)==null?void 0:s.docs)==null?void 0:u.source}}};const p=["Default"];export{o as Default,p as __namedExportsOrder,c as default};
-//# sourceMappingURL=ResidenceIcon.stories-d5b0cb65.js.map
