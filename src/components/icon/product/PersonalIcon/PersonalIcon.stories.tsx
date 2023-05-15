@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import PersonalIcon from './PersonalIcon';
 
-const meta: Meta = { title: 'Element/Icon/Product/PersonalIcon', component: PersonalIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Icon/Product/PersonalIcon', component: PersonalIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof PersonalIcon>;

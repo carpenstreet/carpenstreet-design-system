@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ScrapIcon from './ScrapIcon';
 
-const meta: Meta = { title: 'Elements/Icon/Gnb/ScrapIcon', component: ScrapIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Icon/Gnb/ScrapIcon', component: ScrapIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof ScrapIcon>;

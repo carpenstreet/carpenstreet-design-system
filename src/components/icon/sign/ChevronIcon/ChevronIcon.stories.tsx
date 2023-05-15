@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ChevronIcon from './ChevronIcon';
 
-const meta: Meta = { title: 'Element/Icon/Sign/ChevronIcon', component: ChevronIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Icon/Sign/ChevronIcon', component: ChevronIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof ChevronIcon>;

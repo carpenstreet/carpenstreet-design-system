@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import MinusIcon from './MinusIcon';
 
-const meta: Meta = { title: 'Element/Icon/Sign/MinusIcon', component: MinusIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Icon/Sign/MinusIcon', component: MinusIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof MinusIcon>;

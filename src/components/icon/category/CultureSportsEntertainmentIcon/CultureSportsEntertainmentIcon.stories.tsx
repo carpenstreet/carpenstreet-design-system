@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import CultureSportsEntertainmentIcon from './CultureSportsEntertainmentIcon';
 
-const meta: Meta = { title: 'Element/Icon/Category/문화체육엔터', component: CultureSportsEntertainmentIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Icon/Category/문화체육엔터', component: CultureSportsEntertainmentIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof CultureSportsEntertainmentIcon>;

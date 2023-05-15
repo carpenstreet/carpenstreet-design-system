@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import PropsIcon from './PropsIcon';
 
-const meta: Meta = { title: 'Element/Icon/Category/소품모음', component: PropsIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Icon/Category/소품모음', component: PropsIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof PropsIcon>;

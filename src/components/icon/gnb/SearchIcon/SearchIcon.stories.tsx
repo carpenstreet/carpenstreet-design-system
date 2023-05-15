@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import SearchIcon from './SearchIcon';
 
-const meta: Meta = { title: 'Element/Icon/Gnb/SearchIcon', component: SearchIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Icon/Gnb/SearchIcon', component: SearchIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof SearchIcon>;
