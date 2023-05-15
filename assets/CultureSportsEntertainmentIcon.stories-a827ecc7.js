@@ -1,0 +1,6 @@
+import{a as s,j as e}from"./jsx-runtime-91a467a5.js";import"./index-8db94870.js";import"./_commonjsHelpers-042e6b4d.js";const u=({size:r=16})=>s("svg",{width:r,height:r,viewBox:"0 0 16 16",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[e("path",{d:"M10 10L7 8V12L10 10Z",fill:"#EEEEFF"}),e("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M13 6H3V14H13V6ZM10 10L7 8V12L10 10Z",fill:"#EEEEFF"}),e("path",{d:"M10 10L7 8.00002V12L10 10Z",fill:"#313135"}),e("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M3 4.39913L13.6108 1.98758L13.3892 1.01245L2 3.6009V15H14V5.00002H3V4.39913ZM3 6.00002H13V14H3V6.00002Z",fill:"#313135"})]});try{u.displayName="CultureSportsEntertainmentIcon",u.__docgenInfo={description:"카테고리 컴포넌트에서 쓰이는 '문화체육엔터' 아이콘입니다.",displayName:"CultureSportsEntertainmentIcon",props:{size:{defaultValue:{value:"16"},description:"",name:"size",required:!1,type:{name:"number"}}}}}catch{}const p={title:"Icon/Category/문화체육엔터",component:u,tags:["autodocs"]},t={args:{size:16}};var o,a,n;t.parameters={...t.parameters,docs:{...(o=t.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    size: 16
+  }
+}`,...(n=(a=t.parameters)==null?void 0:a.docs)==null?void 0:n.source}}};const c=["Default"];export{t as Default,c as __namedExportsOrder,p as default};
+//# sourceMappingURL=CultureSportsEntertainmentIcon.stories-a827ecc7.js.map

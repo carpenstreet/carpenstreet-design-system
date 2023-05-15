@@ -1,0 +1,6 @@
+import{a as u,j as o}from"./jsx-runtime-91a467a5.js";import"./index-8db94870.js";import"./_commonjsHelpers-042e6b4d.js";const t=({size:r=24})=>u("svg",{width:r,height:r,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[o("path",{d:"M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z",fill:"#313135"}),o("path",{d:"M14 5C14 6.10457 13.1046 7 12 7C10.8954 7 10 6.10457 10 5C10 3.89543 10.8954 3 12 3C13.1046 3 14 3.89543 14 5Z",fill:"#313135"}),o("path",{d:"M14 19C14 20.1046 13.1046 21 12 21C10.8954 21 10 20.1046 10 19C10 17.8954 10.8954 17 12 17C13.1046 17 14 17.8954 14 19Z",fill:"#313135"})]});try{t.displayName="MoreIcon",t.__docgenInfo={description:"각종 UI 요소에 사용되는 '더보기' 아이콘입니다.",displayName:"MoreIcon",props:{size:{defaultValue:{value:"24"},description:"",name:"size",required:!1,type:{name:"number"}}}}}catch{}const p={title:"Icon/Sign/MoreIcon",component:t,tags:["autodocs"]},e={args:{size:24}};var a,s,n;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    size: 24
+  }
+}`,...(n=(s=e.parameters)==null?void 0:s.docs)==null?void 0:n.source}}};const l=["Default"];export{e as Default,l as __namedExportsOrder,p as default};
+//# sourceMappingURL=MoreIcon.stories-969be5c8.js.map
