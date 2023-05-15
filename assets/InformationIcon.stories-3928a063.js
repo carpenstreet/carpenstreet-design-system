@@ -1,0 +1,12 @@
+import{j as e,a as c,F as p}from"./jsx-runtime-91a467a5.js";import"./index-8db94870.js";import"./_commonjsHelpers-042e6b4d.js";const o=({size:n=24,isFilled:C})=>e("svg",{width:n,height:n,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:C?e("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM11 16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16L13 11C13 10.4477 12.5523 10 12 10C11.4477 10 11 10.4477 11 11V16ZM12 7C11.4477 7 11 7.44771 11 8C11 8.55229 11.4477 9 12 9C12.5523 9 13 8.55229 13 8C13 7.44771 12.5523 7 12 7Z",fill:"#313135"}):c(p,{children:[e("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z",fill:"#313135"}),e("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M12 17C11.4477 17 11 16.5523 11 16L11 11C11 10.4477 11.4477 10 12 10C12.5523 10 13 10.4477 13 11L13 16C13 16.5523 12.5523 17 12 17ZM11 8C11 7.44771 11.4477 7 12 7C12.5523 7 13 7.44771 13 8C13 8.55229 12.5523 9 12 9C11.4477 9 11 8.55229 11 8Z",fill:"#313135"})]})});try{o.displayName="InformationIcon",o.__docgenInfo={description:"각종 UI에 사용되는 '정보' 아이콘입니다.",displayName:"InformationIcon",props:{size:{defaultValue:{value:"24"},description:"",name:"size",required:!1,type:{name:"number"}},isFilled:{defaultValue:null,description:"",name:"isFilled",required:!0,type:{name:"boolean"}}}}}catch{}const F={title:"Element/Icon/Sign/InformationIcon",component:o,tags:["autodocs"]},r={args:{size:24,isFilled:!0}},l={args:{size:24,isFilled:!1}};var s,a,i;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  args: {
+    size: 24,
+    isFilled: true
+  }
+}`,...(i=(a=r.parameters)==null?void 0:a.docs)==null?void 0:i.source}}};var t,d,u;l.parameters={...l.parameters,docs:{...(t=l.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {
+    size: 24,
+    isFilled: false
+  }
+}`,...(u=(d=l.parameters)==null?void 0:d.docs)==null?void 0:u.source}}};const I=["Filled","Outlined"];export{r as Filled,l as Outlined,I as __namedExportsOrder,F as default};
+//# sourceMappingURL=InformationIcon.stories-3928a063.js.map
