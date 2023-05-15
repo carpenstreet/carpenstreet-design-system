@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import ScrapIcon from '@components/ADS/Element/icon/gnb/ScrapIcon/ScrapIcon';
+import ScrapIcon from './ScrapIcon';
 
 const meta: Meta = { title: 'Element/Icon/Gnb/ScrapIcon', component: ScrapIcon, tags: ['autodocs'] };
 
