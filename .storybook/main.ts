@@ -6,11 +6,12 @@ export default {
     name: '@storybook/react-vite',
     options: {}
   },
-  async viteFinal(config, { configType }) {
+  async viteFinal(config) {
     config.base = process.env.BASE_PATH || config.base;
     return mergeConfig(config, {});
   },
   docs: {
     autodocs: true
-  }
+  },
+  staticDirs: ['../public']
 };
