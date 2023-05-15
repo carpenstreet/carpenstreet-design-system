@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import TablesIcon from './TablesIcon';
 
-const meta: Meta = { title: 'Icon/Category/테이블모음', component: TablesIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Category/테이블모음', component: TablesIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof TablesIcon>;

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import LicenseIcon from './LicenseIcon';
 
-const meta: Meta = { title: 'Icon/Product/LicenseIcon', component: LicenseIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Product/LicenseIcon', component: LicenseIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof LicenseIcon>;

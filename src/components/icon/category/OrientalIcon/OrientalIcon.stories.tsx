@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import OrientalIcon from './OrientalIcon';
 
-const meta: Meta = { title: 'Icon/Category/동양사극무협', component: OrientalIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Category/동양사극무협', component: OrientalIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof OrientalIcon>;

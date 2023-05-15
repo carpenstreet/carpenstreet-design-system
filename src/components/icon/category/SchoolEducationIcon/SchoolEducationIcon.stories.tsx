@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import SchoolEducationIcon from './SchoolEducationIcon';
 
-const meta: Meta = { title: 'Icon/Category/학교교육', component: SchoolEducationIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Category/학교교육', component: SchoolEducationIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof SchoolEducationIcon>;

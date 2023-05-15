@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import CalendarIcon from './CalendarIcon';
 
-const meta: Meta = { title: 'Icon/Sign/CalendarIcon', component: CalendarIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Sign/CalendarIcon', component: CalendarIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof CalendarIcon>;

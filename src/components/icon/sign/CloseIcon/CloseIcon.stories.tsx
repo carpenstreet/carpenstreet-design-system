@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import CloseIcon from './CloseIcon';
 
-const meta: Meta = { title: 'Icon/Sign/CloseIcon', component: CloseIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Sign/CloseIcon', component: CloseIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof CloseIcon>;

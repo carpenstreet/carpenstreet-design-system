@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import CategoryIcon from './CategoryIcon';
 
-const meta: Meta = { title: 'Icon/Gnb/CategoryIcon', component: CategoryIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Gnb/CategoryIcon', component: CategoryIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof CategoryIcon>;

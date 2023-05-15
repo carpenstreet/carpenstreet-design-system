@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ResidenceIcon from './ResidenceIcon';
 
-const meta: Meta = { title: 'Icon/Category/거주지', component: ResidenceIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Category/거주지', component: ResidenceIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof ResidenceIcon>;

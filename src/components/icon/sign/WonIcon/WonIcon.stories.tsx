@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import WonIcon from './WonIcon';
 
-const meta: Meta = { title: 'Icon/Sign/WonIcon', component: WonIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Sign/WonIcon', component: WonIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof WonIcon>;

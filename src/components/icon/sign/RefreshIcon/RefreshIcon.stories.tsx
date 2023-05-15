@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import RefreshIcon from './RefreshIcon';
 
-const meta: Meta = { title: 'Icon/Sign/RefreshIcon', component: RefreshIcon, tags: ['autodocs'] };
+const meta: Meta = { title: 'Element/Icon/Sign/RefreshIcon', component: RefreshIcon, tags: ['autodocs'] };
 
 export default meta;
 type Story = StoryObj<typeof RefreshIcon>;
