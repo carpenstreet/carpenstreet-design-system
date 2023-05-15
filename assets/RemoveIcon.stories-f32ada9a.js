@@ -1,0 +1,6 @@
+import{j as t}from"./jsx-runtime-91a467a5.js";import"./index-8db94870.js";import"./_commonjsHelpers-042e6b4d.js";const r=({size:o=16})=>t("svg",{width:o,height:o,viewBox:"0 0 16 16",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t("path",{d:"M8.00016 1.33337C4.3135 1.33337 1.3335 4.31337 1.3335 8.00004C1.3335 11.6867 4.3135 14.6667 8.00016 14.6667C11.6868 14.6667 14.6668 11.6867 14.6668 8.00004C14.6668 4.31337 11.6868 1.33337 8.00016 1.33337ZM11.3335 10.3934L10.3935 11.3334L8.00016 8.94004L5.60683 11.3334L4.66683 10.3934L7.06016 8.00004L4.66683 5.60671L5.60683 4.66671L8.00016 7.06004L10.3935 4.66671L11.3335 5.60671L8.94016 8.00004L11.3335 10.3934Z",fill:"#4E4EFF",fillOpacity:"0.3"})});try{r.displayName="RemoveIcon",r.__docgenInfo={description:"상품 관련 페이지에서 쓰이는 '삭제' 아이콘입니다.",displayName:"RemoveIcon",props:{size:{defaultValue:{value:"16"},description:"",name:"size",required:!1,type:{name:"number"}}}}}catch{}const m={title:"Element/Icon/Product/RemoveIcon",component:r,tags:["autodocs"]},e={args:{size:16}};var a,s,u;e.parameters={...e.parameters,docs:{...(a=e.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    size: 16
+  }
+}`,...(u=(s=e.parameters)==null?void 0:s.docs)==null?void 0:u.source}}};const p=["Default"];export{e as Default,p as __namedExportsOrder,m as default};
+//# sourceMappingURL=RemoveIcon.stories-f32ada9a.js.map
