@@ -36,5 +36,6 @@ export interface IButtonProps<Color extends TButtonColor> {
   endIcon?: boolean;
   isLoading?: boolean;
   width?: number | string;
+  buttonStyle?: React.CSSProperties;
   children: React.ReactNode | React.ReactNode[];
 }
