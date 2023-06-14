@@ -16,15 +16,10 @@ const config = [
         output: [
             {
                 name: pkg.name,
-                dir: './dist/cjs',
-                format: 'cjs',
-                preserveModules: true,
-                preserveModulesRoot: 'src'
-            },
-            {
-                name: pkg.name,
                 dir: './dist/es',
                 format: 'es',
+                preserveModules: true,
+                preserveModulesRoot: 'src'
             },
         ],
         plugins: [
