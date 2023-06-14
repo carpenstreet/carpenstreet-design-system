@@ -1,8 +1,8 @@
 import React from 'react';
 import { ButtonContainer } from './Button.styles';
-import Letter from '../letter/Letter';
-import { TLetterVariant } from '../letter/Letter.types';
-import { TColor } from '@/shared/settings/color.type';
+import Letter from '@components/Letter/Letter';
+import { TLetterVariant } from '@components/Letter/Letter.types';
+import { TColor } from '@shared/settings/color.type';
 import { BUTTON_TYPE, IButtonProps, TButtonColor } from './Button.type';
 
 /* 

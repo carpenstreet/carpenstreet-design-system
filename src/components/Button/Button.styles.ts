@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { BUTTON_TYPE, TButtonSize } from './Button.type';
-import { TColor } from '@/shared/settings/color.type';
-import { getColor } from '@/shared/util/util';
+import { TColor } from '@shared/settings/color.type';
+import { getColor } from '@shared/util/util';
 
 // 버튼 배경 색
 const BUTTON_BACKGROUND: { [key in BUTTON_TYPE]: TColor } = {

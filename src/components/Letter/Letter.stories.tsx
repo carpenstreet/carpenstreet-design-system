@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Letter from './Letter';
-import ThemeMui from '@/shared/settings/ThemeMui';
+import ThemeMui from '@shared/settings/ThemeMui';
 
 const meta: Meta = { title: 'Foundation/Letter', component: Letter, tags: ['autodocs'] };
 

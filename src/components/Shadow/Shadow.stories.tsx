@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Shadow from './Shadow';
-import ThemeMui from '@/shared/settings/ThemeMui';
-import Button from '@components/button/Button';
+import ThemeMui from '@shared/settings/ThemeMui';
+import Button from '@components/Button/Button';
 
 const meta: Meta = { title: 'Styles/Shadow', component: Shadow, tags: ['autodocs'] };
 

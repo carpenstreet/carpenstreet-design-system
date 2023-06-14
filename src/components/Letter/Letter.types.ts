@@ -1,4 +1,5 @@
-import { TColor } from '@/shared/settings/color.type';
+import { TColor } from '@shared/settings/color.type';
+import { ReactNode } from "react";
 
 type TMinimal = 'letter/en, ko/minimal' | 'letter/en, ko/minimal/bold' | 'letter/en, ko/minimal/black';
 type TMinimalGlobal = 'letter/ja/minimal' | 'letter/ja/minimal/bold' | 'letter/ja/minimal/black';
@@ -40,6 +41,6 @@ export type TLetterVariant =
 export interface ILetterProps {
   variant?: TLetterVariant;
   color?: TColor;
-  children: React.ReactNode | React.ReactNode[];
+  children: ReactNode | ReactNode[];
   className?: string;
 }

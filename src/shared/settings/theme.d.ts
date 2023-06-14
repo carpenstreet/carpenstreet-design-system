@@ -1,5 +1,5 @@
 import { ThemeOptions } from '@mui/material';
-import color from './color';
+import color from './Color.ts';
 
 type TColor = typeof color;
 

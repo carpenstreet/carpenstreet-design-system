@@ -1,3 +1,5 @@
+import { CSSProperties, ReactNode } from 'react';
+
 export type TButtonOn = 'light' | 'dark';
 export type TButtonColor = 'primary' | 'default';
 export type TButtonStyle = 'filled' | 'outlined' | 'default' | 'text' | 'applied';
@@ -36,6 +38,6 @@ export interface IButtonProps<Color extends TButtonColor> {
   endIcon?: boolean;
   isLoading?: boolean;
   width?: number | string;
-  buttonStyle?: React.CSSProperties;
-  children: React.ReactNode | React.ReactNode[];
+  buttonStyle?: CSSProperties;
+  children: ReactNode | ReactNode[];
 }
