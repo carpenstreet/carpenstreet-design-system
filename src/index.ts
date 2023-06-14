@@ -1,7 +1,7 @@
 // Components
 import Button from "./components/Button/Button";
 import Shadow from "./components/Shadow/Shadow";
-import * as Icon from "./components/Icon";
+import * as Icon from "@components/Icon/Icon";
 
 export const Components= {
   Button,
@@ -9,7 +9,7 @@ export const Components= {
   Icon,
 }
 
-import Color from "./shared/settings/color.ts";
+import Color from "./shared/settings/color";
 
 const CDS = {
   Components,

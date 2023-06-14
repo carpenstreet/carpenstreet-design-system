@@ -3,9 +3,10 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 // import commonjs from '@rollup/plugin-commonjs';
 import esbuild from 'rollup-plugin-esbuild';
 import tsconfigPaths from 'rollup-plugin-tsconfig-paths';
+import typescript from "rollup-plugin-typescript2";
 import dts from 'rollup-plugin-dts'
-const extensions = [ 'ts', 'tsx' ];
 
+const extensions = [ 'js', 'jsx', 'ts', 'tsx' ];
 import pkg from './package.json' assert { type: 'json' };
 
 const config = [
@@ -28,10 +29,14 @@ const config = [
         ],
         plugins: [
             tsconfigPaths(),
+            // peerDepsExternal(),
             nodeResolve({ extensions }),
-            peerDepsExternal(),
+            // typescript({
+            //     clean: true,
+            //     sourceMap: false,
+            // }),
             esbuild(),
-            dts()
+            dts(),
             // typescript(),
         ]
     }
