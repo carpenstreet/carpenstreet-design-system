@@ -47,7 +47,7 @@ const BUTTON_BORDER_COLOR: { [key in BUTTON_TYPE]: TColor | null } = {
   [BUTTON_TYPE.darkTextDisabled]: null,
 };
 
-export const ButtonContainer = styled('button')<{ buttonType: BUTTON_TYPE; size: TButtonSize; width: number | string }>(
+export const ButtonContainer = styled.button<{ buttonType: BUTTON_TYPE; size: TButtonSize; width: number | string }>(
   (props: { buttonType: BUTTON_TYPE; size: TButtonSize; width: number | string }) => {
     const backgroundColor = (() => {
       let color = getColor(BUTTON_BACKGROUND[props.buttonType]);

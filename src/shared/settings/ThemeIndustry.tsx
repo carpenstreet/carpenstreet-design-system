@@ -29,5 +29,6 @@ export default function ThemeIndustry({ children }: Props) {
   const themeMui = useTheme();
 
   // [todo]: 최종적으로 themeMui만 사용하도록 변경해야 함.
+  // @ts-ignore
   return <ThemeProvider theme={{ ...themeMui, ...defaultTheme }}>{children}</ThemeProvider>;
 }

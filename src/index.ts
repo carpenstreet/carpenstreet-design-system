@@ -1,16 +1,18 @@
 import {Button, Letter, Shadow, Icon} from "./components";
 import Color from "@shared/settings/Color.ts";
 
-const Components = {
+export default {
   Button,
   Letter,
   Shadow,
   Icon,
-}
+  Color
+};
 
-const CDS = {
-  Components,
+export {
+  Button,
+  Letter,
+  Shadow,
+  Icon,
   Color
 }
-
-export default CDS;
