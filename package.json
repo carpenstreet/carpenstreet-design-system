@@ -16,7 +16,7 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "ts-lint": "tsc --noEmit --incremental",
+    "ts-lint": "tsc --incremental",
     "predeploy": "storybook build && cp CNAME storybook-static/CNAME && cp .nojekyll storybook-static/.nojekyll",
     "deploy": "gh-pages -t true -d storybook-static",
     "rollup": "rimraf dist && rollup -c",

@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import color from './color';
+import color from './Color.ts';
 
 // ----------------------------------------------------------------------
 
