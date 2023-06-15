@@ -1,6 +1,6 @@
 {
   "name": "carpenstreet-designsystem",
-  "version": "0.0.6",
+  "version": "0.0.10",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -35,7 +35,6 @@
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
-    "rimraf": "^5.0.1",
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-typescript": "^7.21.4",
@@ -56,13 +55,14 @@
     "@vitejs/plugin-react": "^4.0.0",
     "gh-pages": "^5.0.0",
     "identity-obj-proxy": "^3.0.0",
+    "rimraf": "^5.0.1",
     "rollup": "^3.25.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-uglify": "^6.0.4",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-esbuild": "^5.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-tsconfig-paths": "^1.5.1",
     "rollup-plugin-typescript2": "^0.34.1",
+    "rollup-plugin-uglify": "^6.0.4",
     "storybook": "^7.0.7",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
