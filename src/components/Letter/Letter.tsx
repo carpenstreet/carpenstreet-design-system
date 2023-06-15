@@ -1,5 +1,5 @@
 import React from 'react';
-import { ILetterProps } from './Letter.type';
+import { ILetterProps } from './Letter.types';
 import { getColor } from '@shared/util/util';
 
 const sizeObj = {

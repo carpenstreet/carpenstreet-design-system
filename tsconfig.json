@@ -7,18 +7,21 @@
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "strict": false,
     "strictNullChecks": false,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
+    "emitDeclarationOnly": true,
     "jsx": "react-jsx",
+    "declaration": true,
     "baseUrl": "./",
     "types": ["node"],
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@components": ["src/components"],
+      "@components/*": ["src/components/*", "components/*"],
+      "@components": ["src/components", "components"],
       "@shared/*": ["src/shared/*"],
       "@shared": ["src/shared"],
       "@styles/*": ["src/styles/*"],
@@ -30,7 +33,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "global.d.ts", "types/**/*.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["src", "types/**/*.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

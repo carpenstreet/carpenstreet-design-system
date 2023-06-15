@@ -1,18 +1,22 @@
 {
   "name": "carpenstreet-design-system",
-  "private": true,
   "version": "0.0.1",
   "type": "module",
-  "types": "./dist/types/index.d.ts",
-  "main": "./dist/cjs/index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "author": "상구너 <sanguneo@acon3d.com>, 애드 <mingeon@acon3d.com>, 플린 <flynn@acon3d.com>, 오웬 <owen@acon3d.com>",
   "homepage": "https://designsystem.carpenstreet.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:carpenstreet/carpenstreet-design-system.git"
+  },
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
     "predeploy": "storybook build && cp CNAME storybook-static/CNAME && cp .nojekyll storybook-static/.nojekyll",
     "deploy": "gh-pages -t true -d storybook-static",
-    "ts-lint": "tsc --noEmit --incremental"
+    "ts-lint": "tsc --noEmit --incremental",
+    "rollup": "rimraf dist && rollup -c"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -25,10 +29,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
+    "rimraf": "^5.0.1",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-esbuild": "^5.0.0",
     "rollup-plugin-tsconfig-paths": "^1.5.1",
-    "rollup-plugin-typescript": "^1.0.1",
     "rollup-plugin-typescript2": "^0.34.1",
     "styled-components": "^5.3.10"
   },
@@ -39,7 +43,6 @@
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^25.0.1",
     "@rollup/plugin-node-resolve": "^15.1.0",
-    "@rollup/plugin-typescript": "^11.1.1",
     "@storybook/addon-docs": "^7.0.7",
     "@storybook/addon-essentials": "^7.0.7",
     "@storybook/addon-interactions": "^7.0.7",
@@ -56,6 +59,7 @@
     "identity-obj-proxy": "^3.0.0",
     "rollup": "^3.25.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-uglify": "^6.0.4",
     "storybook": "^7.0.7",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",

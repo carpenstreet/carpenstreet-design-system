@@ -1,13 +1,11 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-// import commonjs from '@rollup/plugin-commonjs';
-import esbuild from 'rollup-plugin-esbuild';
 import tsconfigPaths from 'rollup-plugin-tsconfig-paths';
-import typescript from "rollup-plugin-typescript2";
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import esbuild from 'rollup-plugin-esbuild';
 import dts from 'rollup-plugin-dts'
+import {uglify} from "rollup-plugin-uglify";
 
-const extensions = [ 'js', 'jsx', 'ts', 'tsx' ];
-import pkg from './package.json' assert { type: 'json' };
+const extensions = [ 'js', 'jsx', 'ts', 'tsx', 'mjs' ];
 
 const config = [
     {
@@ -15,8 +13,7 @@ const config = [
         input: './src/index.ts',
         output: [
             {
-                name: pkg.name,
-                dir: './dist/es',
+                dir: './dist',
                 format: 'es',
                 preserveModules: true,
                 preserveModulesRoot: 'src'
@@ -24,16 +21,26 @@ const config = [
         ],
         plugins: [
             tsconfigPaths(),
-            // peerDepsExternal(),
             nodeResolve({ extensions }),
-            // typescript({
-            //     clean: true,
-            //     sourceMap: false,
-            // }),
+            peerDepsExternal(),
             esbuild(),
-            dts(),
-            // typescript(),
+            uglify(),
         ]
-    }
+    },{
+        external: [ /node_modules/ ],
+        input: './src/index.ts',
+        output: [
+            {
+                dir: './dist',
+                format: 'es',
+                preserveModules: true,
+                preserveModulesRoot: 'src'
+            },
+        ],
+        plugins: [
+            tsconfigPaths(),
+            dts({respectExternal: false}),
+        ]
+    },
 ];
 export default config;
