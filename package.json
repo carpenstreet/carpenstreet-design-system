@@ -20,6 +20,7 @@
     "predeploy": "storybook build && cp CNAME storybook-static/CNAME && cp .nojekyll storybook-static/.nojekyll",
     "deploy": "gh-pages -t true -d storybook-static",
     "rollup": "rimraf dist && rollup -c",
+    "prepublish": "npm run rollup",
     "publish": "npm publish"
   },
   "dependencies": {
