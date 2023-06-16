@@ -3,9 +3,22 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import esbuild from 'rollup-plugin-esbuild';
 import dts from 'rollup-plugin-dts'
-import {uglify} from "rollup-plugin-uglify";
+import modify from 'rollup-plugin-modify';
+import { terser } from 'rollup-plugin-terser';
 
 const extensions = [ 'js', 'jsx', 'ts', 'tsx', 'mjs' ];
+
+const minifierPlugin = terser({
+    compress: {
+        passes: 10,
+        keep_infinity: true,
+        pure_getters: true,
+    },
+    format: {
+        wrap_func_args: false,
+        preserve_annotations: true,
+    },
+});
 
 const config = [
     {
@@ -23,8 +36,12 @@ const config = [
             tsconfigPaths(),
             nodeResolve({ extensions }),
             peerDepsExternal(),
+            modify({
+                find: 'import styled from \'styled-components\';',
+                replace: 'import _styled from \'styled-components\';\n\/\/ @ts-ignore\nconst styled: typeof _styled = _styled.default ? _styled.default : _styled;'
+            }),
             esbuild(),
-            uglify(),
+            minifierPlugin,
         ]
     },{
         external: [ /node_modules/ ],
