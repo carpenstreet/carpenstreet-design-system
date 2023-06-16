@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@shared/styled.ts';
 import { TShadowVariant } from './Shadow.types';
 
 export const Shadows = [

@@ -27,7 +27,7 @@ const config = [
         output: [
             {
                 dir: './dist',
-                format: 'es',
+                format: 'esm',
                 preserveModules: true,
                 preserveModulesRoot: 'src'
             },
@@ -36,12 +36,8 @@ const config = [
             tsconfigPaths(),
             nodeResolve({ extensions }),
             peerDepsExternal(),
-            modify({
-                find: 'import styled from \'styled-components\';',
-                replace: 'import _styled from \'styled-components\';\n\/\/ @ts-ignore\nconst styled: typeof _styled = _styled.default ? _styled.default : _styled;'
-            }),
-            esbuild(),
-            minifierPlugin,
+            esbuild()
+            // minifierPlugin,
         ]
     },{
         external: [ /node_modules/ ],
@@ -49,7 +45,7 @@ const config = [
         output: [
             {
                 dir: './dist',
-                format: 'es',
+                format: 'esm',
                 preserveModules: true,
                 preserveModulesRoot: 'src'
             },

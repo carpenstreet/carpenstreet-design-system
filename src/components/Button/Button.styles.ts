@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@shared/styled.ts';
 import { BUTTON_TYPE, TButtonSize } from './Button.type';
 import { TColor } from '@shared/settings/color.type';
 import { getColor } from '@shared/util/util';
