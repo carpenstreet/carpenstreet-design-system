@@ -22,31 +22,6 @@ import TablesIcon from './TablesIcon/TablesIcon.tsx';
 import TravelAccommodationIcon from './TravelAccommodationIcon/TravelAccommodationIcon.tsx';
 
 
-const CategoryIcon = {
-  AccommodationsIcon,
-  CafeRestaurantBarIcon,
-  CarVehicleIcon,
-  ChairsIcon,
-  CityLandscapeTrafficIcon,
-  CompanyBuildingIndustryIcon,
-  CultureSportsEntertainmentIcon,
-  ExtraIcon,
-  FantasyMedievalIcon,
-  LightingsIcon,
-  ModernSliceOfLifeIcon,
-  NoirCrimeRichIcon,
-  OrientalIcon,
-  PropAnimalIcon,
-  PropsIcon,
-  PublicServiceEventsIcon,
-  ResidenceIcon,
-  SFApocalypseIcon,
-  SchoolEducationIcon,
-  SourceFileIcon,
-  TablesIcon,
-  TravelAccommodationIcon,
-}
-
 export {
   AccommodationsIcon,
   CafeRestaurantBarIcon,

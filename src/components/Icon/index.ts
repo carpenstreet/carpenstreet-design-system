@@ -9,3 +9,10 @@ export {
   Product,
   Sign,
 }
+
+export default {
+  Category,
+  Gnb,
+  Product,
+  Sign,
+}
