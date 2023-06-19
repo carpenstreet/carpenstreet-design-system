@@ -27,3 +27,19 @@ export {
   ViewCountIcon,
   FaqCreator,
 }
+
+export default {
+  AconOnlyIcon,
+  Banner,
+  ImageIcon,
+  LinkIcon,
+  LoadingIcon,
+  PersonalIcon,
+  RemoveIcon,
+  ReviewCountIcon,
+  ScrapIcon,
+  SharingIcon,
+  StarIcon,
+  ViewCountIcon,
+  FaqCreator,
+}

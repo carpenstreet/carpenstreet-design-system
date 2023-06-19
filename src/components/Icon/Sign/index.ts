@@ -44,3 +44,27 @@ export {
   WonIcon,
   YenIcon,
 }
+
+export default {
+  ArrowIcon,
+  CalendarIcon,
+  CaretIcon,
+  CheckIcon,
+  ChevronIcon,
+  CloseIcon,
+  CouponIcon,
+  DollarIcon,
+  DownloadIcon,
+  EqualsIcon,
+  InformationIcon,
+  MinusIcon,
+  MoreIcon,
+  NoticeIcon,
+  PlusIcon,
+  PointIcon,
+  QuestionIcon,
+  RefreshIcon,
+  RemoveIcon,
+  WonIcon,
+  YenIcon,
+}
