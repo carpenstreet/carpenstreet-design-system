@@ -1,0 +1,1 @@
+{"version":3,"file":"styled-843ae4d3.js","sources":["../../src/shared/styled.ts"],"sourcesContent":["import styled from 'styled-components';\n\n// @ts-ignore\nconst styled: typeof styled = styled.default ? styled.default : styled;\n\nexport default styled;"],"names":["styled"],"mappings":"AAGA,MAAMA,EAAwBA,EAAO,QAAUA,EAAO,QAAUA"}
