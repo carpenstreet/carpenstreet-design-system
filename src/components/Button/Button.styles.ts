@@ -2,6 +2,7 @@ import styled from '@shared/styled.ts';
 import { BUTTON_TYPE, TButtonSize } from './Button.type';
 import { TColor } from '@shared/settings/color.type';
 import { getColor } from '@shared/util/util';
+import {CSSProperties} from "styled-components";
 
 // 버튼 배경 색
 const BUTTON_BACKGROUND: { [key in BUTTON_TYPE]: TColor } = {
@@ -47,8 +48,8 @@ const BUTTON_BORDER_COLOR: { [key in BUTTON_TYPE]: TColor | null } = {
   [BUTTON_TYPE.darkTextDisabled]: null,
 };
 
-export const ButtonContainer = styled.button<{ buttonType: BUTTON_TYPE; size: TButtonSize; width: number | string }>(
-  (props: { buttonType: BUTTON_TYPE; size: TButtonSize; width: number | string }) => {
+export const ButtonContainer = styled.button<{ buttonType: BUTTON_TYPE; size: TButtonSize; width: number | string; buttonStyle?: CSSProperties }>(
+  (props: { buttonType: BUTTON_TYPE; size: TButtonSize; width: number | string, buttonStyle?: CSSProperties }) => {
     const backgroundColor = (() => {
       let color = getColor(BUTTON_BACKGROUND[props.buttonType]);
       if (props.buttonType === BUTTON_TYPE.lightDefaultLine) color = `${color}80`;
@@ -74,6 +75,8 @@ export const ButtonContainer = styled.button<{ buttonType: BUTTON_TYPE; size: TB
       if (props.size === 'M') return '10px 22px';
       if (props.size === 'S') return '8px 16px';
     })();
+    
+    console.log(`props`, props);
 
     return {
       display: 'flex',
@@ -82,6 +85,7 @@ export const ButtonContainer = styled.button<{ buttonType: BUTTON_TYPE; size: TB
       backgroundColor: backgroundColor,
       ...(props.width && { width: !Number.isNaN(Number(props.width)) ? `${props.width}px` : props.width }),
       ...(borderColor ? { border: `1px solid ${borderColor};` } : { border: 'none' }),
+      ...props.buttonStyle
     };
   },
 );

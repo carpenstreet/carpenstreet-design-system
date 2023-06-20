@@ -50,7 +50,7 @@ const weightObj = {
  * @param variant 피그마에 있는 Ag 속성을 그대로 사용합니다.
  * @constructor
  */
-const Letter = ({ variant = 'letter/en, ko/medium', color = 'color/text/primary', className, children, ...rest }: ILetterProps) => {
+const Letter = ({ variant = 'letter/en, ko/medium', color = 'color/text/primary', className, style, children, ...rest }: ILetterProps) => {
   const replaceString = variant.replace('Letter/en, ko/', '').replace('Letter/ja/', '');
   const variants = replaceString.split('/');
   const size = variants[0];
@@ -60,6 +60,7 @@ const Letter = ({ variant = 'letter/en, ko/medium', color = 'color/text/primary'
     ...sizeObj[size],
     ...weightObj[weight],
     color: getColor(color),
+    ...style,
   };
 
   return (
