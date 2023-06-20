@@ -1,6 +1,6 @@
 {
   "name": "carpenstreet-designsystem",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -19,8 +19,7 @@
     "ts-lint": "tsc --incremental",
     "predeploy": "storybook build && cp CNAME storybook-static/CNAME && cp .nojekyll storybook-static/.nojekyll",
     "deploy": "gh-pages -t true -d storybook-static",
-    "rollup": "rimraf dist && rollup -c",
-    "pkgpublish": "npm publish"
+    "prepublish": "rimraf dist && rollup -c"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -48,10 +47,10 @@
     "@storybook/react": "^7.0.22",
     "@storybook/react-vite": "^7.0.22",
     "@types/node": "^18.16.0",
-    "@types/react": "^18.2.12",
-    "@types/react-dom": "^18.2.5",
+    "@types/react": "^18.2.13",
+    "@types/react-dom": "^18.2.6",
     "@types/styled-components": "^5.1.26",
-    "@vitejs/plugin-react": "^4.0.0",
+    "@vitejs/plugin-react": "^4.0.1",
     "gh-pages": "^5.0.0",
     "identity-obj-proxy": "^3.0.0",
     "rimraf": "^5.0.1",
