@@ -1,3 +1,4 @@
+import styled from './shared/styled.ts';
 import {Button, Letter, Shadow, Icon} from "./components";
 import Color from "@shared/settings/Color.ts";
 

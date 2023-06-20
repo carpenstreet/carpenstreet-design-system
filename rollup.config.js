@@ -26,7 +26,7 @@ const config = [
         input: './src/index.ts',
         output: [
             {
-                dir: './dist',
+                dir: './dist/',
                 format: 'esm',
                 preserveModules: true,
                 preserveModulesRoot: 'src'
@@ -36,18 +36,56 @@ const config = [
             tsconfigPaths(),
             nodeResolve({ extensions }),
             peerDepsExternal(),
-            esbuild()
-            // minifierPlugin,
+            esbuild(),
+            minifierPlugin,
         ]
-    },{
+    },
+    {
+        external: [ /node_modules/ ],
+        input: './src/index.ts',
+        output: [
+            {
+                dir: './dist/',
+                format: 'esm',
+                // preserveModules: true,
+                // preserveModulesRoot: 'src'
+            },
+        ],
+        plugins: [
+            tsconfigPaths(),
+            nodeResolve({ extensions }),
+            peerDepsExternal(),
+            esbuild(),
+            minifierPlugin,
+        ]
+    },
+    {
         external: [ /node_modules/ ],
         input: './src/index.ts',
         output: [
             {
                 dir: './dist',
+                entryFileNames: '[name].d.ts',
                 format: 'esm',
                 preserveModules: true,
                 preserveModulesRoot: 'src'
+            },
+        ],
+        plugins: [
+            tsconfigPaths(),
+            dts({respectExternal: false}),
+        ]
+    },
+    {
+        external: [ /node_modules/ ],
+        input: './src/index.ts',
+        output: [
+            {
+                dir: './dist',
+                entryFileNames: '[name].d.ts',
+                format: 'esm',
+                // preserveModules: true,
+                // preserveModulesRoot: 'src'
             },
         ],
         plugins: [
