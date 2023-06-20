@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode } from 'react';
+import { CSSProperties, ReactNode, MouseEventHandler } from 'react';
 
 export type TButtonOn = 'light' | 'dark';
 export type TButtonColor = 'primary' | 'default';
@@ -41,4 +41,5 @@ export interface IButtonProps<Color extends TButtonColor> {
   buttonStyle?: CSSProperties;
   letterStyle?: CSSProperties;
   children: ReactNode | ReactNode[];
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }

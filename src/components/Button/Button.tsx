@@ -25,6 +25,7 @@ const Button = <Color extends TButtonColor>({
   buttonStyle,
   letterStyle,
   children,
+  onClick,
 }: IButtonProps<Color>) => {
   // 피그마 속성으로 타입 재정의
   const buttonType: BUTTON_TYPE = (() => {
@@ -80,7 +81,7 @@ const Button = <Color extends TButtonColor>({
   })();
 
   return (
-    <ButtonContainer buttonType={buttonType} size={size} width={width} buttonStyle={buttonStyle}>
+    <ButtonContainer buttonType={buttonType} size={size} width={width} buttonStyle={buttonStyle} onClick={onClick}>
       <Letter variant={buttonLetterVariant} color={buttonLetterColor} style={letterStyle}>
         {children}
       </Letter>

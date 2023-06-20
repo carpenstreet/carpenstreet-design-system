@@ -76,8 +76,6 @@ export const ButtonContainer = styled.button<{ buttonType: BUTTON_TYPE; size: TB
       if (props.size === 'S') return '8px 16px';
     })();
     
-    console.log(`props`, props);
-
     return {
       display: 'flex',
       borderRadius: '8px',
