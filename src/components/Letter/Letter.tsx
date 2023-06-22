@@ -51,7 +51,8 @@ const weightObj = {
  * @constructor
  */
 const Letter = ({ variant = 'letter/en, ko/medium', color = 'color/text/primary', className, style={}, children, ...rest }: ILetterProps) => {
-  const replaceString = variant.replace('Letter', 'letter').replace('letter/en, ko/', '').replace('letter/ja/', '');
+  const replaceString = variant.replace('Letter', 'letter').replace('/regular', '')
+    .replace('letter/en, ko/', '').replace('letter/ja/', '');
   const variants = replaceString.split('/').slice(-2);
   const size = variants[0];
   const weight = variants[1] || 'regular';
