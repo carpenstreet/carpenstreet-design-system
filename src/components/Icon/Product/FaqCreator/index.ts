@@ -15,3 +15,12 @@ export {
   ProductIcon,
   SettingIcon,
 }
+
+export default {
+  BrandIcon,
+  CalculateIcon,
+  LicenseIcon,
+  PolicyIcon,
+  ProductIcon,
+  SettingIcon,
+};

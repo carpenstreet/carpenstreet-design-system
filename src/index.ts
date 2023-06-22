@@ -1,19 +1,31 @@
 import styled from './shared/styled.ts';
-import {Button, Letter, Shadow, Icon} from "./components";
+import {Button, Letter, Shadow, Icon, CategoryIcon, ProductIcon, GnbIcon, SignIcon} from "@components";
 import Color from "@shared/settings/Color.ts";
-
-export default {
-  Button,
-  Letter,
-  Shadow,
-  Icon,
-  Color
-};
 
 export {
   Button,
   Letter,
   Shadow,
+  //
   Icon,
+  CategoryIcon,
+  ProductIcon,
+  GnbIcon,
+  SignIcon,
+  //
   Color
 }
+
+export default {
+  Button,
+  Letter,
+  Shadow,
+  //
+  Icon,
+  CategoryIcon,
+  ProductIcon,
+  GnbIcon,
+  SignIcon,
+  //
+  Color
+};

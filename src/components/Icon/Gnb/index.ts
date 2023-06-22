@@ -12,10 +12,11 @@ export {
   SearchIcon,
 }
 
+
 export default {
   CartIcon,
   CategoryIcon,
   IdentityIcon,
   ScrapIcon,
   SearchIcon,
-}
+};

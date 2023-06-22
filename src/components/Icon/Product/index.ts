@@ -27,6 +27,7 @@ export {
   ViewCountIcon,
   FaqCreator,
 }
+export * from './FaqCreator';
 
 export default {
   AconOnlyIcon,
@@ -42,4 +43,5 @@ export default {
   StarIcon,
   ViewCountIcon,
   FaqCreator,
-}
+  ...FaqCreator,
+};

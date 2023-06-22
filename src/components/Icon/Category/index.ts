@@ -21,7 +21,6 @@ import SourceFileIcon from './SourceFileIcon/SourceFileIcon.tsx';
 import TablesIcon from './TablesIcon/TablesIcon.tsx';
 import TravelAccommodationIcon from './TravelAccommodationIcon/TravelAccommodationIcon.tsx';
 
-
 export {
   AccommodationsIcon,
   CafeRestaurantBarIcon,
@@ -46,6 +45,8 @@ export {
   TablesIcon,
   TravelAccommodationIcon,
 }
+
+
 export default {
   AccommodationsIcon,
   CafeRestaurantBarIcon,
@@ -69,4 +70,4 @@ export default {
   SourceFileIcon,
   TablesIcon,
   TravelAccommodationIcon,
-};
+}
