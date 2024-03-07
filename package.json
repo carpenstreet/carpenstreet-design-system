@@ -1,6 +1,6 @@
 {
   "name": "carpenstreet-designsystem",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -19,7 +19,8 @@
     "ts-lint": "tsc --incremental",
     "predeploy": "storybook build && cp CNAME storybook-static/CNAME && cp .nojekyll storybook-static/.nojekyll",
     "deploy": "gh-pages -t true -d storybook-static",
-    "prepublish": "rimraf dist && rollup -c"
+    "prepublish": "rimraf dist && rollup -c",
+    "fulldeploy": "yarn predeploy && yarn deploy && yarn prepublish && yarn publish"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
