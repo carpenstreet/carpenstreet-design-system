@@ -1,0 +1,24 @@
+import{j as s}from"./jsx-runtime-91a467a5.js";import{R as v}from"./index-8db94870.js";import{_ as i}from"./styled-0460a380.js";import{T as d}from"./ThemeMui-894c5d20.js";import"./_commonjsHelpers-042e6b4d.js";import"./Color-ef04fb11.js";import"./extends-98964cd2.js";const l=["0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12)","0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12)","0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 1px 8px rgba(0, 0, 0, 0.12)","0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12)","0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px rgba(0, 0, 0, 0.14), 0px 1px 14px rgba(0, 0, 0, 0.12)","0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12)","0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12)","0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)","0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12)","0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12)","0px 6px 7px -4px rgba(0, 0, 0, 0.2), 0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12)","0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12)","0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12)","0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12)","0px 8px 9px -5px rgba(0, 0, 0, 0.2), 0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12)","0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12)","0px 8px 11px -5px rgba(0, 0, 0, 0.2), 0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12)","0px 9px 11px -5px rgba(0, 0, 0, 0.2), 0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12)","0px 9px 12px -6px rgba(0, 0, 0, 0.2), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12)","0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12)","0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12)","0px 10px 14px -6px rgba(0, 0, 0, 0.2), 0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12)","0px 11px 14px -7px rgba(0, 0, 0, 0.2), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12)","0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12)"];i.div`
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  ${x=>`box-shadow: ${l[x.variant]}`};
+`;const r=({variant:x=24,children:p})=>{var e;const u={boxShadow:l[x-1]},n=(e=p==null?void 0:p.type)==null?void 0:e.displayName;return v.cloneElement(p,{...(()=>{var b,g;return n==="Button"?{buttonStyle:{...((b=p==null?void 0:p.props)==null?void 0:b.buttonStyle)||{},...u}}:{style:{...((g=p==null?void 0:p.props)==null?void 0:g.style)||{},...u}}})()})};try{r.displayName="Shadow",r.__docgenInfo={description:`children의 컴포넌트 및 React Dom Element를 복사 후 boxShadow 스타일을 입혀서 재정의하였습니다. <br/>
+children에 컴포넌트를 넣을 경우 아래 코드처럼 props에 style을 추가하고 최상위 요소에 style 프로퍼티 적용 부탁드립니다. <br />
+\`\`\`
+const Shadow = ({ style }) => {
+ return (
+   <ShadowWrapper style={style} />
+ )
+}
+\`\`\``,displayName:"Shadow",props:{variant:{defaultValue:{value:"24"},description:"",name:"variant",required:!1,type:{name:"enum",value:[{value:"16"},{value:"24"},{value:"12"},{value:"1"},{value:"2"},{value:"3"},{value:"4"},{value:"5"},{value:"6"},{value:"7"},{value:"8"},{value:"9"},{value:"10"},{value:"11"},{value:"13"},{value:"14"},{value:"15"},{value:"17"},{value:"18"},{value:"19"},{value:"20"},{value:"21"},{value:"22"},{value:"23"}]}}}}}catch{}const _={title:"Styles/Shadow",component:r,tags:["autodocs"]},a={args:{variant:24,children:s("div",{style:{width:100,height:100}})}};a.decorators=[x=>s(d,{children:x()})];var t,o,C;a.parameters={...a.parameters,docs:{...(t=a.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {
+    variant: 24,
+    children: <div style={{
+      width: 100,
+      height: 100
+    }} />
+  }
+}`,...(C=(o=a.parameters)==null?void 0:o.docs)==null?void 0:C.source}}};const f=["Default"];export{a as Default,f as __namedExportsOrder,_ as default};
+//# sourceMappingURL=Shadow.stories-00e18046.js.map
