@@ -1,5 +1,8 @@
+import React from 'react';
 import { ThemeOptions } from '@mui/material';
 import color from './Color.ts';
+import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
+
 
 type TColor = typeof color;
 
@@ -40,6 +43,10 @@ interface ChartPaletteOptions {
   donut: string[];
 }
 
+interface CustomTypographyVariants extends Record<CustomTypographyVariantsTypes, React.CSSProperties> {};
+
+// -------------------------------------------------------
+
 declare module '@mui/material' {
   interface Color {
     0: string;
@@ -61,6 +68,10 @@ declare module '@mui/material/styles' {
   interface ThemeOptions {
     customShadows?: CustomShadowOptions;
   }
+
+  interface TypographyVariants extends CustomTypographyVariants {}
+
+  interface TypographyVariantsOptions extends Partial<CustomTypographyVariants> {}
 }
 
 declare module '@mui/material/styles/createPalette' {
@@ -82,14 +93,18 @@ declare module '@mui/material/styles/createPalette' {
     lighter: string;
     darker: string;
   }
-  interface Palette {
+  interface Palette extends TColor {
     gradients: GradientsPaletteOptions;
     chart: ChartPaletteOptions;
   }
-  interface PaletteOptions {
+  interface PaletteOptions extends TColor {
     gradients: GradientsPaletteOptions;
     chart: ChartPaletteOptions;
   }
+}
+
+declare module '@mui/material/Typography/Typography' {
+  interface TypographyPropsVariantOverrides extends Record<CustomTypographyVariantsTypes, true> {}
 }
 
 // [todo]: styled-component type을 적용하면 오류가 많이 발생하여 임시 주석처리
