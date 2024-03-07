@@ -107,4 +107,15 @@ export default {
     4: '#F5F5FA',
     5: '#F4F4F9',
   },
+  primary: {
+    100: '#e6e6ff',
+    200: '#ceceff',
+    300: '#aeaeff',
+    400: '#8e8eff',
+    500: '#6a6aff',
+    600: '#4e4eff',
+    700: '#3e3ecd',
+    800: '#2f2f9b',
+    900: '#212170',
+  }
 } as const;
