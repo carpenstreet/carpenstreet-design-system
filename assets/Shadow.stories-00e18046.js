@@ -12,7 +12,7 @@ const Shadow = ({ style }) => {
    <ShadowWrapper style={style} />
  )
 }
-\`\`\``,displayName:"Shadow",props:{variant:{defaultValue:{value:"24"},description:"",name:"variant",required:!1,type:{name:"enum",value:[{value:"16"},{value:"24"},{value:"1"},{value:"2"},{value:"3"},{value:"4"},{value:"12"},{value:"5"},{value:"6"},{value:"7"},{value:"8"},{value:"9"},{value:"10"},{value:"11"},{value:"13"},{value:"14"},{value:"15"},{value:"17"},{value:"18"},{value:"19"},{value:"20"},{value:"21"},{value:"22"},{value:"23"}]}}}}}catch{}const _={title:"Styles/Shadow",component:r,tags:["autodocs"]},a={args:{variant:24,children:s("div",{style:{width:100,height:100}})}};a.decorators=[x=>s(d,{children:x()})];var t,o,C;a.parameters={...a.parameters,docs:{...(t=a.parameters)==null?void 0:t.docs,source:{originalSource:`{
+\`\`\``,displayName:"Shadow",props:{variant:{defaultValue:{value:"24"},description:"",name:"variant",required:!1,type:{name:"enum",value:[{value:"16"},{value:"24"},{value:"12"},{value:"1"},{value:"2"},{value:"3"},{value:"4"},{value:"5"},{value:"6"},{value:"7"},{value:"8"},{value:"9"},{value:"10"},{value:"11"},{value:"13"},{value:"14"},{value:"15"},{value:"17"},{value:"18"},{value:"19"},{value:"20"},{value:"21"},{value:"22"},{value:"23"}]}}}}}catch{}const _={title:"Styles/Shadow",component:r,tags:["autodocs"]},a={args:{variant:24,children:s("div",{style:{width:100,height:100}})}};a.decorators=[x=>s(d,{children:x()})];var t,o,C;a.parameters={...a.parameters,docs:{...(t=a.parameters)==null?void 0:t.docs,source:{originalSource:`{
   args: {
     variant: 24,
     children: <div style={{
@@ -21,4 +21,4 @@ const Shadow = ({ style }) => {
     }} />
   }
 }`,...(C=(o=a.parameters)==null?void 0:o.docs)==null?void 0:C.source}}};const f=["Default"];export{a as Default,f as __namedExportsOrder,_ as default};
-//# sourceMappingURL=Shadow.stories-27d3fd56.js.map
+//# sourceMappingURL=Shadow.stories-00e18046.js.map
