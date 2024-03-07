@@ -5,12 +5,13 @@ import { TLetterVariant } from '@components/Letter/Letter.types';
 import { TColor } from '@shared/settings/color.type';
 import { BUTTON_TYPE, IButtonProps, TButtonColor } from './Button.type';
 
-/* 
-  [todo]: starticon, endicon, isLoading 의 경우 아이콘이 모두 정의되면 진행할 예정 
+/*
+  [todo]: starticon, endicon, isLoading 의 경우 아이콘이 모두 정의되면 진행할 예정
   icon의 경우 icon이름을 string으로 지정해주면 그에 맞는 아이콘을 불러올 수 있도록 구현할 예정 (크기는 size 마다 고정)
 */
 /**
  * props를 설정하지 않을 경우 기본적으로 primary, filled, m 스타일로 적용됩니다.
+ * ..
  */
 const Button = <Color extends TButtonColor>({
   on,
