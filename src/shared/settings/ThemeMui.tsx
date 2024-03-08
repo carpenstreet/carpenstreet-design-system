@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { color } from './Color.ts';
+import { colorPalette } from './Color.ts';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants.ts';
 import { fontFace } from '@shared/styles/fontFaceStyle';
 
@@ -13,9 +13,7 @@ type Props = {
 export default function ThemeMui({ children }: Props) {
   const theme = createTheme({
     palette: {
-      // 아래부터 Design System Color
-      // [todo]: color.json의 경우 플린님이 만둘어두신 components/ads 디렉토리로 이동해야 함.
-      color,
+      ...colorPalette,
     },
     components: {
       MuiCssBaseline: {

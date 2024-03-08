@@ -1,5 +1,13 @@
 import {Meta, ColorPalette, ColorItem} from '@storybook/blocks';
-import {color, getColors} from "@shared/settings/Color";
+import {
+    background,
+    common, gradient,
+    grayishViolet,
+    grayScale,
+    grayScaleDim, green, orange, partnership,
+    primaryColor,
+    primaryColorDim, skyblue, state, stateErrorDim, stateInfoDim, stateSaleDim, stateSuccessDim, stateWarningDim
+} from "@shared/settings/Color.ts";
 
 <Meta title='Foundation/Color' />
 
@@ -11,26 +19,26 @@ ACON3D 서비스에 사용되는 색상입니다. 아래의 색을 인터페이�
 
 <ColorPalette>
     <ColorItem title={'color/white'} subtitle={'White'} colors={{
-        'color/white': color.white
+        'color/white': common.white
     }} />
     <ColorItem title={'color/black'} subtitle={'Black'} colors={{
-        'color/black': color.black
+        'color/black': common.black
     }} />
-    <ColorItem title={'color/gray'} subtitle={'Gray Scale'} colors={getColors('gray')} />
-    <ColorItem title={'color/gray/dim'} subtitle={'Gray Scale with Dim'} colors={getColors('gray', 'dim')} />
-    <ColorItem title={'color/primary'} subtitle={'Primary Color'} colors={getColors('primary')} />
-    <ColorItem title={'color/primary/dim'} subtitle={'Primary Color with Dim'} colors={getColors('primary', 'dim')} />
-    <ColorItem title={'color/grayishViolet'} subtitle={'Grayish Violet'} colors={getColors('grayishViolet')} />
-    <ColorItem title={'color/orange'} subtitle={'Orange'} colors={getColors('orange')} />
-    <ColorItem title={'color/green'} subtitle={'Green'} colors={getColors('green')} />
-    <ColorItem title={'color/skyBlue'} subtitle={'Sky Blue'} colors={getColors('skyBlue')} />
-    <ColorItem title={'color/state'} subtitle={'State'} colors={getColors('state')} />
-    <ColorItem title={'color/state/infoDim'} subtitle={'Info with Dim'} colors={getColors('state', 'infoDim')} />
-    <ColorItem title={'color/state/successDim'} subtitle={'Success with Dim'} colors={getColors('state', 'successDim')} />
-    <ColorItem title={'color/state/warningDim'} subtitle={'Warning with Dim'} colors={getColors('state', 'warningDim')} />
-    <ColorItem title={'color/state/errorDim'} subtitle={'Error with Dim'} colors={getColors('state', 'errorDim')} />
-    <ColorItem title={'color/state/saleDim'} subtitle={'Sale with Dim'} colors={getColors('state', 'saleDim')} />
-    <ColorItem title={'color/partnership'} subtitle={'Partnership (HUB)'} colors={getColors('partnership')} />
-    <ColorItem title={'color/gradient'} subtitle={'Gradient'} colors={getColors('gradient')} />
-    <ColorItem title={'color/background'} subtitle={'Background'} colors={getColors('background')} />
+    <ColorItem title={'color/gray'} subtitle={'Gray Scale'} colors={grayScale} />
+    <ColorItem title={'color/gray/dim'} subtitle={'Gray Scale with Dim'} colors={grayScaleDim} />
+    <ColorItem title={'color/primary'} subtitle={'Primary Color'} colors={primaryColor} />
+    <ColorItem title={'color/primary/dim'} subtitle={'Primary Color with Dim'} colors={primaryColorDim} />
+    <ColorItem title={'color/grayishViolet'} subtitle={'Grayish Violet'} colors={grayishViolet} />
+    <ColorItem title={'color/orange'} subtitle={'Orange'} colors={orange} />
+    <ColorItem title={'color/green'} subtitle={'Green'} colors={green} />
+    <ColorItem title={'color/skyBlue'} subtitle={'Sky Blue'} colors={skyblue} />
+    <ColorItem title={'color/state'} subtitle={'State'} colors={state} />
+    <ColorItem title={'color/state/infoDim'} subtitle={'Info with Dim'} colors={stateInfoDim} />
+    <ColorItem title={'color/state/successDim'} subtitle={'Success with Dim'} colors={stateSuccessDim} />
+    <ColorItem title={'color/state/warningDim'} subtitle={'Warning with Dim'} colors={stateWarningDim} />
+    <ColorItem title={'color/state/errorDim'} subtitle={'Error with Dim'} colors={stateErrorDim} />
+    <ColorItem title={'color/state/saleDim'} subtitle={'Sale with Dim'} colors={stateSaleDim} />
+    <ColorItem title={'color/partnership'} subtitle={'Partnership (HUB)'} colors={partnership} />
+    <ColorItem title={'color/gradient'} subtitle={'Gradient'} colors={gradient} />
+    <ColorItem title={'color/background'} subtitle={'Background'} colors={background} />
 </ColorPalette>
