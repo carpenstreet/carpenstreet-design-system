@@ -6,6 +6,13 @@ const meta: Meta<typeof Typography> = {
   title: 'Foundation/Typography',
   component: Typography,
   tags: ['autodocs'],
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
 };
 
 export default meta;
@@ -17,5 +24,3 @@ export const Default: Story = {
     children: '테스트',
   },
 };
-
-Default.decorators = [(story) => <ThemeMui>{story()}</ThemeMui>];
