@@ -1,5 +1,3 @@
-import color from './Color.ts';
-
 // [todo] color type을 자동으로 만들어 줄 수 없을까?
 // type KeysHelper<T extends Record<string, any>, K extends keyof T> = K extends string
 //   ? `${K}` | (T[K] extends Record<string, any> ? `${K}.${KeysHelper<T[K], keyof T[K]>}` : never)
