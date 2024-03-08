@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Typography from './Typography';
-import ThemeMui from '@shared/settings/ThemeMui.tsx';
+import ThemeMui from '@shared/settings/ThemeMui';
 
 const meta: Meta<typeof Typography> = {
   title: 'Foundation/Typography',
