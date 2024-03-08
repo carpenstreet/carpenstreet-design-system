@@ -1,27 +1,27 @@
 export const CustomTypographyVariants = {
   // h1
-  'Typography/Headline/H1/black' : {
+  'Typography/Headline/H1/black': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '40px',
     fontWeight: 800,
     lineHeight: '56px',
   },
-  'Typography/Headline/H1/bold' : {
+  'Typography/Headline/H1/bold': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '40px',
     fontWeight: 700,
     lineHeight: '56px',
   },
-  'Typography/Headline/H1/medium' : {
+  'Typography/Headline/H1/medium': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '40px',
     fontWeight: 600,
     lineHeight: '56px',
   },
-  'Typography/Headline/H1/regular' : {
+  'Typography/Headline/H1/regular': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '40px',
@@ -30,28 +30,28 @@ export const CustomTypographyVariants = {
   },
 
   // h2
-  'Typography/Headline/H2/black' : {
+  'Typography/Headline/H2/black': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '36px',
     fontWeight: 800,
     lineHeight: '48px',
   },
-  'Typography/Headline/H2/bold' : {
+  'Typography/Headline/H2/bold': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '36px',
     fontWeight: 700,
     lineHeight: '48px',
   },
-  'Typography/Headline/H2/medium' : {
+  'Typography/Headline/H2/medium': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '36px',
     fontWeight: 600,
     lineHeight: '48px',
   },
-  'Typography/Headline/H2/regular' : {
+  'Typography/Headline/H2/regular': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '36px',
@@ -60,28 +60,28 @@ export const CustomTypographyVariants = {
   },
 
   // h3
-  'Typography/Headline/H3/black' : {
+  'Typography/Headline/H3/black': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '32px',
     fontWeight: 800,
     lineHeight: '42px',
   },
-  'Typography/Headline/H3/bold' : {
+  'Typography/Headline/H3/bold': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '32px',
     fontWeight: 700,
     lineHeight: '42px',
   },
-  'Typography/Headline/H3/medium' : {
+  'Typography/Headline/H3/medium': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '32px',
     fontWeight: 600,
     lineHeight: '42px',
   },
-  'Typography/Headline/H3/regular' : {
+  'Typography/Headline/H3/regular': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '32px',
@@ -90,14 +90,14 @@ export const CustomTypographyVariants = {
   },
 
   // h4
-  'Typography/Headline/H4/black' : {
+  'Typography/Headline/H4/black': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '30px',
     fontWeight: 800,
     lineHeight: '40px',
   },
-  'Typography/Headline/H4/bold' : {
+  'Typography/Headline/H4/bold': {
     color: '#313135',
     fontFamily: 'Pretendard',
     fontSize: '30px',

@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { color } from './Color.ts';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants.ts';
+import { fontFace } from '@shared/styles/fontFaceStyle';
 
 // ----------------------------------------------------------------------
 
@@ -17,6 +18,9 @@ export default function ThemeMui({ children }: Props) {
       color,
     },
     components: {
+      MuiCssBaseline: {
+        styleOverrides: fontFace,
+      },
       MuiUseMediaQuery: {
         defaultProps: {
           noSsr: true,
