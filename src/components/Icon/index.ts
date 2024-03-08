@@ -1,4 +1,4 @@
-import * as CategoryIcon from './Category';
+import * as CategoryIcon from './legacy/Category';
 import * as GnbIcon from './Gnb';
 import * as ProductIcon from './Product';
 import * as SignIcon from './Sign';
