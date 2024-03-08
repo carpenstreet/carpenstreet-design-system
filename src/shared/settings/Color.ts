@@ -1,3 +1,6 @@
+/**
+ * color palette 객체입니다
+ */
 export const color = {
   white: '#FFFFFF',
   black: '#000000',
@@ -74,7 +77,7 @@ export const color = {
     800: '#1A7950',
     900: '#0F4730',
   },
-  skyblue: {
+  skyBlue: {
     100: '#EBFAFE',
     200: '#C9F0FD',
     300: '#98E3FA',
@@ -147,3 +150,22 @@ export const color = {
     9: '#55558D',
   },
 } as const;
+
+/**
+ * Color.mdx 에서 사용하는 함수입니다
+ * ColorItem의 colors props로 넘겨줄 색상 obj를 반환합니다
+ */
+export function getColors(...colorKeys: string[]) {
+  const foundColor = findColor(color, colorKeys);
+
+  const res = {};
+  for (const [key, value] of Object.entries(foundColor)) {
+    if (typeof value !== 'string') continue;
+    res[`color/${colorKeys.join('/')}/${key}`] = value;
+  }
+  return res;
+}
+
+function findColor(palette: Partial<typeof color>, colorKeys: string[]) {
+  return colorKeys.length === 0 ? palette : findColor(palette[colorKeys[0]], colorKeys.slice(1));
+}
