@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import ProfileFilledIcon from './ProfileFilled';
+import ProfileFilledIcon from './ProfileFilledIcon';
 
 const meta: Meta = { title: 'Element/Icon/ProfileFilled', component: ProfileFilledIcon, tags: ['autodocs'] };
 
@@ -10,6 +10,6 @@ export const Default: Story = {
   args: {
     width: 24,
     height: 24,
-    color: '#313135'
+    color: '#313135',
   },
 };
