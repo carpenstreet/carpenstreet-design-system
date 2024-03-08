@@ -3,7 +3,6 @@ import { ThemeOptions } from '@mui/material';
 import color from './Color.ts';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
 
-
 type TColor = typeof color;
 
 interface CustomShadowOptions {
@@ -26,24 +25,7 @@ interface CustomShadowOptions {
   dropdown: string;
 }
 
-interface GradientsPaletteOptions {
-  primary: string;
-  info: string;
-  success: string;
-  warning: string;
-  error: string;
-}
-
-interface ChartPaletteOptions {
-  violet: string[];
-  blue: string[];
-  green: string[];
-  yellow: string[];
-  red: string[];
-  donut: string[];
-}
-
-interface CustomTypographyVariants extends Record<CustomTypographyVariantsTypes, React.CSSProperties> {};
+interface CustomTypographyVariants extends Record<CustomTypographyVariantsTypes, React.CSSProperties> {}
 
 // -------------------------------------------------------
 
@@ -75,31 +57,8 @@ declare module '@mui/material/styles' {
 }
 
 declare module '@mui/material/styles/createPalette' {
-  export interface Palette extends TColor {
-    _unused_: Symbol;
-  }
-  export interface PaletteOptions extends TColor {
-    _unused_: Symbol;
-  }
-
-  interface TypeBackground {
-    neutral: string;
-  }
-  interface SimplePaletteColorOptions {
-    lighter: string;
-    darker: string;
-  }
-  interface PaletteColor {
-    lighter: string;
-    darker: string;
-  }
-  interface Palette extends TColor {
-    gradients: GradientsPaletteOptions;
-    chart: ChartPaletteOptions;
-  }
-  interface PaletteOptions extends TColor {
-    gradients: GradientsPaletteOptions;
-    chart: ChartPaletteOptions;
+  interface PaletteOptions {
+    color: TColor;
   }
 }
 

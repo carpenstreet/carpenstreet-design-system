@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import color from './Color.ts';
+import { color } from './Color.ts';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants.ts';
 
 // ----------------------------------------------------------------------
@@ -12,19 +12,9 @@ type Props = {
 export default function ThemeMui({ children }: Props) {
   const theme = createTheme({
     palette: {
-      // [todo]: primary, secondary는 사용하지 않음. 사용하는 부분 모두 변경 후 삭제해야 함.
-      // @ts-ignore
-      primary: {
-        main: '#f300ba',
-      },
-      // @ts-ignore
-      secondary: {
-        main: color.violet['600'],
-      },
-
       // 아래부터 Design System Color
       // [todo]: color.json의 경우 플린님이 만둘어두신 components/ads 디렉토리로 이동해야 함.
-      ...color,
+      color,
     },
     components: {
       MuiUseMediaQuery: {
@@ -43,7 +33,7 @@ export default function ThemeMui({ children }: Props) {
             },
           },
         },
-      }
+      },
     },
     typography: CustomTypographyVariants,
     breakpoints: {

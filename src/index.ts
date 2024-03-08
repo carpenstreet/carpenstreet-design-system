@@ -1,7 +1,6 @@
-import styled from './shared/styled.ts';
-import {Button, Letter, Shadow, Typography, Icon, CategoryIcon, ProductIcon, GnbIcon, SignIcon} from "@components";
-import Color from "@shared/settings/Color.ts";
-import DesignSystemProvider from "./shared/settings/ThemeMui";
+import { Button, Letter, Shadow, Typography, Icon, CategoryIcon, ProductIcon, GnbIcon, SignIcon } from '@components';
+import { color } from '@shared/settings/Color.ts';
+import DesignSystemProvider from './shared/settings/ThemeMui';
 
 export {
   Button,
@@ -15,9 +14,9 @@ export {
   GnbIcon,
   SignIcon,
   //
-  Color,
-  DesignSystemProvider
-}
+  color,
+  DesignSystemProvider,
+};
 
 export default {
   Button,
@@ -31,6 +30,6 @@ export default {
   GnbIcon,
   SignIcon,
   //
-  Color,
-  DesignSystemProvider
+  color,
+  DesignSystemProvider,
 };
