@@ -1,4 +1,4 @@
-import { IPropAnimalIconProps } from './PropAnimalIcon.types.ts';
+import { IPropAnimalIconProps } from './PropAnimalIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '소품동물' 아이콘입니다.

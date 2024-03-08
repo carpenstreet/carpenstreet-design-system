@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import ResidenceIcon from './ResidenceIcon.tsx';
+import ResidenceIcon from './ResidenceIcon';
 
 const meta: Meta = { title: 'Element/Icon/Category/거주지', component: ResidenceIcon, tags: ['autodocs'] };
 

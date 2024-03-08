@@ -1,4 +1,4 @@
-import { IOrientalIconProps } from './OrientalIcon.types.ts';
+import { IOrientalIconProps } from './OrientalIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '동양사극무협' 아이콘입니다.

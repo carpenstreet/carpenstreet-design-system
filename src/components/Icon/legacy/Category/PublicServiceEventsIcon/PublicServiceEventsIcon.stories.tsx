@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import PublicServiceEventsIcon from './PublicServiceEventsIcon.tsx';
+import PublicServiceEventsIcon from './PublicServiceEventsIcon';
 
 const meta: Meta = { title: 'Element/Icon/Category/공공서비스경조사', component: PublicServiceEventsIcon, tags: ['autodocs'] };
 

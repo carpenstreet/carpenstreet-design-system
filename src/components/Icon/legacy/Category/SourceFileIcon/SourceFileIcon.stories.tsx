@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import SourceFileIcon from './SourceFileIcon.tsx';
+import SourceFileIcon from './SourceFileIcon';
 
 const meta: Meta = { title: 'Element/Icon/Category/소스파일', component: SourceFileIcon, tags: ['autodocs'] };
 

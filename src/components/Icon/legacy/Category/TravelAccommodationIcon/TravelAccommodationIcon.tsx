@@ -1,4 +1,4 @@
-import { ITravelAccommodationIconProps } from './TravelAccommodationIcon.types.ts';
+import { ITravelAccommodationIconProps } from './TravelAccommodationIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '여행숙박' 아이콘입니다.

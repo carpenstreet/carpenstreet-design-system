@@ -1,7 +1,7 @@
 import * as CategoryIcon from './legacy/Category';
-import * as GnbIcon from './Gnb';
-import * as ProductIcon from './Product';
-import * as SignIcon from './Sign';
+import * as GnbIcon from './legacy/Gnb';
+import * as ProductIcon from './legacy/Product';
+import * as SignIcon from './legacy/Sign';
 
 /* begin :  remapping for old usage */
 const Category = CategoryIcon;
@@ -20,7 +20,7 @@ export {
   GnbIcon,
   ProductIcon,
   SignIcon,
-}
+};
 
 export default {
   Category,
@@ -32,4 +32,4 @@ export default {
   GnbIcon,
   ProductIcon,
   SignIcon,
-}
+};

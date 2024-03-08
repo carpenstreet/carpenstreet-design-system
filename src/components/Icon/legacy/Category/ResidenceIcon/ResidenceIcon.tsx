@@ -1,4 +1,4 @@
-import { IResidenceIconProps } from './ResidenceIcon.types.ts';
+import { IResidenceIconProps } from './ResidenceIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '거주지' 아이콘입니다.

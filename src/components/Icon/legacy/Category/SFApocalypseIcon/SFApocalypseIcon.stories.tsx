@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import SFApocalypseIcon from './SFApocalypseIcon.tsx';
+import SFApocalypseIcon from './SFApocalypseIcon';
 
 const meta: Meta = { title: 'Element/Icon/Category/SF아포칼립스', component: SFApocalypseIcon, tags: ['autodocs'] };
 

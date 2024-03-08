@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import SchoolEducationIcon from './SchoolEducationIcon.tsx';
+import SchoolEducationIcon from './SchoolEducationIcon';
 
 const meta: Meta = { title: 'Element/Icon/Category/학교교육', component: SchoolEducationIcon, tags: ['autodocs'] };
 

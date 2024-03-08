@@ -1,4 +1,4 @@
-import { IModernSliceOfLifeIconProps } from './ModernSliceOfLifeIcon.types.ts';
+import { IModernSliceOfLifeIconProps } from './ModernSliceOfLifeIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '현대일상물' 아이콘입니다.

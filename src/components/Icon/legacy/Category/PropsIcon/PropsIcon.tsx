@@ -1,4 +1,4 @@
-import { IPropsIconProps } from './PropsIcon.types.ts';
+import { IPropsIconProps } from './PropsIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '소품모음' 아이콘입니다.

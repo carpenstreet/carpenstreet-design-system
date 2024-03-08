@@ -1,4 +1,4 @@
-import { INoirCrimeRichIconProps } from './NoirCrimeRichIcon.types.ts';
+import { INoirCrimeRichIconProps } from './NoirCrimeRichIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '도시경관교통' 아이콘입니다.

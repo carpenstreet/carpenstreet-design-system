@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import TravelAccommodationIcon from './TravelAccommodationIcon.tsx';
+import TravelAccommodationIcon from './TravelAccommodationIcon';
 
 const meta: Meta = { title: 'Element/Icon/Category/여행숙박', component: TravelAccommodationIcon, tags: ['autodocs'] };
 

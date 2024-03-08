@@ -1,4 +1,4 @@
-import { ISFApocalypseIconProps } from './SFApocalypseIcon.types.ts';
+import { ISFApocalypseIconProps } from './SFApocalypseIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 'SF아포칼립스' 아이콘입니다.

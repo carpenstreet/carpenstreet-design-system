@@ -7,7 +7,7 @@ export default meta;
 type Story = StoryObj<typeof LoadingIcon>;
 
 export const Default: Story = {
-    args: {
-        size: 24
-    }
-}
+  args: {
+    size: 24,
+  },
+};

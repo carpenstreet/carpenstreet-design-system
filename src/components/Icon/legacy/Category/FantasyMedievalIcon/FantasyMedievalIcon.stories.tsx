@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import FantasyMedievalIcon from './FantasyMedievalIcon.tsx';
+import FantasyMedievalIcon from './FantasyMedievalIcon';
 
 const meta: Meta = { title: 'Element/Icon/Category/판타지중세', component: FantasyMedievalIcon, tags: ['autodocs'] };
 

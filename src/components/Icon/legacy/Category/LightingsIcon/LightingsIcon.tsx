@@ -1,4 +1,4 @@
-import { ILightingsIconProps } from './LightingsIcon.types.ts';
+import { ILightingsIconProps } from './LightingsIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '조명모음' 아이콘입니다.

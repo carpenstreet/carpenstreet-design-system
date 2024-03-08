@@ -1,4 +1,4 @@
-import { ISchoolEducationIconProps } from './SchoolEducationIcon.types.ts';
+import { ISchoolEducationIconProps } from './SchoolEducationIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '학교교육' 아이콘입니다.

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import PropAnimalIcon from './PropAnimalIcon.tsx';
+import PropAnimalIcon from './PropAnimalIcon';
 
 const meta: Meta = { title: 'Element/Icon/Category/소품동물', component: PropAnimalIcon, tags: ['autodocs'] };
 

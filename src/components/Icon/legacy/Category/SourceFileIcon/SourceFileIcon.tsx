@@ -1,4 +1,4 @@
-import { ISourceFileIconProps } from './SourceFileIcon.types.ts';
+import { ISourceFileIconProps } from './SourceFileIcon.types';
 
 /**
  * 카테고리 컴포넌트에서 쓰이는 '소스파일' 아이콘입니다.
