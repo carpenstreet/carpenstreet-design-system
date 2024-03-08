@@ -1,9 +1,9 @@
 import React from 'react';
 import { ThemeOptions } from '@mui/material';
-import color from './Color.ts';
+import { colorPaletteSource, colorPalette } from './Color.ts';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
 
-type TColor = typeof color;
+type ColorPaletteType = typeof colorPalette;
 
 interface CustomShadowOptions {
   z1: string;
@@ -57,9 +57,7 @@ declare module '@mui/material/styles' {
 }
 
 declare module '@mui/material/styles/createPalette' {
-  interface PaletteOptions {
-    color: TColor;
-  }
+  interface PaletteOptions extends ColorPaletteType {}
 }
 
 declare module '@mui/material/Typography/Typography' {
