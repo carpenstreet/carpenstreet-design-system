@@ -1,0 +1,36 @@
+import {Meta, ColorPalette, ColorItem} from '@storybook/blocks';
+import {color, getColors} from "@shared/settings/Color";
+
+<Meta title='Foundation/Color' />
+
+# Color
+
+ACON3D 서비스에 사용되는 색상입니다. 아래의 색을 인터페이스에 사용하기 위해서는 각 색에 의미를 부여하여 사용해야 합니다. ([피그마 링크](https://www.figma.com/file/qfL0NXrfMVNIlBszjy8T8z/ACON-Design-System-(%EA%B3%B5%EC%82%AC%EC%A4%91)?type=design&node-id=1803-3368&mode=design))
+
+---
+
+<ColorPalette>
+    <ColorItem title={'color/white'} subtitle={'White'} colors={{
+        'color/white': color.white
+    }} />
+    <ColorItem title={'color/black'} subtitle={'Black'} colors={{
+        'color/black': color.black
+    }} />
+    <ColorItem title={'color/gray'} subtitle={'Gray Scale'} colors={getColors('gray')} />
+    <ColorItem title={'color/gray/dim'} subtitle={'Gray Scale with Dim'} colors={getColors('gray', 'dim')} />
+    <ColorItem title={'color/primary'} subtitle={'Primary Color'} colors={getColors('primary')} />
+    <ColorItem title={'color/primary/dim'} subtitle={'Primary Color with Dim'} colors={getColors('primary', 'dim')} />
+    <ColorItem title={'color/grayishViolet'} subtitle={'Grayish Violet'} colors={getColors('grayishViolet')} />
+    <ColorItem title={'color/orange'} subtitle={'Orange'} colors={getColors('orange')} />
+    <ColorItem title={'color/green'} subtitle={'Green'} colors={getColors('green')} />
+    <ColorItem title={'color/skyBlue'} subtitle={'Sky Blue'} colors={getColors('skyBlue')} />
+    <ColorItem title={'color/state'} subtitle={'State'} colors={getColors('state')} />
+    <ColorItem title={'color/state/infoDim'} subtitle={'Info with Dim'} colors={getColors('state', 'infoDim')} />
+    <ColorItem title={'color/state/successDim'} subtitle={'Success with Dim'} colors={getColors('state', 'successDim')} />
+    <ColorItem title={'color/state/warningDim'} subtitle={'Warning with Dim'} colors={getColors('state', 'warningDim')} />
+    <ColorItem title={'color/state/errorDim'} subtitle={'Error with Dim'} colors={getColors('state', 'errorDim')} />
+    <ColorItem title={'color/state/saleDim'} subtitle={'Sale with Dim'} colors={getColors('state', 'saleDim')} />
+    <ColorItem title={'color/partnership'} subtitle={'Partnership (HUB)'} colors={getColors('partnership')} />
+    <ColorItem title={'color/gradient'} subtitle={'Gradient'} colors={getColors('gradient')} />
+    <ColorItem title={'color/background'} subtitle={'Background'} colors={getColors('background')} />
+</ColorPalette>
