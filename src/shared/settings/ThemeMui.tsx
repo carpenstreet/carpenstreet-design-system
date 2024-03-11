@@ -24,28 +24,9 @@ export default function ThemeMui({ children }: Props) {
           noSsr: true,
         },
       },
-      MuiRadio: {
-        styleOverrides: {
-          root: {
-            padding: 0,
-            marginRight: '10px',
-            '& .MuiSvgIcon-root': {
-              height: 1,
-              width: 1,
-            },
-          },
-        },
-      },
     },
-    typography: CustomTypographyVariants,
-    breakpoints: {
-      values: {
-        xs: 0,
-        sm: 600,
-        md: 900,
-        lg: 1200,
-        xl: 1296,
-      },
+    typography: {
+      ...CustomTypographyVariants,
     },
   });
 
