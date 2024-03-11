@@ -10,6 +10,6 @@ export const Default: Story = {
   args: {
     width: 24,
     height: 24,
-    color: '#313135',
+    color: 'color/gray/800',
   },
 };
