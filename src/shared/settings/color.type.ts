@@ -1,10 +1,6 @@
-// [todo] color type을 자동으로 만들어 줄 수 없을까?
-// type KeysHelper<T extends Record<string, any>, K extends keyof T> = K extends string
-//   ? `${K}` | (T[K] extends Record<string, any> ? `${K}.${KeysHelper<T[K], keyof T[K]>}` : never)
-//   : `${K}.${KeysHelper<T[K], keyof T[K]>}`;
-//
-// export type ColorType = KeysHelper<typeof color, keyof typeof color>;
-// const test:ColorType = 'skyblue.200';
+import { colorPalette } from '@shared/settings/Color';
+
+export type CustomColorTypes = keyof typeof colorPalette;
 
 // [24.03.06] 현재는 사용하지 않지만, acon에 남아있는 부분들을 위해 남겨둠
 export type TColor =
