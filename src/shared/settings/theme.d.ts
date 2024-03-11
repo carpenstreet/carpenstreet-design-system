@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeOptions } from '@mui/material';
-import { colorPaletteSource, colorPalette } from './Color.ts';
+import { colorPalette } from './Color.ts';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
 
 type ColorPaletteType = typeof colorPalette;
@@ -26,6 +26,13 @@ interface CustomShadowOptions {
 }
 
 interface CustomTypographyVariants extends Record<CustomTypographyVariantsTypes, React.CSSProperties> {}
+
+// Button의 Color Props에 default와 gray를 추가해주려면 palette에도 해당 색상들을 추가해줘야 함
+// 어쩔 수 없이 만든 interface
+interface ButtonColorProps {
+  default: string;
+  gray: string;
+}
 
 // -------------------------------------------------------
 
@@ -57,7 +64,8 @@ declare module '@mui/material/styles' {
 }
 
 declare module '@mui/material/styles/createPalette' {
-  interface PaletteOptions extends ColorPaletteType {}
+  interface Palette extends ColorPaletteType, ButtonColorProps {}
+  interface PaletteOptions extends ColorPaletteType, ButtonColorProps {}
 }
 
 declare module '@mui/material/Typography/Typography' {
@@ -80,5 +88,23 @@ declare module 'styled-components' {
       colText: string;
       colActiveText: string;
     } & ThemeOptions['colors'];
+  }
+}
+
+declare module '@mui/material/Button' {
+  interface ButtonPropsVariantOverrides {
+    underlined: true;
+  }
+
+  interface ButtonPropsSizeOverrides {
+    XL: true;
+    L: true;
+    M: true;
+    S: true;
+  }
+
+  interface ButtonPropsColorOverrides {
+    default: true;
+    gray: true;
   }
 }

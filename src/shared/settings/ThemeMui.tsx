@@ -15,6 +15,11 @@ export default function ThemeMui({ children }: Props) {
   const theme = createTheme({
     palette: {
       ...colorPalette,
+      // Button.tsx의 color props를 위한 기본 설정
+      // Button의 Color Props에 default와 gray를 추가해주려면 palette에도 해당 색상들을 추가해줘야 함
+      // 어쩔 수 없이 만든 기본 색상이며, 아래 MuiButton의 styleOverrides에서 실제 color를 관리함
+      default: '#fff',
+      gray: '#fff',
     },
     components: {
       MuiCssBaseline: {
@@ -23,6 +28,77 @@ export default function ThemeMui({ children }: Props) {
       MuiUseMediaQuery: {
         defaultProps: {
           noSsr: true,
+        },
+      },
+      MuiTypography: {
+        styleOverrides: {
+          root: {
+            letterSpacing: '0',
+          },
+        },
+      },
+
+      MuiButton: {
+        variants: [
+          {
+            props: { variant: 'underlined' },
+            style: {},
+          },
+        ],
+        styleOverrides: {
+          root: {
+            minWidth: 'auto',
+            textTransform: 'none',
+            boxShadow: 'none',
+            '&:hover': {
+              boxShadow: 'none',
+            },
+          },
+          contained: ({ ownerState, theme }) => ({
+            // Common
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '4px',
+            alignSelf: 'stretch',
+
+            // Size
+            ...(ownerState.size === 'L' && {
+              borderRadius: '8px',
+              padding: '12px 22px',
+            }),
+            ...(ownerState.size === 'M' && {
+              borderRadius: '8px',
+              padding: '10px 22px',
+            }),
+            ...(ownerState.size === 'S' && {
+              borderRadius: '4px',
+              padding: '4px 8px',
+            }),
+
+            // Color
+            // font color는 Button.tsx에서 관리
+            ...(ownerState.color === 'primary' && {
+              backgroundColor: theme.palette['color/primary/600'],
+              '&:hover': {
+                backgroundColor: theme.palette['color/primary/700'],
+              },
+            }),
+            ...(ownerState.color === 'default' && {
+              backgroundColor: theme.palette['color/gray/800'],
+              '&:hover': {
+                backgroundColor: theme.palette['color/gray/600'],
+              },
+            }),
+
+            // Disabled
+            // .Mui-disabled 클래스에 대한 css를 바꿔주어야 함
+            // ownerState.disabled && {} 로 override 하기 어려움
+            '&.Mui-disabled': {
+              backgroundColor: theme.palette['color/gray/200'],
+            },
+          }),
         },
       },
     },
