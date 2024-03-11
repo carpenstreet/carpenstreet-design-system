@@ -18,7 +18,7 @@ export default function Button({
   children?: React.ReactNode;
   variant: 'contained' | 'text' | 'outlined';
   size: 'L' | 'M' | 'S';
-  color?: ButtonTypeMap['props']['color'];
+  color?: 'primary' | 'default' | 'gray';
   disabled?: boolean;
   sx?: any;
 }) {
@@ -29,8 +29,15 @@ export default function Button({
   }
 
   function getTypoColor(): CustomColorPaletteTypes {
-    if (disabled) return 'color/gray/400';
-    return 'color/white';
+    if (variant === 'contained') {
+      if (disabled) return 'color/gray/400';
+      return 'color/white';
+    }
+    if (variant === 'outlined') {
+      if (disabled) return 'color/gray/200';
+      if (color === 'primary') return 'color/primary/600';
+      if (color === 'default') return 'color/gray/800';
+    }
   }
 
   return (

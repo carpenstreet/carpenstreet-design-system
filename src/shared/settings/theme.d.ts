@@ -29,9 +29,18 @@ interface CustomTypographyVariants extends Record<CustomTypographyVariantsTypes,
 
 // Button의 Color Props에 default와 gray를 추가해주려면 palette에도 해당 색상들을 추가해줘야 함
 // 어쩔 수 없이 만든 interface
+// 참고: https://github.com/mui/material-ui/issues/29702#issuecomment-972471545
 interface ButtonColorProps {
-  default: string;
-  gray: string;
+  default: {
+    main: string;
+    dark: string;
+    light: string;
+  };
+  gray: {
+    main: string;
+    dark: string;
+    light: string;
+  };
 }
 
 // -------------------------------------------------------
