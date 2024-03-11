@@ -1,5 +1,5 @@
 import { TColor } from '@shared/settings/color.type';
-import { colorPaletteSource as colorObj } from '@shared/settings/Color.ts';
+import { colorPalette as colorObj } from '@shared/settings/Color';
 import { TOpactiy } from './util.type';
 
 export const getColor = (color: TColor): string => {
