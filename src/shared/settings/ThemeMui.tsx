@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { colorPalette } from './Color.ts';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants.ts';
 import { fontFace } from '@shared/styles/fontFaceStyle';
+import { CssBaseline } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -27,8 +28,16 @@ export default function ThemeMui({ children }: Props) {
     },
     typography: {
       ...CustomTypographyVariants,
+      allVariants: {
+        fontFamily: '"Pretendard Variable", Pretendard',
+      },
     },
   });
 
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+  );
 }
