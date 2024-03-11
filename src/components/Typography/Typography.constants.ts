@@ -1,24 +1,24 @@
 export const CustomTypographyVariants = {
   // h1
-  'Typography/Headline/H1/black': {
+  'typography/headline/h1/black': {
     fontFamily: 'Pretendard',
     fontSize: '40px',
     fontWeight: 800,
     lineHeight: '56px',
   },
-  'Typography/Headline/H1/bold': {
+  'typography/headline/h1/bold': {
     fontFamily: 'Pretendard',
     fontSize: '40px',
     fontWeight: 700,
     lineHeight: '56px',
   },
-  'Typography/Headline/H1/medium': {
+  'typography/headline/h1/medium': {
     fontFamily: 'Pretendard',
     fontSize: '40px',
     fontWeight: 600,
     lineHeight: '56px',
   },
-  'Typography/Headline/H1/regular': {
+  'typography/headline/h1/regular': {
     fontFamily: 'Pretendard',
     fontSize: '40px',
     fontWeight: 400,
@@ -26,25 +26,25 @@ export const CustomTypographyVariants = {
   },
 
   // h2
-  'Typography/Headline/H2/black': {
+  'typography/headline/h2/black': {
     fontFamily: 'Pretendard',
     fontSize: '36px',
     fontWeight: 800,
     lineHeight: '48px',
   },
-  'Typography/Headline/H2/bold': {
+  'typography/headline/h2/bold': {
     fontFamily: 'Pretendard',
     fontSize: '36px',
     fontWeight: 700,
     lineHeight: '48px',
   },
-  'Typography/Headline/H2/medium': {
+  'typography/headline/h2/medium': {
     fontFamily: 'Pretendard',
     fontSize: '36px',
     fontWeight: 600,
     lineHeight: '48px',
   },
-  'Typography/Headline/H2/regular': {
+  'typography/headline/h2/regular': {
     fontFamily: 'Pretendard',
     fontSize: '36px',
     fontWeight: 400,
@@ -52,25 +52,25 @@ export const CustomTypographyVariants = {
   },
 
   // h3
-  'Typography/Headline/H3/black': {
+  'typography/headline/h3/black': {
     fontFamily: 'Pretendard',
     fontSize: '32px',
     fontWeight: 800,
     lineHeight: '42px',
   },
-  'Typography/Headline/H3/bold': {
+  'typography/headline/h3/bold': {
     fontFamily: 'Pretendard',
     fontSize: '32px',
     fontWeight: 700,
     lineHeight: '42px',
   },
-  'Typography/Headline/H3/medium': {
+  'typography/headline/h3/medium': {
     fontFamily: 'Pretendard',
     fontSize: '32px',
     fontWeight: 600,
     lineHeight: '42px',
   },
-  'Typography/Headline/H3/regular': {
+  'typography/headline/h3/regular': {
     fontFamily: 'Pretendard',
     fontSize: '32px',
     fontWeight: 400,
@@ -78,25 +78,25 @@ export const CustomTypographyVariants = {
   },
 
   // h4
-  'Typography/Headline/H4/black': {
+  'typography/headline/h4/black': {
     fontFamily: 'Pretendard',
     fontSize: '30px',
     fontWeight: 800,
     lineHeight: '40px',
   },
-  'Typography/Headline/H4/bold': {
+  'typography/headline/h4/bold': {
     fontFamily: 'Pretendard',
     fontSize: '30px',
     fontWeight: 700,
     lineHeight: '40px',
   },
-  'Typography/Headline/H4/medium': {
+  'typography/headline/h4/medium': {
     fontFamily: 'Pretendard',
     fontSize: '30px',
     fontWeight: 600,
     lineHeight: '40px',
   },
-  'Typography/Headline/H4/regular': {
+  'typography/headline/h4/regular': {
     fontFamily: 'Pretendard',
     fontSize: '30px',
     fontWeight: 400,
@@ -104,25 +104,25 @@ export const CustomTypographyVariants = {
   },
 
   // title large
-  'Typography/Title/Large/black': {
+  'typography/title/large/black': {
     fontFamily: 'Pretendard',
     fontSize: '28px',
     fontWeight: 900,
     lineHeight: '36px',
   },
-  'Typography/Title/Large/bold': {
+  'typography/title/large/bold': {
     fontFamily: 'Pretendard',
     fontSize: '28px',
     fontWeight: 700,
     lineHeight: '36px',
   },
-  'Typography/Title/Large/medium': {
+  'typography/title/large/medium': {
     fontFamily: 'Pretendard',
     fontSize: '28px',
     fontWeight: 400,
     lineHeight: '36px',
   },
-  'Typography/Title/Large/regular': {
+  'typography/title/large/regular': {
     fontFamily: 'Pretendard',
     fontSize: '28px',
     fontWeight: 400,
@@ -130,25 +130,25 @@ export const CustomTypographyVariants = {
   },
 
   // title medium
-  'Typography/Title/Medium/black': {
+  'typography/title/medium/black': {
     fontFamily: 'Pretendard',
     fontSize: '24px',
     fontWeight: 800,
     lineHeight: '32px',
   },
-  'Typography/Title/Medium/bold': {
+  'typography/title/medium/bold': {
     fontFamily: 'Pretendard',
     fontSize: '24px',
     fontWeight: 700,
     lineHeight: '32px',
   },
-  'Typography/Title/Medium/medium': {
+  'typography/title/medium/medium': {
     fontFamily: 'Pretendard',
     fontSize: '24px',
     fontWeight: 600,
     lineHeight: '32px',
   },
-  'Typography/Title/Medium/regular': {
+  'typography/title/medium/regular': {
     fontFamily: 'Pretendard',
     fontSize: '24px',
     fontWeight: 400,
@@ -156,25 +156,25 @@ export const CustomTypographyVariants = {
   },
 
   // title small
-  'Typography/Title/Small/black': {
+  'typography/title/small/black': {
     fontFamily: 'Pretendard',
     fontSize: '20px',
     fontWeight: 900,
     lineHeight: '28px',
   },
-  'Typography/Title/Small/bold': {
+  'typography/title/small/bold': {
     fontFamily: 'Pretendard',
     fontSize: '20px',
     fontWeight: 700,
     lineHeight: '28px',
   },
-  'Typography/Title/Small/medium': {
+  'typography/title/small/medium': {
     fontFamily: 'Pretendard',
     fontSize: '20px',
     fontWeight: 600,
     lineHeight: '28px',
   },
-  'Typography/Title/Small/regular': {
+  'typography/title/small/regular': {
     fontFamily: 'Pretendard',
     fontSize: '20px',
     fontWeight: 400,
@@ -182,25 +182,25 @@ export const CustomTypographyVariants = {
   },
 
   // body medium
-  'Typography/Body/Medium/black': {
+  'typography/body/medium/black': {
     fontFamily: 'Pretendard',
     fontSize: '16px',
     fontWeight: 800,
     lineHeight: '24px',
   },
-  'Typography/Body/Medium/bold': {
+  'typography/body/medium/bold': {
     fontFamily: 'Pretendard',
     fontSize: '16px',
     fontWeight: 700,
     lineHeight: '24px',
   },
-  'Typography/Body/Medium/medium': {
+  'typography/body/medium/medium': {
     fontFamily: 'Pretendard',
     fontSize: '16px',
     fontWeight: 600,
     lineHeight: '24px',
   },
-  'Typography/Body/Medium/regular': {
+  'typography/body/medium/regular': {
     fontFamily: 'Pretendard',
     fontSize: '16px',
     fontWeight: 400,
@@ -208,25 +208,25 @@ export const CustomTypographyVariants = {
   },
 
   // body small
-  'Typography/Body/Small/black': {
+  'typography/body/small/black': {
     fontFamily: 'Pretendard',
     fontSize: '14px',
     fontWeight: 800,
     lineHeight: '20px',
   },
-  'Typography/Body/Small/bold': {
+  'typography/body/small/bold': {
     fontFamily: 'Pretendard',
     fontSize: '14px',
     fontWeight: 700,
     lineHeight: '20px',
   },
-  'Typography/Body/Small/medium': {
+  'typography/body/small/medium': {
     fontFamily: 'Pretendard',
     fontSize: '14px',
     fontWeight: 600,
     lineHeight: '20px',
   },
-  'Typography/Body/Small/regular': {
+  'typography/body/small/regular': {
     fontFamily: 'Pretendard',
     fontSize: '14px',
     fontWeight: 400,
@@ -234,25 +234,25 @@ export const CustomTypographyVariants = {
   },
 
   // label Large
-  'Typography/Label/Large/black': {
+  'typography/label/large/black': {
     fontFamily: 'Pretendard',
     fontSize: '12px',
     fontWeight: 800,
     lineHeight: '16px',
   },
-  'Typography/Label/Large/bold': {
+  'typography/label/large/bold': {
     fontFamily: 'Pretendard',
     fontSize: '12px',
     fontWeight: 700,
     lineHeight: '16px',
   },
-  'Typography/Label/Large/medium': {
+  'typography/label/large/medium': {
     fontFamily: 'Pretendard',
     fontSize: '12px',
     fontWeight: 600,
     lineHeight: '16px',
   },
-  'Typography/Label/Large/regular': {
+  'typography/label/large/regular': {
     fontFamily: 'Pretendard',
     fontSize: '12px',
     fontWeight: 400,
@@ -260,25 +260,25 @@ export const CustomTypographyVariants = {
   },
 
   // label Medium
-  'Typography/Label/Medium/black': {
+  'typography/label/medium/black': {
     fontFamily: 'Pretendard',
     fontSize: '11px',
     fontWeight: 800,
     lineHeight: '14px',
   },
-  'Typography/Label/Medium/bold': {
+  'typography/label/medium/bold': {
     fontFamily: 'Pretendard',
     fontSize: '11px',
     fontWeight: 700,
     lineHeight: '14px',
   },
-  'Typography/Label/Medium/medium': {
+  'typography/label/medium/medium': {
     fontFamily: 'Pretendard',
     fontSize: '11px',
     fontWeight: 600,
     lineHeight: '14px',
   },
-  'Typography/Label/Medium/regular': {
+  'typography/label/medium/regular': {
     fontFamily: 'Pretendard',
     fontSize: '11px',
     fontWeight: 400,
@@ -286,25 +286,25 @@ export const CustomTypographyVariants = {
   },
 
   // label Small
-  'Typography/Label/Small/black': {
+  'typography/label/small/black': {
     fontFamily: 'Pretendard',
     fontSize: '10px',
     fontWeight: 800,
     lineHeight: '14px',
   },
-  'Typography/Label/Small/bold': {
+  'typography/label/small/bold': {
     fontFamily: 'Pretendard',
     fontSize: '10px',
     fontWeight: 700,
     lineHeight: '14px',
   },
-  'Typography/Label/Small/medium': {
+  'typography/label/small/medium': {
     fontFamily: 'Pretendard',
     fontSize: '10px',
     fontWeight: 600,
     lineHeight: '14px',
   },
-  'Typography/Label/Small/regular': {
+  'typography/label/small/regular': {
     fontFamily: 'Pretendard',
     fontSize: '10px',
     fontWeight: 400,
