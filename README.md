@@ -16,7 +16,7 @@
     <img src="https://img.shields.io/badge/Node.js-v18.17.0-green?logo=nodedotjs">
     <img src="https://img.shields.io/badge/yarn-v1.22.17-288fbc?logo=yarn">
     <img src="https://img.shields.io/badge/React-18.2.0-017fa6?logo=react">
-    <img src="https://img.shields.io/badge/storybook-7.0.2-ff66cc?logo=storybook">
+    <img src="https://img.shields.io/badge/storybook-7.6.17-ff66cc?logo=storybook">
     <a href="https://github.com/carpenstreet/carpenstreet-desgin-system"><img src="https://img.shields.io/badge/GitHub-%23121011?logo=github&logoColor=white"></a>
 </p>
 
