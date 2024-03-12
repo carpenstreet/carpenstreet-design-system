@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import SearchIcon from './SearchIcon';
 
-const meta: Meta = { title: 'Element/Icon/Search', component: SearchIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/Search',
+  component: SearchIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof SearchIcon>;

@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import EarningIcon from './EarningIcon';
 
-const meta: Meta = { title: 'Element/Icon/Earning', component: EarningIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/Earning',
+  component: EarningIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof EarningIcon>;

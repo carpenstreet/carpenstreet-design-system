@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import CloseIcon from './CloseIcon';
 
-const meta: Meta = { title: 'Element/Icon/Close', component: CloseIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/Close',
+  component: CloseIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof CloseIcon>;

@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import MinusIcon from './MinusIcon';
 
-const meta: Meta = { title: 'Element/Icon/Minus', component: MinusIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/Minus',
+  component: MinusIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof MinusIcon>;

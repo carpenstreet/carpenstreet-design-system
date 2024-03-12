@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import ProfileFilledIcon from './ProfileFilledIcon';
 
-const meta: Meta = { title: 'Element/Icon/ProfileFilled', component: ProfileFilledIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/ProfileFilled',
+  component: ProfileFilledIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof ProfileFilledIcon>;

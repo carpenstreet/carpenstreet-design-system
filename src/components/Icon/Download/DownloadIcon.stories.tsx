@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import DownloadIcon from './DownloadIcon';
 
-const meta: Meta = { title: 'Element/Icon/Download', component: DownloadIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/Download',
+  component: DownloadIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof DownloadIcon>;

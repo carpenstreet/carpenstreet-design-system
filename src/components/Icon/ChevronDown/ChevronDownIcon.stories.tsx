@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import ChevronDownIcon from './ChevronDownIcon';
 
-const meta: Meta = { title: 'Element/Icon/ChevronDown', component: ChevronDownIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/ChevronDown',
+  component: ChevronDownIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof ChevronDownIcon>;

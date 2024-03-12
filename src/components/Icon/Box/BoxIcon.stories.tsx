@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import BoxIcon from './BoxIcon';
 
-const meta: Meta = { title: 'Element/Icon/Box', component: BoxIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/Box',
+  component: BoxIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof BoxIcon>;

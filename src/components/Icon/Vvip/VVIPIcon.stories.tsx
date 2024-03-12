@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import VVIPIcon from './VVIPIcon';
 
-const meta: Meta = { title: 'Element/Icon/VVIP', component: VVIPIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/VVIP',
+  component: VVIPIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof VVIPIcon>;

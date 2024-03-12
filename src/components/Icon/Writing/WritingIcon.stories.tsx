@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import WritingIcon from './WritingIcon';
 
-const meta: Meta = { title: 'Element/Icon/Writing', component: WritingIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/Writing',
+  component: WritingIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof WritingIcon>;

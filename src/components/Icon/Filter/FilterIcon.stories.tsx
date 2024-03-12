@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import FilterIcon from './FilterIcon';
 
-const meta: Meta = { title: 'Element/Icon/Filter', component: FilterIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/Filter',
+  component: FilterIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof FilterIcon>;

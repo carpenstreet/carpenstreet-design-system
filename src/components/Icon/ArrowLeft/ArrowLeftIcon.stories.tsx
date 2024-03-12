@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import ArrowLeftIcon from './ArrowLeftIcon';
 
-const meta: Meta = { title: 'Element/Icon/ArrowLeft', component: ArrowLeftIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/ArrowLeft',
+  component: ArrowLeftIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof ArrowLeftIcon>;

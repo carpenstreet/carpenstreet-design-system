@@ -1,7 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
+import ThemeMui from '@shared/settings/ThemeMui';
 import CaretUpIcon from './CaretUpIcon';
 
-const meta: Meta = { title: 'Element/Icon/CaretUp', component: CaretUpIcon, tags: ['autodocs'] };
+const meta: Meta = {
+  title: 'Foundation/Icon/CaretUp',
+  component: CaretUpIcon,
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
+};
 
 export default meta;
 type Story = StoryObj<typeof CaretUpIcon>;
