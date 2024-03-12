@@ -1,4 +1,4 @@
-import { Button, Letter, Shadow, Typography, Icon, CategoryIcon, ProductIcon, GnbIcon, SignIcon } from '@components';
+import { Button, Letter, Shadow, Typography, Icon } from '@components';
 import DesignSystemProvider from './shared/settings/ThemeMui';
 
 export {
@@ -8,10 +8,6 @@ export {
   Typography,
   //
   Icon,
-  CategoryIcon,
-  ProductIcon,
-  GnbIcon,
-  SignIcon,
   //
   DesignSystemProvider,
 };
@@ -23,10 +19,6 @@ export default {
   Typography,
   //
   Icon,
-  CategoryIcon,
-  ProductIcon,
-  GnbIcon,
-  SignIcon,
   //
   DesignSystemProvider,
 };

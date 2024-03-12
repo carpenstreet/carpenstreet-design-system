@@ -1,35 +1,106 @@
-import * as CategoryIcon from './Category';
-import * as GnbIcon from './Gnb';
-import * as ProductIcon from './Product';
-import * as SignIcon from './Sign';
+import ProfileFilledIcon from './ProfileFilled/ProfileFilledIcon';
+import SearchIcon from './Search/SearchIcon';
+import CategoryIcon from './Cateogry/CategoryIcon';
+import StarIcon from './Star/StarIcon';
+import ImageIcon from './Image/ImageIcon';
+import DownloadIcon from './Download/DownloadIcon';
+import MinusIcon from './Minus/MinusIcon';
+import CloseIcon from './Close/CloseIcon';
 
-/* begin :  remapping for old usage */
-const Category = CategoryIcon;
-const Gnb = GnbIcon;
-const Product = ProductIcon;
-const Sign = SignIcon;
-/* end :  remapping for old usage */
+import VVIPIcon from './Vvip/VVIPIcon';
+import FilterIcon from './Filter/FilterIcon';
+import ViewIcon from './View/ViewIcon';
+import CopyIcon from './Copy/CopyIcon';
+import WritingIcon from './Writing/WritingIcon';
+import BoxIcon from './Box/BoxIcon';
+import EarningIcon from './Earning/EarningIcon';
+
+import NoticeOutlineIcon from './NoticeOutline/NoticeOutlineIcon';
+import NoticeIcon from './Notice/NoticeIcon';
+import InformationOutlineIcon from './InformationOutline/InformationOutlineIcon';
+import InformationIcon from './Information/InformationIcon';
+import RemoveIcon from './Remove/RemoveIcon';
+
+import ChevronLeftIcon from './ChevronLeft/ChevronLeftIcon';
+import ChevronRightIcon from './ChevronRight/ChevronRightIcon';
+import ChevronDownIcon from './ChevronDown/ChevronDownIcon';
+import ChevronUpIcon from './ChevronUp/ChevronUpIcon';
+import CaretUpIcon from './CaretUp/CaretUpIcon';
+import CaretDownIcon from './CaretDown/CaretDownIcon';
+import ArrowDownIcon from './ArrowDown/ArrowDownIcon';
+import ArrowUpIcon from './ArrowUp/ArrowUpIcon';
+import ArrowRightIcon from './ArrowRight/ArrowRightIcon';
+import ArrowLeftIcon from './ArrowLeft/ArrowLeftIcon';
+
+import SecurityIcon from './Security/SecurityIcon';
+import BubbleIcon from './Bubble/BubbleIcon';
 
 export {
-  Category,
-  Gnb,
-  Product,
-  Sign,
-  //
+  ProfileFilledIcon,
+  SearchIcon,
   CategoryIcon,
-  GnbIcon,
-  ProductIcon,
-  SignIcon,
-}
+  StarIcon,
+  ImageIcon,
+  DownloadIcon,
+  MinusIcon,
+  CloseIcon,
+  VVIPIcon,
+  FilterIcon,
+  ViewIcon,
+  CopyIcon,
+  WritingIcon,
+  BoxIcon,
+  EarningIcon,
+  NoticeOutlineIcon,
+  NoticeIcon,
+  InformationOutlineIcon,
+  InformationIcon,
+  RemoveIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+  CaretUpIcon,
+  CaretDownIcon,
+  ArrowDownIcon,
+  ArrowUpIcon,
+  ArrowRightIcon,
+  ArrowLeftIcon,
+  SecurityIcon,
+  BubbleIcon,
+};
 
 export default {
-  Category,
-  Gnb,
-  Product,
-  Sign,
-  //
+  ProfileFilledIcon,
+  SearchIcon,
   CategoryIcon,
-  GnbIcon,
-  ProductIcon,
-  SignIcon,
-}
+  StarIcon,
+  ImageIcon,
+  DownloadIcon,
+  MinusIcon,
+  CloseIcon,
+  VVIPIcon,
+  FilterIcon,
+  ViewIcon,
+  CopyIcon,
+  WritingIcon,
+  BoxIcon,
+  EarningIcon,
+  NoticeOutlineIcon,
+  NoticeIcon,
+  InformationOutlineIcon,
+  InformationIcon,
+  RemoveIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
+  CaretUpIcon,
+  CaretDownIcon,
+  ArrowDownIcon,
+  ArrowUpIcon,
+  ArrowRightIcon,
+  ArrowLeftIcon,
+  SecurityIcon,
+  BubbleIcon,
+};
