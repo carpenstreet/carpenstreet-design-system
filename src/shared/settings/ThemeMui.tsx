@@ -185,6 +185,7 @@ export default function ThemeMui({ children }: Props) {
         // 아래 object의 순서는 중요함
         // 예를 들자면, disabled에 관한 style을 정의하는 object가 가장 나중에 위치해 있어야 나머지 object를 override하면서 정상적으로 작동함
         variants: [
+          // underlined
           {
             props: { variant: 'underlined' },
             style: {
@@ -252,6 +253,47 @@ export default function ThemeMui({ children }: Props) {
               borderBottom: `1px solid ${theme.palette['color/gray/200']}`,
               '& > .MuiTypography-root': {
                 color: theme.palette['color/gray/200'],
+              },
+            }),
+          },
+          // iconOnly
+          {
+            props: {
+              variant: 'iconOnly',
+            },
+            style: {
+              display: 'flex',
+              padding: '6px',
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: '8px',
+            },
+          },
+          {
+            props: (props) => props.variant === 'iconOnly' && props.size === 'M',
+            style: {
+              padding: '6px',
+            },
+          },
+          {
+            props: (props) => props.variant === 'iconOnly' && props.size === 'S',
+            style: {
+              padding: '4px',
+            },
+          },
+          {
+            props: (props) => props.variant === 'iconOnly' && props.color === 'primary',
+            style: ({ theme }) => ({
+              '&:hover': {
+                backgroundColor: theme.palette['color/primary/dim/100'],
+              },
+            }),
+          },
+          {
+            props: (props) => props.variant === 'iconOnly' && props.color === 'default',
+            style: ({ theme }) => ({
+              '&:hover': {
+                backgroundColor: theme.palette['color/gray/100'],
               },
             }),
           },

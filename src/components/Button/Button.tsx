@@ -14,7 +14,7 @@ export default function Button({
   weight = 'regular',
 }: {
   children?: React.ReactNode;
-  variant: 'contained' | 'outlined' | 'text' | 'underlined';
+  variant: 'contained' | 'outlined' | 'text' | 'underlined' | 'iconOnly';
   size: 'XL' | 'L' | 'M' | 'S';
   color?: 'primary' | 'default' | 'gray';
   disabled?: boolean;

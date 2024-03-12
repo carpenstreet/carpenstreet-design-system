@@ -103,6 +103,7 @@ declare module 'styled-components' {
 declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
     underlined: true;
+    iconOnly: true;
   }
 
   interface ButtonPropsSizeOverrides {
