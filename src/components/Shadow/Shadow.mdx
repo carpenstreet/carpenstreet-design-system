@@ -1,0 +1,30 @@
+import { Meta, Canvas, Story } from '@storybook/blocks';
+import * as ShadowPaperStories from './ShadowPaper.stories';
+import * as ShadowBoxStories from './ShadowBox.stories';
+
+<Meta title='Foundation/Shadow' />
+
+# Shadow
+
+- 인터페이스 요소를 다른 요소와 다르게 강조하여 표현할 때 그림자를 사용할 수 있습니다.
+- MUI의 Box 및 Paper 컴포넌트에서 대부분 사용됩니다.
+
+---
+
+### Shadow - Paper Components
+<Canvas>
+  <Story of={ShadowPaperStories.ShadowPaper1} />
+  <Story of={ShadowPaperStories.ShadowPaper2} />
+  <Story of={ShadowPaperStories.ShadowPaper3} />
+  <Story of={ShadowPaperStories.ShadowPaper4} />
+  <Story of={ShadowPaperStories.ShadowPaper5} />
+</Canvas>
+
+### Shadow - Box Components
+<Canvas>
+  <Story of={ShadowBoxStories.ShadowBox1} />
+  <Story of={ShadowBoxStories.ShadowBox2} />
+  <Story of={ShadowBoxStories.ShadowBox3} />
+  <Story of={ShadowBoxStories.ShadowBox4} />
+  <Story of={ShadowBoxStories.ShadowBox5} />
+</Canvas>
