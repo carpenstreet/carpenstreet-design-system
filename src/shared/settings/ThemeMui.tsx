@@ -446,6 +446,13 @@ export default function ThemeMui({ children }: Props) {
         fontFamily: '"Pretendard Variable", Pretendard',
       },
     },
+    spacing: 4,
+    breakpoints: {
+      values: {
+        mobile: 0,
+        desktop: 768,
+      },
+    },
     shadows,
   });
 

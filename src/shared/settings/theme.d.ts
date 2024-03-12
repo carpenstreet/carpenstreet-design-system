@@ -70,6 +70,16 @@ declare module '@mui/material/styles' {
   interface TypographyVariants extends CustomTypographyVariants {}
 
   interface TypographyVariantsOptions extends Partial<CustomTypographyVariants> {}
+
+  interface BreakpointOverrides {
+    xs: false;
+    sm: false;
+    md: false;
+    lg: false;
+    xl: false;
+    mobile: true;
+    desktop: true;
+  }
 }
 
 declare module '@mui/material/styles/createPalette' {
