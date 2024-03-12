@@ -54,21 +54,19 @@ export default function ThemeMui({ children }: Props) {
       MuiButton: {
         styleOverrides: {
           root: {
+            // 기본적으로 설정되어 있던 css 해제
             minWidth: 'auto',
             textTransform: 'none',
             boxShadow: 'none',
             '&:hover': {
               boxShadow: 'none',
             },
-          },
-          contained: ({ ownerState, theme }) => ({
             // Common
             display: 'flex',
-            flexDirection: 'column',
             justifyContent: 'center',
-            alignItems: 'flex-start',
-            gap: '4px',
-            alignSelf: 'stretch',
+            alignItems: 'center',
+          },
+          contained: ({ ownerState, theme }) => ({
             '& > .MuiTypography-root': {
               color: theme.palette['color/white'],
             },
@@ -112,14 +110,6 @@ export default function ThemeMui({ children }: Props) {
             },
           }),
           outlined: ({ ownerState, theme }) => ({
-            // Common
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            gap: '4px',
-            alignSelf: 'stretch',
-
             // Size
             ...(ownerState.size === 'L' && {
               borderRadius: '8px',
@@ -168,13 +158,6 @@ export default function ThemeMui({ children }: Props) {
             },
           }),
           text: ({ ownerState, theme }) => ({
-            // Common
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            gap: '4px',
-            alignSelf: 'stretch',
             borderRadius: 'unset',
             padding: 'unset',
             backgroundColor: 'transparent',
@@ -217,10 +200,6 @@ export default function ThemeMui({ children }: Props) {
           {
             props: { variant: 'underlined' },
             style: {
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'flex-start',
               gap: '4px',
               margin: '4px',
               padding: ' 0 0 2px 0',
