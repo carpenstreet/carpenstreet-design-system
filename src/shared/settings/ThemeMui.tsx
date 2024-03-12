@@ -45,6 +45,12 @@ export default function ThemeMui({ children }: Props) {
           },
         },
       },
+      // Click 시 Ripple 효과 off
+      MuiButtonBase: {
+        defaultProps: {
+          disableRipple: true,
+        },
+      },
       MuiButton: {
         styleOverrides: {
           root: {
