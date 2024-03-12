@@ -72,7 +72,8 @@ export default function ThemeMui({ children }: Props) {
             },
 
             // Size
-            ...(ownerState.size === 'L' && {
+            // contained의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
+            ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
               borderRadius: '8px',
               padding: '12px 22px',
             }),
@@ -92,7 +93,8 @@ export default function ThemeMui({ children }: Props) {
                 backgroundColor: theme.palette['color/primary/700'],
               },
             }),
-            ...(ownerState.color === 'default' && {
+            // contained의 경우 gray 색상을 지원하지 않으므로 gray 입력받을 경우 fallback으로 default 색상 적용
+            ...((ownerState.color === 'default' || ownerState.color === 'gray') && {
               backgroundColor: theme.palette['color/gray/800'],
               '&:hover': {
                 backgroundColor: theme.palette['color/gray/600'],
@@ -111,7 +113,8 @@ export default function ThemeMui({ children }: Props) {
           }),
           outlined: ({ ownerState, theme }) => ({
             // Size
-            ...(ownerState.size === 'L' && {
+            // contained의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
+            ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
               borderRadius: '8px',
               padding: '12px 22px',
             }),
@@ -135,7 +138,8 @@ export default function ThemeMui({ children }: Props) {
                 backgroundColor: theme.palette['color/primary/dim/100'],
               },
             }),
-            ...(ownerState.color === 'default' && {
+            // contained의 경우 gray 색상을 지원하지 않으므로 gray 입력받을 경우 fallback으로 default 색상 적용
+            ...((ownerState.color === 'default' || ownerState.color === 'gray') && {
               border: `1px solid ${theme.palette['color/gray/dim/400']}`,
               '& > .MuiTypography-root': {
                 color: theme.palette['color/gray/800'],

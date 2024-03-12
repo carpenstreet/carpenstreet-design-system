@@ -7,22 +7,31 @@ export default function Button({
   children = 'button',
   variant,
   size,
-  color = 'primary',
+  color = 'default',
   disabled,
   sx,
   weight = 'regular',
+  startIcon,
+  endIcon,
 }: {
   children?: React.ReactNode;
-  variant: 'contained' | 'outlined' | 'text' | 'underlined' | 'iconOnly';
+  variant: 'contained' | 'outlined' | 'text' | 'underlined';
   size: 'XL' | 'L' | 'M' | 'S';
   color?: 'primary' | 'default' | 'gray';
   disabled?: boolean;
   sx?: any;
   weight?: 'regular' | 'bold';
+  startIcon?: React.ReactNode;
+  endIcon?: React.ReactNode;
 }) {
   function getTypoVariant(): CustomTypographyVariantsTypes {
-    if (variant === 'contained' || variant === 'outlined') {
-      if (size === 'L') return 'typography/body/medium/bold';
+    if (variant === 'contained') {
+      if (size === 'L' || size === 'XL') return 'typography/body/medium/bold';
+      if (size === 'M') return 'typography/body/small/bold';
+      if (size === 'S') return 'typography/label/large/bold';
+    }
+    if (variant === 'outlined') {
+      if (size === 'L' || size === 'XL') return 'typography/body/medium/bold';
       if (size === 'M') return 'typography/body/small/bold';
       if (size === 'S') return 'typography/label/large/bold';
     }
@@ -59,8 +68,21 @@ export default function Button({
     }
   }
 
+  React.useEffect(() => {
+    if (variant === 'contained') {
+      if (size === 'XL') console.error('Design system Button props error: size - contained variant는 XL을 지원하지 않습니다 (fallback 처리로 L 사이즈가 적용되었습니다)');
+      if (color === 'gray') console.error('Design system Button props error: color - contained variant는 gray를 지원하지 않습니다 (fallback 처리로 default가 적용되었습니다)');
+      if (weight === 'bold') console.error('Design system Button props error: weight - contained variant는  bold를 지원하지 않습니다 (regular와 동일하게 처리됩니다)');
+    }
+    if (variant === 'outlined') {
+      if (size === 'XL') console.error('Design system Button props error: size - outlined variant는 XL을 지원하지 않습니다 (fallback 처리로 L 사이즈가 적용되었습니다)');
+      if (color === 'gray') console.error('Design system Button props error: color - outlined variant는 gray를 지원하지 않습니다 (fallback 처리로 default가 적용되었습니다)');
+      if (weight === 'bold') console.error('Design system Button props error: weight - outlined variant는  bold를 지원하지 않습니다 (regular와 동일하게 처리됩니다)');
+    }
+  }, [variant, size, color, weight]);
+
   return (
-    <MUIButton variant={variant} size={size} disabled={disabled} color={color} sx={sx}>
+    <MUIButton variant={variant} size={size} disabled={disabled} color={color} sx={sx} startIcon={startIcon} endIcon={endIcon}>
       <Typography variant={getTypoVariant()}>{children}</Typography>
     </MUIButton>
   );
