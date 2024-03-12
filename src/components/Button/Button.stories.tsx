@@ -1,32 +1,68 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
-import { TButtonOn } from './Button.type';
+import ThemeMui from '@shared/settings/ThemeMui.tsx';
+import { ChevronLeftIcon, ChevronRightIcon } from '@components';
 
 const meta: Meta<typeof Button> = {
   title: 'Component/Button',
   component: Button,
-  tags: ['autodocs'],
-  // argTypes: {
-  //   on: { control: { include: ['light', 'dark'] } },
-  //   color: { control: { include: ['primary', 'default'] } },
-  //   style: { control: { include: ['filled', 'outlined'] }, if: { arg: 'color', eq: 'primary' } },
-  // },
+  decorators: [
+    (Story) => (
+      <ThemeMui>
+        <Story />
+      </ThemeMui>
+    ),
+  ],
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
+const commonArgs = {
+  children: 'button',
+  variant: 'contained',
+  size: 'L',
+  color: 'default',
+  disabled: false,
+  weight: 'regular',
+} as const;
+
+const excludedParameters = {
+  parameters: {
+    controls: {
+      exclude: ['startIcon', 'endIcon'],
+    },
+  },
+};
+
 export const Default: Story = {
   args: {
-    on: 'light',
-    color: 'primary',
-    style: 'filled',
-    size: 'M',
-    activated: true,
-    startIcon: false,
-    endIcon: false,
-    isLoading: false,
-    width: 'auto',
-    children: 'button',
+    ...commonArgs,
   },
+  ...excludedParameters,
+};
+
+export const StartAndEnd: Story = {
+  args: {
+    ...commonArgs,
+    startIcon: <ChevronLeftIcon color={'color/green/500'} />,
+    endIcon: <ChevronRightIcon color={'color/green/500'} />,
+  },
+  ...excludedParameters,
+};
+
+export const Start: Story = {
+  args: {
+    ...commonArgs,
+    startIcon: <ChevronLeftIcon color={'color/green/500'} />,
+  },
+  ...excludedParameters,
+};
+
+export const End: Story = {
+  args: {
+    ...commonArgs,
+    endIcon: <ChevronRightIcon color={'color/green/500'} />,
+  },
+  ...excludedParameters,
 };
