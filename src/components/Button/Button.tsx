@@ -1,7 +1,6 @@
 import MUIButton from '@mui/material/Button';
 import React from 'react';
 import { Typography } from '@components';
-import { CustomColorPaletteTypes } from '@shared/settings/color.type.ts';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
 
 export default function Button({
@@ -60,29 +59,9 @@ export default function Button({
     }
   }
 
-  function getTypoColor(): CustomColorPaletteTypes {
-    if (variant === 'contained') {
-      if (disabled) return 'color/gray/400';
-      return 'color/white';
-    }
-    if (variant === 'outlined') {
-      if (disabled) return 'color/gray/200';
-      if (color === 'primary') return 'color/primary/600';
-      if (color === 'default') return 'color/gray/800';
-    }
-    if (variant === 'text') {
-      if (disabled) return 'color/gray/200';
-      if (color === 'primary') return 'color/primary/600';
-      if (color === 'default') return 'color/gray/800';
-      if (color === 'gray') return 'color/gray/400';
-    }
-  }
-
   return (
     <MUIButton variant={variant} size={size} disabled={disabled} color={color} sx={sx}>
-      <Typography variant={getTypoVariant()} color={getTypoColor()}>
-        {children}
-      </Typography>
+      <Typography variant={getTypoVariant()}>{children}</Typography>
     </MUIButton>
   );
 }

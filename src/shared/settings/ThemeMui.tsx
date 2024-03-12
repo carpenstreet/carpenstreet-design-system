@@ -63,6 +63,9 @@ export default function ThemeMui({ children }: Props) {
             alignItems: 'flex-start',
             gap: '4px',
             alignSelf: 'stretch',
+            '& > .MuiTypography-root': {
+              color: theme.palette['color/white'],
+            },
 
             // Size
             ...(ownerState.size === 'L' && {
@@ -79,7 +82,6 @@ export default function ThemeMui({ children }: Props) {
             }),
 
             // Color
-            // font color는 Button.tsx에서 관리
             ...(ownerState.color === 'primary' && {
               backgroundColor: theme.palette['color/primary/600'],
               '&:hover': {
@@ -97,6 +99,9 @@ export default function ThemeMui({ children }: Props) {
             // .Mui-disabled 클래스에 대한 css를 바꿔주어야 함
             // ownerState.disabled && {} 로 override 하기 어려움
             '&.Mui-disabled': {
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/gray/400'],
+              },
               backgroundColor: theme.palette['color/gray/200'],
             },
           }),
@@ -124,9 +129,11 @@ export default function ThemeMui({ children }: Props) {
             }),
 
             // Color
-            // font color는 Button.tsx에서 관리
             ...(ownerState.color === 'primary' && {
               border: `1px solid ${theme.palette['color/primary/600']}`,
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/primary/600'],
+              },
               '&:hover': {
                 border: `1px solid ${theme.palette['color/primary/600']}`,
                 backgroundColor: theme.palette['color/primary/dim/100'],
@@ -134,6 +141,9 @@ export default function ThemeMui({ children }: Props) {
             }),
             ...(ownerState.color === 'default' && {
               border: `1px solid ${theme.palette['color/gray/dim/400']}`,
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/gray/800'],
+              },
               '&:hover': {
                 border: `1px solid ${theme.palette['color/gray/dim/400']}`,
                 backgroundColor: theme.palette['color/gray/dim/100'],
@@ -144,6 +154,9 @@ export default function ThemeMui({ children }: Props) {
             // .Mui-disabled 클래스에 대한 css를 바꿔주어야 함
             // ownerState.disabled && {} 로 override 하기 어려움
             '&.Mui-disabled': {
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/gray/200'],
+              },
               border: `1px solid ${theme.palette['color/gray/200']}`,
               backgroundColor: theme.palette['color/white'],
             },
@@ -160,20 +173,28 @@ export default function ThemeMui({ children }: Props) {
             padding: 'unset',
 
             // Color
-            // font color는 Button.tsx에서 관리
             ...(ownerState.color === 'primary' && {
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/primary/600'],
+              },
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/primary/600']}`,
                 backgroundColor: theme.palette['color/white'],
               },
             }),
             ...(ownerState.color === 'default' && {
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/gray/800'],
+              },
               '&:hover': {
                 border: `1px solid ${theme.palette['color/gray/800']}`,
                 backgroundColor: theme.palette['color/white'],
               },
             }),
             ...(ownerState.color === 'gray' && {
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/gray/400'],
+              },
               '&:hover': {
                 border: `1px solid ${theme.palette['color/gray/400']}`,
                 backgroundColor: theme.palette['color/white'],
