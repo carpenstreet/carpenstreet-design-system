@@ -279,47 +279,6 @@ export default function ThemeMui({ children }: Props) {
               },
             }),
           },
-          // iconOnly
-          {
-            props: {
-              variant: 'iconOnly',
-            },
-            style: {
-              display: 'flex',
-              padding: '6px',
-              justifyContent: 'center',
-              alignItems: 'center',
-              borderRadius: '8px',
-            },
-          },
-          {
-            props: (props) => props.variant === 'iconOnly' && props.size === 'M',
-            style: {
-              padding: '6px',
-            },
-          },
-          {
-            props: (props) => props.variant === 'iconOnly' && props.size === 'S',
-            style: {
-              padding: '4px',
-            },
-          },
-          {
-            props: (props) => props.variant === 'iconOnly' && props.color === 'primary',
-            style: ({ theme }) => ({
-              '&:hover': {
-                backgroundColor: theme.palette['color/primary/dim/100'],
-              },
-            }),
-          },
-          {
-            props: (props) => props.variant === 'iconOnly' && props.color === 'default',
-            style: ({ theme }) => ({
-              '&:hover': {
-                backgroundColor: theme.palette['color/gray/100'],
-              },
-            }),
-          },
         ],
       },
     },
