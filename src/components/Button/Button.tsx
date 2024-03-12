@@ -14,7 +14,7 @@ export default function Button({
   weight = 'regular',
 }: {
   children?: React.ReactNode;
-  variant: 'contained' | 'outlined' | 'text';
+  variant: 'contained' | 'outlined' | 'text' | 'underlined';
   size: 'XL' | 'L' | 'M' | 'S';
   color?: 'primary' | 'default' | 'gray';
   disabled?: boolean;
@@ -36,6 +36,23 @@ export default function Button({
       }
       if (weight === 'bold') {
         if (size === 'XL') return 'typography/title/medium/bold';
+        if (size === 'L') return 'typography/body/medium/bold';
+        if (size === 'M') return 'typography/body/small/bold';
+        if (size === 'S') return 'typography/label/large/bold';
+      }
+    }
+    if (variant === 'underlined') {
+      if (size === 'XL') {
+        console.error('underlined button does not support XL size');
+        if (weight === 'regular') return 'typography/body/medium/regular';
+        if (weight === 'bold') return 'typography/body/medium/bold';
+      }
+      if (weight === 'regular') {
+        if (size === 'L') return 'typography/body/medium/regular';
+        if (size === 'M') return 'typography/body/small/regular';
+        if (size === 'S') return 'typography/label/large/regular';
+      }
+      if (weight === 'bold') {
         if (size === 'L') return 'typography/body/medium/bold';
         if (size === 'M') return 'typography/body/small/bold';
         if (size === 'S') return 'typography/label/large/bold';

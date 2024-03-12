@@ -46,12 +46,6 @@ export default function ThemeMui({ children }: Props) {
         },
       },
       MuiButton: {
-        // variants: [
-        //   {
-        //     props: { variant: 'underlined' },
-        //     style: {},
-        //   },
-        // ],
         styleOverrides: {
           root: {
             minWidth: 'auto',
@@ -187,6 +181,81 @@ export default function ThemeMui({ children }: Props) {
             }),
           }),
         },
+        // Custom Variant의 경우, styleOverrides와는 달리 아래처럼 각 조건마다 style을 적용해주어야 함
+        // 아래 object의 순서는 중요함
+        // 예를 들자면, disabled에 관한 style을 정의하는 object가 가장 나중에 위치해 있어야 나머지 object를 override하면서 정상적으로 작동함
+        variants: [
+          {
+            props: { variant: 'underlined' },
+            style: {
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              gap: '4px',
+              margin: '4px',
+              padding: ' 0 0 2px 0',
+              borderRadius: 'unset',
+            },
+          },
+          {
+            props: (props) => props.variant === 'underlined' && props.color === 'primary',
+            style: ({ theme }) => ({
+              borderBottom: `1px solid ${theme.palette['color/primary/600']}`,
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/primary/600'],
+              },
+              '&:hover': {
+                borderBottom: `1px solid ${theme.palette['color/primary/700']}`,
+                backgroundColor: theme.palette['color/white'],
+                '& > .MuiTypography-root': {
+                  color: theme.palette['color/primary/700'],
+                },
+              },
+            }),
+          },
+          {
+            props: (props) => props.variant === 'underlined' && props.color === 'default',
+            style: ({ theme }) => ({
+              borderBottom: `1px solid ${theme.palette['color/gray/800']}`,
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/gray/800'],
+              },
+              '&:hover': {
+                borderBottom: `1px solid ${theme.palette['color/gray/600']}`,
+                backgroundColor: theme.palette['color/white'],
+                '& > .MuiTypography-root': {
+                  color: theme.palette['color/gray/600'],
+                },
+              },
+            }),
+          },
+          {
+            props: (props) => props.variant === 'underlined' && props.color === 'gray',
+            style: ({ theme }) => ({
+              borderBottom: `1px solid ${theme.palette['color/gray/400']}`,
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/gray/400'],
+              },
+              '&:hover': {
+                borderBottom: `1px solid ${theme.palette['color/gray/600']}`,
+                backgroundColor: theme.palette['color/white'],
+                '& > .MuiTypography-root': {
+                  color: theme.palette['color/gray/600'],
+                },
+              },
+            }),
+          },
+          {
+            props: (props) => props.variant === 'underlined' && props.disabled,
+            style: ({ theme }) => ({
+              borderBottom: `1px solid ${theme.palette['color/gray/200']}`,
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/gray/200'],
+              },
+            }),
+          },
+        ],
       },
     },
     typography: {
