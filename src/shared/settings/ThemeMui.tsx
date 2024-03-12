@@ -171,6 +171,7 @@ export default function ThemeMui({ children }: Props) {
             alignSelf: 'stretch',
             borderRadius: 'unset',
             padding: 'unset',
+            backgroundColor: 'transparent',
 
             // Color
             ...(ownerState.color === 'primary' && {
@@ -179,7 +180,7 @@ export default function ThemeMui({ children }: Props) {
               },
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/primary/600']}`,
-                backgroundColor: theme.palette['color/white'],
+                backgroundColor: 'transparent',
               },
             }),
             ...(ownerState.color === 'default' && {
@@ -188,7 +189,7 @@ export default function ThemeMui({ children }: Props) {
               },
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/gray/800']}`,
-                backgroundColor: theme.palette['color/white'],
+                backgroundColor: 'transparent',
               },
             }),
             ...(ownerState.color === 'gray' && {
@@ -197,7 +198,7 @@ export default function ThemeMui({ children }: Props) {
               },
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/gray/400']}`,
-                backgroundColor: theme.palette['color/white'],
+                backgroundColor: 'transparent',
               },
             }),
           }),
@@ -218,6 +219,7 @@ export default function ThemeMui({ children }: Props) {
               margin: '4px',
               padding: ' 0 0 2px 0',
               borderRadius: 'unset',
+              backgroundColor: 'transparent',
             },
           },
           {
@@ -229,7 +231,7 @@ export default function ThemeMui({ children }: Props) {
               },
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/primary/700']}`,
-                backgroundColor: theme.palette['color/white'],
+                backgroundColor: 'transparent',
                 '& > .MuiTypography-root': {
                   color: theme.palette['color/primary/700'],
                 },
@@ -245,7 +247,7 @@ export default function ThemeMui({ children }: Props) {
               },
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/gray/600']}`,
-                backgroundColor: theme.palette['color/white'],
+                backgroundColor: 'transparent',
                 '& > .MuiTypography-root': {
                   color: theme.palette['color/gray/600'],
                 },
@@ -261,7 +263,7 @@ export default function ThemeMui({ children }: Props) {
               },
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/gray/600']}`,
-                backgroundColor: theme.palette['color/white'],
+                backgroundColor: 'transparent',
                 '& > .MuiTypography-root': {
                   color: theme.palette['color/gray/600'],
                 },
