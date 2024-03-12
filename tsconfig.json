@@ -20,8 +20,6 @@
     "baseUrl": "./",
     "types": ["node"],
     "paths": {
-      "@util/*": ["src/util/*"],
-      "@util": ["src/util"],
       "@components/*": ["src/components/*", "components/*"],
       "@components": ["src/components", "components"],
       "@shared/*": ["src/shared/*"],

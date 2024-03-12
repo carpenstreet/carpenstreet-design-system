@@ -13,8 +13,6 @@ export default defineConfig({
       { find: '@/shared', replacement: path.resolve(__dirname, 'src/shared') },
       { find: '@pages', replacement: path.resolve(__dirname, 'src/pages') },
       { find: '@/pages', replacement: path.resolve(__dirname, 'src/pages') },
-      { find: '@util', replacement: path.resolve(__dirname, 'src/util') },
-      { find: '@/util', replacement: path.resolve(__dirname, 'src/util') },
     ],
   },
   server: {
