@@ -2,28 +2,9 @@ import MUIButton from '@mui/material/Button';
 import React from 'react';
 import { Typography } from '@components';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
+import { ButtonProps } from '@components/Button/Button.type.ts';
 
-export default function Button({
-  children = 'button',
-  variant,
-  size,
-  color = 'default',
-  disabled,
-  sx,
-  weight = 'regular',
-  startIcon,
-  endIcon,
-}: {
-  children?: React.ReactNode;
-  variant: 'contained' | 'outlined' | 'text' | 'underlined';
-  size: 'XL' | 'L' | 'M' | 'S';
-  color?: 'primary' | 'default' | 'gray';
-  disabled?: boolean;
-  sx?: any;
-  weight?: 'regular' | 'bold';
-  startIcon?: React.ReactNode;
-  endIcon?: React.ReactNode;
-}) {
+export default function Button({ children, variant, size, color = 'default', disabled, sx, weight = 'regular', startIcon, endIcon }: ButtonProps) {
   function getTypoVariant(): CustomTypographyVariantsTypes {
     if (variant === 'contained') {
       if (size === 'L' || size === 'XL') return 'typography/body/medium/bold';
