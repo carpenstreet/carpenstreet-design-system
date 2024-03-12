@@ -187,7 +187,7 @@ export default function ThemeMui({ children }: Props) {
                 color: theme.palette['color/gray/800'],
               },
               '&:hover': {
-                border: `1px solid ${theme.palette['color/gray/800']}`,
+                borderBottom: `1px solid ${theme.palette['color/gray/800']}`,
                 backgroundColor: theme.palette['color/white'],
               },
             }),
@@ -196,7 +196,7 @@ export default function ThemeMui({ children }: Props) {
                 color: theme.palette['color/gray/400'],
               },
               '&:hover': {
-                border: `1px solid ${theme.palette['color/gray/400']}`,
+                borderBottom: `1px solid ${theme.palette['color/gray/400']}`,
                 backgroundColor: theme.palette['color/white'],
               },
             }),
