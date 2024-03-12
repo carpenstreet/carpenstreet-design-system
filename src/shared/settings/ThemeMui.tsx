@@ -66,7 +66,7 @@ export default function ThemeMui({ children }: Props) {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             gap: '4px',
             alignSelf: 'stretch',
 
@@ -111,7 +111,7 @@ export default function ThemeMui({ children }: Props) {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             gap: '4px',
             alignSelf: 'stretch',
 
@@ -153,6 +153,38 @@ export default function ThemeMui({ children }: Props) {
               border: `1px solid ${theme.palette['color/gray/200']}`,
               backgroundColor: theme.palette['color/white'],
             },
+          }),
+          text: ({ ownerState, theme }) => ({
+            // Common
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            gap: '4px',
+            alignSelf: 'stretch',
+            borderRadius: 'unset',
+            padding: 'unset',
+
+            // Color
+            // font color는 Button.tsx에서 관리
+            ...(ownerState.color === 'primary' && {
+              '&:hover': {
+                borderBottom: `1px solid ${theme.palette['color/primary/600']}`,
+                backgroundColor: theme.palette['color/white'],
+              },
+            }),
+            ...(ownerState.color === 'default' && {
+              '&:hover': {
+                border: `1px solid ${theme.palette['color/gray/800']}`,
+                backgroundColor: theme.palette['color/white'],
+              },
+            }),
+            ...(ownerState.color === 'gray' && {
+              '&:hover': {
+                border: `1px solid ${theme.palette['color/gray/400']}`,
+                backgroundColor: theme.palette['color/white'],
+              },
+            }),
           }),
         },
       },
