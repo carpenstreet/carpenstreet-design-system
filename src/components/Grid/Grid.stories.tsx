@@ -21,14 +21,17 @@ type Story = StoryObj<typeof GridContainer>;
 
 export const GridContainerExample: Story = {
   args: {
+    direction: 'row',
+    sx: {},
     children: (
       <React.Fragment>
         {new Array(12).fill(null).map((_, idx) => (
           <GridItem key={idx} mobile={1} desktop={1}>
             <Paper
+              elevation={0}
               sx={{
-                height: '500px',
-                backgroundColor: 'tomato',
+                height: '300px',
+                backgroundColor: '#FFE5E5',
                 padding: 0,
               }}
             />
@@ -36,7 +39,5 @@ export const GridContainerExample: Story = {
         ))}
       </React.Fragment>
     ),
-    sx: {},
-    direction: 'row',
   },
 };

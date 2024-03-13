@@ -4,8 +4,19 @@ import * as GridContainerStories from './Grid.stories';
 <Meta of={GridContainerStories} />
 
 # Grid
+- GridContainer와 GridItem이 주어지고 Grid Container의 경우 breakpoint 별 스타일이 적용됩니다.
+- Grid Item은 Mui의 속성을 그대로 사용합니다.
 
-Grid ...
+---
+
+### Desktop (768px ~)
+- 최대 너비 1380px
+- 양옆 Padding 40px
+- Gap 24px
+
+### Mobile (0px ~ 767px)
+- 양옆 Padding 16px
+- Gap 24px
 
 <Canvas of={GridContainerStories.GridContainerExample} />
 
