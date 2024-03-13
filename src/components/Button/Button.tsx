@@ -34,18 +34,13 @@ export default function Button(props: ButtonProps) {
       }
     }
     if (variant === 'underlined') {
-      if (size === 'XL') {
-        console.error('underlined button does not support XL size');
-        if (weight === 'regular') return 'typography/body/medium/regular';
-        if (weight === 'bold') return 'typography/body/medium/bold';
-      }
       if (weight === 'regular') {
-        if (size === 'L') return 'typography/body/medium/regular';
+        if (size === 'L' || size === 'XL') return 'typography/body/medium/regular';
         if (size === 'M') return 'typography/body/small/regular';
         if (size === 'S') return 'typography/label/large/regular';
       }
       if (weight === 'bold') {
-        if (size === 'L') return 'typography/body/medium/bold';
+        if (size === 'L' || size === 'XL') return 'typography/body/medium/bold';
         if (size === 'M') return 'typography/body/small/bold';
         if (size === 'S') return 'typography/label/large/bold';
       }
@@ -62,6 +57,9 @@ export default function Button(props: ButtonProps) {
       if (size === 'XL') console.error('Design system Button props error: size - outlined variant는 XL을 지원하지 않습니다 (fallback 처리로 L 사이즈가 적용되었습니다)');
       if (color === 'gray') console.error('Design system Button props error: color - outlined variant는 gray를 지원하지 않습니다 (fallback 처리로 default가 적용되었습니다)');
       if (weight === 'bold') console.error('Design system Button props error: weight - outlined variant는  bold를 지원하지 않습니다 (regular와 동일하게 처리됩니다)');
+    }
+    if (variant === 'underlined') {
+      if (size === 'XL') console.error('Design system Button props error: size - underlined variant는 XL을 지원하지 않습니다 (fallback 처리로 L 사이즈가 적용되었습니다)');
     }
   }, [variant, size, color, weight]);
 
