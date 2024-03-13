@@ -1,17 +1,20 @@
-import Button from '@components/Button/Button.tsx';
-import Letter from '@components/Letter/Letter.tsx';
-import Shadow from '@components/Shadow/Shadow.tsx';
-import Icon from '@components/Icon/index.ts';
-import Typography from '@components/Typography/Typography.tsx';
+import Button from '@components/Button/Button';
+import Letter from '@components/Letter/Letter';
+import Shadow from '@components/Shadow/Shadow';
+import Icon from '@components/Icon/index';
+import Typography from '@components/Typography/Typography';
+import { GridContainer, GridItem } from '@components/Grid/Grid';
 
-export { Button, Letter, Shadow, Typography, Icon };
-export * from '@components/Icon/index.ts';
+export { Button, Letter, Shadow, Typography, GridContainer, GridItem, Icon };
+export * from '@components/Icon/index';
 
 export default {
   Button,
   Letter,
   Shadow,
   Typography,
+  GridContainer,
+  GridItem,
   Icon,
   ...Icon,
 };
