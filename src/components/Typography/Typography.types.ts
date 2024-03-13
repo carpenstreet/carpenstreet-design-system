@@ -1,9 +1,9 @@
-import { TypographyOwnProps } from '@mui/material/Typography/Typography';
+import { TypographyProps as MUITypographyProps } from '@mui/material/Typography/Typography';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants';
 import { CustomColorPaletteTypes } from '@shared/settings/color.type';
 
 export type TypographyProps = {
-  children: TypographyOwnProps['children'];
+  children: MUITypographyProps['children'];
   variant: CustomTypographyVariantsTypes;
   color?: CustomColorPaletteTypes;
 };
