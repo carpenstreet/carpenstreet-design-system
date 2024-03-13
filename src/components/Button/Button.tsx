@@ -4,7 +4,10 @@ import { Typography } from '@components';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
 import { ButtonProps } from '@components/Button/Button.type.ts';
 
-export default function Button({ children, variant, size, color = 'default', disabled, sx, weight = 'regular', startIcon, endIcon }: ButtonProps) {
+export default function Button(props: ButtonProps) {
+  const { children, ...buttonProps } = props;
+  const { variant, size, weight, color } = buttonProps;
+
   function getTypoVariant(): CustomTypographyVariantsTypes {
     if (variant === 'contained') {
       if (size === 'L' || size === 'XL') return 'typography/body/medium/bold';
@@ -63,7 +66,7 @@ export default function Button({ children, variant, size, color = 'default', dis
   }, [variant, size, color, weight]);
 
   return (
-    <MUIButton variant={variant} size={size} disabled={disabled} color={color} sx={sx} startIcon={startIcon} endIcon={endIcon}>
+    <MUIButton {...buttonProps}>
       <Typography variant={getTypoVariant()}>{children}</Typography>
     </MUIButton>
   );

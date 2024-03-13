@@ -1,14 +1,10 @@
 import { TypographyOwnProps } from '@mui/material/Typography/Typography';
-import { ButtonOwnProps } from '@mui/material';
+import { ButtonProps as MUIButtonProps } from '@mui/material';
 
-export type ButtonProps = {
+export type ButtonProps = Omit<MUIButtonProps, 'children' | 'variant' | 'size' | 'color'> & {
   children: TypographyOwnProps['children'];
   variant: 'contained' | 'outlined' | 'text' | 'underlined';
   size: 'XL' | 'L' | 'M' | 'S';
   color?: 'primary' | 'default' | 'gray';
-  disabled?: ButtonOwnProps['disabled'];
-  sx?: ButtonOwnProps['sx'];
   weight?: 'regular' | 'bold';
-  startIcon?: ButtonOwnProps['startIcon'];
-  endIcon?: ButtonOwnProps['endIcon'];
 };
