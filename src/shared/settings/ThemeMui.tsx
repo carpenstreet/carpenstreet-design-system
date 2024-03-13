@@ -62,6 +62,7 @@ export default function ThemeMui({ children }: Props) {
               boxShadow: 'none',
             },
             // Common
+            boxSizing: 'border-box',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -75,15 +76,21 @@ export default function ThemeMui({ children }: Props) {
             // contained의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
             ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
               borderRadius: '8px',
-              padding: '12px 22px',
+              paddingLeft: '22px',
+              paddingRight: '22px',
+              height: '48px',
             }),
             ...(ownerState.size === 'M' && {
               borderRadius: '8px',
-              padding: '10px 22px',
+              paddingLeft: '22px',
+              paddingRight: '22px',
+              height: '40px',
             }),
             ...(ownerState.size === 'S' && {
               borderRadius: '4px',
-              padding: '4px 8px',
+              paddingLeft: '8px',
+              paddingRight: '8px',
+              height: '24px',
             }),
 
             // Color
@@ -116,15 +123,21 @@ export default function ThemeMui({ children }: Props) {
             // contained의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
             ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
               borderRadius: '8px',
-              padding: '12px 22px',
+              paddingLeft: '21px', // border 값만큼 빼줌 (22 - 1)
+              paddingRight: '21px', // border 값만큼 빼줌 (22 - 1)
+              height: '48px',
             }),
             ...(ownerState.size === 'M' && {
               borderRadius: '8px',
-              padding: '10px 22px',
+              paddingLeft: '21px', // border 값만큼 빼줌 (22 - 1)
+              paddingRight: '21px', // border 값만큼 빼줌 (22 - 1)
+              height: '40px',
             }),
             ...(ownerState.size === 'S' && {
               borderRadius: '4px',
-              padding: '4px 8px',
+              paddingLeft: '7px', // border 값만큼 빼줌 (8 - 1)
+              paddingRight: '7px', // border 값만큼 빼줌 (8 - 1)
+              height: '24px',
             }),
 
             // Color
@@ -165,6 +178,20 @@ export default function ThemeMui({ children }: Props) {
             borderRadius: 'unset',
             padding: 'unset',
             backgroundColor: 'transparent',
+
+            // Size
+            ...(ownerState.size === 'XL' && {
+              height: '33px',
+            }),
+            ...(ownerState.size === 'L' && {
+              height: '25px',
+            }),
+            ...(ownerState.size === 'M' && {
+              height: '21px',
+            }),
+            ...(ownerState.size === 'S' && {
+              height: '17px',
+            }),
 
             // Color
             ...(ownerState.color === 'primary' && {
