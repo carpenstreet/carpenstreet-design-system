@@ -194,6 +194,15 @@ export default function ThemeMui({ children }: Props) {
                 backgroundColor: 'transparent',
               },
             }),
+
+            // Disabled
+            // .Mui-disabled 클래스에 대한 css를 바꿔주어야 함
+            // ownerState.disabled && {} 로 override 하기 어려움
+            '&.Mui-disabled': {
+              '& > .MuiTypography-root': {
+                color: theme.palette['color/gray/200'],
+              },
+            },
           }),
         },
         // Custom Variant의 경우, styleOverrides와는 달리 아래처럼 각 조건마다 style을 적용해주어야 함
