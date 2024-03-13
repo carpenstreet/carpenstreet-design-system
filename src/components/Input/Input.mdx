@@ -1,0 +1,22 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as InputStories from './Input.stories';
+
+<Meta of={InputStories} />
+
+# Input
+
+<Canvas of={InputStories.Default} />
+
+<Controls include={[
+  'variant',
+  'size',
+  'color',
+  // ---
+  'helperText',
+  'placeholder',
+  'label',
+  // ---
+  'error',
+  'disabled',
+  'focused',
+]} />

@@ -4,6 +4,7 @@ import { colorPalette } from './Color.ts';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants.ts';
 import { fontFace } from '@shared/styles/fontFaceStyle';
 import { CssBaseline } from '@mui/material';
+import { OverrideInput } from '@shared/settings/overrides/Input';
 
 // ----------------------------------------------------------------------
 
@@ -287,6 +288,11 @@ export default function ThemeMui({ children }: Props) {
       },
     },
   });
+
+  // overrides component ...
+  const OverrideInputs = OverrideInput(theme);
+  theme.components.MuiInput = OverrideInputs.standardInput;
+  theme.components.MuiOutlinedInput = OverrideInputs.outlinedInput;
 
   return (
     <ThemeProvider theme={theme}>

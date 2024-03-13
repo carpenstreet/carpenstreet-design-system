@@ -118,3 +118,10 @@ declare module '@mui/material/Button' {
     gray: true;
   }
 }
+
+declare module '@mui/material/TextField/TextField' {
+  interface TextFieldPropsSizeOverrides {
+    S: true;
+    M: true;
+  }
+}
