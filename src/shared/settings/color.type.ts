@@ -1,6 +1,6 @@
 import { colorPalette } from '@shared/settings/Color';
 
-export type CustomColorTypes = keyof typeof colorPalette;
+export type CustomColorPaletteTypes = keyof typeof colorPalette;
 
 // [24.03.06] 현재는 사용하지 않지만, acon에 남아있는 부분들을 위해 남겨둠
 export type TColor =

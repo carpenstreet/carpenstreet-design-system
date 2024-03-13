@@ -1,10 +1,11 @@
-import { TypographyTypeMap } from '@mui/material/Typography/Typography';
+import { TypographyProps as MUITypographyProps } from '@mui/material/Typography/Typography';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants';
-import { CustomColorTypes } from '@shared/settings/color.type';
+import { CustomColorPaletteTypes } from '@shared/settings/color.type';
 
-export type TypographyProps = Pick<TypographyTypeMap['props'], 'children'> & {
+export type TypographyProps = {
+  children: MUITypographyProps['children'];
   variant: CustomTypographyVariantsTypes;
-  color?: CustomColorTypes;
+  color?: CustomColorPaletteTypes;
 };
 
 export type CustomTypographyVariantsTypes = keyof typeof CustomTypographyVariants;
