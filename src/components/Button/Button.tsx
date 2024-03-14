@@ -3,12 +3,13 @@ import React from 'react';
 import { Typography } from '@components';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
 import { ButtonProps } from '@components/Button/Button.type.ts';
+import { IconCommonPropsType } from '@components/Icon/Icon.types.ts';
 
 export default function Button(props: ButtonProps) {
-  const { children, ...buttonProps } = props;
-  const { variant, size, weight, color } = buttonProps;
+  const { children, startIcon, endIcon, ...rest } = props;
+  const { variant, size, weight, color, disabled } = rest;
 
-  function getTypoVariant(): CustomTypographyVariantsTypes {
+  const typoVariant = ((): CustomTypographyVariantsTypes => {
     if (variant === 'contained') {
       if (size === 'L' || size === 'XL') return 'typography/body/medium/bold';
       if (size === 'M') return 'typography/body/small/bold';
@@ -45,7 +46,42 @@ export default function Button(props: ButtonProps) {
         if (size === 'S') return 'typography/label/large/bold';
       }
     }
+  })();
+
+  function customizeIcon(icon: React.ReactNode) {
+    if (!React.isValidElement(icon)) return icon;
+
+    const iconSize = size === 'L' || size === 'XL' ? 24 : size === 'M' ? 20 : 16;
+
+    const iconColor = (() => {
+      if (variant === 'contained') {
+        if (disabled) return 'color/gray/400';
+        return 'color/white';
+      }
+      if (variant === 'outlined') {
+        if (disabled) return 'color/gray/200';
+        if (color === 'primary') return 'color/primary/600';
+        return 'color/gray/800';
+      }
+      if (variant === 'text') {
+        if (disabled) return 'color/gray/200';
+        if (color === 'primary') return 'color/primary/600';
+        if (color === 'gray') return 'color/gray/400';
+        return 'color/gray/800';
+      }
+      if (variant === 'underlined') {
+        if (disabled) return 'color/gray/200';
+        if (color === 'primary') return 'color/primary/600';
+        if (color === 'gray') return 'color/gray/400';
+        return 'color/gray/800';
+      }
+    })();
+
+    return React.cloneElement(icon as React.ReactElement<IconCommonPropsType>, { width: iconSize, height: iconSize, color: iconColor });
   }
+
+  const customStartIcon = customizeIcon(startIcon);
+  const customEndIcon = customizeIcon(endIcon);
 
   React.useEffect(() => {
     if (variant === 'contained') {
@@ -64,8 +100,8 @@ export default function Button(props: ButtonProps) {
   }, [variant, size, color, weight]);
 
   return (
-    <MUIButton {...buttonProps}>
-      <Typography variant={getTypoVariant()}>{children}</Typography>
+    <MUIButton startIcon={customStartIcon} endIcon={customEndIcon} {...rest}>
+      <Typography variant={typoVariant}>{children}</Typography>
     </MUIButton>
   );
 }

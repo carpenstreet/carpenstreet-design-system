@@ -61,11 +61,11 @@ export default function ThemeMui({ children }: Props) {
             '&:hover': {
               boxShadow: 'none',
             },
-            // icon margin
-            '& .MuiButton-startIcon': {
+            // icon
+            '& > .MuiButton-startIcon': {
               marginRight: '4px',
             },
-            '& .MuiButton-endIcon': {
+            '& > .MuiButton-endIcon': {
               marginLeft: '4px',
             },
             // Common
@@ -247,7 +247,6 @@ export default function ThemeMui({ children }: Props) {
           {
             props: { variant: 'underlined' },
             style: {
-              gap: '4px',
               margin: '4px',
               padding: ' 0 0 2px 0',
               borderRadius: 'unset',
@@ -267,6 +266,14 @@ export default function ThemeMui({ children }: Props) {
                 '& > .MuiTypography-root': {
                   color: theme.palette['color/primary/700'],
                 },
+                '& > .MuiButton-icon': {
+                  '& path, & circle': {
+                    fill: theme.palette['color/primary/700'],
+                  },
+                  '& rect': {
+                    stroke: theme.palette['color/primary/700'],
+                  },
+                },
               },
             }),
           },
@@ -283,6 +290,14 @@ export default function ThemeMui({ children }: Props) {
                 '& > .MuiTypography-root': {
                   color: theme.palette['color/gray/600'],
                 },
+                '& > .MuiButton-icon': {
+                  '& path, & circle': {
+                    fill: theme.palette['color/gray/600'],
+                  },
+                  '& rect': {
+                    stroke: theme.palette['color/gray/600'],
+                  },
+                },
               },
             }),
           },
@@ -298,6 +313,14 @@ export default function ThemeMui({ children }: Props) {
                 backgroundColor: 'transparent',
                 '& > .MuiTypography-root': {
                   color: theme.palette['color/gray/600'],
+                },
+                '& > .MuiButton-icon': {
+                  '& path, & circle': {
+                    fill: theme.palette['color/gray/600'],
+                  },
+                  '& rect': {
+                    stroke: theme.palette['color/gray/600'],
+                  },
                 },
               },
             }),

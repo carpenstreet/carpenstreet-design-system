@@ -51,8 +51,8 @@ export const ContainedDefaultLargeIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/white'} />,
-    endIcon: <ChevronRightIcon color={'color/white'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -75,8 +75,8 @@ export const ContainedDefaultMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/white'} />,
-    endIcon: <ChevronRightIcon color={'color/white'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -99,8 +99,8 @@ export const ContainedDefaultSmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/white'} />,
-    endIcon: <ChevronRightIcon color={'color/white'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -123,8 +123,8 @@ export const ContainedPrimaryLargeIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/white'} />,
-    endIcon: <ChevronRightIcon color={'color/white'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -147,8 +147,8 @@ export const ContainedPrimaryMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/white'} />,
-    endIcon: <ChevronRightIcon color={'color/white'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -171,8 +171,8 @@ export const ContainedPrimarySmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/white'} />,
-    endIcon: <ChevronRightIcon color={'color/white'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -195,8 +195,8 @@ export const ContainedLargeDisabledIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -219,8 +219,8 @@ export const ContainedMediumDisabledIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -243,8 +243,8 @@ export const ContainedSmallDisabledIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -269,8 +269,8 @@ export const OutlinedDefaultLargeIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/gray/800'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/800'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -293,8 +293,8 @@ export const OutlinedDefaultMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/gray/800'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/800'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -317,8 +317,8 @@ export const OutlinedDefaultSmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/gray/800'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/800'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -341,8 +341,8 @@ export const OutlinedPrimaryLargeIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -365,8 +365,8 @@ export const OutlinedPrimaryMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -389,8 +389,8 @@ export const OutlinedPrimarySmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -413,8 +413,8 @@ export const OutlinedLargeDisabledIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -437,8 +437,8 @@ export const OutlinedMediumDisabledIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -461,8 +461,8 @@ export const OutlinedSmallDisabledIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -592,8 +592,8 @@ export const TextDefaultMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} />,
-    endIcon: <ChevronRightIcon width={20} height={20} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -605,8 +605,8 @@ export const TextDefaultMediumIconBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} />,
-    endIcon: <ChevronRightIcon width={20} height={20} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -640,8 +640,8 @@ export const TextDefaultSmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} />,
-    endIcon: <ChevronRightIcon width={16} height={16} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -653,8 +653,8 @@ export const TextDefaultSmallIconBold: Story = {
     size: 'S',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} />,
-    endIcon: <ChevronRightIcon width={16} height={16} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -688,8 +688,8 @@ export const TextPrimaryExtraLargeIcon: Story = {
     size: 'XL',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -701,8 +701,8 @@ export const TextPrimaryExtraLargeIconBold: Story = {
     size: 'XL',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -735,8 +735,8 @@ export const TextPrimaryLargeIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -748,8 +748,8 @@ export const TextPrimaryLargeIconBold: Story = {
     size: 'L',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -783,8 +783,8 @@ export const TextPrimaryMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -796,8 +796,8 @@ export const TextPrimaryMediumIconBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -831,8 +831,8 @@ export const TextPrimarySmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -844,8 +844,8 @@ export const TextPrimarySmallIconBold: Story = {
     size: 'S',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -879,8 +879,8 @@ export const TextGrayExtraLargeIcon: Story = {
     size: 'XL',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -892,8 +892,8 @@ export const TextGrayExtraLargeIconBold: Story = {
     size: 'XL',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -926,8 +926,8 @@ export const TextGrayLargeIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -939,8 +939,8 @@ export const TextGrayLargeIconBold: Story = {
     size: 'L',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -974,8 +974,8 @@ export const TextGrayMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -987,8 +987,8 @@ export const TextGrayMediumIconBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1022,8 +1022,8 @@ export const TextGraySmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1035,8 +1035,8 @@ export const TextGraySmallIconBold: Story = {
     size: 'S',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1070,8 +1070,8 @@ export const TextExtraLargeDisabledIcon: Story = {
     size: 'XL',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1083,8 +1083,8 @@ export const TextExtraLargeDisabledIconBold: Story = {
     size: 'XL',
     weight: 'bold',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1117,8 +1117,8 @@ export const TextLargeDisabledIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1130,8 +1130,8 @@ export const TextLargeDisabledIconBold: Story = {
     size: 'L',
     weight: 'bold',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1165,8 +1165,8 @@ export const TextMediumDisabledIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1178,8 +1178,8 @@ export const TextMediumDisabledIconBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: true,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1213,8 +1213,8 @@ export const TextSmallDisabledIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1226,8 +1226,8 @@ export const TextSmallDisabledIconBold: Story = {
     size: 'S',
     weight: 'bold',
     disabled: true,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1310,8 +1310,8 @@ export const UnderlinedDefaultMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} />,
-    endIcon: <ChevronRightIcon width={20} height={20} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1323,8 +1323,8 @@ export const UnderlinedDefaultMediumIconBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} />,
-    endIcon: <ChevronRightIcon width={20} height={20} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1358,8 +1358,8 @@ export const UnderlinedDefaultSmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} />,
-    endIcon: <ChevronRightIcon width={16} height={16} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1371,8 +1371,8 @@ export const UnderlinedDefaultSmallIconBold: Story = {
     size: 'S',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} />,
-    endIcon: <ChevronRightIcon width={16} height={16} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1405,8 +1405,8 @@ export const UnderlinedPrimaryLargeIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1418,8 +1418,8 @@ export const UnderlinedPrimaryLargeIconBold: Story = {
     size: 'L',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1453,8 +1453,8 @@ export const UnderlinedPrimaryMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1466,8 +1466,8 @@ export const UnderlinedPrimaryMediumIconBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1501,8 +1501,8 @@ export const UnderlinedPrimarySmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1514,8 +1514,8 @@ export const UnderlinedPrimarySmallIconBold: Story = {
     size: 'S',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/primary/600'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/primary/600'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1548,8 +1548,8 @@ export const UnderlinedGrayLargeIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1561,8 +1561,8 @@ export const UnderlinedGrayLargeIconBold: Story = {
     size: 'L',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1596,8 +1596,8 @@ export const UnderlinedGrayMediumIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1609,8 +1609,8 @@ export const UnderlinedGrayMediumIconBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1644,8 +1644,8 @@ export const UnderlinedGraySmallIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1657,8 +1657,8 @@ export const UnderlinedGraySmallIconBold: Story = {
     size: 'S',
     weight: 'bold',
     disabled: false,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/gray/400'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/gray/400'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1691,8 +1691,8 @@ export const UnderlinedLargeDisabledIcon: Story = {
     size: 'L',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1704,8 +1704,8 @@ export const UnderlinedLargeDisabledIconBold: Story = {
     size: 'L',
     weight: 'bold',
     disabled: true,
-    startIcon: <ChevronLeftIcon color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1739,8 +1739,8 @@ export const UnderlinedMediumDisabledIcon: Story = {
     size: 'M',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1752,8 +1752,8 @@ export const UnderlinedMediumDisabledIconBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: true,
-    startIcon: <ChevronLeftIcon width={20} height={20} color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon width={20} height={20} color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1787,8 +1787,8 @@ export const UnderlinedSmallDisabledIcon: Story = {
     size: 'S',
     weight: 'regular',
     disabled: true,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -1800,7 +1800,7 @@ export const UnderlinedSmallDisabledIconBold: Story = {
     size: 'S',
     weight: 'bold',
     disabled: true,
-    startIcon: <ChevronLeftIcon width={16} height={16} color={'color/gray/200'} />,
-    endIcon: <ChevronRightIcon width={16} height={16} color={'color/gray/200'} />,
+    startIcon: <ChevronLeftIcon />,
+    endIcon: <ChevronRightIcon />,
   },
 };
