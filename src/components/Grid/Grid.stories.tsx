@@ -1,12 +1,12 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { GridContainer, GridItem } from './Grid';
+import { Grid } from './Grid';
 import ThemeMui from '@shared/settings/ThemeMui';
 import { Paper } from '@mui/material';
 
-const meta: Meta<typeof GridContainer> = {
+const meta: Meta<typeof Grid> = {
   title: 'Foundation/Grid',
-  component: GridContainer,
+  component: Grid,
   decorators: [
     (Story) => (
       <ThemeMui>
@@ -17,25 +17,26 @@ const meta: Meta<typeof GridContainer> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof GridContainer>;
+type Story = StoryObj<typeof Grid>;
 
 export const GridContainerExample: Story = {
   args: {
     direction: 'row',
+    container: true,
     sx: {},
     children: (
       <React.Fragment>
         {new Array(12).fill(null).map((_, idx) => (
-          <GridItem key={idx} mobile={1} desktop={1}>
+          <Grid item key={idx} mobile={1} desktop={1}>
             <Paper
               elevation={0}
               sx={{
-                height: '300px',
+                height: '100px',
                 backgroundColor: '#FFE5E5',
                 padding: 0,
               }}
             />
-          </GridItem>
+          </Grid>
         ))}
       </React.Fragment>
     ),
