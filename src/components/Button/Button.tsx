@@ -5,10 +5,10 @@ import { CustomTypographyVariantsTypes } from '@components/Typography/Typography
 import { ButtonProps } from '@components/Button/Button.type.ts';
 
 export default function Button(props: ButtonProps) {
-  const { children, ...buttonProps } = props;
-  const { variant, size, weight, color } = buttonProps;
+  const { children, ...rest } = props;
+  const { variant, size, weight, color } = rest;
 
-  function getTypoVariant(): CustomTypographyVariantsTypes {
+  const typoVariant = ((): CustomTypographyVariantsTypes => {
     if (variant === 'contained') {
       if (size === 'L' || size === 'XL') return 'typography/body/medium/bold';
       if (size === 'M') return 'typography/body/small/bold';
@@ -45,7 +45,7 @@ export default function Button(props: ButtonProps) {
         if (size === 'S') return 'typography/label/large/bold';
       }
     }
-  }
+  })();
 
   React.useEffect(() => {
     if (variant === 'contained') {
@@ -64,8 +64,8 @@ export default function Button(props: ButtonProps) {
   }, [variant, size, color, weight]);
 
   return (
-    <MUIButton {...buttonProps}>
-      <Typography variant={getTypoVariant()}>{children}</Typography>
+    <MUIButton {...rest}>
+      <Typography variant={typoVariant}>{children}</Typography>
     </MUIButton>
   );
 }

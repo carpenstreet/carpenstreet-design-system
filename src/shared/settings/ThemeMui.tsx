@@ -45,15 +45,12 @@ export default function ThemeMui({ children }: Props) {
           },
         },
       },
-      // Click 시 Ripple 효과 off
-      MuiButtonBase: {
+      MuiButton: {
         defaultProps: {
           disableRipple: true,
         },
-      },
-      MuiButton: {
         styleOverrides: {
-          root: {
+          root: ({ ownerState }) => ({
             // 기본적으로 설정되어 있던 css 해제
             minWidth: 'auto',
             textTransform: 'none',
@@ -61,11 +58,43 @@ export default function ThemeMui({ children }: Props) {
             '&:hover': {
               boxShadow: 'none',
             },
+            // icon
+            '& > .MuiButton-startIcon': {
+              marginRight: '4px',
+            },
+            '& > .MuiButton-endIcon': {
+              marginLeft: '4px',
+            },
+            ...((ownerState.size === 'XL' || ownerState.size === 'L') && {
+              '& > .MuiButton-icon': {
+                '& > svg': {
+                  width: '24px',
+                  height: '24px',
+                },
+              },
+            }),
+            ...(ownerState.size === 'M' && {
+              '& > .MuiButton-icon': {
+                '& > svg': {
+                  width: '20px',
+                  height: '20px',
+                },
+              },
+            }),
+            ...(ownerState.size === 'S' && {
+              '& > .MuiButton-icon': {
+                '& > svg': {
+                  width: '16px',
+                  height: '16px',
+                },
+              },
+            }),
             // Common
+            boxSizing: 'border-box',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-          },
+          }),
           contained: ({ ownerState, theme }) => ({
             '& > .MuiTypography-root': {
               color: theme.palette['color/white'],
@@ -75,18 +104,32 @@ export default function ThemeMui({ children }: Props) {
             // contained의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
             ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
               borderRadius: '8px',
-              padding: '12px 22px',
+              paddingLeft: '22px',
+              paddingRight: '22px',
+              height: '48px',
             }),
             ...(ownerState.size === 'M' && {
               borderRadius: '8px',
-              padding: '10px 22px',
+              paddingLeft: '22px',
+              paddingRight: '22px',
+              height: '40px',
             }),
             ...(ownerState.size === 'S' && {
               borderRadius: '4px',
-              padding: '4px 8px',
+              paddingLeft: '8px',
+              paddingRight: '8px',
+              height: '24px',
             }),
 
             // Color
+            '& > .MuiButton-icon': {
+              '& path, & circle': {
+                fill: theme.palette['color/white'],
+              },
+              '& rect': {
+                stroke: theme.palette['color/white'],
+              },
+            },
             ...(ownerState.color === 'primary' && {
               backgroundColor: theme.palette['color/primary/600'],
               '&:hover': {
@@ -109,6 +152,14 @@ export default function ThemeMui({ children }: Props) {
                 color: theme.palette['color/gray/400'],
               },
               backgroundColor: theme.palette['color/gray/200'],
+              '& > .MuiButton-icon': {
+                '& path, & circle': {
+                  fill: theme.palette['color/gray/400'],
+                },
+                '& rect': {
+                  stroke: theme.palette['color/gray/400'],
+                },
+              },
             },
           }),
           outlined: ({ ownerState, theme }) => ({
@@ -116,15 +167,21 @@ export default function ThemeMui({ children }: Props) {
             // contained의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
             ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
               borderRadius: '8px',
-              padding: '12px 22px',
+              paddingLeft: '21px', // border 값만큼 빼줌 (22 - 1) box-shadow css 로도 설정할 수 있지만, hover 시에 스타일이 깨지는 문제가 있어서 보류
+              paddingRight: '21px', // border 값만큼 빼줌 (22 - 1)
+              height: '48px',
             }),
             ...(ownerState.size === 'M' && {
               borderRadius: '8px',
-              padding: '10px 22px',
+              paddingLeft: '21px', // border 값만큼 빼줌 (22 - 1)
+              paddingRight: '21px', // border 값만큼 빼줌 (22 - 1)
+              height: '40px',
             }),
             ...(ownerState.size === 'S' && {
               borderRadius: '4px',
-              padding: '4px 8px',
+              paddingLeft: '7px', // border 값만큼 빼줌 (8 - 1)
+              paddingRight: '7px', // border 값만큼 빼줌 (8 - 1)
+              height: '24px',
             }),
 
             // Color
@@ -136,6 +193,14 @@ export default function ThemeMui({ children }: Props) {
               '&:hover': {
                 border: `1px solid ${theme.palette['color/primary/600']}`,
                 backgroundColor: theme.palette['color/primary/dim/100'],
+              },
+              '& > .MuiButton-icon': {
+                '& path, & circle': {
+                  fill: theme.palette['color/primary/600'],
+                },
+                '& rect': {
+                  stroke: theme.palette['color/primary/600'],
+                },
               },
             }),
             // contained의 경우 gray 색상을 지원하지 않으므로 gray 입력받을 경우 fallback으로 default 색상 적용
@@ -159,12 +224,35 @@ export default function ThemeMui({ children }: Props) {
               },
               border: `1px solid ${theme.palette['color/gray/200']}`,
               backgroundColor: theme.palette['color/white'],
+              '& > .MuiButton-icon': {
+                '& path, & circle': {
+                  fill: theme.palette['color/gray/200'],
+                },
+                '& rect': {
+                  stroke: theme.palette['color/gray/200'],
+                },
+              },
             },
           }),
           text: ({ ownerState, theme }) => ({
             borderRadius: 'unset',
             padding: 'unset',
             backgroundColor: 'transparent',
+            borderBottom: '1px solid transparent',
+
+            // Size
+            ...(ownerState.size === 'XL' && {
+              height: '33px',
+            }),
+            ...(ownerState.size === 'L' && {
+              height: '25px',
+            }),
+            ...(ownerState.size === 'M' && {
+              height: '21px',
+            }),
+            ...(ownerState.size === 'S' && {
+              height: '17px',
+            }),
 
             // Color
             ...(ownerState.color === 'primary' && {
@@ -174,6 +262,14 @@ export default function ThemeMui({ children }: Props) {
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/primary/600']}`,
                 backgroundColor: 'transparent',
+              },
+              '& > .MuiButton-icon': {
+                '& path, & circle': {
+                  fill: theme.palette['color/primary/600'],
+                },
+                '& rect': {
+                  stroke: theme.palette['color/primary/600'],
+                },
               },
             }),
             ...(ownerState.color === 'default' && {
@@ -193,6 +289,14 @@ export default function ThemeMui({ children }: Props) {
                 borderBottom: `1px solid ${theme.palette['color/gray/400']}`,
                 backgroundColor: 'transparent',
               },
+              '& > .MuiButton-icon': {
+                '& path, & circle': {
+                  fill: theme.palette['color/gray/400'],
+                },
+                '& rect': {
+                  stroke: theme.palette['color/gray/400'],
+                },
+              },
             }),
 
             // Disabled
@@ -201,6 +305,14 @@ export default function ThemeMui({ children }: Props) {
             '&.Mui-disabled': {
               '& > .MuiTypography-root': {
                 color: theme.palette['color/gray/200'],
+              },
+              '& > .MuiButton-icon': {
+                '& path, & circle': {
+                  fill: theme.palette['color/gray/200'],
+                },
+                '& rect': {
+                  stroke: theme.palette['color/gray/200'],
+                },
               },
             },
           }),
@@ -213,7 +325,6 @@ export default function ThemeMui({ children }: Props) {
           {
             props: { variant: 'underlined' },
             style: {
-              gap: '4px',
               margin: '4px',
               padding: ' 0 0 2px 0',
               borderRadius: 'unset',
@@ -227,11 +338,27 @@ export default function ThemeMui({ children }: Props) {
               '& > .MuiTypography-root': {
                 color: theme.palette['color/primary/600'],
               },
+              '& > .MuiButton-icon': {
+                '& path, & circle': {
+                  fill: theme.palette['color/primary/600'],
+                },
+                '& rect': {
+                  stroke: theme.palette['color/primary/600'],
+                },
+              },
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/primary/700']}`,
                 backgroundColor: 'transparent',
                 '& > .MuiTypography-root': {
                   color: theme.palette['color/primary/700'],
+                },
+                '& > .MuiButton-icon': {
+                  '& path, & circle': {
+                    fill: theme.palette['color/primary/700'],
+                  },
+                  '& rect': {
+                    stroke: theme.palette['color/primary/700'],
+                  },
                 },
               },
             }),
@@ -249,6 +376,14 @@ export default function ThemeMui({ children }: Props) {
                 '& > .MuiTypography-root': {
                   color: theme.palette['color/gray/600'],
                 },
+                '& > .MuiButton-icon': {
+                  '& path, & circle': {
+                    fill: theme.palette['color/gray/600'],
+                  },
+                  '& rect': {
+                    stroke: theme.palette['color/gray/600'],
+                  },
+                },
               },
             }),
           },
@@ -259,11 +394,27 @@ export default function ThemeMui({ children }: Props) {
               '& > .MuiTypography-root': {
                 color: theme.palette['color/gray/400'],
               },
+              '& > .MuiButton-icon': {
+                '& path, & circle': {
+                  fill: theme.palette['color/gray/400'],
+                },
+                '& rect': {
+                  stroke: theme.palette['color/gray/400'],
+                },
+              },
               '&:hover': {
                 borderBottom: `1px solid ${theme.palette['color/gray/600']}`,
                 backgroundColor: 'transparent',
                 '& > .MuiTypography-root': {
                   color: theme.palette['color/gray/600'],
+                },
+                '& > .MuiButton-icon': {
+                  '& path, & circle': {
+                    fill: theme.palette['color/gray/600'],
+                  },
+                  '& rect': {
+                    stroke: theme.palette['color/gray/600'],
+                  },
                 },
               },
             }),
@@ -274,6 +425,14 @@ export default function ThemeMui({ children }: Props) {
               borderBottom: `1px solid ${theme.palette['color/gray/200']}`,
               '& > .MuiTypography-root': {
                 color: theme.palette['color/gray/200'],
+              },
+              '& > .MuiButton-icon': {
+                '& path, & circle': {
+                  fill: theme.palette['color/gray/200'],
+                },
+                '& rect': {
+                  stroke: theme.palette['color/gray/200'],
+                },
               },
             }),
           },
