@@ -3,9 +3,9 @@ import Letter from '@components/Letter/Letter';
 import Shadow from '@components/Shadow/Shadow';
 import Icon from '@components/Icon/index';
 import Typography from '@components/Typography/Typography';
-import { GridContainer, GridItem } from '@components/Grid/Grid';
+import Grid from '@components/Grid/Grid';
 
-export { Button, Letter, Shadow, Typography, GridContainer, GridItem, Icon };
+export { Button, Letter, Shadow, Typography, Grid, Icon };
 export * from '@components/Icon/index';
 
 export default {
@@ -13,8 +13,7 @@ export default {
   Letter,
   Shadow,
   Typography,
-  GridContainer,
-  GridItem,
+  Grid,
   Icon,
   ...Icon,
 };

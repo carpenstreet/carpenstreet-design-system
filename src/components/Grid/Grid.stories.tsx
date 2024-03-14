@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Grid } from './Grid';
+import Grid from './Grid';
 import ThemeMui from '@shared/settings/ThemeMui';
 import { Paper } from '@mui/material';
 
@@ -19,7 +19,7 @@ const meta: Meta<typeof Grid> = {
 export default meta;
 type Story = StoryObj<typeof Grid>;
 
-export const GridContainerExample: Story = {
+export const GridExample: Story = {
   args: {
     direction: 'row',
     container: true,

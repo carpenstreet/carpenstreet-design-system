@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid as MUIGrid } from '@mui/material';
 import { GridProps } from '@mui/material/Grid/Grid';
 
-export const Grid = (props: GridProps) => {
+function Grid(props: GridProps) {
   const { children, ...rest } = props;
   const { sx, container } = rest;
 
@@ -24,4 +24,6 @@ export const Grid = (props: GridProps) => {
   };
 
   return <MUIGrid {...containerProps}>{children}</MUIGrid>;
-};
+}
+
+export default Grid;
