@@ -167,7 +167,7 @@ export default function ThemeMui({ children }: Props) {
             // contained의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
             ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
               borderRadius: '8px',
-              paddingLeft: '21px', // border 값만큼 빼줌 (22 - 1)
+              paddingLeft: '21px', // border 값만큼 빼줌 (22 - 1) box-shadow css 로도 설정할 수 있지만, hover 시에 스타일이 깨지는 문제가 있어서 보류
               paddingRight: '21px', // border 값만큼 빼줌 (22 - 1)
               height: '48px',
             }),
