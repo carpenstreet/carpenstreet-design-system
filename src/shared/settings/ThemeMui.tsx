@@ -61,6 +61,13 @@ export default function ThemeMui({ children }: Props) {
             '&:hover': {
               boxShadow: 'none',
             },
+            // icon margin
+            '& .MuiButton-startIcon': {
+              marginRight: '4px',
+            },
+            '& .MuiButton-endIcon': {
+              marginLeft: '4px',
+            },
             // Common
             boxSizing: 'border-box',
             display: 'flex',
