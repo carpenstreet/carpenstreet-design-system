@@ -185,6 +185,7 @@ export default function ThemeMui({ children }: Props) {
             borderRadius: 'unset',
             padding: 'unset',
             backgroundColor: 'transparent',
+            borderBottom: '1px solid transparent',
 
             // Size
             ...(ownerState.size === 'XL' && {
