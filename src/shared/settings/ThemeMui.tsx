@@ -4,7 +4,7 @@ import { colorPalette } from './Color.ts';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants.ts';
 import { fontFace } from '@shared/styles/fontFaceStyle';
 import { CssBaseline } from '@mui/material';
-import { Shadows } from '@shared/settings/Shadows.ts';
+import { shadows } from '@shared/settings/Shadows.ts';
 
 // ----------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ export default function ThemeMui({ children }: Props) {
         fontFamily: '"Pretendard Variable", Pretendard',
       },
     },
-    shadows: Shadows,
+    shadows,
   });
 
   return (

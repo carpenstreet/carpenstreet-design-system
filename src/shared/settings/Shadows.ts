@@ -1,7 +1,7 @@
-import { Shadows as ShadowsType } from '@mui/material/styles/shadows';
+import { Shadows as MUIShadowsType } from '@mui/material/styles/shadows';
 
 // mui의 Shadows Type이 25개의 string으로 잡혀있어서, 사용하지 않는
-export const Shadows = [
+export const shadows = [
   'none',
   //Elevation #1
   '0px 1px 3px 0px rgba(0, 0, 0, 0.12)',
@@ -51,4 +51,4 @@ export const Shadows = [
   '',
   //Elevation #24
   '',
-] satisfies ShadowsType;
+] satisfies MUIShadowsType;
