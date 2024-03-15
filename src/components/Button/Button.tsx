@@ -2,7 +2,7 @@ import MUIButton from '@mui/material/Button';
 import React from 'react';
 import Typography from '@components/Typography/Typography';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
-import { ButtonProps } from '@components/Button/Button.type.ts';
+import { ButtonProps } from '@components/Button/Button.types.ts';
 
 export default function Button(props: ButtonProps) {
   const { children, color = 'default', ...rest } = props;
