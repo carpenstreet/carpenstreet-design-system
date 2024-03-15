@@ -1,4 +1,4 @@
-import { Button, Letter, Shadow, Typography, Icon } from '@components';
+import { Button, Letter, Shadow, Typography, Grid, Icon } from '@components';
 import DesignSystemProvider from './shared/settings/ThemeMui';
 
 export {
@@ -6,6 +6,7 @@ export {
   Letter,
   Shadow,
   Typography,
+  Grid,
   //
   Icon,
   //
@@ -17,6 +18,7 @@ export default {
   Letter,
   Shadow,
   Typography,
+  Grid,
   //
   Icon,
   //
