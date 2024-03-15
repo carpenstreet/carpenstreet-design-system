@@ -5,8 +5,8 @@ import { CustomTypographyVariantsTypes } from '@components/Typography/Typography
 import { ButtonProps } from '@components/Button/Button.type.ts';
 
 export default function Button(props: ButtonProps) {
-  const { children, ...rest } = props;
-  const { variant, size, weight, color } = rest;
+  const { children, color = 'default', ...rest } = props;
+  const { variant, size, weight } = rest;
 
   const typoVariant = ((): CustomTypographyVariantsTypes => {
     if (variant === 'contained') {
@@ -64,7 +64,7 @@ export default function Button(props: ButtonProps) {
   }, [variant, size, color, weight]);
 
   return (
-    <MUIButton {...rest}>
+    <MUIButton color={color} {...rest}>
       <Typography variant={typoVariant}>{children}</Typography>
     </MUIButton>
   );
