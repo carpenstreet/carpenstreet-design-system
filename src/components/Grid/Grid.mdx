@@ -4,8 +4,9 @@ import * as GridContainerStories from './Grid.stories';
 <Meta of={GridContainerStories} />
 
 # Grid
-- GridContainer와 GridItem이 주어지고 Grid Container의 경우 breakpoint 별 스타일이 적용됩니다.
-- Grid Item은 Mui의 속성을 그대로 사용합니다.
+- Mui의 Grid 컴포넌트를 사용합니다.
+- Grid는 Container, Item로 구분됩니다. Container 내 Item을 넣어서 사용합니다.
+- Grid Prop 중 Container: true 값을 적용하면, 디바이스 별 Container 스타일이 적용됩니다.
 
 ---
 
@@ -20,4 +21,4 @@ import * as GridContainerStories from './Grid.stories';
 
 <Canvas of={GridContainerStories.GridExample} />
 
-<Controls include={['children']} />
+<Controls include={['container', 'children']} />
