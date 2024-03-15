@@ -5,6 +5,7 @@ import { CustomTypographyVariants } from '@components/Typography/Typography.cons
 import { fontFace } from '@shared/styles/fontFaceStyle';
 import { CssBaseline } from '@mui/material';
 import { shadows } from '@shared/settings/shadows/shadows.ts';
+import { overrideTypography } from '@shared/settings/typography/typography.ts';
 
 // ----------------------------------------------------------------------
 
@@ -39,13 +40,7 @@ export default function ThemeMui({ children }: Props) {
           noSsr: true,
         },
       },
-      MuiTypography: {
-        styleOverrides: {
-          root: {
-            letterSpacing: '0',
-          },
-        },
-      },
+      MuiTypography: overrideTypography,
       MuiButton: {
         defaultProps: {
           disableRipple: true,
