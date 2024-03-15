@@ -7,6 +7,7 @@ import { CssBaseline } from '@mui/material';
 import { shadows } from '@shared/settings/shadows/shadows.ts';
 import { overrideTypography } from '@shared/settings/typography/typography.ts';
 import { overrideButton } from '@shared/settings/button/button.ts';
+import { overrideIconButton } from '@shared/settings/iconButton/iconButton.ts';
 
 // ----------------------------------------------------------------------
 
@@ -43,64 +44,7 @@ export default function ThemeMui({ children }: Props) {
       },
       MuiTypography: overrideTypography,
       MuiButton: overrideButton,
-      MuiIconButton: {
-        defaultProps: {
-          disableRipple: true,
-        },
-        styleOverrides: {
-          root: ({ ownerState, theme }) => ({
-            backgroundColor: 'transparent',
-
-            // Size
-            ...(ownerState.size === 'M' && {
-              width: '36px',
-              height: '36px',
-              padding: '6px',
-              borderRadius: '8px',
-              '& > svg': {
-                width: '24px',
-                height: '24px',
-              },
-            }),
-            ...(ownerState.size === 'S' && {
-              width: '24px',
-              height: '24px',
-              padding: '4px',
-              borderRadius: '4px',
-              '& > svg': {
-                width: '16px',
-                height: '16px',
-              },
-            }),
-            // Color
-            ...(ownerState.color === 'primary' && {
-              '&:hover': {
-                backgroundColor: theme.palette['color/primary/dim/100'],
-              },
-              '& path, & circle': {
-                fill: theme.palette['color/primary/600'],
-              },
-              '& rect': {
-                stroke: theme.palette['color/primary/600'],
-              },
-            }),
-            ...(ownerState.color === 'default' && {
-              '&:hover': {
-                backgroundColor: theme.palette['color/gray/100'],
-              },
-            }),
-            // Disabled
-            '&.Mui-disabled': {
-              '& path, & circle': {
-                fill: theme.palette['color/gray/200'],
-              },
-              '& rect': {
-                stroke: theme.palette['color/gray/200'],
-              },
-            },
-          }),
-        },
-      },
+      MuiIconButton: overrideIconButton,
     },
     typography: {
       ...CustomTypographyVariants,
