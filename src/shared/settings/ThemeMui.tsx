@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { colorPalette } from './Color.ts';
+import { colorPalette } from './color/color.ts';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants.ts';
 import { fontFace } from '@shared/styles/fontFaceStyle';
 import { CssBaseline } from '@mui/material';

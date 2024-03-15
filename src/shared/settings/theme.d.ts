@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeOptions } from '@mui/material';
-import { colorPalette } from './Color.ts';
+import { colorPalette } from './color/color.ts';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
 
 type ColorPaletteType = typeof colorPalette;
