@@ -128,3 +128,10 @@ declare module '@mui/material/Button' {
     gray: true;
   }
 }
+
+declare module '@mui/material/IconButton/IconButton' {
+  interface IconButtonPropsSizeOverrides {
+    M: true;
+    S: true;
+  }
+}
