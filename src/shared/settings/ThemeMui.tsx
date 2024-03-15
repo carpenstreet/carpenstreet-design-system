@@ -4,7 +4,7 @@ import { colorPalette } from './color/color.ts';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants.ts';
 import { fontFace } from '@shared/styles/fontFaceStyle';
 import { CssBaseline } from '@mui/material';
-import { shadows } from '@shared/settings/Shadows.ts';
+import { shadows } from '@shared/settings/shadows/shadows.ts';
 
 // ----------------------------------------------------------------------
 
