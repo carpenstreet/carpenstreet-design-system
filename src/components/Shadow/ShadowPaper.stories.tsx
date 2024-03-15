@@ -56,11 +56,3 @@ export const ShadowPaper4: Story = {
     sx: CommonSX,
   },
 };
-
-export const ShadowPaper5: Story = {
-  args: {
-    elevation: 5,
-    children: 'Shadow 5',
-    sx: CommonSX,
-  },
-};

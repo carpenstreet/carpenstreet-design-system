@@ -64,13 +64,3 @@ export const ShadowBox4: Story = {
     },
   },
 };
-
-export const ShadowBox5: Story = {
-  args: {
-    children: 'Shadow 5',
-    sx: {
-      ...CommonSX,
-      boxShadow: 5,
-    },
-  },
-};
