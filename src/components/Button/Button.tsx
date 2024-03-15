@@ -1,6 +1,6 @@
 import MUIButton from '@mui/material/Button';
 import React from 'react';
-import { Typography } from '@components';
+import Typography from '@components/Typography/Typography';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
 import { ButtonProps } from '@components/Button/Button.type.ts';
 
