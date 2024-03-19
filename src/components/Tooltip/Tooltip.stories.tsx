@@ -26,111 +26,352 @@ const TooltipBox = (text: string) => (
 
 export const Default: Story = {
   args: {
-    children: TooltipBox('Hover!'),
+    children: TooltipBox(''),
     title: '툴팁 속 텍스트',
+    direction: 'none',
+    color: 'default',
+    open: true,
   },
 };
 
-// -----
+// ----------------------------------------------------------------------
+// Default
+// ----------------------------------------------------------------------
 
-export const TopStartTooltip: Story = {
+export const DefaultTopLeftTooltip: Story = {
   args: {
-    children: TooltipBox('Top Start'),
-    title: 'Top Start',
-    placement: 'top-start',
+    children: TooltipBox('Top Left'),
+    title: 'Top Left',
+    direction: 'top-left',
   },
 };
 
-export const TopTooltip: Story = {
+export const DefaultTopTooltip: Story = {
   args: {
     children: TooltipBox('Top'),
     title: 'Top',
-    placement: 'top',
+    direction: 'top',
   },
 };
 
-export const TopEndTooltip: Story = {
+export const DefaultTopRightTooltip: Story = {
   args: {
-    children: TooltipBox('Top End'),
-    title: 'Top End',
-    placement: 'top-end',
+    children: TooltipBox('Top Right'),
+    title: 'Top Right',
+    direction: 'top-right',
   },
 };
 
 // -----
 
-export const RightStartTooltip: Story = {
+export const DefaultRightTopTooltip: Story = {
   args: {
-    children: TooltipBox('Right Start'),
-    title: 'Right Start',
-    placement: 'right-start',
+    children: TooltipBox('Right Top'),
+    title: 'Right Top',
+    direction: 'right-top',
   },
 };
 
-export const RightTooltip: Story = {
+export const DefaultRightTooltip: Story = {
   args: {
     children: TooltipBox('Right'),
     title: 'Right',
-    placement: 'right',
+    direction: 'right',
   },
 };
 
-export const RightEndTooltip: Story = {
+export const DefaultRightBottomTooltip: Story = {
   args: {
-    children: TooltipBox('Right End'),
-    title: 'Right End',
-    placement: 'right-end',
+    children: TooltipBox('Right Bottom'),
+    title: 'Right Bottom',
+    direction: 'right-bottom',
   },
 };
 
 // -----
 
-export const BottomStartTooltip: Story = {
+export const DefaultBottomLeftTooltip: Story = {
   args: {
-    children: TooltipBox('Bottom Start'),
-    title: 'Bottom Start',
-    placement: 'bottom-start',
+    children: TooltipBox('Bottom Left'),
+    title: 'Bottom Left',
+    direction: 'bottom-left',
   },
 };
 
-export const BottomTooltip: Story = {
+export const DefaultBottomTooltip: Story = {
   args: {
     children: TooltipBox('Bottom'),
     title: 'Bottom',
-    placement: 'bottom',
+    direction: 'bottom',
   },
 };
 
-export const BottomEndTooltip: Story = {
+export const DefaultBottomRightTooltip: Story = {
   args: {
-    children: TooltipBox('Bottom End'),
-    title: 'Bottom End',
-    placement: 'bottom-end',
+    children: TooltipBox('Bottom Right'),
+    title: 'Bottom Right',
+    direction: 'bottom-right',
   },
 };
 
 // -----
 
-export const LeftStartTooltip: Story = {
+export const DefaultLeftTopTooltip: Story = {
   args: {
-    children: TooltipBox('Left Start'),
-    title: 'Left Start',
-    placement: 'left-start',
+    children: TooltipBox('Left Top'),
+    title: 'Left Top',
+    direction: 'left-top',
   },
 };
 
-export const LeftTooltip: Story = {
+export const DefaultLeftTooltip: Story = {
   args: {
     children: TooltipBox('Left'),
     title: 'Left',
-    placement: 'left',
+    direction: 'left',
   },
 };
 
-export const LeftEndTooltip: Story = {
+export const DefaultLeftBottomTooltip: Story = {
   args: {
-    children: TooltipBox('Left End'),
-    title: 'Left End',
-    placement: 'left-end',
+    children: TooltipBox('Left Bottom'),
+    title: 'Left Bottom',
+    direction: 'left-bottom',
+  },
+};
+
+// ----------------------------------------------------------------------
+// GrayishViolet
+// ----------------------------------------------------------------------
+
+export const GrayishVioletTopLeftTooltip: Story = {
+  args: {
+    children: TooltipBox('Top Left'),
+    title: 'Top Left',
+    direction: 'top-left',
+    color: 'grayishViolet',
+  },
+};
+
+export const GrayishVioletTopTooltip: Story = {
+  args: {
+    children: TooltipBox('Top'),
+    title: 'Top',
+    direction: 'top',
+    color: 'grayishViolet',
+  },
+};
+
+export const GrayishVioletTopRightTooltip: Story = {
+  args: {
+    children: TooltipBox('Top Right'),
+    title: 'Top Right',
+    direction: 'top-right',
+    color: 'grayishViolet',
+  },
+};
+
+// -----
+
+export const GrayishVioletRightTopTooltip: Story = {
+  args: {
+    children: TooltipBox('Right Top'),
+    title: 'Right Top',
+    direction: 'right-top',
+    color: 'grayishViolet',
+  },
+};
+
+export const GrayishVioletRightTooltip: Story = {
+  args: {
+    children: TooltipBox('Right'),
+    title: 'Right',
+    direction: 'right',
+    color: 'grayishViolet',
+  },
+};
+
+export const GrayishVioletRightBottomTooltip: Story = {
+  args: {
+    children: TooltipBox('Right Bottom'),
+    title: 'Right Bottom',
+    direction: 'right-bottom',
+    color: 'grayishViolet',
+  },
+};
+
+// -----
+
+export const GrayishVioletBottomLeftTooltip: Story = {
+  args: {
+    children: TooltipBox('Bottom Left'),
+    title: 'Bottom Left',
+    direction: 'bottom-left',
+    color: 'grayishViolet',
+  },
+};
+
+export const GrayishVioletBottomTooltip: Story = {
+  args: {
+    children: TooltipBox('Bottom'),
+    title: 'Bottom',
+    direction: 'bottom',
+    color: 'grayishViolet',
+  },
+};
+
+export const GrayishVioletBottomRightTooltip: Story = {
+  args: {
+    children: TooltipBox('Bottom Right'),
+    title: 'Bottom Right',
+    direction: 'bottom-right',
+    color: 'grayishViolet',
+  },
+};
+
+// -----
+
+export const GrayishVioletLeftTopTooltip: Story = {
+  args: {
+    children: TooltipBox('Left Top'),
+    title: 'Left Top',
+    direction: 'left-top',
+    color: 'grayishViolet',
+  },
+};
+
+export const GrayishVioletLeftTooltip: Story = {
+  args: {
+    children: TooltipBox('Left'),
+    title: 'Left',
+    direction: 'left',
+    color: 'grayishViolet',
+  },
+};
+
+export const GrayishVioletLeftBottomTooltip: Story = {
+  args: {
+    children: TooltipBox('Left Bottom'),
+    title: 'Left Bottom',
+    direction: 'left-bottom',
+    color: 'grayishViolet',
+  },
+};
+
+// ----------------------------------------------------------------------
+// Primary
+// ----------------------------------------------------------------------
+
+export const PrimaryTopLeftTooltip: Story = {
+  args: {
+    children: TooltipBox('Top Left'),
+    title: 'Top Left',
+    direction: 'top-left',
+    color: 'primary',
+  },
+};
+
+export const PrimaryTopTooltip: Story = {
+  args: {
+    children: TooltipBox('Top'),
+    title: 'Top',
+    direction: 'top',
+    color: 'primary',
+  },
+};
+
+export const PrimaryTopRightTooltip: Story = {
+  args: {
+    children: TooltipBox('Top Right'),
+    title: 'Top Right',
+    direction: 'top-right',
+    color: 'primary',
+  },
+};
+
+// -----
+
+export const PrimaryRightTopTooltip: Story = {
+  args: {
+    children: TooltipBox('Right Top'),
+    title: 'Right Top',
+    direction: 'right-top',
+    color: 'primary',
+  },
+};
+
+export const PrimaryRightTooltip: Story = {
+  args: {
+    children: TooltipBox('Right'),
+    title: 'Right',
+    direction: 'right',
+    color: 'primary',
+  },
+};
+
+export const PrimaryRightBottomTooltip: Story = {
+  args: {
+    children: TooltipBox('Right Bottom'),
+    title: 'Right Bottom',
+    direction: 'right-bottom',
+    color: 'primary',
+  },
+};
+
+// -----
+
+export const PrimaryBottomLeftTooltip: Story = {
+  args: {
+    children: TooltipBox('Bottom Left'),
+    title: 'Bottom Left',
+    direction: 'bottom-left',
+    color: 'primary',
+  },
+};
+
+export const PrimaryBottomTooltip: Story = {
+  args: {
+    children: TooltipBox('Bottom'),
+    title: 'Bottom',
+    direction: 'bottom',
+    color: 'primary',
+  },
+};
+
+export const PrimaryBottomRightTooltip: Story = {
+  args: {
+    children: TooltipBox('Bottom Right'),
+    title: 'Bottom Right',
+    direction: 'bottom-right',
+    color: 'primary',
+  },
+};
+
+// -----
+
+export const PrimaryLeftTopTooltip: Story = {
+  args: {
+    children: TooltipBox('Left Top'),
+    title: 'Left Top',
+    direction: 'left-top',
+    color: 'primary',
+  },
+};
+
+export const PrimaryLeftTooltip: Story = {
+  args: {
+    children: TooltipBox('Left'),
+    title: 'Left',
+    direction: 'left',
+    color: 'primary',
+  },
+};
+
+export const PrimaryLeftBottomTooltip: Story = {
+  args: {
+    children: TooltipBox('Left Bottom'),
+    title: 'Left Bottom',
+    direction: 'left-bottom',
+    color: 'primary',
   },
 };

@@ -2,14 +2,39 @@ import { Canvas, Controls, Meta, Story } from '@storybook/blocks';
 
 import * as TooltipStories from './Tooltip.stories';
 import {
-  BottomEndTooltip,
-  BottomStartTooltip, BottomTooltip, LeftEndTooltip, LeftStartTooltip, LeftTooltip,
-  RightEndTooltip,
-  RightStartTooltip,
-  RightTooltip,
-  TopEndTooltip,
-  TopStartTooltip,
-  TopTooltip,
+  DefaultBottomRightTooltip,
+  DefaultBottomLeftTooltip,
+  DefaultBottomTooltip,
+  DefaultLeftBottomTooltip,
+  DefaultLeftTopTooltip,
+  DefaultLeftTooltip,
+  DefaultRightBottomTooltip,
+  DefaultRightTopTooltip,
+  DefaultRightTooltip,
+  DefaultTopRightTooltip,
+  DefaultTopLeftTooltip,
+  DefaultTopTooltip,
+  GrayishVioletBottomRightTooltip,
+  GrayishVioletBottomLeftTooltip,
+  GrayishVioletBottomTooltip,
+  GrayishVioletLeftBottomTooltip,
+  GrayishVioletLeftTopTooltip,
+  GrayishVioletLeftTooltip,
+  GrayishVioletRightBottomTooltip,
+  GrayishVioletRightTopTooltip,
+  GrayishVioletRightTooltip,
+  GrayishVioletTopRightTooltip,
+  GrayishVioletTopLeftTooltip,
+  GrayishVioletTopTooltip,
+  PrimaryTopLeftTooltip,
+  PrimaryTopTooltip,
+  PrimaryTopRightTooltip,
+  PrimaryLeftTopTooltip,
+  PrimaryLeftTooltip,
+  PrimaryLeftBottomTooltip,
+  PrimaryBottomLeftTooltip,
+  PrimaryBottomTooltip,
+  PrimaryBottomRightTooltip, PrimaryRightTopTooltip, PrimaryRightTooltip, PrimaryRightBottomTooltip,
 } from './Tooltip.stories';
 
 <Meta of={TooltipStories} />
@@ -17,46 +42,122 @@ import {
 # Tooltip
 
 - Parameter는 Mui와 동일하며 스타일만 디자인시스템에 맞게 수정하였습니다.
+- color의 기본 값은 default 입니다.
 
 <Canvas of={TooltipStories.Default} />
 
 <Controls
   include={[
     'title',
-    'direction'
+    'direction',
+    'color'
   ]}
 />
 
 ---
 
+# Default
+
 ### Top
 
 <Canvas>
-  <Story of={TopStartTooltip} />
-  <Story of={TopTooltip} />
-  <Story of={TopEndTooltip} />
+  <Story of={DefaultTopLeftTooltip} />
+  <Story of={DefaultTopTooltip} />
+  <Story of={DefaultTopRightTooltip} />
 </Canvas>
 
 ### Left
 
 <Canvas>
-  <Story of={LeftStartTooltip} />
-  <Story of={LeftTooltip} />
-  <Story of={LeftEndTooltip} />
+  <Story of={DefaultLeftTopTooltip} />
+  <Story of={DefaultLeftTooltip} />
+  <Story of={DefaultLeftBottomTooltip} />
 </Canvas>
 
 ### Bottom
 
 <Canvas>
-  <Story of={BottomStartTooltip} />
-  <Story of={BottomTooltip} />
-  <Story of={BottomEndTooltip} />
+  <Story of={DefaultBottomLeftTooltip} />
+  <Story of={DefaultBottomTooltip} />
+  <Story of={DefaultBottomRightTooltip} />
 </Canvas>
 
 ### Right
 
 <Canvas>
-  <Story of={RightStartTooltip} />
-  <Story of={RightTooltip} />
-  <Story of={RightEndTooltip} />
+  <Story of={DefaultRightTopTooltip} />
+  <Story of={DefaultRightTooltip} />
+  <Story of={DefaultRightBottomTooltip} />
+</Canvas>
+
+---
+
+# GrayishViolet
+
+### Top
+
+<Canvas>
+  <Story of={GrayishVioletTopLeftTooltip} />
+  <Story of={GrayishVioletTopTooltip} />
+  <Story of={GrayishVioletTopRightTooltip} />
+</Canvas>
+
+### Left
+
+<Canvas>
+  <Story of={GrayishVioletLeftTopTooltip} />
+  <Story of={GrayishVioletLeftTooltip} />
+  <Story of={GrayishVioletLeftBottomTooltip} />
+</Canvas>
+
+### Bottom
+
+<Canvas>
+  <Story of={GrayishVioletBottomLeftTooltip} />
+  <Story of={GrayishVioletBottomTooltip} />
+  <Story of={GrayishVioletBottomRightTooltip} />
+</Canvas>
+
+### Right
+
+<Canvas>
+  <Story of={GrayishVioletRightTopTooltip} />
+  <Story of={GrayishVioletRightTooltip} />
+  <Story of={GrayishVioletRightBottomTooltip} />
+</Canvas>
+
+---
+
+# Primary
+
+### Top
+
+<Canvas>
+  <Story of={PrimaryTopLeftTooltip} />
+  <Story of={PrimaryTopTooltip} />
+  <Story of={PrimaryTopRightTooltip} />
+</Canvas>
+
+### Left
+
+<Canvas>
+  <Story of={PrimaryLeftTopTooltip} />
+  <Story of={PrimaryLeftTooltip} />
+  <Story of={PrimaryLeftBottomTooltip} />
+</Canvas>
+
+### Bottom
+
+<Canvas>
+  <Story of={PrimaryBottomLeftTooltip} />
+  <Story of={PrimaryBottomTooltip} />
+  <Story of={PrimaryBottomRightTooltip} />
+</Canvas>
+
+### Right
+
+<Canvas>
+  <Story of={PrimaryRightTopTooltip} />
+  <Story of={PrimaryRightTooltip} />
+  <Story of={PrimaryRightBottomTooltip} />
 </Canvas>

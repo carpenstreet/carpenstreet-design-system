@@ -5,10 +5,11 @@ import { Typography } from '@components';
 import { placementMapping } from '@components/Tooltip/Tooltip.constants.ts';
 
 const Tooltip = (props: TooltipPropsType) => {
-  const { children, ...other } = props;
+  const { children, color = 'default', ...other } = props;
 
   const tooltipProps = {
     ...other,
+    color,
     placement: placementMapping[other.direction],
     arrow: other.direction !== 'none',
     title: (
