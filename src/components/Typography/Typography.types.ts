@@ -1,6 +1,6 @@
 import { TypographyProps as MUITypographyProps } from '@mui/material/Typography/Typography';
 import { CustomTypographyVariants } from '@components/Typography/Typography.constants';
-import { CustomColorPaletteTypes } from '@shared/settings/color.type';
+import { CustomColorPaletteTypes } from '@shared/settings/color/color.type.ts';
 
 export type TypographyProps = {
   children: MUITypographyProps['children'];
