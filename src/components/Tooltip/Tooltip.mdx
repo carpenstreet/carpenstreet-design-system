@@ -1,0 +1,62 @@
+import { Canvas, Controls, Meta, Story } from '@storybook/blocks';
+
+import * as TooltipStories from './Tooltip.stories';
+import {
+  BottomEndTooltip,
+  BottomStartTooltip, BottomTooltip, LeftEndTooltip, LeftStartTooltip, LeftTooltip,
+  RightEndTooltip,
+  RightStartTooltip,
+  RightTooltip,
+  TopEndTooltip,
+  TopStartTooltip,
+  TopTooltip,
+} from './Tooltip.stories';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+- Parameter는 Mui와 동일하며 스타일만 디자인시스템에 맞게 수정하였습니다.
+
+<Canvas of={TooltipStories.Default} />
+
+<Controls
+  include={[
+    'title',
+    'direction'
+  ]}
+/>
+
+---
+
+### Top
+
+<Canvas>
+  <Story of={TopStartTooltip} />
+  <Story of={TopTooltip} />
+  <Story of={TopEndTooltip} />
+</Canvas>
+
+### Left
+
+<Canvas>
+  <Story of={LeftStartTooltip} />
+  <Story of={LeftTooltip} />
+  <Story of={LeftEndTooltip} />
+</Canvas>
+
+### Bottom
+
+<Canvas>
+  <Story of={BottomStartTooltip} />
+  <Story of={BottomTooltip} />
+  <Story of={BottomEndTooltip} />
+</Canvas>
+
+### Right
+
+<Canvas>
+  <Story of={RightStartTooltip} />
+  <Story of={RightTooltip} />
+  <Story of={RightEndTooltip} />
+</Canvas>
