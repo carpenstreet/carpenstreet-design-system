@@ -19,7 +19,9 @@ export default meta;
 type Story = StoryObj<typeof Tooltip>;
 
 const TooltipBox = (text: string) => (
-  <Box sx={{ border: '1px #ccc solid', width: '100px', height: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'pointer' }}>{text}</Box>
+  <Box sx={{ border: '1px #ccc solid', width: '100px', height: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center', cursor: 'pointer', borderRadius: '8px' }}>
+    {text}
+  </Box>
 );
 
 // -----
@@ -43,6 +45,7 @@ export const DefaultTopLeftTooltip: Story = {
     children: TooltipBox('Top Left'),
     title: 'Top Left',
     direction: 'top-left',
+    open: true,
   },
 };
 
@@ -51,6 +54,7 @@ export const DefaultTopTooltip: Story = {
     children: TooltipBox('Top'),
     title: 'Top',
     direction: 'top',
+    open: true,
   },
 };
 
@@ -59,6 +63,7 @@ export const DefaultTopRightTooltip: Story = {
     children: TooltipBox('Top Right'),
     title: 'Top Right',
     direction: 'top-right',
+    open: true,
   },
 };
 
@@ -69,6 +74,7 @@ export const DefaultRightTopTooltip: Story = {
     children: TooltipBox('Right Top'),
     title: 'Right Top',
     direction: 'right-top',
+    open: true,
   },
 };
 
@@ -77,6 +83,7 @@ export const DefaultRightTooltip: Story = {
     children: TooltipBox('Right'),
     title: 'Right',
     direction: 'right',
+    open: true,
   },
 };
 
@@ -85,6 +92,7 @@ export const DefaultRightBottomTooltip: Story = {
     children: TooltipBox('Right Bottom'),
     title: 'Right Bottom',
     direction: 'right-bottom',
+    open: true,
   },
 };
 
@@ -95,6 +103,7 @@ export const DefaultBottomLeftTooltip: Story = {
     children: TooltipBox('Bottom Left'),
     title: 'Bottom Left',
     direction: 'bottom-left',
+    open: true,
   },
 };
 
@@ -103,6 +112,7 @@ export const DefaultBottomTooltip: Story = {
     children: TooltipBox('Bottom'),
     title: 'Bottom',
     direction: 'bottom',
+    open: true,
   },
 };
 
@@ -111,6 +121,7 @@ export const DefaultBottomRightTooltip: Story = {
     children: TooltipBox('Bottom Right'),
     title: 'Bottom Right',
     direction: 'bottom-right',
+    open: true,
   },
 };
 
@@ -121,6 +132,7 @@ export const DefaultLeftTopTooltip: Story = {
     children: TooltipBox('Left Top'),
     title: 'Left Top',
     direction: 'left-top',
+    open: true,
   },
 };
 
@@ -129,6 +141,7 @@ export const DefaultLeftTooltip: Story = {
     children: TooltipBox('Left'),
     title: 'Left',
     direction: 'left',
+    open: true,
   },
 };
 
@@ -137,6 +150,7 @@ export const DefaultLeftBottomTooltip: Story = {
     children: TooltipBox('Left Bottom'),
     title: 'Left Bottom',
     direction: 'left-bottom',
+    open: true,
   },
 };
 
@@ -149,6 +163,7 @@ export const GrayishVioletTopLeftTooltip: Story = {
     children: TooltipBox('Top Left'),
     title: 'Top Left',
     direction: 'top-left',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -158,6 +173,7 @@ export const GrayishVioletTopTooltip: Story = {
     children: TooltipBox('Top'),
     title: 'Top',
     direction: 'top',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -167,6 +183,7 @@ export const GrayishVioletTopRightTooltip: Story = {
     children: TooltipBox('Top Right'),
     title: 'Top Right',
     direction: 'top-right',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -178,6 +195,7 @@ export const GrayishVioletRightTopTooltip: Story = {
     children: TooltipBox('Right Top'),
     title: 'Right Top',
     direction: 'right-top',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -187,6 +205,7 @@ export const GrayishVioletRightTooltip: Story = {
     children: TooltipBox('Right'),
     title: 'Right',
     direction: 'right',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -196,6 +215,7 @@ export const GrayishVioletRightBottomTooltip: Story = {
     children: TooltipBox('Right Bottom'),
     title: 'Right Bottom',
     direction: 'right-bottom',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -207,6 +227,7 @@ export const GrayishVioletBottomLeftTooltip: Story = {
     children: TooltipBox('Bottom Left'),
     title: 'Bottom Left',
     direction: 'bottom-left',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -216,6 +237,7 @@ export const GrayishVioletBottomTooltip: Story = {
     children: TooltipBox('Bottom'),
     title: 'Bottom',
     direction: 'bottom',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -225,6 +247,7 @@ export const GrayishVioletBottomRightTooltip: Story = {
     children: TooltipBox('Bottom Right'),
     title: 'Bottom Right',
     direction: 'bottom-right',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -236,6 +259,7 @@ export const GrayishVioletLeftTopTooltip: Story = {
     children: TooltipBox('Left Top'),
     title: 'Left Top',
     direction: 'left-top',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -245,6 +269,7 @@ export const GrayishVioletLeftTooltip: Story = {
     children: TooltipBox('Left'),
     title: 'Left',
     direction: 'left',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -254,6 +279,7 @@ export const GrayishVioletLeftBottomTooltip: Story = {
     children: TooltipBox('Left Bottom'),
     title: 'Left Bottom',
     direction: 'left-bottom',
+    open: true,
     color: 'grayishViolet',
   },
 };
@@ -267,6 +293,7 @@ export const PrimaryTopLeftTooltip: Story = {
     children: TooltipBox('Top Left'),
     title: 'Top Left',
     direction: 'top-left',
+    open: true,
     color: 'primary',
   },
 };
@@ -276,6 +303,7 @@ export const PrimaryTopTooltip: Story = {
     children: TooltipBox('Top'),
     title: 'Top',
     direction: 'top',
+    open: true,
     color: 'primary',
   },
 };
@@ -285,6 +313,7 @@ export const PrimaryTopRightTooltip: Story = {
     children: TooltipBox('Top Right'),
     title: 'Top Right',
     direction: 'top-right',
+    open: true,
     color: 'primary',
   },
 };
@@ -296,6 +325,7 @@ export const PrimaryRightTopTooltip: Story = {
     children: TooltipBox('Right Top'),
     title: 'Right Top',
     direction: 'right-top',
+    open: true,
     color: 'primary',
   },
 };
@@ -305,6 +335,7 @@ export const PrimaryRightTooltip: Story = {
     children: TooltipBox('Right'),
     title: 'Right',
     direction: 'right',
+    open: true,
     color: 'primary',
   },
 };
@@ -314,6 +345,7 @@ export const PrimaryRightBottomTooltip: Story = {
     children: TooltipBox('Right Bottom'),
     title: 'Right Bottom',
     direction: 'right-bottom',
+    open: true,
     color: 'primary',
   },
 };
@@ -325,6 +357,7 @@ export const PrimaryBottomLeftTooltip: Story = {
     children: TooltipBox('Bottom Left'),
     title: 'Bottom Left',
     direction: 'bottom-left',
+    open: true,
     color: 'primary',
   },
 };
@@ -334,6 +367,7 @@ export const PrimaryBottomTooltip: Story = {
     children: TooltipBox('Bottom'),
     title: 'Bottom',
     direction: 'bottom',
+    open: true,
     color: 'primary',
   },
 };
@@ -343,6 +377,7 @@ export const PrimaryBottomRightTooltip: Story = {
     children: TooltipBox('Bottom Right'),
     title: 'Bottom Right',
     direction: 'bottom-right',
+    open: true,
     color: 'primary',
   },
 };
@@ -354,6 +389,7 @@ export const PrimaryLeftTopTooltip: Story = {
     children: TooltipBox('Left Top'),
     title: 'Left Top',
     direction: 'left-top',
+    open: true,
     color: 'primary',
   },
 };
@@ -363,6 +399,7 @@ export const PrimaryLeftTooltip: Story = {
     children: TooltipBox('Left'),
     title: 'Left',
     direction: 'left',
+    open: true,
     color: 'primary',
   },
 };
@@ -372,6 +409,7 @@ export const PrimaryLeftBottomTooltip: Story = {
     children: TooltipBox('Left Bottom'),
     title: 'Left Bottom',
     direction: 'left-bottom',
+    open: true,
     color: 'primary',
   },
 };
