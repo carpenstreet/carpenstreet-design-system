@@ -1,12 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
-import Button from './Button';
+import ExampleButton from './ExampleButton';
 import ThemeMui from '@shared/settings/ThemeMui.tsx';
-import { ChevronLeftIcon, ChevronRightIcon } from '@components';
-import { ButtonProps } from '@components/Button/Button.types.ts';
 
-const meta: Meta<typeof Button> = {
+const meta: Meta<typeof ExampleButton> = {
   title: 'Component/Button',
-  component: Button,
+  component: ExampleButton,
   decorators: [
     (Story) => (
       <ThemeMui>
@@ -17,7 +15,7 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof ExampleButton>;
 
 export const Default: Story = {
   args: {
@@ -44,19 +42,6 @@ export const ContainedDefaultMedium: Story = {
   },
 };
 
-export const ContainedDefaultMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'contained',
-    color: 'default',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
 export const ContainedPrimaryMedium: Story = {
   args: {
     children: 'button',
@@ -68,19 +53,6 @@ export const ContainedPrimaryMedium: Story = {
   },
 };
 
-export const ContainedPrimaryMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'contained',
-    color: 'primary',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
 export const ContainedMediumDisabled: Story = {
   args: {
     children: 'button',
@@ -89,19 +61,6 @@ export const ContainedMediumDisabled: Story = {
     size: 'M',
     weight: 'regular',
     disabled: true,
-  },
-};
-
-export const ContainedMediumDisabledIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'contained',
-    color: 'default',
-    size: 'M',
-    weight: 'regular',
-    disabled: true,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -117,19 +76,6 @@ export const OutlinedDefaultMedium: Story = {
   },
 };
 
-export const OutlinedDefaultMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'outlined',
-    color: 'default',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
 export const OutlinedPrimaryMedium: Story = {
   args: {
     children: 'button',
@@ -141,19 +87,6 @@ export const OutlinedPrimaryMedium: Story = {
   },
 };
 
-export const OutlinedPrimaryMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'outlined',
-    color: 'primary',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
 export const OutlinedMediumDisabled: Story = {
   args: {
     children: 'button',
@@ -162,19 +95,6 @@ export const OutlinedMediumDisabled: Story = {
     size: 'M',
     weight: 'regular',
     disabled: true,
-  },
-};
-
-export const OutlinedMediumDisabledIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'outlined',
-    color: 'default',
-    size: 'M',
-    weight: 'regular',
-    disabled: true,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -201,32 +121,6 @@ export const TextDefaultMediumBold: Story = {
   },
 };
 
-export const TextDefaultMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'text',
-    color: 'default',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
-export const TextDefaultMediumIconBold: Story = {
-  args: {
-    children: 'button',
-    variant: 'text',
-    color: 'default',
-    size: 'M',
-    weight: 'bold',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
 export const TextPrimaryMedium: Story = {
   args: {
     children: 'button',
@@ -246,32 +140,6 @@ export const TextPrimaryMediumBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: false,
-  },
-};
-
-export const TextPrimaryMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'text',
-    color: 'primary',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
-export const TextPrimaryMediumIconBold: Story = {
-  args: {
-    children: 'button',
-    variant: 'text',
-    color: 'primary',
-    size: 'M',
-    weight: 'bold',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -297,32 +165,6 @@ export const TextGrayMediumBold: Story = {
   },
 };
 
-export const TextGrayMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'text',
-    color: 'gray',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
-export const TextGrayMediumIconBold: Story = {
-  args: {
-    children: 'button',
-    variant: 'text',
-    color: 'gray',
-    size: 'M',
-    weight: 'bold',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
 export const TextMediumDisabled: Story = {
   args: {
     children: 'button',
@@ -342,32 +184,6 @@ export const TextMediumDisabledBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: true,
-  },
-};
-
-export const TextMediumDisabledIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'text',
-    color: 'default',
-    size: 'M',
-    weight: 'regular',
-    disabled: true,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
-export const TextMediumDisabledIconBold: Story = {
-  args: {
-    children: 'button',
-    variant: 'text',
-    color: 'default',
-    size: 'M',
-    weight: 'bold',
-    disabled: true,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -395,32 +211,6 @@ export const UnderlinedDefaultMediumBold: Story = {
   },
 };
 
-export const UnderlinedDefaultMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'underlined',
-    color: 'default',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
-export const UnderlinedDefaultMediumIconBold: Story = {
-  args: {
-    children: 'button',
-    variant: 'underlined',
-    color: 'default',
-    size: 'M',
-    weight: 'bold',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
 export const UnderlinedPrimaryMedium: Story = {
   args: {
     children: 'button',
@@ -440,32 +230,6 @@ export const UnderlinedPrimaryMediumBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: false,
-  },
-};
-
-export const UnderlinedPrimaryMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'underlined',
-    color: 'primary',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
-export const UnderlinedPrimaryMediumIconBold: Story = {
-  args: {
-    children: 'button',
-    variant: 'underlined',
-    color: 'primary',
-    size: 'M',
-    weight: 'bold',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
   },
 };
 
@@ -491,32 +255,6 @@ export const UnderlinedGrayMediumBold: Story = {
   },
 };
 
-export const UnderlinedGrayMediumIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'underlined',
-    color: 'gray',
-    size: 'M',
-    weight: 'regular',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
-export const UnderlinedGrayMediumIconBold: Story = {
-  args: {
-    children: 'button',
-    variant: 'underlined',
-    color: 'gray',
-    size: 'M',
-    weight: 'bold',
-    disabled: false,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
 export const UnderlinedMediumDisabled: Story = {
   args: {
     children: 'button',
@@ -536,31 +274,5 @@ export const UnderlinedMediumDisabledBold: Story = {
     size: 'M',
     weight: 'bold',
     disabled: true,
-  },
-};
-
-export const UnderlinedMediumDisabledIcon: Story = {
-  args: {
-    children: 'button',
-    variant: 'underlined',
-    color: 'default',
-    size: 'M',
-    weight: 'regular',
-    disabled: true,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
-  },
-};
-
-export const UnderlinedMediumDisabledIconBold: Story = {
-  args: {
-    children: 'button',
-    variant: 'underlined',
-    color: 'default',
-    size: 'M',
-    weight: 'bold',
-    disabled: true,
-    startIcon: <ChevronLeftIcon />,
-    endIcon: <ChevronRightIcon />,
   },
 };
