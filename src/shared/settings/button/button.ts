@@ -119,7 +119,7 @@ export const overrideButton = {
     }),
     outlined: ({ ownerState, theme }) => ({
       // Size
-      // contained의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
+      // outlined의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
       ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
         borderRadius: '8px',
         paddingLeft: '21px', // border 값만큼 빼줌 (22 - 1) box-shadow css 로도 설정할 수 있지만, hover 시에 스타일이 깨지는 문제가 있어서 보류
@@ -158,7 +158,7 @@ export const overrideButton = {
           },
         },
       }),
-      // contained의 경우 gray 색상을 지원하지 않으므로 gray 입력받을 경우 fallback으로 default 색상 적용
+      // outlined의 경우 gray 색상을 지원하지 않으므로 gray 입력받을 경우 fallback으로 default 색상 적용
       ...((ownerState.color === 'default' || ownerState.color === 'gray') && {
         border: `1px solid ${theme.palette['color/gray/dim/400']}`,
         '& > .MuiTypography-root': {
