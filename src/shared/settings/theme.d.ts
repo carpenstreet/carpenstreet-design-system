@@ -1,5 +1,4 @@
 import React from 'react';
-import { ThemeOptions } from '@mui/material';
 import { colorPalette } from './color/color.ts';
 import { CustomTypographyVariantsTypes } from '@components/Typography/Typography.types.ts';
 
@@ -89,25 +88,6 @@ declare module '@mui/material/styles/createPalette' {
 
 declare module '@mui/material/Typography/Typography' {
   interface TypographyPropsVariantOverrides extends Record<CustomTypographyVariantsTypes, true> {}
-}
-
-// [todo]: styled-component type을 적용하면 오류가 많이 발생하여 임시 주석처리
-declare module 'styled-components' {
-  export interface DefaultTheme extends ThemeOptions {
-    colors: {
-      icon: string;
-      activeText: string;
-      text: string;
-      gnbBg: string;
-      gnbCount: string;
-      gnbCountText: string;
-      listBorder: string;
-      colBg: string;
-      colActiveBg: string;
-      colText: string;
-      colActiveText: string;
-    } & ThemeOptions['colors'];
-  }
 }
 
 declare module '@mui/material/Button' {
