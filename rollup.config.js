@@ -18,19 +18,19 @@ const minifierPlugin = terser({
 });
 
 const config = [
-  {
-    external: [/node_modules/],
-    input: './src/index.ts',
-    output: [
-      {
-        dir: './dist/',
-        format: 'esm',
-        preserveModules: true,
-        preserveModulesRoot: 'src',
-      },
-    ],
-    plugins: [tsconfigPaths(), resolve(), peerDepsExternal(), esbuild(), minifierPlugin],
-  },
+  // {
+  //   external: [/node_modules/],
+  //   input: './src/index.ts',
+  //   output: [
+  //     {
+  //       dir: './dist/',
+  //       format: 'esm',
+  //       preserveModules: true,
+  //       preserveModulesRoot: 'src',
+  //     },
+  //   ],
+  //   plugins: [tsconfigPaths(), resolve(), peerDepsExternal(), esbuild(), minifierPlugin],
+  // },
   {
     external: [/node_modules/],
     input: './src/index.ts',
@@ -44,20 +44,20 @@ const config = [
     ],
     plugins: [tsconfigPaths(), resolve(), peerDepsExternal(), esbuild(), minifierPlugin],
   },
-  {
-    external: [/node_modules/],
-    input: './src/index.ts',
-    output: [
-      {
-        dir: './dist',
-        entryFileNames: '[name].d.ts',
-        format: 'esm',
-        preserveModules: true,
-        preserveModulesRoot: 'src',
-      },
-    ],
-    plugins: [tsconfigPaths(), dts({ respectExternal: false })],
-  },
+  // {
+  //   external: [/node_modules/],
+  //   input: './src/index.ts',
+  //   output: [
+  //     {
+  //       dir: './dist',
+  //       entryFileNames: '[name].d.ts',
+  //       format: 'esm',
+  //       preserveModules: true,
+  //       preserveModulesRoot: 'src',
+  //     },
+  //   ],
+  //   plugins: [tsconfigPaths(), dts({ respectExternal: false })],
+  // },
   {
     external: [/node_modules/],
     input: './src/index.ts',
