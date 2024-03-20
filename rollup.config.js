@@ -11,8 +11,6 @@ const config = [
       {
         dir: './dist/',
         format: 'esm',
-        preserveModules: true,
-        preserveModulesRoot: 'src',
       },
     ],
     plugins: [peerDepsExternal(), nodeResolve(), commonjs(), typescript({ compilerOptions: { declaration: true, declarationDir: './dist/types' } }), preserveDirectives()],
