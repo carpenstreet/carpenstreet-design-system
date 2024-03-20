@@ -1,80 +1,21 @@
-import tsconfigPaths from 'rollup-plugin-tsconfig-paths';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import esbuild from 'rollup-plugin-esbuild';
-import dts from 'rollup-plugin-dts';
-import modify from 'rollup-plugin-modify';
-import { terser } from 'rollup-plugin-terser';
+import typescript from '@rollup/plugin-typescript';
+import preserveDirectives from 'rollup-preserve-directives';
 import commonjs from '@rollup/plugin-commonjs';
-
-const extensions = ['js', 'jsx', 'ts', 'tsx', 'mjs'];
-
-const minifierPlugin = terser({
-  compress: {
-    passes: 10,
-    keep_infinity: true,
-    pure_getters: true,
-  },
-  format: {
-    wrap_func_args: false,
-    preserve_annotations: true,
-  },
-});
 
 const config = [
   {
-    external: ['react', 'react-dom', 'react-router-dom'],
-    input: './src/index.ts',
+    external: [/node_modules/],
+    input: 'src/index.ts',
     output: [
       {
         dir: './dist/',
-        format: 'esm',
+        format: 'cjs',
         preserveModules: true,
         preserveModulesRoot: 'src',
       },
     ],
-    plugins: [tsconfigPaths(), nodeResolve({ extensions }), peerDepsExternal(), esbuild(), minifierPlugin, commonjs()],
-  },
-  {
-    external: ['react', 'react-dom', 'react-router-dom'],
-    input: './src/index.ts',
-    output: [
-      {
-        dir: './dist/',
-        format: 'esm',
-        // preserveModules: true,
-        // preserveModulesRoot: 'src'
-      },
-    ],
-    plugins: [tsconfigPaths(), nodeResolve({ extensions }), peerDepsExternal(), esbuild(), minifierPlugin, commonjs()],
-  },
-  {
-    external: ['react', 'react-dom', 'react-router-dom'],
-    input: './src/index.ts',
-    output: [
-      {
-        dir: './dist',
-        entryFileNames: '[name].d.ts',
-        format: 'esm',
-        preserveModules: true,
-        preserveModulesRoot: 'src',
-      },
-    ],
-    plugins: [tsconfigPaths(), dts({ respectExternal: false }), commonjs()],
-  },
-  {
-    external: ['react', 'react-dom', 'react-router-dom'],
-    input: './src/index.ts',
-    output: [
-      {
-        dir: './dist',
-        entryFileNames: '[name].d.ts',
-        format: 'esm',
-        // preserveModules: true,
-        // preserveModulesRoot: 'src'
-      },
-    ],
-    plugins: [tsconfigPaths(), dts({ respectExternal: false }), commonjs()],
+    plugins: [typescript({ compilerOptions: { declaration: true, declarationDir: './dist/types' } }), nodeResolve(), preserveDirectives(), commonjs()],
   },
 ];
 export default config;
