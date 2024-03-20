@@ -1,24 +1,14 @@
-import { Button, IconButton, Typography, Grid, Icon } from '@components';
 import DesignSystemProvider from './shared/settings/ThemeMui';
+import { Button, IconButton, Typography, Grid, Icon, Checkbox } from '@components';
 
-export {
-  Button,
-  IconButton,
-  Typography,
-  Grid,
-  //
-  Icon,
-  //
-  DesignSystemProvider,
-};
+export { DesignSystemProvider, Button, IconButton, Typography, Grid, Icon, Checkbox };
 
 export default {
+  DesignSystemProvider,
   Button,
   IconButton,
   Typography,
   Grid,
-  //
   Icon,
-  //
-  DesignSystemProvider,
+  Checkbox,
 };

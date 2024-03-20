@@ -3,8 +3,9 @@ import IconButton from '@components/IconButton/IconButton.tsx';
 import Icon from '@components/Icon/index';
 import Typography from '@components/Typography/Typography';
 import Grid from '@components/Grid/Grid';
+import Checkbox from '@components/Checkbox/Checkbox';
 
-export { Button, IconButton, Typography, Grid, Icon };
+export { Button, IconButton, Typography, Grid, Icon, Checkbox };
 export * from '@components/Icon/index';
 
 export default {
@@ -14,4 +15,5 @@ export default {
   Grid,
   Icon,
   ...Icon,
+  Checkbox,
 };
