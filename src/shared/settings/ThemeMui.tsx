@@ -8,6 +8,7 @@ import { shadows } from '@shared/settings/shadows/shadows.ts';
 import { overrideTypography } from '@shared/settings/typography/typography.ts';
 import { overrideButton } from '@shared/settings/button/button.ts';
 import { overrideIconButton } from '@shared/settings/iconButton/iconButton.ts';
+import { overrideCheckbox } from '@shared/settings/checkbox/checkbox.ts';
 
 // ----------------------------------------------------------------------
 
@@ -45,6 +46,7 @@ export default function ThemeMui({ children }: Props) {
       MuiTypography: overrideTypography,
       MuiButton: overrideButton,
       MuiIconButton: overrideIconButton,
+      MuiCheckbox: overrideCheckbox,
     },
     typography: {
       ...CustomTypographyVariants,

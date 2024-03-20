@@ -135,3 +135,10 @@ declare module '@mui/material/IconButton/IconButton' {
     S: true;
   }
 }
+
+declare module '@mui/material/Checkbox/Checkbox' {
+  interface CheckboxPropsSizeOverrides {
+    M: true;
+    S: true;
+  }
+}
