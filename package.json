@@ -28,12 +28,9 @@
     "@mui/material": "^5.13.5",
     "@mui/styles": "^5.13.2",
     "@mui/system": "^5.13.5",
-    "dayjs": "^1.11.8",
-    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.13.0",
-    "styled-components": "^5.3.11"
+    "react-router-dom": "^6.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
