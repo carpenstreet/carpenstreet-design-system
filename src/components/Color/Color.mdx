@@ -1,44 +1,63 @@
-import {Meta, ColorPalette, ColorItem} from '@storybook/blocks';
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
 import {
-    background,
-    common, gradient,
-    grayishViolet,
-    grayScale,
-    grayScaleDim, green, orange, partnership,
-    primaryColor,
-    primaryColorDim, skyblue, state, stateErrorDim, stateInfoDim, stateSaleDim, stateSuccessDim, stateWarningDim
-} from "@shared/settings/color/color.ts";
+  background,
+  common,
+  gradient,
+  grayishViolet,
+  grayScale,
+  grayScaleDim,
+  green,
+  orange,
+  partnership,
+  primaryColor,
+  primaryColorDim,
+  skyblue,
+  state,
+  stateErrorDim,
+  stateInfoDim,
+  stateSaleDim,
+  stateSuccessDim,
+  stateWarningDim,
+} from '../../shared/settings/color/color.ts';
 
-<Meta title='Foundation/Color' />
+<Meta title="Foundation/Color" />
 
 # Color
 
-ACON3D 서비스에 사용되는 색상입니다. 아래의 색을 인터페이스에 사용하기 위해서는 각 색에 의미를 부여하여 사용해야 합니다. ([피그마 링크](https://www.figma.com/file/qfL0NXrfMVNIlBszjy8T8z/ACON-Design-System-(%EA%B3%B5%EC%82%AC%EC%A4%91)?type=design&node-id=1803-3368&mode=design))
+ACON3D 서비스에 사용되는 색상입니다. 아래의 색을 인터페이스에 사용하기 위해서는 각 색에 의미를 부여하여 사용해야 합니다. ([피그마 링크](<https://www.figma.com/file/qfL0NXrfMVNIlBszjy8T8z/ACON-Design-System-(%EA%B3%B5%EC%82%AC%EC%A4%91)?type=design&node-id=1803-3368&mode=design>))
 
 ---
 
 <ColorPalette>
-    <ColorItem title={'color/white'} subtitle={'White'} colors={{
-        'color/white': common.white
-    }} />
-    <ColorItem title={'color/black'} subtitle={'Black'} colors={{
-        'color/black': common.black
-    }} />
-    <ColorItem title={'color/gray'} subtitle={'Gray Scale'} colors={grayScale} />
-    <ColorItem title={'color/gray/dim'} subtitle={'Gray Scale with Dim'} colors={grayScaleDim} />
-    <ColorItem title={'color/primary'} subtitle={'Primary Color'} colors={primaryColor} />
-    <ColorItem title={'color/primary/dim'} subtitle={'Primary Color with Dim'} colors={primaryColorDim} />
-    <ColorItem title={'color/grayishViolet'} subtitle={'Grayish Violet'} colors={grayishViolet} />
-    <ColorItem title={'color/orange'} subtitle={'Orange'} colors={orange} />
-    <ColorItem title={'color/green'} subtitle={'Green'} colors={green} />
-    <ColorItem title={'color/skyBlue'} subtitle={'Sky Blue'} colors={skyblue} />
-    <ColorItem title={'color/state'} subtitle={'State'} colors={state} />
-    <ColorItem title={'color/state/infoDim'} subtitle={'Info with Dim'} colors={stateInfoDim} />
-    <ColorItem title={'color/state/successDim'} subtitle={'Success with Dim'} colors={stateSuccessDim} />
-    <ColorItem title={'color/state/warningDim'} subtitle={'Warning with Dim'} colors={stateWarningDim} />
-    <ColorItem title={'color/state/errorDim'} subtitle={'Error with Dim'} colors={stateErrorDim} />
-    <ColorItem title={'color/state/saleDim'} subtitle={'Sale with Dim'} colors={stateSaleDim} />
-    <ColorItem title={'color/partnership'} subtitle={'Partnership (HUB)'} colors={partnership} />
-    <ColorItem title={'color/gradient'} subtitle={'Gradient'} colors={gradient} />
-    <ColorItem title={'color/background'} subtitle={'Background'} colors={background} />
+  <ColorItem
+    title={'color/white'}
+    subtitle={'White'}
+    colors={{
+      'color/white': common.white,
+    }}
+  />
+  <ColorItem
+    title={'color/black'}
+    subtitle={'Black'}
+    colors={{
+      'color/black': common.black,
+    }}
+  />
+  <ColorItem title={'color/gray'} subtitle={'Gray Scale'} colors={grayScale} />
+  <ColorItem title={'color/gray/dim'} subtitle={'Gray Scale with Dim'} colors={grayScaleDim} />
+  <ColorItem title={'color/primary'} subtitle={'Primary Color'} colors={primaryColor} />
+  <ColorItem title={'color/primary/dim'} subtitle={'Primary Color with Dim'} colors={primaryColorDim} />
+  <ColorItem title={'color/grayishViolet'} subtitle={'Grayish Violet'} colors={grayishViolet} />
+  <ColorItem title={'color/orange'} subtitle={'Orange'} colors={orange} />
+  <ColorItem title={'color/green'} subtitle={'Green'} colors={green} />
+  <ColorItem title={'color/skyBlue'} subtitle={'Sky Blue'} colors={skyblue} />
+  <ColorItem title={'color/state'} subtitle={'State'} colors={state} />
+  <ColorItem title={'color/state/infoDim'} subtitle={'Info with Dim'} colors={stateInfoDim} />
+  <ColorItem title={'color/state/successDim'} subtitle={'Success with Dim'} colors={stateSuccessDim} />
+  <ColorItem title={'color/state/warningDim'} subtitle={'Warning with Dim'} colors={stateWarningDim} />
+  <ColorItem title={'color/state/errorDim'} subtitle={'Error with Dim'} colors={stateErrorDim} />
+  <ColorItem title={'color/state/saleDim'} subtitle={'Sale with Dim'} colors={stateSaleDim} />
+  <ColorItem title={'color/partnership'} subtitle={'Partnership (HUB)'} colors={partnership} />
+  <ColorItem title={'color/gradient'} subtitle={'Gradient'} colors={gradient} />
+  <ColorItem title={'color/background'} subtitle={'Background'} colors={background} />
 </ColorPalette>

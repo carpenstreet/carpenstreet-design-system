@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import ThemeMui from '@shared/settings/ThemeMui';
+import ThemeMui from '../../../shared/settings/ThemeMui';
 import NoticeIcon from './NoticeIcon';
 
 const meta: Meta = {

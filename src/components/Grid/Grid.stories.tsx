@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 import Grid from './Grid';
-import ThemeMui from '@shared/settings/ThemeMui';
+import ThemeMui from '../../shared/settings/ThemeMui';
 import { Paper } from '@mui/material';
 
 const meta: Meta<typeof Grid> = {

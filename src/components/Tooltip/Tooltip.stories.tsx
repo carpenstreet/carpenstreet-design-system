@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import Tooltip from './Tooltip';
-import ThemeMui from '@shared/settings/ThemeMui';
+import ThemeMui from '../../shared/settings/ThemeMui';
 import { Box } from '@mui/material';
 
 const meta: Meta<typeof Tooltip> = {

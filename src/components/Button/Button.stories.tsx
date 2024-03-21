@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ExampleButton from './ExampleButton';
-import ThemeMui from '@shared/settings/ThemeMui.tsx';
+import ThemeMui from '../../shared/settings/ThemeMui.tsx';
 
 const meta: Meta<typeof ExampleButton> = {
   title: 'Component/Button',
