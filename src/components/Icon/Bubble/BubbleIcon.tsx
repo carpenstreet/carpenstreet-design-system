@@ -2,7 +2,7 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const BubbleIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function BubbleIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -22,6 +22,4 @@ const BubbleIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconC
       />
     </svg>
   );
-};
-
-export default BubbleIcon;
+}

@@ -1,7 +1,7 @@
 import { IconCommonPropsType } from '../Icon.types.ts';
 import { useTheme } from '@mui/material/styles';
 
-const ProfileFilledIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function ProfileFilledIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -18,6 +18,4 @@ const ProfileFilledIcon = ({ width = 24, height = 24, color = 'color/gray/800' }
       </defs>
     </svg>
   );
-};
-
-export default ProfileFilledIcon;
+}

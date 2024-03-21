@@ -2,7 +2,7 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const CopyIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function CopyIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -22,6 +22,4 @@ const CopyIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCom
       />
     </svg>
   );
-};
-
-export default CopyIcon;
+}

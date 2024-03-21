@@ -1,7 +1,7 @@
 import { IconCommonPropsType } from '../Icon.types.ts';
 import { useTheme } from '@mui/material/styles';
 
-const SearchIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function SearchIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -21,6 +21,4 @@ const SearchIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconC
       />
     </svg>
   );
-};
-
-export default SearchIcon;
+}

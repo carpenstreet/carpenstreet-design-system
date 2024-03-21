@@ -2,7 +2,7 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const EarningIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function EarningIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -40,6 +40,4 @@ const EarningIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: Icon
       />
     </svg>
   );
-};
-
-export default EarningIcon;
+}

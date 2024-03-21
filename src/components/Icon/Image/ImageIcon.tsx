@@ -2,7 +2,7 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const ImageIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function ImageIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -16,6 +16,4 @@ const ImageIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCo
       <circle cx="16.1665" cy="7.83337" r="2.5" fill={iconColor} />
     </svg>
   );
-};
-
-export default ImageIcon;
+}

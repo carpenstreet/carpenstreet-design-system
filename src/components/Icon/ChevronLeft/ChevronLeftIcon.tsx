@@ -2,7 +2,7 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const ChevronLeftIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function ChevronLeftIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -14,6 +14,4 @@ const ChevronLeftIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: 
       />
     </svg>
   );
-};
-
-export default ChevronLeftIcon;
+}
