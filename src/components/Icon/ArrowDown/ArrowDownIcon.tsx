@@ -2,7 +2,7 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const ArrowDownIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function ArrowDownIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -22,6 +22,4 @@ const ArrowDownIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: Ic
       />
     </svg>
   );
-};
-
-export default ArrowDownIcon;
+}

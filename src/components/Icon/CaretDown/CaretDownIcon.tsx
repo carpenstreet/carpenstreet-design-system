@@ -2,7 +2,7 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const CaretDownIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function CaretDownIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -14,6 +14,4 @@ const CaretDownIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: Ic
       />
     </svg>
   );
-};
-
-export default CaretDownIcon;
+}

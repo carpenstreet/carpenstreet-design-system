@@ -2,7 +2,7 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const InformationIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function InformationIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -16,6 +16,4 @@ const InformationIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: 
       />
     </svg>
   );
-};
-
-export default InformationIcon;
+}

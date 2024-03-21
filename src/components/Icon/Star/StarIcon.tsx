@@ -1,7 +1,7 @@
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const StarIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function StarIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -10,6 +10,4 @@ const StarIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCom
       <path d="M12 3L15.2756 8.86417L22 10.0937L17.3 14.9474L18.1803 21.5714L12 18.707L5.81966 21.5714L6.7 14.9474L2 10.0937L8.72442 8.86417L12 3Z" fill={iconColor} />
     </svg>
   );
-};
-
-export default StarIcon;
+}

@@ -1,5 +1,5 @@
 import { TooltipProps as MUITooltipProps } from '@mui/material/Tooltip/Tooltip';
-import { placementMapping } from '@components/Tooltip/Tooltip.constants.ts';
+import { placementMapping } from './Tooltip.constants.ts';
 
 export type TooltipPlacementType = keyof typeof placementMapping;
 

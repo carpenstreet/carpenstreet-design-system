@@ -2,7 +2,7 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-const ViewIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {
+export default function ViewIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -12,6 +12,4 @@ const ViewIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCom
       <path d="M14 12C14 13.1046 13.1046 14 12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12Z" fill="white" />
     </svg>
   );
-};
-
-export default ViewIcon;
+}

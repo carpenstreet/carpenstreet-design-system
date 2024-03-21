@@ -1,10 +1,10 @@
 import React from 'react';
 import { Tooltip as MUITooltip } from '@mui/material';
-import { TooltipPropsType } from '@components/Tooltip/Tooltip.types.ts';
-import { Typography } from '@components';
-import { placementMapping } from '@components/Tooltip/Tooltip.constants.ts';
+import { TooltipPropsType } from './Tooltip.types.ts';
+import Typography from '../Typography/Typography';
+import { placementMapping } from './Tooltip.constants.ts';
 
-const Tooltip = (props: TooltipPropsType) => {
+export default function Tooltip(props: TooltipPropsType) {
   const { children, color = 'default', ...other } = props;
 
   const tooltipProps = {
@@ -20,6 +20,4 @@ const Tooltip = (props: TooltipPropsType) => {
   };
 
   return <MUITooltip {...tooltipProps}>{children}</MUITooltip>;
-};
-
-export default Tooltip;
+}

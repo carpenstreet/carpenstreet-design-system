@@ -1,5 +1,5 @@
 import Button from './Button/Button';
-import IconButton from './IconButton/IconButton.tsx';
+import IconButton from './IconButton/IconButton';
 import Icon from './Icon/index';
 import Typography from './Typography/Typography';
 import Grid from './Grid/Grid';

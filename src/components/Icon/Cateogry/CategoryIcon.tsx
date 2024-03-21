@@ -1,7 +1,7 @@
 import { IconCommonPropsType } from '../Icon.types.ts';
 import { useTheme } from '@mui/material/styles';
 
-const CategoryIcon = ({ width = 24, height = 24, color = 'color/black' }: IconCommonPropsType) => {
+export default function CategoryIcon({ width = 24, height = 24, color = 'color/black' }: IconCommonPropsType) {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
@@ -27,6 +27,4 @@ const CategoryIcon = ({ width = 24, height = 24, color = 'color/black' }: IconCo
       />
     </svg>
   );
-};
-
-export default CategoryIcon;
+}
