@@ -20,19 +20,6 @@
     "declarationDir": "./dist",
     "baseUrl": "./",
     "types": ["node"],
-    "paths": {
-      "@components/*": ["src/components/*", "components/*"],
-      "@components": ["src/components", "components"],
-      "@shared/*": ["src/shared/*"],
-      "@shared": ["src/shared"],
-      "@styles/*": ["src/styles/*"],
-      "@styles": ["src/styles"],
-      "@pages/*": ["src/pages/*"],
-      "@pages": ["src/pages"],
-      "@public/*": ["public/*"],
-      "@public": ["public"],
-      "@/*": ["./src/*"]
-    }
   },
   "include": ["src", "types/**/*.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],

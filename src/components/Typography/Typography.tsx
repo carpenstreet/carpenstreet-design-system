@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography as MUITypography } from '@mui/material';
-import { TypographyProps } from '@components/Typography/Typography.types.ts';
+import { TypographyProps } from './Typography.types.ts';
 
 const Typography = ({ variant, color = 'color/gray/800', children }: TypographyProps) => {
   return (

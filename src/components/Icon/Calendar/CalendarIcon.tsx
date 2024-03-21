@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconCommonPropsType } from '@components/Icon/Icon.types';
+import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
 const CalendarIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {

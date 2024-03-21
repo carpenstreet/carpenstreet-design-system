@@ -1,14 +1,14 @@
 import React, { ReactNode } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { colorPalette } from './color/color.ts';
-import { CustomTypographyVariants } from '@components/Typography/Typography.constants.ts';
-import { fontFace } from '@shared/styles/fontFaceStyle';
+import { CustomTypographyVariants } from '../../components/Typography/Typography.constants.ts';
+import { fontFace } from '../styles/fontFaceStyle';
 import { CssBaseline } from '@mui/material';
-import { shadows } from '@shared/settings/shadows/shadows.ts';
-import { overrideTypography } from '@shared/settings/typography/typography.ts';
-import { overrideButton } from '@shared/settings/button/button.ts';
-import { overrideIconButton } from '@shared/settings/iconButton/iconButton.ts';
-import { overrideCheckbox } from '@shared/settings/checkbox/checkbox.ts';
+import { shadows } from './shadows/shadows.ts';
+import { overrideTypography } from './typography/typography.ts';
+import { overrideButton } from './button/button.ts';
+import { overrideIconButton } from './iconButton/iconButton.ts';
+import { overrideCheckbox } from './checkbox/checkbox.ts';
 
 // ----------------------------------------------------------------------
 

@@ -1,5 +1,5 @@
 import { Checkbox as MUICheckbox } from '@mui/material';
-import { CheckboxProps } from '@components/Checkbox/Checkbox.types.ts';
+import { CheckboxProps } from './Checkbox.types.ts';
 
 export default function Checkbox(props: CheckboxProps) {
   const { color = 'default', ...rest } = props;

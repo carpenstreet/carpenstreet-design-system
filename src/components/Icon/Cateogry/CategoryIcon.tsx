@@ -1,4 +1,4 @@
-import { IconCommonPropsType } from '@components/Icon/Icon.types.ts';
+import { IconCommonPropsType } from '../Icon.types.ts';
 import { useTheme } from '@mui/material/styles';
 
 const CategoryIcon = ({ width = 24, height = 24, color = 'color/black' }: IconCommonPropsType) => {

@@ -1,3 +1,3 @@
-import { colorPalette } from '@shared/settings/color/color.ts';
+import { colorPalette } from './color.ts';
 
 export type CustomColorPaletteTypes = keyof typeof colorPalette;

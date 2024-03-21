@@ -1,4 +1,4 @@
-import { IconCommonPropsType } from '@components/Icon/Icon.types';
+import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
 const StarIcon = ({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) => {

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import IconButton from './IconButton';
-import ThemeMui from '@shared/settings/ThemeMui.tsx';
-import CategoryIcon from '@components/Icon/Cateogry/CategoryIcon.tsx';
+import ThemeMui from '../../shared/settings/ThemeMui.tsx';
+import CategoryIcon from '../Icon/Cateogry/CategoryIcon.tsx';
 
 const meta: Meta<typeof IconButton> = {
   title: 'Component/IconButton',
