@@ -17,6 +17,7 @@
     "emitDeclarationOnly": true,
     "jsx": "react-jsx",
     "declaration": true,
+    "declarationDir": "./dist",
     "baseUrl": "./",
     "types": ["node"],
     "paths": {
