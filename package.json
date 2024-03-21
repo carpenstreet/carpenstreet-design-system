@@ -2,8 +2,8 @@
   "name": "carpenstreet-designsystem",
   "version": "1.1.26",
   "type": "module",
-  "main": "./dist/src/index.js",
-  "types": "./dist/src/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "/dist"
   ],
@@ -23,16 +23,16 @@
     "fulldeploy": "echo '\n[PRE-DEPLOY START]\n' && yarn predeploy && echo '\n[PRE-DEPLOY DONE]\n' && echo '\n[DEPLOY START]\n' && yarn deploy && echo '\n[DEPLOY DONE]\n' && echo '\n[PRE-PUBLISH START]\n' && yarn prepublish && echo '\n[PRE-PUBLISH DONE]\n' && echo '\n[PUBLISH START]\n' && yarn publish && echo '\n[PUBLISH DONE]\n'"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.13.5",
-    "@mui/styles": "^5.13.2",
-    "@mui/system": "^5.13.5",
     "react-router-dom": "^6.13.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.5",
+    "@mui/styles": "^5.13.2",
+    "@mui/system": "^5.13.5"
   },
   "devDependencies": {
     "@babel/core": "^7.22.5",
