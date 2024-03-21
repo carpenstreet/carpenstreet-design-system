@@ -9,6 +9,7 @@ import { overrideTypography } from './typography/typography.ts';
 import { overrideButton } from './button/button.ts';
 import { overrideIconButton } from './iconButton/iconButton.ts';
 import { overrideCheckbox } from './checkbox/checkbox.ts';
+import { overrideTooltip } from './tooltip/tooltip.ts';
 
 // ----------------------------------------------------------------------
 
@@ -47,6 +48,7 @@ export default function ThemeMui({ children }: Props) {
       MuiButton: overrideButton,
       MuiIconButton: overrideIconButton,
       MuiCheckbox: overrideCheckbox,
+      MuiTooltip: overrideTooltip,
     },
     typography: {
       ...CustomTypographyVariants,

@@ -1,0 +1,168 @@
+import { Canvas, Controls, Meta, Story } from '@storybook/blocks';
+
+import * as TooltipStories from './Tooltip.stories';
+import {
+  DefaultBottomRightTooltip,
+  DefaultBottomLeftTooltip,
+  DefaultBottomTooltip,
+  DefaultLeftBottomTooltip,
+  DefaultLeftTopTooltip,
+  DefaultLeftTooltip,
+  DefaultRightBottomTooltip,
+  DefaultRightTopTooltip,
+  DefaultRightTooltip,
+  DefaultTopRightTooltip,
+  DefaultTopLeftTooltip,
+  DefaultTopTooltip,
+  GrayishVioletBottomRightTooltip,
+  GrayishVioletBottomLeftTooltip,
+  GrayishVioletBottomTooltip,
+  GrayishVioletLeftBottomTooltip,
+  GrayishVioletLeftTopTooltip,
+  GrayishVioletLeftTooltip,
+  GrayishVioletRightBottomTooltip,
+  GrayishVioletRightTopTooltip,
+  GrayishVioletRightTooltip,
+  GrayishVioletTopRightTooltip,
+  GrayishVioletTopLeftTooltip,
+  GrayishVioletTopTooltip,
+  PrimaryTopLeftTooltip,
+  PrimaryTopTooltip,
+  PrimaryTopRightTooltip,
+  PrimaryLeftTopTooltip,
+  PrimaryLeftTooltip,
+  PrimaryLeftBottomTooltip,
+  PrimaryBottomLeftTooltip,
+  PrimaryBottomTooltip,
+  PrimaryBottomRightTooltip, PrimaryRightTopTooltip, PrimaryRightTooltip, PrimaryRightBottomTooltip,
+} from './Tooltip.stories';
+
+<Meta of={TooltipStories} />
+
+# Tooltip
+
+사용자가 특정 요소 위로 마우스를 호버하면 Typography를 감싼 박스를 노출하는 컴포넌트입니다.
+MUI의 툴팁을 토대로 스타일을 override하여 제작되었습니다.
+
+### Tooltip의 주요 Prop
+- title: 툴팁 내에 들어갈 텍스트를 지정하고 Typography 컴포넌트로 감싸져 있습니다.
+- direction: mui의 placement와 동일하며, 디자인 시스템 피그마에 있는 툴팁의 Prop과 값이 일치합니다. direction이 "none"일 경우 arrow 아이콘이 사라집니다.
+- color: 툴팁의 배경색을 지정합니다. 기본적으로 default 값이 적용됩니다.
+
+<Canvas of={TooltipStories.Default} />
+
+<Controls
+  include={[
+    'title',
+    'direction',
+    'color'
+  ]}
+/>
+
+---
+
+# Default
+
+### Top
+
+<Canvas>
+  <Story of={DefaultTopLeftTooltip} />
+  <Story of={DefaultTopTooltip} />
+  <Story of={DefaultTopRightTooltip} />
+</Canvas>
+
+### Left
+
+<Canvas>
+  <Story of={DefaultLeftTopTooltip} />
+  <Story of={DefaultLeftTooltip} />
+  <Story of={DefaultLeftBottomTooltip} />
+</Canvas>
+
+### Bottom
+
+<Canvas>
+  <Story of={DefaultBottomLeftTooltip} />
+  <Story of={DefaultBottomTooltip} />
+  <Story of={DefaultBottomRightTooltip} />
+</Canvas>
+
+### Right
+
+<Canvas>
+  <Story of={DefaultRightTopTooltip} />
+  <Story of={DefaultRightTooltip} />
+  <Story of={DefaultRightBottomTooltip} />
+</Canvas>
+
+---
+
+# GrayishViolet
+
+### Top
+
+<Canvas>
+  <Story of={GrayishVioletTopLeftTooltip} />
+  <Story of={GrayishVioletTopTooltip} />
+  <Story of={GrayishVioletTopRightTooltip} />
+</Canvas>
+
+### Left
+
+<Canvas>
+  <Story of={GrayishVioletLeftTopTooltip} />
+  <Story of={GrayishVioletLeftTooltip} />
+  <Story of={GrayishVioletLeftBottomTooltip} />
+</Canvas>
+
+### Bottom
+
+<Canvas>
+  <Story of={GrayishVioletBottomLeftTooltip} />
+  <Story of={GrayishVioletBottomTooltip} />
+  <Story of={GrayishVioletBottomRightTooltip} />
+</Canvas>
+
+### Right
+
+<Canvas>
+  <Story of={GrayishVioletRightTopTooltip} />
+  <Story of={GrayishVioletRightTooltip} />
+  <Story of={GrayishVioletRightBottomTooltip} />
+</Canvas>
+
+---
+
+# Primary
+
+### Top
+
+<Canvas>
+  <Story of={PrimaryTopLeftTooltip} />
+  <Story of={PrimaryTopTooltip} />
+  <Story of={PrimaryTopRightTooltip} />
+</Canvas>
+
+### Left
+
+<Canvas>
+  <Story of={PrimaryLeftTopTooltip} />
+  <Story of={PrimaryLeftTooltip} />
+  <Story of={PrimaryLeftBottomTooltip} />
+</Canvas>
+
+### Bottom
+
+<Canvas>
+  <Story of={PrimaryBottomLeftTooltip} />
+  <Story of={PrimaryBottomTooltip} />
+  <Story of={PrimaryBottomRightTooltip} />
+</Canvas>
+
+### Right
+
+<Canvas>
+  <Story of={PrimaryRightTopTooltip} />
+  <Story of={PrimaryRightTooltip} />
+  <Story of={PrimaryRightBottomTooltip} />
+</Canvas>
