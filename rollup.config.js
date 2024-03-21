@@ -2,11 +2,11 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import preserveDirectives from 'rollup-preserve-directives';
 import commonjs from '@rollup/plugin-commonjs';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import { dts } from 'rollup-plugin-dts';
 
 const config = [
   {
+    external: ['react', 'react-dom'], // 외부 의존성을 설정해준다.
     input: 'src/index.ts',
     output: [
       {
@@ -15,7 +15,6 @@ const config = [
       },
     ],
     plugins: [
-      peerDepsExternal(), // peer dependency를 external로 설정해주는 plugin
       nodeResolve(), // node_modules에서 모듈을 불러오는데 필요한 plugin
       commonjs(), // CommonJS 모듈을 ES로 변환해주는 plugin
       typescript(), // typescript를 컴파일해주는 plugin
