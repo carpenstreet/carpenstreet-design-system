@@ -10,7 +10,14 @@ ACON3D 서비스에 사용되는 타이포그래피입니다. Size와 Weight를 
 
 <Canvas of={TypographyStories.Default} />
 
-<Controls />
+<Controls include={['variant', 'color', 'children', 'sx']} />
+
+## Responsive
+지정된 breakpoint에 따라 variant를 지정할 수 있습니다. 아래는 예제입니다. <br />
+`desktop` breakpoint에 `typography/headline/h1/black` variant가 지정되어 있고 <br />
+`mobile` breakpoint에 `typography/title/small/black` variant가 지정되어 있습니다.
+
+<Canvas of={TypographyStories.Responsive} />
 
 ## Variants
 
