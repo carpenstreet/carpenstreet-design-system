@@ -5,6 +5,18 @@ _이슈 URL을 복사해 붙여넣어도 괜찮습니다._
 
 PRDT-?
 
+# CheckList
+
+***Reviewr는 아래 체크리스트를 확인해주세요***
+
+(PR 작성자는 체크리스트를 수정하지 마세요)
+
+- [ ] `ooo.stories.ts` 파일에 `title`이 제대로 설정되어 있는가?
+- [ ] `ooo.tsx` 파일이 `export default function`을 사용하고 있는가?
+- [ ] `ooo.types.ts` 파일에서 MUI type을 적당한 곳에서 잘 import해오고 있는가?
+- [ ] `ooo.mdx` 파일에서 `<Controls />`의 `include` prop이 잘 설정되어 있는가?
+- [ ] 변경사항 전반적으로 import문을 `index.ts`가 아닌 정확한 파일에서 import하고 있는가?
+
 # Description
 
 ## 요약
