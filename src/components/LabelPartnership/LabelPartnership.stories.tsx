@@ -5,6 +5,15 @@ import LabelPartnership from './LabelPartnership.tsx';
 const meta: Meta = {
   title: 'Component/LabelPartnership',
   component: LabelPartnership,
+  argTypes: {
+    size: {
+      table: {
+        defaultValue: {
+          summary: 'M',
+        },
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <ThemeMui>
