@@ -4,8 +4,66 @@ import * as LabelStories from './Label.stories';
 
 # Label
 
+카펜스트리트의 디자인 시스템에서 쓰이는 라벨 UI입니다.
+
+라벨은 상태를 나타내기 위한 텍스트 UI이며, 일반적으로 클릭 기능을 제공하지 않습니다.
+
+`variant`와 `color` prop를 통해 라벨의 스타일을 변경할 수 있으며, `sx` prop에 커스텀 스타일을 지정해줄 수도 있습니다.
+
+`variant`를 `small`로 설정하실 경우, `children`의 첫 글자만 라벨에 표시됩니다.
+
 <Meta of={LabelStories} />
 
 <Canvas of={LabelStories.Default} />
 
-<Controls />
+<Controls include={['children', 'variant', 'color', 'sx']} />
+
+## Variants
+
+### filled
+
+<Canvas of={LabelStories.FilledDefault} />
+
+<Canvas of={LabelStories.FilledPrimary} />
+
+<Canvas of={LabelStories.FilledInfo} />
+
+<Canvas of={LabelStories.FilledSuccess} />
+
+<Canvas of={LabelStories.FilledError} />
+
+### soft
+
+<Canvas of={LabelStories.SoftDefault} />
+
+<Canvas of={LabelStories.SoftPrimary} />
+
+<Canvas of={LabelStories.SoftInfo} />
+
+<Canvas of={LabelStories.SoftSuccess} />
+
+<Canvas of={LabelStories.SoftError} />
+
+### outlined
+
+<Canvas of={LabelStories.OutlinedDefault} />
+
+<Canvas of={LabelStories.OutlinedPrimary} />
+
+<Canvas of={LabelStories.OutlinedInfo} />
+
+<Canvas of={LabelStories.OutlinedSuccess} />
+
+<Canvas of={LabelStories.OutlinedError} />
+
+### small
+
+<Canvas of={LabelStories.SmallDefault} />
+
+<Canvas of={LabelStories.SmallPrimary} />
+
+<Canvas of={LabelStories.SmallInfo} />
+
+<Canvas of={LabelStories.SmallSuccess} />
+
+<Canvas of={LabelStories.SmallError} />
