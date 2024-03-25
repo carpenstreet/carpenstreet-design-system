@@ -20,8 +20,6 @@ export default function LabelPartnership(props: LabelPartnershipProps) {
     background: theme.palette[`color/partnership/${partnership}`],
   }))();
 
-  console.log(boxStyle);
-
   const boxSx = { ...boxStyle, ...sx };
 
   const iconSize = size === 'M' ? 20 : 16;

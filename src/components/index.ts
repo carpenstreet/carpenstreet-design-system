@@ -37,6 +37,7 @@ import Grid from './Grid/Grid';
 import Checkbox from './Checkbox/Checkbox';
 import Tooltip from './Tooltip/Tooltip';
 import Label from './Label/Label.tsx';
+import LabelPartnership from './LabelPartnership/LabelPartnership.tsx';
 
 export {
   Button,
@@ -78,6 +79,7 @@ export {
   Checkbox,
   Tooltip,
   Label,
+  LabelPartnership,
 };
 export * from './Icon/index';
 
@@ -121,4 +123,5 @@ export default {
   Checkbox,
   Tooltip,
   Label,
+  LabelPartnership,
 };

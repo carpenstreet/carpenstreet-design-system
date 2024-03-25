@@ -39,6 +39,7 @@ import {
   Checkbox,
   Tooltip,
   Label,
+  LabelPartnership,
 } from './components';
 
 export {
@@ -82,6 +83,7 @@ export {
   Checkbox,
   Tooltip,
   Label,
+  LabelPartnership,
 };
 
 export default {
@@ -125,4 +127,5 @@ export default {
   Checkbox,
   Tooltip,
   Label,
+  LabelPartnership,
 };
