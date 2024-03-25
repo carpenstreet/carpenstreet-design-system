@@ -38,6 +38,7 @@ import {
   BubbleIcon,
   Checkbox,
   Tooltip,
+  Label,
 } from './components';
 
 export {
@@ -80,6 +81,7 @@ export {
   BubbleIcon,
   Checkbox,
   Tooltip,
+  Label,
 };
 
 export default {
@@ -122,4 +124,5 @@ export default {
   BubbleIcon,
   Checkbox,
   Tooltip,
+  Label,
 };

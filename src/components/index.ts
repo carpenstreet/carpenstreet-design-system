@@ -36,6 +36,7 @@ import Typography from './Typography/Typography';
 import Grid from './Grid/Grid';
 import Checkbox from './Checkbox/Checkbox';
 import Tooltip from './Tooltip/Tooltip';
+import Label from './Label/Label.tsx';
 
 export {
   Button,
@@ -76,6 +77,7 @@ export {
   BubbleIcon,
   Checkbox,
   Tooltip,
+  Label,
 };
 export * from './Icon/index';
 
@@ -118,4 +120,5 @@ export default {
   BubbleIcon,
   Checkbox,
   Tooltip,
+  Label,
 };
