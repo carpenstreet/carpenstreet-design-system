@@ -1,0 +1,38 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as LabelPartnershipStories from './LabelPartnership.stories';
+
+<Meta of={LabelPartnershipStories} />
+
+# Label Partnership
+
+Partnership 등급을 표시하기 위한 Label입니다.
+
+일반 Label과 동일하게 클릭 기능은 제공되지 않습니다.
+
+`partnership`, `size` prop을 통해 스타일을 변경할 수 있으며, 그 외 `sx` prop으로 커스텀 스타일을 지정할 수도 있습니다.
+
+`size`를 지정하지 않을시 기본값으로 `M`이 적용됩니다.
+
+<Canvas of={LabelPartnershipStories.Default} />
+
+<Controls incldue={['partnership', 'size', 'sx']} />
+
+## Variants
+
+### vvip
+
+<Canvas of={LabelPartnershipStories.VVIPMedium} />
+
+<Canvas of={LabelPartnershipStories.VVIPSmall} />
+
+### vip
+
+<Canvas of={LabelPartnershipStories.VIPMedium} />
+
+<Canvas of={LabelPartnershipStories.VIPSmall} />
+
+### partner
+
+<Canvas of={LabelPartnershipStories.PartnerMedium} />
+
+<Canvas of={LabelPartnershipStories.PartnerSmall} />
