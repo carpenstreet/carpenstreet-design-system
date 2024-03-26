@@ -21,6 +21,7 @@ export const Default: Story = {
   args: {
     variant: 'typography/headline/h1/regular',
     children: '내 인생의 전환점은 타이포그래피 수업이었다.',
+    sx: {},
   },
 };
 
