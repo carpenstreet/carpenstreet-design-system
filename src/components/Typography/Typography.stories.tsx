@@ -21,6 +21,20 @@ export const Default: Story = {
   args: {
     variant: 'typography/headline/h1/regular',
     children: '내 인생의 전환점은 타이포그래피 수업이었다.',
+    sx: {},
+  },
+};
+
+export const Responsive: Story = {
+  args: {
+    variant: 'typography/headline/h1/black',
+    children: '내 인생의 전환점은 타이포그래피 수업이었다.',
+    sx: {
+      typography: {
+        desktop: 'typography/headline/h1/black',
+        mobile: 'typography/title/small/black',
+      },
+    },
   },
 };
 
