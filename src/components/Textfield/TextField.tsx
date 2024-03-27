@@ -6,17 +6,17 @@ import {
   useFormControl,
   Box as MUIBox,
   FormControlProps as MUIFormControlProps,
-  InputProps as MUIInputProps,
   OutlinedInputProps as MUIOutlinedInputProps,
 } from '@mui/material';
-import { TextFieldProps, HelperTextProps, InputLabelProps, InputMore } from './TextField.types.ts';
+import { TextFieldProps, HelperTextProps, InputLabelProps, InputMore, CustomTextFieldVariants } from './TextField.types.ts';
 import { useTheme } from '@mui/material/styles';
 import { CustomTypographyVariants } from '../Typography/Typography.constants.ts';
 import React from 'react';
 import { CheckIcon, AlertIcon, InformationIcon, NoticeIcon } from '../Icon';
 import { unstable_useId } from '@mui/utils';
+import { variantInputComponent } from './Textfield.constants.ts';
 
-export default function TextField(props: TextFieldProps) {
+export default function TextField<Variant extends CustomTextFieldVariants>(props: TextFieldProps<Variant>) {
   const {
     autoComplete,
     autoFocus = false,
@@ -75,7 +75,7 @@ export default function TextField(props: TextFieldProps) {
     ...InputLabelPropsOverride,
   };
 
-  const InputProps: MUIInputProps = {
+  const InputProps: TextFieldProps['InputProps'] = {
     autoComplete,
     autoFocus,
     defaultValue,
@@ -132,16 +132,13 @@ function InputLabel(props: InputLabelProps) {
   const theme = useTheme();
 
   const control = useFormControl();
-  const { focused, filled } = control;
+  const { focused, filled, variant } = control;
 
   const sx = {
-    // Label 위치를 맞추기 위한 코드
-    top: `calc(-${CustomTypographyVariants['typography/body/medium/regular'].fontSize} + ${size === 'M' ? '16px' : '8px'})`,
+    typography: theme.typography['typography/body/medium/regular'],
     ...(withStartIcon && {
       left: '32px',
     }),
-
-    typography: theme.typography['typography/body/medium/regular'],
     color: theme.palette['color/gray/400'],
 
     '&.Mui-error': {
@@ -169,6 +166,11 @@ function InputLabel(props: InputLabelProps) {
         color: theme.palette['color/gray/200'],
       },
     },
+
+    ...(variant === 'outlined' && {
+      // Label 위치를 맞추기 위한 코드
+      top: `calc(-${CustomTypographyVariants['typography/body/medium/regular'].fontSize} + ${size === 'M' ? '16px' : '8px'})`,
+    }),
     ...sxOverride,
   };
 
@@ -185,67 +187,112 @@ function Input(props: MUIOutlinedInputProps) {
   const theme = useTheme();
 
   const control = useFormControl();
-  const { focused, filled } = control;
+  const { variant, focused, filled } = control;
+
+  const InputComponent = variantInputComponent[variant];
 
   const inputSx = {
-    padding: 'unset',
+    ...(variant === 'standard' && {
+      paddingTop: size === 'M' ? '4px' : '2.5px',
+      paddingBottom: size === 'M' ? '6.5px' : '5px',
+      height: '24px',
+    }),
+    ...(variant === 'outlined' && {
+      padding: 'unset',
 
-    '&.Mui-disabled': {
-      '-webkit-text-fill-color': 'unset',
-      color: theme.palette['color/gray/200'],
-    },
+      '&.Mui-disabled': {
+        '-webkit-text-fill-color': 'unset',
+      },
+    }),
   };
 
   const sx = {
-    padding: size === 'M' ? '16px 12px' : '8px 12px',
     typography: theme.typography['typography/body/medium/regular'],
-    borderRadius: '8px',
-    border: theme.palette['color/gray/dim/400'],
     gap: '8px',
 
-    '& svg': {
-      width: '24px',
-      height: '24px',
-    },
-
-    '&:hover': {
-      color: theme.palette['color/gray/800'],
-      borderColor: theme.palette['color/gray/dim/600'],
-    },
-
-    '&.Mui-focused': {
+    ...(variant === 'standard' && {
       color: theme.palette['color/gray/800'],
 
-      '.MuiOutlinedInput-notchedOutline': {
-        borderColor: theme.palette['color/primary/600'],
-        borderWidth: '1px',
+      marginTop: '13.5px',
+      '&:before': {
+        borderColor: theme.palette['color/gray/dim/400'],
       },
-    },
-
-    '&.Mui-error': {
-      color: theme.palette['color/gray/800'],
-
-      '.MuiOutlinedInput-notchedOutline': {
-        borderColor: theme.palette['color/state/error'],
-      },
-    },
-
-    '&.Mui-disabled': {
-      '.MuiOutlinedInput-notchedOutline': {
-        borderColor: theme.palette['color/gray/200'],
+      '&:after': {
+        transition: 'none',
       },
 
-      '& path, & circle': {
-        fill: theme.palette['color/gray/400'],
+      '&:hover:not(.Mui-disabled, .Mui-error):before': {
+        // :not(.Mui-disabled, .Mui-error) 를 selector에 포함하지 않으면 우선순위에서 밀림
+        borderBottom: `1px solid ${theme.palette['color/gray/600']}`,
       },
-      '& rect': {
-        stroke: theme.palette['color/gray/400'],
+
+      '&.Mui-focused:after': {
+        borderBottom: `1px solid ${theme.palette['color/primary/600']}`,
       },
-    },
+
+      '&.Mui-error:before, &.Mui-error:after': {
+        borderBottom: `1px solid ${theme.palette['color/state/error']}`,
+      },
+
+      '&.Mui-disabled': {
+        color: theme.palette['color/gray/200'],
+      },
+      '&.Mui-disabled:before, &.Mui-disabled:after': {
+        borderBottom: `1px solid ${theme.palette['color/gray/200']}`,
+      },
+    }),
+
+    ...(variant === 'outlined' && {
+      padding: size === 'M' ? '16px 12px' : '8px 12px',
+      borderRadius: '8px',
+      border: theme.palette['color/gray/dim/400'],
+      color: theme.palette['color/gray/400'],
+
+      '& svg': {
+        width: '24px',
+        height: '24px',
+      },
+
+      '&:hover': {
+        color: theme.palette['color/gray/800'],
+        borderColor: theme.palette['color/gray/dim/600'],
+      },
+
+      '&.Mui-focused': {
+        color: theme.palette['color/gray/800'],
+
+        '.MuiOutlinedInput-notchedOutline': {
+          borderColor: theme.palette['color/primary/600'],
+          borderWidth: '1px',
+        },
+      },
+
+      '&.Mui-error': {
+        color: theme.palette['color/gray/800'],
+
+        '.MuiOutlinedInput-notchedOutline': {
+          borderColor: theme.palette['color/state/error'],
+        },
+      },
+
+      '&.Mui-disabled': {
+        color: theme.palette['color/gray/200'],
+        '.MuiOutlinedInput-notchedOutline': {
+          borderColor: theme.palette['color/gray/200'],
+        },
+
+        '& path, & circle': {
+          fill: theme.palette['color/gray/400'],
+        },
+        '& rect': {
+          stroke: theme.palette['color/gray/400'],
+        },
+      },
+    }),
     ...sxOverride,
   };
 
-  return <MUIOutlinedInput {...props} inputProps={{ ...inputProps, sx: inputSx }} sx={sx} notched={focused || filled} />;
+  return <InputComponent {...props} inputProps={{ ...inputProps, sx: inputSx }} sx={sx} notched={focused || filled} />;
 }
 
 function HelperText(props: HelperTextProps) {
@@ -255,11 +302,10 @@ function HelperText(props: HelperTextProps) {
   const theme = useTheme();
 
   const control = useFormControl();
-  const { error, disabled } = control;
+  const { error, disabled, variant } = control;
 
   const sx = {
     margin: 'unset',
-    marginLeft: '12px',
     marginTop: '8px',
     color: theme.palette['color/gray/800'],
     '& path, & circle': {
@@ -298,6 +344,7 @@ function HelperText(props: HelperTextProps) {
         stroke: theme.palette['color/gray/400'],
       },
     },
+    ...(variant === 'outlined' && { marginLeft: '12px' }),
     ...sxOverride,
   };
 
