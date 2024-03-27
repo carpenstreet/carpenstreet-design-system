@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ThemeMui from '../../shared/settings/ThemeMui';
-import TextField from './TextField.tsx';
-import { InformationIcon, InformationOutlineIcon } from '../Icon';
+import ExampleTextField from './ExampleTextField';
+import { BoxIcon, ViewIcon } from '../Icon';
 
 const meta: Meta = {
   title: 'Component/TextField',
-  component: TextField,
+  component: ExampleTextField,
   decorators: [
     (Story) => (
       <ThemeMui>
@@ -16,22 +16,22 @@ const meta: Meta = {
 };
 
 export default meta;
-type Story = StoryObj<typeof TextField>;
+type Story = StoryObj<typeof ExampleTextField>;
 
 export const Default: Story = {
   args: {
     variant: 'outlined',
-    label: 'Label',
     size: 'M',
+    label: 'Label',
+    helperText: 'Helper Text...',
+    withHelperTextIcon: true,
     success: false,
     error: false,
     disabled: false,
     InputProps: {
-      startAdornment: <InformationIcon />,
-      endAdornment: <InformationOutlineIcon />,
+      startAdornment: <BoxIcon />,
+      endAdornment: <ViewIcon />,
     },
-    withHelperTextIcon: true,
-    helperText: 'asdf',
     sx: {
       width: '320px',
     },
