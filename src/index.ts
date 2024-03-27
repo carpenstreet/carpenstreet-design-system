@@ -45,6 +45,7 @@ import {
   Tooltip,
   Label,
   LabelPartnership,
+  TextField,
 } from './components';
 
 export {
@@ -94,6 +95,7 @@ export {
   Tooltip,
   Label,
   LabelPartnership,
+  TextField,
 };
 
 export default {
@@ -143,4 +145,5 @@ export default {
   Tooltip,
   Label,
   LabelPartnership,
+  TextField,
 };

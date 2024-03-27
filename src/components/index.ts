@@ -41,8 +41,9 @@ import Typography from './Typography/Typography';
 import Grid from './Grid/Grid';
 import Checkbox from './Checkbox/Checkbox';
 import Tooltip from './Tooltip/Tooltip';
-import Label from './Label/Label.tsx';
-import LabelPartnership from './LabelPartnership/LabelPartnership.tsx';
+import Label from './Label/Label';
+import LabelPartnership from './LabelPartnership/LabelPartnership';
+import TextField from './Textfield/TextField';
 
 export {
   Button,
@@ -90,6 +91,7 @@ export {
   Tooltip,
   Label,
   LabelPartnership,
+  TextField,
 };
 export * from './Icon/index';
 
@@ -139,4 +141,5 @@ export default {
   Tooltip,
   Label,
   LabelPartnership,
+  TextField,
 };
