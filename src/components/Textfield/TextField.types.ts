@@ -13,8 +13,6 @@ export type TextFieldProps<Variant extends CustomTextFieldVariants = CustomTextF
   variant: Variant;
   size: 'M' | 'S';
   // custom
-  startIcon?: MUIInputProps['startAdornment'];
-  endIcon?: MUIInputProps['endAdornment'];
   success?: boolean;
   withHelperTextIcon?: boolean;
 };

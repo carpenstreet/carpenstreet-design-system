@@ -46,8 +46,6 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
     type,
     value,
     variant,
-    startIcon,
-    endIcon,
     success,
     withHelperTextIcon,
     ...rest
@@ -70,7 +68,7 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
   const InputLabelProps: InputLabelProps = {
     id: inputLabelId,
     htmlFor: id,
-    withStartIcon: startIcon !== undefined,
+    withStartIcon: InputPropsOverride.startAdornment !== undefined,
     size,
     ...InputLabelPropsOverride,
   };
@@ -95,8 +93,6 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
     rows,
     type,
     value,
-    startAdornment: startIcon,
-    endAdornment: endIcon,
     size,
     ...InputPropsOverride,
   };

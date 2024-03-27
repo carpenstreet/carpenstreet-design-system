@@ -26,8 +26,10 @@ export const Default: Story = {
     success: false,
     error: false,
     disabled: false,
-    // startIcon: <InformationIcon />,
-    // endIcon: <InformationOutlineIcon />,
+    InputProps: {
+      startAdornment: <InformationIcon />,
+      endAdornment: <InformationOutlineIcon />,
+    },
     withHelperTextIcon: true,
     helperText: 'asdf',
     sx: {
