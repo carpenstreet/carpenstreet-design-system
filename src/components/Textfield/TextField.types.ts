@@ -1,4 +1,4 @@
-import { InputProps as MUIInputProps, InputLabelProps as MUIInputLabelProps, FormHelperTextProps as MUIFormHelperTextProps } from '@mui/material';
+import { InputLabelProps as MUIInputLabelProps, FormHelperTextProps as MUIFormHelperTextProps } from '@mui/material';
 import { OutlinedTextFieldProps, StandardTextFieldProps } from '@mui/material/TextField/TextField';
 
 export type CustomTextFieldVariants = 'standard' | 'outlined';

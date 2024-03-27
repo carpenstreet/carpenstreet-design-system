@@ -1,7 +1,6 @@
 import {
   FormControl as MUIFormControl,
   InputLabel as MUIInputLabel,
-  OutlinedInput as MUIOutlinedInput,
   FormHelperText as MUIFormHelperText,
   useFormControl,
   Box as MUIBox,
