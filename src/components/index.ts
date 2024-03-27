@@ -1,5 +1,6 @@
 import Button from './Button/Button';
 import IconButton from './IconButton/IconButton';
+// Icons
 import ProfileFilledIcon from './Icon/ProfileFilled/ProfileFilledIcon';
 import SearchIcon from './Icon/Search/SearchIcon';
 import CategoryIcon from './Icon/Cateogry/CategoryIcon';
@@ -31,6 +32,10 @@ import ArrowUpIcon from './Icon/ArrowUp/ArrowUpIcon';
 import ArrowRightIcon from './Icon/ArrowRight/ArrowRightIcon';
 import ArrowLeftIcon from './Icon/ArrowLeft/ArrowLeftIcon';
 import SecurityIcon from './Icon/Security/SecurityIcon';
+import CheckOutlineIcon from './Icon/CheckOutline/CheckOutlineIcon';
+import CheckIcon from './Icon/Check/CheckIcon';
+import AlertIcon from './Icon/Alert/AlertIcon';
+// ---
 import BubbleIcon from './Icon/Bubble/BubbleIcon';
 import Typography from './Typography/Typography';
 import Grid from './Grid/Grid';
@@ -44,6 +49,7 @@ export {
   IconButton,
   Typography,
   Grid,
+  // Icons
   ProfileFilledIcon,
   SearchIcon,
   CategoryIcon,
@@ -76,6 +82,10 @@ export {
   ArrowLeftIcon,
   SecurityIcon,
   BubbleIcon,
+  CheckOutlineIcon,
+  CheckIcon,
+  AlertIcon,
+  // ---
   Checkbox,
   Tooltip,
   Label,
@@ -88,6 +98,7 @@ export default {
   IconButton,
   Typography,
   Grid,
+  // Icons
   ProfileFilledIcon,
   SearchIcon,
   CategoryIcon,
@@ -120,6 +131,10 @@ export default {
   ArrowLeftIcon,
   SecurityIcon,
   BubbleIcon,
+  CheckOutlineIcon,
+  CheckIcon,
+  AlertIcon,
+  // ---
   Checkbox,
   Tooltip,
   Label,

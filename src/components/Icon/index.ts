@@ -34,6 +34,9 @@ import ArrowLeftIcon from './ArrowLeft/ArrowLeftIcon';
 
 import SecurityIcon from './Security/SecurityIcon';
 import BubbleIcon from './Bubble/BubbleIcon';
+import CheckIcon from './Check/CheckIcon';
+import CheckOutlineIcon from './CheckOutline/CheckOutlineIcon';
+import AlertIcon from './Alert/AlertIcon';
 
 export {
   ProfileFilledIcon,
@@ -68,6 +71,9 @@ export {
   ArrowLeftIcon,
   SecurityIcon,
   BubbleIcon,
+  CheckIcon,
+  CheckOutlineIcon,
+  AlertIcon,
 };
 
 export default {
@@ -103,4 +109,7 @@ export default {
   ArrowLeftIcon,
   SecurityIcon,
   BubbleIcon,
+  CheckIcon,
+  CheckOutlineIcon,
+  AlertIcon,
 };
