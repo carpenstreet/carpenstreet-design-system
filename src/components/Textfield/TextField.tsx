@@ -3,7 +3,7 @@ import {
   InputLabel as MUIInputLabel,
   FormHelperText as MUIFormHelperText,
   useFormControl,
-  Box as MUIBox,
+  Box,
   FormControlProps as MUIFormControlProps,
   OutlinedInputProps as MUIOutlinedInputProps,
 } from '@mui/material';
@@ -276,10 +276,10 @@ function Input(props: MUIOutlinedInputProps) {
           borderColor: theme.palette['color/gray/200'],
         },
 
-        '& path, & circle': {
+        '& path:not([fill="white"]), & circle:not([fill="white"])': {
           fill: theme.palette['color/gray/400'],
         },
-        '& rect': {
+        '& rect:not([fill="white"])': {
           stroke: theme.palette['color/gray/400'],
         },
       },
@@ -303,39 +303,39 @@ function HelperText(props: HelperTextProps) {
     margin: 'unset',
     marginTop: '8px',
     color: theme.palette['color/gray/800'],
-    '& path, & circle': {
+    '& path:not([fill="white"]), & circle:not([fill="white"])': {
       fill: theme.palette['color/gray/600'],
     },
-    '& rect': {
+    '& rect:not([fill="white"])': {
       stroke: theme.palette['color/gray/600'],
     },
 
     ...(success && {
       color: theme.palette['color/state/success'],
-      '& path, & circle': {
+      '& path:not([fill="white"]), & circle:not([fill="white"])': {
         fill: theme.palette['color/state/success'],
       },
-      '& rect': {
+      '& rect:not([fill="white"])': {
         stroke: theme.palette['color/state/success'],
       },
     }),
 
     '&.Mui-error': {
       color: theme.palette['color/state/error'],
-      '& path, & circle': {
+      '& path:not([fill="white"]), & circle:not([fill="white"])': {
         fill: theme.palette['color/state/error'],
       },
-      '& rect': {
+      '& rect:not([fill="white"])': {
         stroke: theme.palette['color/state/error'],
       },
     },
 
     '&.Mui-disabled': {
       color: theme.palette['color/gray/400'],
-      '& path, & circle': {
+      '& path:not([fill="white"]), & circle:not([fill="white"])': {
         fill: theme.palette['color/gray/400'],
       },
-      '& rect': {
+      '& rect:not([fill="white"])': {
         stroke: theme.palette['color/gray/400'],
       },
     },
@@ -357,10 +357,10 @@ function HelperText(props: HelperTextProps) {
 
   return (
     <MUIFormHelperText {...rest} sx={sx} error={error}>
-      <MUIBox sx={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
         {withIcon && icon}
         {children}
-      </MUIBox>
+      </Box>
     </MUIFormHelperText>
   );
 }

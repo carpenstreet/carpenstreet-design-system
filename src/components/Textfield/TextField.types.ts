@@ -1,9 +1,13 @@
-import { InputLabelProps as MUIInputLabelProps, FormHelperTextProps as MUIFormHelperTextProps } from '@mui/material';
-import { OutlinedTextFieldProps, StandardTextFieldProps } from '@mui/material/TextField/TextField';
+import {
+  InputLabelProps as MUIInputLabelProps,
+  FormHelperTextProps as MUIFormHelperTextProps,
+  OutlinedTextFieldProps as MUIOutlinedTextFieldProps,
+  StandardTextFieldProps as MUIStandardTextFieldProps,
+} from '@mui/material';
 
 export type CustomTextFieldVariants = 'standard' | 'outlined';
 
-type GetTextFieldProps<Variant extends CustomTextFieldVariants> = Variant extends 'standard' ? StandardTextFieldProps : OutlinedTextFieldProps;
+type GetTextFieldProps<Variant extends CustomTextFieldVariants> = Variant extends 'standard' ? MUIStandardTextFieldProps : MUIOutlinedTextFieldProps;
 
 export type TextFieldProps<Variant extends CustomTextFieldVariants = CustomTextFieldVariants> = Omit<
   GetTextFieldProps<Variant>,
