@@ -122,3 +122,24 @@ declare module '@mui/material/Checkbox/Checkbox' {
     S: true;
   }
 }
+
+declare module '@mui/material/FormControl/FormControl' {
+  interface FormControlPropsSizeOverrides {
+    M: true;
+    S: true;
+  }
+}
+
+declare module '@mui/material/InputBase/InputBase' {
+  interface InputBasePropsSizeOverrides {
+    M: true;
+    S: true;
+  }
+}
+
+declare module '@mui/material/InputLabel/InputLabel' {
+  interface InputLabelPropsSizeOverrides {
+    M: true;
+    S: true;
+  }
+}

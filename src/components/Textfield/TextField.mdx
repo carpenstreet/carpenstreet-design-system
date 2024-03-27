@@ -1,0 +1,8 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as TextFieldStories from './TextField.stories';
+
+<Meta of={TextFieldStories} />
+
+<Canvas of={TextFieldStories.Default} />
+
+<Controls include={['variant', 'label', 'size', 'success', 'error', 'disabled', 'helperText', 'withHelperTextIcon']} />
