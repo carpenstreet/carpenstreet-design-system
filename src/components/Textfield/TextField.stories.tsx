@@ -3,6 +3,7 @@ import ThemeMui from '../../shared/settings/ThemeMui';
 import ExampleTextField from './ExampleTextField';
 import BoxIcon from '../Icon/Box/BoxIcon';
 import ViewIcon from '../Icon/View/ViewIcon';
+import ProfileFilledIcon from '../Icon/ProfileFilled/ProfileFilledIcon.tsx';
 
 const meta: Meta = {
   title: 'Component/TextField',
@@ -30,7 +31,7 @@ export const Default: Story = {
     error: false,
     disabled: false,
     InputProps: {
-      startAdornment: <BoxIcon />,
+      startAdornment: <ProfileFilledIcon />,
       endAdornment: <ViewIcon />,
     },
     sx: {
