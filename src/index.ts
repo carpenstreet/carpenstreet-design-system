@@ -46,6 +46,7 @@ import {
   Label,
   LabelPartnership,
   TextField,
+  Avatar,
 } from './components';
 
 export {
@@ -96,6 +97,7 @@ export {
   Label,
   LabelPartnership,
   TextField,
+  Avatar,
 };
 
 export default {
@@ -146,4 +148,5 @@ export default {
   Label,
   LabelPartnership,
   TextField,
+  Avatar,
 };

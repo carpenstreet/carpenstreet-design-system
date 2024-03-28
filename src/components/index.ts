@@ -44,6 +44,7 @@ import Tooltip from './Tooltip/Tooltip';
 import Label from './Label/Label';
 import LabelPartnership from './LabelPartnership/LabelPartnership';
 import TextField from './Textfield/TextField';
+import Avatar from './Avatar/Avatar';
 
 export {
   Button,
@@ -92,6 +93,7 @@ export {
   Label,
   LabelPartnership,
   TextField,
+  Avatar,
 };
 
 export default {
@@ -141,4 +143,5 @@ export default {
   Label,
   LabelPartnership,
   TextField,
+  Avatar,
 };
