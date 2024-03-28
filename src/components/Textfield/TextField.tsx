@@ -116,7 +116,7 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
 
   return (
     <MUIFormControl {...FormControlProps}>
-      {label !== null && label !== '' && <InputLabel {...InputLabelProps}>{label}</InputLabel>}
+      {label && <InputLabel {...InputLabelProps}>{label}</InputLabel>}
       <Input {...InputProps} {...InputMore} />
       {helperText && <HelperText {...FormHelperTextProps}>{helperText}</HelperText>}
     </MUIFormControl>
