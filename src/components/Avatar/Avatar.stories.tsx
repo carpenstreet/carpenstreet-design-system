@@ -19,8 +19,8 @@ type Story = StoryObj<typeof ExampleAvatar>;
 
 export const Default: Story = {
   args: {
-    src: 'https://image.tmdb.org/t/p/w235_and_h235_face/hRKCbLuihYutWT50fvYpIwg38N8.jpg',
-    alt: 'Wolfgang Güllich',
+    src: 'https://m.media-amazon.com/images/M/MV5BNjI0MjJmYWUtNWVkYy00YmMxLTk3M2UtMjZlYWViMzM5ZjU0XkEyXkFqcGdeQXVyMTE0MzQwMjgz._V1_QL75_UY281_CR31,0,500,281_.jpg',
+    alt: "Neytiri te Tskaha Mo'at'ite",
     sx: {},
   },
 };
