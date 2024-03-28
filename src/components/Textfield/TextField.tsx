@@ -11,7 +11,10 @@ import { TextFieldProps, HelperTextProps, InputLabelProps, InputMore, CustomText
 import { useTheme } from '@mui/material/styles';
 import { CustomTypographyVariants } from '../Typography/Typography.constants.ts';
 import React from 'react';
-import { CheckIcon, AlertIcon, InformationIcon, NoticeIcon } from '../Icon';
+import CheckIcon from '../Icon/Check/CheckIcon';
+import AlertIcon from '../Icon/Alert/AlertIcon';
+import InformationIcon from '../Icon/Information/InformationIcon';
+import NoticeIcon from '../Icon/Notice/NoticeIcon';
 import { unstable_useId } from '@mui/utils';
 import { variantInputComponent } from './Textfield.constants.ts';
 
