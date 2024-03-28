@@ -1,0 +1,19 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+
+import * as AvatarStories from './Avatar.stories';
+
+<Meta of={AvatarStories} />
+
+# Button
+
+ACON3D 서비스에 사용되는 버튼입니다. 기본적으로 정해진 preset을 사용하되, 필요에 따라 `sx` prop을 통해 스타일을 커스텀할 수 있습니다.
+
+옵션 선택이 유효하지 않을 시, 개발자 도구의 콘솔 창에 경고 메시지가 출력됩니다.
+
+버튼에 `startIcon`, `endIcon`을 설정하면, 미리 정해진 preset에 따라 아이콘의 색상과 크기가 자동으로 변경됩니다.
+
+(스토리북에서는 `<ChevronLeftIcon />`과 `<ChevronRightIcon />`을 예시로 사용하였습니다)
+
+<Canvas of={AvatarStories.Default} />
+
+<Controls include={['src', 'alt', 'sx']}/>
