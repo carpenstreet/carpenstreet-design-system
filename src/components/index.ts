@@ -93,7 +93,6 @@ export {
   LabelPartnership,
   TextField,
 };
-export * from './Icon/index';
 
 export default {
   Button,

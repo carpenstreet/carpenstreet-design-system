@@ -1,7 +1,7 @@
 import { LabelPartnershipProps } from './LabelPartnership.types.ts';
 import { Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import { VVIPIcon } from '../Icon';
+import VVIPIcon from '../Icon/Vvip/VVIPIcon';
 import Typography from '../Typography/Typography.tsx';
 
 export default function LabelPartnership(props: LabelPartnershipProps) {

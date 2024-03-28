@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ThemeMui from '../../shared/settings/ThemeMui';
 import ExampleTextField from './ExampleTextField';
-import { BoxIcon, ViewIcon } from '../Icon';
+import BoxIcon from '../Icon/Box/BoxIcon';
+import ViewIcon from '../Icon/View/ViewIcon';
 
 const meta: Meta = {
   title: 'Component/TextField',
