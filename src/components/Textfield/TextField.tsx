@@ -236,6 +236,12 @@ function Input(props: MUIOutlinedInputProps) {
 
       '&.Mui-disabled': {
         color: theme.palette['color/gray/200'],
+        '& path:not([fill="white"]), & circle:not([fill="white"])': {
+          fill: theme.palette['color/gray/400'],
+        },
+        '& rect:not([fill="white"])': {
+          stroke: theme.palette['color/gray/400'],
+        },
       },
       '&.Mui-disabled:before, &.Mui-disabled:after': {
         borderBottom: `1px solid ${theme.palette['color/gray/200']}`,
