@@ -196,6 +196,7 @@ function Input(props: MUIOutlinedInputProps) {
       height: '24px',
     }),
     ...(variant === 'outlined' && {
+      height: '24px',
       padding: 'unset',
 
       '&.Mui-disabled': {
@@ -211,7 +212,8 @@ function Input(props: MUIOutlinedInputProps) {
     ...(variant === 'standard' && {
       color: theme.palette['color/gray/800'],
 
-      marginTop: '13.5px',
+      // css 우선도 떼문에 label+ 추가
+      'label+&': { marginTop: '13.5px' },
       '&:before': {
         borderColor: theme.palette['color/gray/dim/400'],
       },
