@@ -26,10 +26,5 @@ const config = [
     output: [{ file: 'dist/index.d.ts', format: 'esm' }], // ./dist/index.d.ts를 생성
     plugins: [dts()],
   },
-  {
-    input: './src/shared/settings/theme.d.ts',
-    output: [{ file: 'dist/src/shared/settings/theme.d.ts', format: 'esm' }],
-    plugins: [dts()],
-  },
 ];
 export default config;
