@@ -61,12 +61,7 @@ export default function ThemeMui({ children }: Props) {
     spacing: 4,
     breakpoints: {
       values: {
-        xs: 0, // partnerhub에서 사용중인 breakpoint, type error 때문에 넣어줌
-        sm: 600,
-        md: 836,
-        lg: 1200,
-        xl: 1536,
-        mobile: 0, // design system에서 새로 쓰기 시작할 breakpoint
+        mobile: 0,
         desktop: 768,
       },
     },
