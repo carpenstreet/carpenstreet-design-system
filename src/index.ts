@@ -1,4 +1,5 @@
 import DesignSystemProvider from './shared/settings/ThemeMui';
+import { useTheme as useDesignSystemTheme } from '@mui/material/styles';
 import {
   Button,
   IconButton,
@@ -51,6 +52,7 @@ import {
 
 export {
   DesignSystemProvider,
+  useDesignSystemTheme,
   Button,
   IconButton,
   Typography,
@@ -102,6 +104,7 @@ export {
 
 export default {
   DesignSystemProvider,
+  useDesignSystemTheme,
   Button,
   IconButton,
   Typography,
