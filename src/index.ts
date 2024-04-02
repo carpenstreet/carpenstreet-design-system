@@ -1,5 +1,5 @@
 import DesignSystemProvider from './shared/settings/ThemeMui';
-import { useTheme as useDesignSystemTheme } from '@mui/material/styles';
+import useDesignSystemTheme from './hooks/useDesignSystemTheme.tsx';
 import {
   Button,
   IconButton,
