@@ -71,11 +71,6 @@ declare module '@mui/material/styles' {
   interface TypographyVariantsOptions extends Partial<CustomTypographyVariants> {}
 
   interface BreakpointOverrides {
-    xs: false;
-    sm: false;
-    md: false;
-    lg: false;
-    xl: false;
     mobile: true;
     desktop: true;
   }
