@@ -28,7 +28,7 @@ const config = [
   },
   {
     input: './dist/src/shared/settings/theme.d.ts',
-    output: [{ file: 'dist/theme.d.ts', format: 'esm' }],
+    output: [{ file: 'dist/designSystemTheme.d.ts', format: 'esm' }],
     plugins: [dts()],
   },
 ];
