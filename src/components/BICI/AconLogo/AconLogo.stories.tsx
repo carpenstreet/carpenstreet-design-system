@@ -3,7 +3,7 @@ import ThemeMui from '../../../shared/settings/ThemeMui';
 import ExampleAconLogo from './ExampleAconLogo';
 
 const meta: Meta<typeof ExampleAconLogo> = {
-  title: 'BI·CI/현AconLogo',
+  title: 'BI·CI/AconLogo',
   component: ExampleAconLogo,
   decorators: [
     (Story) => (
