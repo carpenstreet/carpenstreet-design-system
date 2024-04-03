@@ -35,6 +35,11 @@ import SecurityIcon from './Icon/Security/SecurityIcon';
 import CheckOutlineIcon from './Icon/CheckOutline/CheckOutlineIcon';
 import CheckIcon from './Icon/Check/CheckIcon';
 import AlertIcon from './Icon/Alert/AlertIcon';
+// Logos
+import CarpenstreetLogo from './BICI/CarpenstreetLogo/CarpenstreetLogo';
+import AconLogo from './BICI/AconLogo/AconLogo';
+import ALogo from './BICI/ALogo/ALogo';
+import PartnerhubLogo from './BICI/PartnerhubLogo/PartnerhubLogo';
 // ---
 import BubbleIcon from './Icon/Bubble/BubbleIcon';
 import Typography from './Typography/Typography';
@@ -87,6 +92,11 @@ export {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  // Logos
+  CarpenstreetLogo,
+  AconLogo,
+  ALogo,
+  PartnerhubLogo,
   // ---
   Checkbox,
   Tooltip,
@@ -137,6 +147,11 @@ export default {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  // Logos
+  CarpenstreetLogo,
+  AconLogo,
+  ALogo,
+  PartnerhubLogo,
   // ---
   Checkbox,
   Tooltip,
