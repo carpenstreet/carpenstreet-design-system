@@ -1,0 +1,12 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as ALogoStories from './ALogo.stories';
+
+<Meta of={ALogoStories} />
+
+# A
+
+배경색은 포함되지 않습니다
+
+<Canvas of={ALogoStories.Default} />
+
+<Controls incldue={['variant', 'width', 'height']} />
