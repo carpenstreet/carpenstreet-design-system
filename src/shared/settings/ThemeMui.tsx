@@ -11,6 +11,7 @@ import { overrideIconButton } from './iconButton/iconButton.ts';
 import { overrideCheckbox } from './checkbox/checkbox.ts';
 import { overrideTooltip } from './tooltip/tooltip.ts';
 import { overrideAvatar } from './avatar/avatar.ts';
+import { overrideTab } from './tab/tab.ts';
 
 // ----------------------------------------------------------------------
 
@@ -51,6 +52,7 @@ export default function ThemeMui({ children }: Props) {
       MuiCheckbox: overrideCheckbox,
       MuiTooltip: overrideTooltip,
       MuiAvatar: overrideAvatar,
+      MuiTab: overrideTab,
     },
     typography: {
       ...CustomTypographyVariants,

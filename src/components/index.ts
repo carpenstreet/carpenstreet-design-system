@@ -50,6 +50,7 @@ import Label from './Label/Label';
 import LabelPartnership from './LabelPartnership/LabelPartnership';
 import TextField from './Textfield/TextField';
 import Avatar from './Avatar/Avatar';
+import Tab from './Tab/Tab';
 
 export {
   Button,
@@ -104,6 +105,7 @@ export {
   LabelPartnership,
   TextField,
   Avatar,
+  Tab,
 };
 
 export default {
@@ -159,4 +161,5 @@ export default {
   LabelPartnership,
   TextField,
   Avatar,
+  Tab,
 };
