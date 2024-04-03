@@ -1,1 +1,0 @@
-import{r as e,a as c}from"./index-76fb7be0.js";function l(t){return t&&t.ownerDocument||document}let u=0;function r(t){const[n,s]=e.useState(t),a=t||n;return e.useEffect(()=>{n==null&&(u+=1,s(`mui-${u}`))},[n]),a}const o=c["useId".toString()];function I(t){if(o!==void 0){const n=o();return t??n}return r(t)}export{l as o,I as u};
