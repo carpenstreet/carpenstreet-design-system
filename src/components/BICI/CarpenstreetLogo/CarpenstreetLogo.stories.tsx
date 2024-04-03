@@ -20,7 +20,7 @@ type Story = StoryObj<typeof ExampleCarpenstreetLogo>;
 export const Default: Story = {
   args: {
     variant: 'white',
-    width: 201,
-    height: 50,
+    width: 192,
+    height: 48,
   },
 };
