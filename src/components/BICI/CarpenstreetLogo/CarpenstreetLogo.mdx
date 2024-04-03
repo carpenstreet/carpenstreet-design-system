@@ -1,0 +1,12 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as CarpenstreetLogoStories from './CarpenstreetLogo.stories';
+
+<Meta of={CarpenstreetLogoStories} />
+
+# Carpenstreet
+
+배경색은 포함되지 않습니다.
+
+<Canvas of={CarpenstreetLogoStories.Default} />
+
+<Controls incldue={['color', 'width', 'height']} />
