@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ThemeMui from '../../shared/settings/ThemeMui';
-import Tab from './Tab';
+import ExampleTabs from './ExampleTabs';
 
-const meta: Meta<typeof Tab> = {
+const meta: Meta<typeof ExampleTabs> = {
   title: 'Component/Tab',
-  component: Tab,
+  component: ExampleTabs,
   decorators: [
     (Story) => (
       <ThemeMui>
@@ -15,11 +15,11 @@ const meta: Meta<typeof Tab> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Tab>;
+type Story = StoryObj<typeof ExampleTabs>;
 
 export const Default: Story = {
   args: {
-    label: 'Label',
+    label: 'Look At Me!',
     size: 'L',
     disabled: false,
     sx: {},
