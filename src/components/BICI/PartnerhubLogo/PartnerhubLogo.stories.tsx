@@ -19,7 +19,7 @@ type Story = StoryObj<typeof PartnerhubLogo>;
 
 export const Default: Story = {
   args: {
-    width: undefined,
-    height: undefined,
+    width: 60,
+    height: 30,
   },
 };
