@@ -3,14 +3,14 @@ import { AconLogoProps } from './AconLogo.types.ts';
 export default function AconLogo({ variant, width, height }: AconLogoProps) {
   const widthToApply = (() => {
     if (width) return width;
-    else if (variant === 'beta') return 200;
-    else return 180;
+    else if (variant === 'beta') return 127;
+    else return 100;
   })();
 
   const heightToApply = (() => {
     if (height) return height;
-    else if (variant === 'beta') return 44;
-    else return 54;
+    else if (variant === 'beta') return 27;
+    else return 30;
   })();
 
   if (variant === 'beta')

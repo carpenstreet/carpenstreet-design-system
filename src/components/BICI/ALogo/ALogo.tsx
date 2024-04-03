@@ -1,14 +1,26 @@
 import { ALogoProps } from './ALogo.types.ts';
 import { useTheme } from '@mui/material/styles';
 
-export default function ALogo({ variant, width = 100, height = 100 }: ALogoProps) {
+export default function ALogo({ variant, width, height }: ALogoProps) {
   const theme = useTheme();
+
+  const widthToApply = (() => {
+    if (width) return width;
+    else if (variant === 'no-container') return 32;
+    else return 56;
+  })();
+
+  const heightToApply = (() => {
+    if (height) return height;
+    else if (variant === 'no-container') return 32;
+    else return 56;
+  })();
 
   const colorToApply = theme.palette[variant === 'dark' ? 'color/gray/800' : 'color/primary/600'];
 
   if (variant === 'no-container')
     return (
-      <svg width={width} height={height} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width={widthToApply} height={heightToApply} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -19,7 +31,7 @@ export default function ALogo({ variant, width = 100, height = 100 }: ALogoProps
     );
 
   return (
-    <svg width={width} height={height} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={widthToApply} height={heightToApply} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_4455_29267)">
         <path d="M0 10C0 4.47715 4.47715 0 10 0H90C95.5228 0 100 4.47715 100 10V90C100 95.5228 95.5228 100 90 100H10C4.47715 100 0 95.5228 0 90V10Z" fill={colorToApply} />
         <path
