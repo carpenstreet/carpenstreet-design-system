@@ -53,6 +53,7 @@ import {
   LabelPartnership,
   TextField,
   Avatar,
+  Tab,
 } from './components';
 
 export {
@@ -110,6 +111,7 @@ export {
   LabelPartnership,
   TextField,
   Avatar,
+  Tab,
 };
 
 export default {
@@ -167,4 +169,5 @@ export default {
   LabelPartnership,
   TextField,
   Avatar,
+  Tab,
 };
