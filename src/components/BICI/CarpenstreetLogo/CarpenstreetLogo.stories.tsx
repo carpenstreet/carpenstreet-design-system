@@ -19,8 +19,8 @@ type Story = StoryObj<typeof ExampleCarpenstreetLogo>;
 
 export const Default: Story = {
   args: {
-    color: 'black',
-    width: null,
-    height: null,
+    variant: 'white',
+    width: undefined,
+    height: undefined,
   },
 };

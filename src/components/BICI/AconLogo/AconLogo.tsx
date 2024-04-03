@@ -1,19 +1,19 @@
 import { AconLogoProps } from './AconLogo.types.ts';
 
-export default function AconLogo({ type, width, height }: AconLogoProps) {
+export default function AconLogo({ variant, width, height }: AconLogoProps) {
   const widthToApply = (() => {
     if (width) return width;
-    else if (type === 'beta') return 200;
+    else if (variant === 'beta') return 200;
     else return 180;
   })();
 
   const heightToApply = (() => {
     if (height) return height;
-    else if (type === 'beta') return 44;
+    else if (variant === 'beta') return 44;
     else return 54;
   })();
 
-  if (type === 'beta')
+  if (variant === 'beta')
     return (
       <svg width={widthToApply} height={heightToApply} viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -59,19 +59,19 @@ export default function AconLogo({ type, width, height }: AconLogoProps) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M11 3.375H37L48 51.3749L33 51.375L32 45.375H16L15 51.3749H0L11 3.375ZM20.6667 17.375H27.3333L30.1667 34.375H17.8333L20.6667 17.375Z"
-        fill={type}
+        fill={variant}
       />
       <path
         d="M71.9999 3.375C58.7451 3.375 48 14.1201 48 27.3749C48 40.6297 58.7451 51.3749 71.9999 51.3749H84V35.375L72.8991 36.8888C67.1339 37.6749 62 33.1936 62 27.375C62 21.5564 67.1339 17.0751 72.8991 17.8612L84 19.375V3.375H71.9999Z"
-        fill={type}
+        fill={variant}
       />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
         d="M111 3.375C98.2974 3.375 88 13.6725 88 26.375V28.375C88 41.0776 98.2974 51.375 111 51.375C123.703 51.375 134 41.0776 134 28.375V26.375C134 13.6725 123.703 3.375 111 3.375ZM111 17.375C106.029 17.375 102 21.4044 102 26.375V28.375C102 33.3456 106.029 37.375 111 37.375C115.971 37.375 120 33.3456 120 28.375V26.375C120 21.4044 115.971 17.375 111 17.375Z"
-        fill={type}
+        fill={variant}
       />
-      <path d="M153 51.375H138V3.375H151L166.615 29.2212L165 3.375H180V51.375H167L151.385 25.5288L153 51.375Z" fill={type} />
+      <path d="M153 51.375H138V3.375H151L166.615 29.2212L165 3.375H180V51.375H167L151.385 25.5288L153 51.375Z" fill={variant} />
     </svg>
   );
 }

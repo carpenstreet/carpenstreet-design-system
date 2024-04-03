@@ -20,7 +20,7 @@ type Story = StoryObj<typeof ExampleALogo>;
 export const Default: Story = {
   args: {
     variant: 'no-container',
-    width: 100,
-    height: 100,
+    width: undefined,
+    height: undefined,
   },
 };

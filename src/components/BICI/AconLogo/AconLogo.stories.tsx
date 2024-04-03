@@ -19,8 +19,8 @@ type Story = StoryObj<typeof ExampleAconLogo>;
 
 export const Default: Story = {
   args: {
-    type: 'white',
-    width: null,
-    height: null,
+    variant: 'white',
+    width: undefined,
+    height: undefined,
   },
 };

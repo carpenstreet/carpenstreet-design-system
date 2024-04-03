@@ -1,5 +1,5 @@
 export type CarpenstreetLogoProps = {
-  color: 'white' | 'black';
+  variant: 'white' | 'black';
   width?: number;
   height?: number;
 };
