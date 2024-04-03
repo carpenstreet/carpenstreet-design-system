@@ -41,6 +41,11 @@ import {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  // Logos
+  CarpenstreetLogo,
+  AconLogo,
+  ALogo,
+  PartnerhubLogo,
   // ---
   Checkbox,
   Tooltip,
@@ -93,6 +98,11 @@ export {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  // Logos
+  CarpenstreetLogo,
+  AconLogo,
+  ALogo,
+  PartnerhubLogo,
   // ---
   Checkbox,
   Tooltip,
@@ -145,6 +155,11 @@ export default {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  // Logos
+  CarpenstreetLogo,
+  AconLogo,
+  ALogo,
+  PartnerhubLogo,
   // ---
   Checkbox,
   Tooltip,
