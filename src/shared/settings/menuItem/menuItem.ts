@@ -13,7 +13,7 @@ export const overrideMenuItem = {
       '&:hover': {
         backgroundColor: theme.palette['color/gray/dim/100'],
       },
-      '&.Mui-selected': {
+      '&.Mui-selected, &.Mui-selected:hover': {
         backgroundColor: theme.palette['color/primary/dim/100'],
       },
       '& .MuiTypography-root': {

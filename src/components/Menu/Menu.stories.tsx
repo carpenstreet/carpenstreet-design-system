@@ -45,8 +45,5 @@ export const HugMenuWithScroll: Story = {
 export const FullWidthMenu: Story = {
   args: {
     fullWidth: true,
-    paperSx: {
-      marginTop: '8px',
-    },
   },
 };

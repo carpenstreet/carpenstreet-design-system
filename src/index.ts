@@ -54,6 +54,8 @@ import {
   TextField,
   Avatar,
   Tab,
+  Menu,
+  MenuItem,
 } from './components';
 
 export {
@@ -112,6 +114,8 @@ export {
   TextField,
   Avatar,
   Tab,
+  Menu,
+  MenuItem,
 };
 
 export default {
@@ -170,4 +174,6 @@ export default {
   TextField,
   Avatar,
   Tab,
+  Menu,
+  MenuItem,
 };

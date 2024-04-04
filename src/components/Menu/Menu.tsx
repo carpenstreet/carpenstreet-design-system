@@ -5,7 +5,7 @@ import { MenuPropsType } from './Menu.types.ts';
 export default function Menu({ width, fullWidth, children, anchorEl, sx, paperSx, ...rest }: MenuPropsType) {
   const menuSx = {
     '& .MuiPaper-root': {
-      ...(width !== null && width !== undefined && { width }),
+      ...(width && { width }),
       ...(fullWidth && { width: `${anchorEl && anchorEl instanceof Element && anchorEl.clientWidth}px` }),
       ...paperSx,
     },
