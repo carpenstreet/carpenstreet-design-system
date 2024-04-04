@@ -51,6 +51,8 @@ import LabelPartnership from './LabelPartnership/LabelPartnership';
 import TextField from './Textfield/TextField';
 import Avatar from './Avatar/Avatar';
 import Tab from './Tab/Tab';
+import Menu from './Menu/Menu';
+import MenuItem from './MenuItem/MenuItem';
 
 export {
   Button,
@@ -106,6 +108,8 @@ export {
   TextField,
   Avatar,
   Tab,
+  Menu,
+  MenuItem,
 };
 
 export default {
@@ -162,4 +166,6 @@ export default {
   TextField,
   Avatar,
   Tab,
+  Menu,
+  MenuItem,
 };
