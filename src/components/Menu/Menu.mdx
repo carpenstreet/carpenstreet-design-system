@@ -1,0 +1,38 @@
+import { Canvas, Controls, Meta, Story } from '@storybook/blocks';
+import * as MenuStories from './Menu.stories';
+
+<Meta of={MenuStories} />
+
+# Menu
+버튼 또는 텍스트 등 특정 요소의 상호작용을 통해 표시됩니다. 자세한 사용 방법은 [Mui의 Menu 컴포넌트 문서](https://mui.com/material-ui/react-menu/)를 참고하세요.
+
+Mui의 Menu 기본 Prop과 함께 추가로 width, fullWidth, paperSx 옵션이 주어집니다.
+
+- width 옵션은 number 타입이며, Menu의 고정 너비를 지정합니다.
+- fullWidth는 boolean 값으로 true일 경우 상위 요소의 너비에 맞춰 Menu의 너비를 지정합니다.
+- Menu의 sx는 popover로 지정되어 있습니다. Menu Paper 요소에 스타일을 지정하려면 paperSx 옵션을 사용해주세요.
+
+<Canvas of={MenuStories.Default} />
+
+<Controls include={['width', 'fullWidth', 'sx', 'paperSx']} />
+
+---
+
+### Width Fixed with Scroll
+- 좌측 Menu 컴포넌트 너비: 300px
+- 우측 Menu 컴포넌트 너비: 100px
+
+<Canvas>
+  <Story of={MenuStories.FixedMenuWithScrollLeft} />
+  <Story of={MenuStories.FixedMenuWithScrollRight} />
+</Canvas>
+
+### Width Hug with Scroll
+Menu 컴포넌트의 너비를 Menu Item의 너비에 맞춤
+
+<Canvas of={MenuStories.HugMenuWithScroll} />
+
+### Full Width with Scroll
+Menu 컴포넌트의 너비를 상위 요소에 맞춤.
+
+<Canvas of={MenuStories.FullWidthMenu} />

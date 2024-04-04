@@ -1,0 +1,20 @@
+import { Canvas, Controls, Meta, Story } from '@storybook/blocks';
+import * as MenuItemStories from './MenuItem.stories';
+
+<Meta of={MenuItemStories} />
+
+# Menu Item
+
+`default`와 `disabled` 상태의 경우 Menu Item의 배경색이 `Transparent`로 설정되기 때문에, 구분을 위해 `border: 1px color/gray/100 solid` 스타일을 적용했습니다.
+
+<Canvas of={MenuItemStories.Default} />
+
+<Controls include={['selected', 'disabled', 'children', 'sx']} />
+
+### Status
+
+<Canvas>
+  <Story of={MenuItemStories.DefaultMenuItem} />
+  <Story of={MenuItemStories.SelectedMenuItem} />
+  <Story of={MenuItemStories.DisabledMenuItem} />
+</Canvas>
