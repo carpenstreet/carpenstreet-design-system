@@ -90,6 +90,20 @@ declare module '@mui/material/Typography/Typography' {
   interface TypographyPropsVariantOverrides extends Record<CustomTypographyVariantsTypes, true> {}
 }
 
+declare module '@mui/material/Pagination/Pagination' {
+  interface PaginationPropsSizeOverrides {
+    L: true;
+    M: true;
+  }
+}
+
+declare module '@mui/material/PaginationItem/PaginationItem' {
+  interface PaginationItemPropsSizeOverrides {
+    L: true;
+    M: true;
+  }
+}
+
 declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
     underlined: true;

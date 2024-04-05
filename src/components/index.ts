@@ -53,6 +53,7 @@ import Avatar from './Avatar/Avatar';
 import Tab from './Tab/Tab';
 import Menu from './Menu/Menu';
 import MenuItem from './MenuItem/MenuItem';
+import Pagination from './Pagination/Pagination';
 
 export {
   Button,
@@ -110,6 +111,7 @@ export {
   Tab,
   Menu,
   MenuItem,
+  Pagination,
 };
 
 export default {
@@ -168,4 +170,5 @@ export default {
   Tab,
   Menu,
   MenuItem,
+  Pagination,
 };
