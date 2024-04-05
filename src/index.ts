@@ -56,6 +56,7 @@ import {
   Tab,
   Menu,
   MenuItem,
+  Pagination,
 } from './components';
 
 export {
@@ -116,6 +117,7 @@ export {
   Tab,
   Menu,
   MenuItem,
+  Pagination,
 };
 
 export default {
@@ -176,4 +178,5 @@ export default {
   Tab,
   Menu,
   MenuItem,
+  Pagination,
 };

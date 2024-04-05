@@ -1,0 +1,21 @@
+import { Canvas, Controls, Meta, Story } from '@storybook/blocks';
+import * as PaginationStories from './Pagination.stories';
+
+<Meta of={PaginationStories} />
+
+# Pagination
+
+여러 페이지들에서 특정 페이지를 선택할 때 사용하는 `Pagination` UI 컴포넌트입니다.
+
+Mui의 `Pagination` 기본 Prop을 사용하며 `Size` Prop은 `L`, `M` 옵션을 지원합니다.
+
+<Canvas of={PaginationStories.Default} />
+
+<Controls include={['size', 'count', 'sx']} />
+
+### Size
+
+<Canvas isColumn>
+  <Story of={PaginationStories.MediumPagination} />
+  <Story of={PaginationStories.LargePagination} />
+</Canvas>

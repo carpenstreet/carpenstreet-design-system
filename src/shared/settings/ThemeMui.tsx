@@ -14,6 +14,7 @@ import { overrideAvatar } from './avatar/avatar.ts';
 import { overrideTab } from './tab/tab.ts';
 import { overrideMenuItem } from './menuItem/menuItem.ts';
 import { overrideMenu } from './menu/menu.ts';
+import { overridePagination } from './pagination/pagination.ts';
 
 // ----------------------------------------------------------------------
 
@@ -57,6 +58,7 @@ export default function ThemeMui({ children }: Props) {
       MuiTab: overrideTab,
       MuiMenuItem: overrideMenuItem,
       MuiMenu: overrideMenu,
+      MuiPagination: overridePagination,
     },
     typography: {
       ...CustomTypographyVariants,

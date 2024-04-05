@@ -16,6 +16,7 @@ PRDT-?
 - [ ] `ooo.types.ts` 파일에서 MUI type을 적당한 곳에서 잘 import해오고 있는가?
 - [ ] `ooo.mdx` 파일에서 `<Controls />`의 `include` prop이 잘 설정되어 있는가?
 - [ ] 변경사항 전반적으로 import문을 `index.ts`가 아닌 정확한 파일에서 import하고 있는가?
+- [ ] 작업된 컴포넌트를 `src/index.ts`, `src/components/index.ts` 파일에서 export하고 있는가?
 
 # Description
 
