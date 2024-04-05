@@ -6,10 +6,10 @@ import { PaginationPropsType } from './Pagination.types.ts';
 import ChevronLeftIcon from '../Icon/ChevronLeft/ChevronLeftIcon.tsx';
 import ChevronRightIcon from '../Icon/ChevronRight/ChevronRightIcon.tsx';
 
-export default function Pagination({ ...rest }: PaginationPropsType) {
+export default function Pagination(props: PaginationPropsType) {
   return (
     <MuiPagination
-      {...rest}
+      {...props}
       renderItem={(item) => {
         return (
           <PaginationItem
