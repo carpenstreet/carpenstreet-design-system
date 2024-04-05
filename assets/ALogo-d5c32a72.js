@@ -1,0 +1,5 @@
+import{j as t,a as m,F as a}from"./jsx-runtime-29545a09.js";import{M as e,C as s,b as p}from"./index-c7f55057.js";import{A as c,D as f}from"./ALogo.stories-a57acfb8.js";import{u as n}from"./index-a1cf9e47.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./iframe-31fefe54.js";import"../sb-preview/runtime.js";import"./extends-623938b0.js";import"./index-d3ea75b5.js";import"./index-11d98b33.js";import"./assertThisInitialized-081f9914.js";import"./inheritsLoose-c82a83d4.js";import"./index-8fd8397b.js";import"./index-356e4a49.js";import"./ThemeMui-6214475d.js";import"./color-d4584655.js";import"./ExampleWrapper-0bddb272.js";import"./useTheme-7aa604bd.js";import"./Box-c1eed08d.js";import"./generateUtilityClasses-b945e9e6.js";function i(o){const r=Object.assign({h1:"h1",p:"p"},n(),o.components);return m(a,{children:[t(e,{of:c}),`
+`,t(r.h1,{id:"a",children:"A"}),`
+`,t(r.p,{children:"배경색(color/gray/400)은 포함되지 않습니다"}),`
+`,t(s,{of:f}),`
+`,t(p,{incldue:["variant","width","height"]})]})}function k(o={}){const{wrapper:r}=Object.assign({},n(),o.components);return r?t(r,Object.assign({},o,{children:t(i,o)})):i(o)}export{k as default};
