@@ -66,7 +66,7 @@ export default function DatePicker() {
     const contentDiv = contentRef.current;
     if (contentDiv && showYearPicker) {
       const rowIndexOfCurrentYear = Math.ceil((currentDay.year() - 1900) / 3);
-      const scrollY = 74 * (rowIndexOfCurrentYear - 2);
+      const scrollY = 78 * (rowIndexOfCurrentYear - 2);
       contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
     }
   }, [contentRef.current, showYearPicker]);
@@ -121,17 +121,7 @@ export default function DatePicker() {
                     const monthIndex = row * 3 + col;
                     const isSelected = monthIndex === currentDay.month();
                     return (
-                      <DateElement
-                        key={monthIndex}
-                        wide
-                        selected={isSelected}
-                        onClick={handleSelectMonth(monthIndex)}
-                        sx={{
-                          borderRadius: '1000px',
-                          width: '60px',
-                          height: '32px',
-                        }}
-                      >
+                      <DateElement key={monthIndex} wide selected={isSelected} onClick={handleSelectMonth(monthIndex)}>
                         {dayjs().month(monthIndex).format('MM')}
                       </DateElement>
                     );
@@ -157,17 +147,7 @@ export default function DatePicker() {
                     const year = 1900 + row * 3 + col;
                     const isSelected = year === currentDay.year();
                     return (
-                      <DateElement
-                        key={year}
-                        wide
-                        selected={isSelected}
-                        onClick={handleSelectYear(year)}
-                        sx={{
-                          borderRadius: '1000px',
-                          width: '60px',
-                          height: '32px',
-                        }}
-                      >
+                      <DateElement key={year} wide selected={isSelected} onClick={handleSelectYear(year)}>
                         {dayjs().year(year).format('YYYY')}
                       </DateElement>
                     );
