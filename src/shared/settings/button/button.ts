@@ -195,10 +195,8 @@ export const overrideButton = {
       backgroundColor: 'transparent',
 
       // Size
-      ...(ownerState.size === 'XL' && {
-        height: '33px',
-      }),
-      ...(ownerState.size === 'L' && {
+      // text 버튼은 XL 사이즈를 지원하지 않음
+      ...((ownerState.size === 'XL' || ownerState.size === 'L') && {
         height: '24px',
       }),
       ...(ownerState.size === 'M' && {
