@@ -211,15 +211,26 @@ export const overrideButton = {
         '& > .MuiTypography-root': {
           color: theme.palette['color/primary/600'],
         },
-        '&:hover': {
-          backgroundColor: 'transparent',
-        },
         '& > .MuiButton-icon': {
           '& path, & circle': {
             fill: theme.palette['color/primary/600'],
           },
           '& rect': {
             stroke: theme.palette['color/primary/600'],
+          },
+        },
+        '&:hover': {
+          backgroundColor: 'transparent',
+          '& > .MuiTypography-root': {
+            color: theme.palette['color/primary/700'],
+          },
+          '& > .MuiButton-icon': {
+            '& path, & circle': {
+              fill: theme.palette['color/primary/700'],
+            },
+            '& rect': {
+              stroke: theme.palette['color/primary/700'],
+            },
           },
         },
       }),
@@ -229,14 +240,22 @@ export const overrideButton = {
         },
         '&:hover': {
           backgroundColor: 'transparent',
+          '& > .MuiTypography-root': {
+            color: theme.palette['color/gray/600'],
+          },
+          '& > .MuiButton-icon': {
+            '& path, & circle': {
+              fill: theme.palette['color/gray/600'],
+            },
+            '& rect': {
+              stroke: theme.palette['color/gray/600'],
+            },
+          },
         },
       }),
       ...(ownerState.color === 'gray' && {
         '& > .MuiTypography-root': {
           color: theme.palette['color/gray/400'],
-        },
-        '&:hover': {
-          backgroundColor: 'transparent',
         },
         '& > .MuiButton-icon': {
           '& path, & circle': {
@@ -244,6 +263,20 @@ export const overrideButton = {
           },
           '& rect': {
             stroke: theme.palette['color/gray/400'],
+          },
+        },
+        '&:hover': {
+          backgroundColor: 'transparent',
+          '& > .MuiTypography-root': {
+            color: theme.palette['color/gray/600'],
+          },
+          '& > .MuiButton-icon': {
+            '& path, & circle': {
+              fill: theme.palette['color/gray/600'],
+            },
+            '& rect': {
+              stroke: theme.palette['color/gray/600'],
+            },
           },
         },
       }),
