@@ -5,6 +5,7 @@ import { Box } from '@mui/material';
 import Toolbar from '../Toolbar/Toolbar.tsx';
 import DayLabel from '../DayLabel/DayLabel.tsx';
 import DateElement from '../DateElement/DateElement.tsx';
+import DateRangeElement from '../DateRangeElement/DateRangeElement.tsx';
 
 export default function DateRangePicker() {
   const theme = useTheme();
@@ -197,11 +198,12 @@ export default function DateRangePicker() {
                           );
                         const date = col - convertedStartIndexOfMonth + 1;
                         const isToday = today.isSame(currentDay.date(date), 'day');
-                        const isSelected = startDay?.isSame(currentDay.date(date), 'day') || endDay?.isSame(currentDay.date(date), 'day');
+                        const isStart = startDay?.isSame(currentDay.date(date), 'day');
+                        const isEnd = endDay?.isSame(currentDay.date(date), 'day');
                         return (
-                          <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
+                          <DateRangeElement key={`week-${index}-date-${date}`} today={isToday} start={isStart} end={isEnd} onClick={handleSelectDate(date)}>
                             {String(date).padStart(2, '0')}
-                          </DateElement>
+                          </DateRangeElement>
                         );
                       })
                     : [...Array(7).keys()].map((col) => {
@@ -217,11 +219,12 @@ export default function DateRangePicker() {
                             />
                           );
                         const isToday = today.isSame(currentDay.date(date), 'day');
-                        const isSelected = startDay?.isSame(currentDay.date(date), 'day') || endDay?.isSame(currentDay.date(date), 'day');
+                        const isStart = startDay?.isSame(currentDay.date(date), 'day');
+                        const isEnd = endDay?.isSame(currentDay.date(date), 'day');
                         return (
-                          <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
+                          <DateRangeElement key={`week-${index}-date-${date}`} today={isToday} start={isStart} end={isEnd} onClick={handleSelectDate(date)}>
                             {String(date).padStart(2, '0')}
-                          </DateElement>
+                          </DateRangeElement>
                         );
                       })}
                 </Box>

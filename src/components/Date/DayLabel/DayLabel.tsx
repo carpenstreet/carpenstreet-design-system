@@ -19,6 +19,7 @@ export default function DayLabel({ show }: DayLabelProps) {
     >
       {dayIndicesOfWeek.map((dayIndex) => (
         <Typography
+          key={`day-label-${dayIndex}`}
           variant={'typography/label/large/regular'}
           color={'color/gray/500'}
           sx={{
