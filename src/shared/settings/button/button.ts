@@ -193,20 +193,19 @@ export const overrideButton = {
       borderRadius: 'unset',
       padding: 'unset',
       backgroundColor: 'transparent',
-      borderBottom: '1px solid transparent',
 
       // Size
       ...(ownerState.size === 'XL' && {
         height: '33px',
       }),
       ...(ownerState.size === 'L' && {
-        height: '25px',
+        height: '24px',
       }),
       ...(ownerState.size === 'M' && {
-        height: '21px',
+        height: '20px',
       }),
       ...(ownerState.size === 'S' && {
-        height: '17px',
+        height: '16px',
       }),
 
       // Color
@@ -215,7 +214,6 @@ export const overrideButton = {
           color: theme.palette['color/primary/600'],
         },
         '&:hover': {
-          borderBottom: `1px solid ${theme.palette['color/primary/600']}`,
           backgroundColor: 'transparent',
         },
         '& > .MuiButton-icon': {
@@ -232,7 +230,6 @@ export const overrideButton = {
           color: theme.palette['color/gray/800'],
         },
         '&:hover': {
-          borderBottom: `1px solid ${theme.palette['color/gray/800']}`,
           backgroundColor: 'transparent',
         },
       }),
@@ -241,7 +238,6 @@ export const overrideButton = {
           color: theme.palette['color/gray/400'],
         },
         '&:hover': {
-          borderBottom: `1px solid ${theme.palette['color/gray/400']}`,
           backgroundColor: 'transparent',
         },
         '& > .MuiButton-icon': {
