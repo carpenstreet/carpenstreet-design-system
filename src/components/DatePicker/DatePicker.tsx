@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import { Box, TextField as MUITextField } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import IconButton from '../IconButton/IconButton.tsx';
@@ -14,43 +14,68 @@ import CaretUpIcon from '../Icon/CaretUp/CaretUpIcon.tsx';
 export default function DatePicker(props: any) {
   const theme = useTheme();
 
+  const today = dayjs();
+
+  const contentRef = React.useRef<HTMLDivElement>(null);
+
   const [currentDay, setCurrentDay] = useState(dayjs());
 
+  const [selectedDay, setSelectedDay] = React.useState(dayjs());
+
+  function handleSelectDate(newDate: number) {
+    return () => {
+      setSelectedDay(currentDay.date(newDate));
+    };
+  }
+
+  function handleSelectYear(newYear: number) {
+    return () => {
+      setCurrentDay(currentDay.year(newYear));
+    };
+  }
+
+  function handleSelectMonth(newMonthIndex: number) {
+    return () => {
+      setCurrentDay(currentDay.month(newMonthIndex));
+    };
+  }
+
   const daysInMonth = currentDay.daysInMonth();
-  console.log(daysInMonth);
 
   const startIndexOfMonth = Number(currentDay.startOf('month').format('d'));
-  console.log(startIndexOfMonth);
 
   const convertedStartIndexOfMonth = startIndexOfMonth - 1 >= 0 ? startIndexOfMonth - 1 : 6;
-  console.log(convertedStartIndexOfMonth);
-
-  // const startOfWeek = startOfMonth.startOf('week');
-
-  console.log(currentDay.startOf('week').format('dd'));
 
   const weekRowsInMonth = Math.ceil((daysInMonth - (7 - convertedStartIndexOfMonth)) / 7) + 1;
 
   const [showYearPicker, setShowYearPicker] = React.useState(false);
-  function handleYearPicker() {
+  function handleShowYearPicker() {
     if (showMonthPicker) setShowMonthPicker(false);
     setShowYearPicker((p) => !p);
   }
 
   const [showMonthPicker, setShowMonthPicker] = React.useState(false);
-  function handleMonthPicker() {
+  function handleShowMonthPicker() {
     if (showYearPicker) setShowYearPicker(false);
     setShowMonthPicker((p) => !p);
   }
 
-  // // Adjust the date using dayjs methods
-  // const previousMonth = () => {
-  //   setDate(date.subtract(1, 'month'));
-  // };
-  //
-  // const nextMonth = () => {
-  //   setDate(date.add(1, 'month'));
-  // };
+  function handlePreviousMonth() {
+    setCurrentDay(currentDay.subtract(1, 'month'));
+  }
+
+  function handleNextMonth() {
+    setCurrentDay(currentDay.add(1, 'month'));
+  }
+
+  React.useEffect(() => {
+    const contentDiv = contentRef.current;
+    if (contentDiv && showYearPicker) {
+      const rowIndexOfCurrentYear = Math.ceil((currentDay.year() - 1900) / 3);
+      const scrollY = 74 * (rowIndexOfCurrentYear - 2);
+      contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
+    }
+  }, [contentRef.current, showYearPicker]);
 
   return (
     <Box
@@ -71,7 +96,7 @@ export default function DatePicker(props: any) {
           padding: '16px 12px',
         }}
       >
-        <IconButton color={'default'} size={'S'}>
+        <IconButton color={'default'} size={'S'} onClick={handlePreviousMonth}>
           <ChevronLeftIcon />
         </IconButton>
         <Box
@@ -81,14 +106,14 @@ export default function DatePicker(props: any) {
             gap: '16px',
           }}
         >
-          <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showYearPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={handleYearPicker}>
+          <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showYearPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={handleShowYearPicker}>
             {currentDay.format('YYYY')}
           </Button>
-          <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showMonthPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={handleMonthPicker}>
+          <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showMonthPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={handleShowMonthPicker}>
             {currentDay.format('MM')}
           </Button>
         </Box>
-        <IconButton color={'default'} size={'S'}>
+        <IconButton color={'default'} size={'S'} onClick={handleNextMonth}>
           <ChevronRightIcon />
         </IconButton>
       </Box>
@@ -124,6 +149,7 @@ export default function DatePicker(props: any) {
 
       {/* content */}
       <Box
+        ref={contentRef}
         sx={{
           paddingLeft: '28px',
           paddingRight: '28px',
@@ -146,10 +172,13 @@ export default function DatePicker(props: any) {
                 >
                   {[...Array(3).keys()].map((col) => {
                     const monthIndex = row * 3 + col;
+                    const isSelected = monthIndex === currentDay.month();
                     return (
                       <Element
                         key={monthIndex}
                         wide
+                        selected={isSelected}
+                        onClick={handleSelectMonth(monthIndex)}
                         sx={{
                           borderRadius: '1000px',
                           width: '60px',
@@ -179,10 +208,13 @@ export default function DatePicker(props: any) {
                 >
                   {[...Array(3).keys()].map((col) => {
                     const year = 1900 + row * 3 + col;
+                    const isSelected = year === currentDay.year();
                     return (
                       <Element
                         key={year}
                         wide
+                        selected={isSelected}
+                        onClick={handleSelectYear(year)}
                         sx={{
                           borderRadius: '1000px',
                           width: '60px',
@@ -227,7 +259,13 @@ export default function DatePicker(props: any) {
                             />
                           );
                         const date = col - convertedStartIndexOfMonth + 1;
-                        return <Element key={`week-${index}-date-${date}`}>{date}</Element>;
+                        const isToday = today.isSame(currentDay.date(date), 'day');
+                        const isSelected = selectedDay.isSame(currentDay.date(date), 'day');
+                        return (
+                          <Element key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
+                            {String(date).padStart(2, '0')}
+                          </Element>
+                        );
                       })
                     : [...Array(7).keys()].map((col) => {
                         const date = row * 7 + col - convertedStartIndexOfMonth + 1;
@@ -241,7 +279,13 @@ export default function DatePicker(props: any) {
                               }}
                             />
                           );
-                        return <Element key={`week-${index}-date-${date}`}>{date}</Element>;
+                        const isToday = today.isSame(currentDay.date(date), 'day');
+                        const isSelected = selectedDay.isSame(currentDay.date(date), 'day');
+                        return (
+                          <Element key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
+                            {String(date).padStart(2, '0')}
+                          </Element>
+                        );
                       })}
                 </Box>
               );
