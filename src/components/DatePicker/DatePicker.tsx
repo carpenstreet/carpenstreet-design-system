@@ -1,26 +1,30 @@
-import React, { useState } from 'react';
-import dayjs, { Dayjs } from 'dayjs';
-import { Box, TextField as MUITextField } from '@mui/material';
+import React from 'react';
+import dayjs from 'dayjs';
+import { Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import IconButton from '../IconButton/IconButton.tsx';
-import ChevronLeftIcon from '../Icon/ChevronLeft/ChevronLeftIcon.tsx';
-import ChevronRightIcon from '../Icon/ChevronRight/ChevronRightIcon.tsx';
-import Typography from '../Typography/Typography.tsx';
-import CaretDownIcon from '../Icon/CaretDown/CaretDownIcon.tsx';
-import Button from '../Button/Button.tsx';
-import { dayIndicesOfWeek, daysOfWeek } from './DatePicker.constants.ts';
-import CaretUpIcon from '../Icon/CaretUp/CaretUpIcon.tsx';
+import DateElement from './DateElement/DateElement.tsx';
+import Toolbar from './Toolbar/Toolbar.tsx';
+import DayLabel from './DayLabel/DayLabel.tsx';
 
-export default function DatePicker(props: any) {
+export default function DatePicker() {
   const theme = useTheme();
 
   const today = dayjs();
 
   const contentRef = React.useRef<HTMLDivElement>(null);
 
-  const [currentDay, setCurrentDay] = useState(dayjs());
-
+  const [currentDay, setCurrentDay] = React.useState(dayjs());
   const [selectedDay, setSelectedDay] = React.useState(dayjs());
+  const [showYearPicker, setShowYearPicker] = React.useState(false);
+  const [showMonthPicker, setShowMonthPicker] = React.useState(false);
+
+  const daysInMonth = currentDay.daysInMonth();
+
+  const startIndexOfMonth = Number(currentDay.startOf('month').format('d'));
+
+  const convertedStartIndexOfMonth = startIndexOfMonth - 1 >= 0 ? startIndexOfMonth - 1 : 6;
+
+  const weekRowsInMonth = Math.ceil((daysInMonth - (7 - convertedStartIndexOfMonth)) / 7) + 1;
 
   function handleSelectDate(newDate: number) {
     return () => {
@@ -40,21 +44,11 @@ export default function DatePicker(props: any) {
     };
   }
 
-  const daysInMonth = currentDay.daysInMonth();
-
-  const startIndexOfMonth = Number(currentDay.startOf('month').format('d'));
-
-  const convertedStartIndexOfMonth = startIndexOfMonth - 1 >= 0 ? startIndexOfMonth - 1 : 6;
-
-  const weekRowsInMonth = Math.ceil((daysInMonth - (7 - convertedStartIndexOfMonth)) / 7) + 1;
-
-  const [showYearPicker, setShowYearPicker] = React.useState(false);
   function handleShowYearPicker() {
     if (showMonthPicker) setShowMonthPicker(false);
     setShowYearPicker((p) => !p);
   }
 
-  const [showMonthPicker, setShowMonthPicker] = React.useState(false);
   function handleShowMonthPicker() {
     if (showYearPicker) setShowYearPicker(false);
     setShowMonthPicker((p) => !p);
@@ -77,6 +71,16 @@ export default function DatePicker(props: any) {
     }
   }, [contentRef.current, showYearPicker]);
 
+  const toolbarProps = {
+    onPreviousMonth: handlePreviousMonth,
+    onNextMonth: handleNextMonth,
+    showYearPicker,
+    onShowYearPicker: handleShowYearPicker,
+    showMonthPicker,
+    onShowMonthPicker: handleShowMonthPicker,
+    currentDay,
+  };
+
   return (
     <Box
       sx={{
@@ -86,66 +90,9 @@ export default function DatePicker(props: any) {
         height: '360px',
       }}
     >
-      {/* toolbar */}
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '16px',
-          padding: '16px 12px',
-        }}
-      >
-        <IconButton color={'default'} size={'S'} onClick={handlePreviousMonth}>
-          <ChevronLeftIcon />
-        </IconButton>
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-          }}
-        >
-          <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showYearPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={handleShowYearPicker}>
-            {currentDay.format('YYYY')}
-          </Button>
-          <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showMonthPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={handleShowMonthPicker}>
-            {currentDay.format('MM')}
-          </Button>
-        </Box>
-        <IconButton color={'default'} size={'S'} onClick={handleNextMonth}>
-          <ChevronRightIcon />
-        </IconButton>
-      </Box>
+      <Toolbar {...toolbarProps} />
 
-      {/* label - days */}
-      {!showYearPicker && !showMonthPicker && (
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            paddingLeft: '28px',
-            paddingRight: '28px',
-          }}
-        >
-          {dayIndicesOfWeek.map((dayIndex) => (
-            <Typography
-              variant={'typography/label/large/regular'}
-              color={'color/gray/500'}
-              sx={{
-                width: '36px',
-                height: '40px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-            >
-              {daysOfWeek[dayIndex]}
-            </Typography>
-          ))}
-        </Box>
-      )}
+      <DayLabel show={!showMonthPicker && !showYearPicker} />
 
       {/* content */}
       <Box
@@ -174,7 +121,7 @@ export default function DatePicker(props: any) {
                     const monthIndex = row * 3 + col;
                     const isSelected = monthIndex === currentDay.month();
                     return (
-                      <Element
+                      <DateElement
                         key={monthIndex}
                         wide
                         selected={isSelected}
@@ -186,7 +133,7 @@ export default function DatePicker(props: any) {
                         }}
                       >
                         {dayjs().month(monthIndex).format('MM')}
-                      </Element>
+                      </DateElement>
                     );
                   })}
                 </Box>
@@ -210,7 +157,7 @@ export default function DatePicker(props: any) {
                     const year = 1900 + row * 3 + col;
                     const isSelected = year === currentDay.year();
                     return (
-                      <Element
+                      <DateElement
                         key={year}
                         wide
                         selected={isSelected}
@@ -222,7 +169,7 @@ export default function DatePicker(props: any) {
                         }}
                       >
                         {dayjs().year(year).format('YYYY')}
-                      </Element>
+                      </DateElement>
                     );
                   })}
                 </Box>
@@ -262,9 +209,9 @@ export default function DatePicker(props: any) {
                         const isToday = today.isSame(currentDay.date(date), 'day');
                         const isSelected = selectedDay.isSame(currentDay.date(date), 'day');
                         return (
-                          <Element key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
+                          <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
                             {String(date).padStart(2, '0')}
-                          </Element>
+                          </DateElement>
                         );
                       })
                     : [...Array(7).keys()].map((col) => {
@@ -282,9 +229,9 @@ export default function DatePicker(props: any) {
                         const isToday = today.isSame(currentDay.date(date), 'day');
                         const isSelected = selectedDay.isSame(currentDay.date(date), 'day');
                         return (
-                          <Element key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
+                          <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
                             {String(date).padStart(2, '0')}
-                          </Element>
+                          </DateElement>
                         );
                       })}
                 </Box>
@@ -294,61 +241,5 @@ export default function DatePicker(props: any) {
         )}
       </Box>
     </Box>
-  );
-}
-
-function Element(props: {
-  children: React.ReactNode;
-  wide?: boolean;
-  selected?: boolean;
-  today?: boolean;
-  event?: boolean;
-  disabled?: boolean;
-  onClick?: React.MouseEventHandler<HTMLSpanElement>;
-  sx?: any;
-}) {
-  const { children, wide, selected, today, event, disabled, onClick, sx: sxOverride } = props;
-
-  const theme = useTheme();
-
-  const typoVariant = selected ? 'typography/body/small/medium' : 'typography/body/small/regular';
-
-  const sx = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '36px',
-    height: '36px',
-    borderRadius: wide ? '1000px' : '50px',
-    cursor: 'pointer',
-    color: theme.palette['color/gray/800'],
-    ...(wide && { width: '60px' }),
-    ...(event && {
-      backgroundColor: theme.palette['color/primary/dim/200'],
-    }),
-    ...(today && {
-      boxShadow: `0px 0px 0px 1px ${theme.palette['color/gray/600']} inset`,
-    }),
-    '&:hover': {
-      backgroundColor: event ? theme.palette['color/primary/dim/400'] : theme.palette['color/gray/100'],
-    },
-    ...(selected && {
-      '&, &:hover': {
-        backgroundColor: theme.palette['color/primary/600'],
-        color: theme.palette['color/white'],
-        boxShadow: 'unset',
-      },
-    }),
-    ...(disabled && {
-      backgroundColor: 'unset',
-      color: theme.palette['color/gray/200'],
-    }),
-    ...sxOverride,
-  };
-
-  return (
-    <Typography variant={typoVariant} sx={sx} onClick={onClick}>
-      {children}
-    </Typography>
   );
 }
