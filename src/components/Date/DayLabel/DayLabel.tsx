@@ -1,7 +1,7 @@
 import React from 'react';
 import { DayLabelProps } from './DayLabel.types.ts';
 import { Box } from '@mui/material';
-import { dayIndicesOfWeek, daysOfWeek } from '../DatePicker.constants.ts';
+import { dayIndicesOfWeek, daysOfWeek } from '../DatePicker/DatePicker.constants.ts';
 import Typography from '../../Typography/Typography.tsx';
 
 export default function DayLabel({ show }: DayLabelProps) {

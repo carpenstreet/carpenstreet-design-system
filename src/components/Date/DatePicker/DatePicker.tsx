@@ -2,9 +2,9 @@ import React from 'react';
 import dayjs from 'dayjs';
 import { Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import DateElement from './DateElement/DateElement.tsx';
-import Toolbar from './Toolbar/Toolbar.tsx';
-import DayLabel from './DayLabel/DayLabel.tsx';
+import DateElement from '../DateElement/DateElement.tsx';
+import Toolbar from '../Toolbar/Toolbar.tsx';
+import DayLabel from '../DayLabel/DayLabel.tsx';
 
 export default function DatePicker() {
   const theme = useTheme();

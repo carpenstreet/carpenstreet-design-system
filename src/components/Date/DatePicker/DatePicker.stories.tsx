@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import ThemeMui from '../../shared/settings/ThemeMui';
-import DatePicker from './DatePicker';
+import ThemeMui from '../../../shared/settings/ThemeMui.tsx';
+import DatePicker from './DatePicker.tsx';
 
 const meta: Meta<typeof DatePicker> = {
   title: 'Component/DatePicker',
