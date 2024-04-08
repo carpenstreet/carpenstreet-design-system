@@ -193,30 +193,23 @@ export const overrideButton = {
       borderRadius: 'unset',
       padding: 'unset',
       backgroundColor: 'transparent',
-      borderBottom: '1px solid transparent',
 
       // Size
-      ...(ownerState.size === 'XL' && {
-        height: '33px',
-      }),
-      ...(ownerState.size === 'L' && {
-        height: '25px',
+      // text 버튼은 XL 사이즈를 지원하지 않음
+      ...((ownerState.size === 'XL' || ownerState.size === 'L') && {
+        height: '24px',
       }),
       ...(ownerState.size === 'M' && {
-        height: '21px',
+        height: '20px',
       }),
       ...(ownerState.size === 'S' && {
-        height: '17px',
+        height: '16px',
       }),
 
       // Color
       ...(ownerState.color === 'primary' && {
         '& > .MuiTypography-root': {
           color: theme.palette['color/primary/600'],
-        },
-        '&:hover': {
-          borderBottom: `1px solid ${theme.palette['color/primary/600']}`,
-          backgroundColor: 'transparent',
         },
         '& > .MuiButton-icon': {
           '& path, & circle': {
@@ -226,23 +219,43 @@ export const overrideButton = {
             stroke: theme.palette['color/primary/600'],
           },
         },
+        '&:hover': {
+          backgroundColor: 'transparent',
+          '& > .MuiTypography-root': {
+            color: theme.palette['color/primary/700'],
+          },
+          '& > .MuiButton-icon': {
+            '& path, & circle': {
+              fill: theme.palette['color/primary/700'],
+            },
+            '& rect': {
+              stroke: theme.palette['color/primary/700'],
+            },
+          },
+        },
       }),
       ...(ownerState.color === 'default' && {
         '& > .MuiTypography-root': {
           color: theme.palette['color/gray/800'],
         },
         '&:hover': {
-          borderBottom: `1px solid ${theme.palette['color/gray/800']}`,
           backgroundColor: 'transparent',
+          '& > .MuiTypography-root': {
+            color: theme.palette['color/gray/600'],
+          },
+          '& > .MuiButton-icon': {
+            '& path, & circle': {
+              fill: theme.palette['color/gray/600'],
+            },
+            '& rect': {
+              stroke: theme.palette['color/gray/600'],
+            },
+          },
         },
       }),
       ...(ownerState.color === 'gray' && {
         '& > .MuiTypography-root': {
           color: theme.palette['color/gray/400'],
-        },
-        '&:hover': {
-          borderBottom: `1px solid ${theme.palette['color/gray/400']}`,
-          backgroundColor: 'transparent',
         },
         '& > .MuiButton-icon': {
           '& path, & circle': {
@@ -250,6 +263,20 @@ export const overrideButton = {
           },
           '& rect': {
             stroke: theme.palette['color/gray/400'],
+          },
+        },
+        '&:hover': {
+          backgroundColor: 'transparent',
+          '& > .MuiTypography-root': {
+            color: theme.palette['color/gray/600'],
+          },
+          '& > .MuiButton-icon': {
+            '& path, & circle': {
+              fill: theme.palette['color/gray/600'],
+            },
+            '& rect': {
+              stroke: theme.palette['color/gray/600'],
+            },
           },
         },
       }),
