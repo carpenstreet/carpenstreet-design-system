@@ -2,6 +2,7 @@ import React from 'react';
 import { DateRangeElementProps } from './DateRangeElement.types.ts';
 import { useTheme } from '@mui/material/styles';
 import Typography from '../../Typography/Typography.tsx';
+import { SxProps, Theme } from '@mui/material';
 
 export default function DateRangeElement(props: DateRangeElementProps) {
   const { children, start, between, end, today, disabled, onClick, sx: sxOverride } = props;
@@ -30,22 +31,15 @@ export default function DateRangeElement(props: DateRangeElementProps) {
       color: theme.palette['color/white'],
       boxShadow: 'unset',
     }),
-    ...(start && {
-      borderRadius: '50px 0 0 50px',
+    ...(between && {
+      backgroundColor: theme.palette['color/primary/100'],
     }),
-    ...(end && {
-      borderRadius: '0 50px 50px 0',
-    }),
-    ...(start &&
-      end && {
-        borderRadius: '50px',
-      }),
     ...(disabled && {
       backgroundColor: 'unset',
       color: theme.palette['color/gray/200'],
     }),
     ...sxOverride,
-  };
+  } satisfies SxProps<Theme>;
 
   return (
     <Typography variant={'typography/body/small/regular'} sx={sx} onClick={onClick}>

@@ -1,11 +1,16 @@
 import { useTheme } from '@mui/material/styles';
 import dayjs, { Dayjs } from 'dayjs';
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
+import isBetween from 'dayjs/plugin/isBetween';
 import React from 'react';
 import { Box } from '@mui/material';
 import Toolbar from '../Toolbar/Toolbar.tsx';
 import DayLabel from '../DayLabel/DayLabel.tsx';
 import DateElement from '../DateElement/DateElement.tsx';
 import DateRangeElement from '../DateRangeElement/DateRangeElement.tsx';
+
+dayjs.extend(isSameOrAfter);
+dayjs.extend(isBetween);
 
 export default function DateRangePicker() {
   const theme = useTheme();
@@ -91,6 +96,14 @@ export default function DateRangePicker() {
     onShowMonthPicker: handleShowMonthPicker,
     currentDay,
   };
+
+  React.useEffect(() => {
+    if (startDay?.isSameOrAfter(endDay)) {
+      const tmp = endDay;
+      setEndDay(startDay);
+      setStartDay(tmp);
+    }
+  }, [startDay?.format('YYYY-MM-DD'), endDay?.format('YYYY-MM-DD')]);
 
   return (
     <Box
@@ -200,9 +213,10 @@ export default function DateRangePicker() {
                         const isToday = today.isSame(currentDay.date(date), 'day');
                         const isStart = startDay?.isSame(currentDay.date(date), 'day');
                         const isEnd = endDay?.isSame(currentDay.date(date), 'day');
+                        const isBetween = startDay && endDay && currentDay.date(date).isBetween(startDay, endDay);
                         return (
-                          <DateRangeElement key={`week-${index}-date-${date}`} today={isToday} start={isStart} end={isEnd} onClick={handleSelectDate(date)}>
-                            {String(date).padStart(2, '0')}
+                          <DateRangeElement key={`week-${index}-date-${date}`} today={isToday} start={isStart} end={isEnd} between={isBetween} onClick={handleSelectDate(date)}>
+                            {date}
                           </DateRangeElement>
                         );
                       })
@@ -221,9 +235,10 @@ export default function DateRangePicker() {
                         const isToday = today.isSame(currentDay.date(date), 'day');
                         const isStart = startDay?.isSame(currentDay.date(date), 'day');
                         const isEnd = endDay?.isSame(currentDay.date(date), 'day');
+                        const isBetween = startDay && endDay && currentDay.date(date).isBetween(startDay, endDay);
                         return (
-                          <DateRangeElement key={`week-${index}-date-${date}`} today={isToday} start={isStart} end={isEnd} onClick={handleSelectDate(date)}>
-                            {String(date).padStart(2, '0')}
+                          <DateRangeElement key={`week-${index}-date-${date}`} today={isToday} start={isStart} end={isEnd} between={isBetween} onClick={handleSelectDate(date)}>
+                            {date}
                           </DateRangeElement>
                         );
                       })}
