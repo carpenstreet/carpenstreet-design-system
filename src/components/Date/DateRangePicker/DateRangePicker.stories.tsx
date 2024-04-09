@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ThemeMui from '../../../shared/settings/ThemeMui.tsx';
-import DateRangePicker from './DateRangePicker.tsx';
+import ExampleDateRangePicker from './ExampleDateRangePicker.tsx';
 
-const meta: Meta<typeof DateRangePicker> = {
+const meta: Meta<typeof ExampleDateRangePicker> = {
   title: 'Component/DateRangePicker',
-  component: DateRangePicker,
+  component: ExampleDateRangePicker,
   decorators: [
     (Story) => (
       <ThemeMui>
@@ -15,6 +15,6 @@ const meta: Meta<typeof DateRangePicker> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof DateRangePicker>;
+type Story = StoryObj<typeof ExampleDateRangePicker>;
 
 export const Default: Story = {};

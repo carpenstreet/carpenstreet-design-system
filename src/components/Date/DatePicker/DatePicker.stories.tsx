@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import ThemeMui from '../../../shared/settings/ThemeMui.tsx';
-import DatePicker from './DatePicker.tsx';
+import ExampleDatePicker from './ExampleDatePicker.tsx';
 
-const meta: Meta<typeof DatePicker> = {
+const meta: Meta<typeof ExampleDatePicker> = {
   title: 'Component/DatePicker',
-  component: DatePicker,
+  component: ExampleDatePicker,
   decorators: [
     (Story) => (
       <ThemeMui>
@@ -15,6 +15,6 @@ const meta: Meta<typeof DatePicker> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof DatePicker>;
+type Story = StoryObj<typeof ExampleDatePicker>;
 
 export const Default: Story = {};
