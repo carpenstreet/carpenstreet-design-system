@@ -33,7 +33,8 @@ export default function DatePicker(props: DatePickerProps) {
 
   function makeHandleSelectDate(newDate: number) {
     return () => {
-      setValue(currentDay.date(newDate));
+      if (value?.isSame(currentDay.date(newDate), 'day')) setValue(null);
+      else setValue(currentDay.date(newDate));
     };
   }
 
