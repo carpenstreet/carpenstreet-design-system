@@ -2,12 +2,12 @@ import React from 'react';
 import dayjs from 'dayjs';
 import { Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import DateElement from '../DateElement/DateElement.tsx';
 import Toolbar from '../Toolbar/Toolbar.tsx';
 import DayLabel from '../DayLabel/DayLabel.tsx';
 import { DatePickerProps } from './DatePicker.types.ts';
 import MonthPicker from '../MonthPicker/MonthPicker.tsx';
 import YearPicker from '../YearPicker/YearPicker.tsx';
+import DatePickerContent from '../DatePickerContent/DatePickerContent.tsx';
 
 export default function DatePicker(props: DatePickerProps) {
   const { value, setValue } = props;
@@ -31,7 +31,7 @@ export default function DatePicker(props: DatePickerProps) {
 
   const weekRowsInMonth = Math.ceil((daysInMonth - (7 - convertedStartIndexOfMonth)) / 7) + 1;
 
-  function handleSelectDate(newDate: number) {
+  function makeHandleSelectDate(newDate: number) {
     return () => {
       setValue(currentDay.date(newDate));
     };
@@ -75,6 +75,16 @@ export default function DatePicker(props: DatePickerProps) {
     showMonthPicker,
     onShowMonthPicker: handleShowMonthPicker,
     currentDay,
+  };
+
+  const contentProps = {
+    value,
+    today,
+    currentDay,
+    startDayIndex: convertedStartIndexOfMonth,
+    numberOfWeeks: weekRowsInMonth,
+    daysInMonth,
+    makeOnSelectDate: makeHandleSelectDate,
   };
 
   // 바깥 영역 클릭시 monthPicker 혹은 yearPicker 닫기
@@ -129,67 +139,7 @@ export default function DatePicker(props: DatePickerProps) {
         ) : showYearPicker ? (
           <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} />
         ) : (
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '4px',
-            }}
-          >
-            {[...Array(weekRowsInMonth).keys()].map((row, index) => {
-              return (
-                <Box
-                  key={`week-${index}`}
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  {index === 0
-                    ? [...Array(7).keys()].map((col) => {
-                        if (col < convertedStartIndexOfMonth)
-                          return (
-                            <Box
-                              key={`week-${index}-blank-${row * 7 + col}`}
-                              sx={{
-                                width: '36px',
-                                height: '36px',
-                              }}
-                            />
-                          );
-                        const date = col - convertedStartIndexOfMonth + 1;
-                        const isToday = today.isSame(currentDay.date(date), 'day');
-                        const isSelected = value?.isSame(currentDay.date(date), 'day');
-                        return (
-                          <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
-                            {String(date).padStart(2, '0')}
-                          </DateElement>
-                        );
-                      })
-                    : [...Array(7).keys()].map((col) => {
-                        const date = row * 7 + col - convertedStartIndexOfMonth + 1;
-                        if (date > daysInMonth)
-                          return (
-                            <Box
-                              key={`week-${index}-blank-${row * 7 + col}`}
-                              sx={{
-                                width: '36px',
-                                height: '36px',
-                              }}
-                            />
-                          );
-                        const isToday = today.isSame(currentDay.date(date), 'day');
-                        const isSelected = value?.isSame(currentDay.date(date), 'day');
-                        return (
-                          <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
-                            {String(date).padStart(2, '0')}
-                          </DateElement>
-                        );
-                      })}
-                </Box>
-              );
-            })}
-          </Box>
+          <DatePickerContent {...contentProps} />
         )}
       </Box>
     </Box>
