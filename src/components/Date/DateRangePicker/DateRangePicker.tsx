@@ -6,9 +6,10 @@ import React from 'react';
 import { Box } from '@mui/material';
 import Toolbar from '../Toolbar/Toolbar.tsx';
 import DayLabel from '../DayLabel/DayLabel.tsx';
-import DateElement from '../DateElement/DateElement.tsx';
 import DateRangeElement from '../DateRangeElement/DateRangeElement.tsx';
 import { DateRangePickerProps } from './DateRangePicker.types.ts';
+import MonthPicker from '../MonthPicker/MonthPicker.tsx';
+import YearPicker from '../YearPicker/YearPicker.tsx';
 
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
@@ -50,13 +51,13 @@ export default function DateRangePicker(props: DateRangePickerProps) {
     };
   }
 
-  function handleSelectYear(newYear: number) {
+  function makeHandleSelectYear(newYear: number) {
     return () => {
       setCurrentDay(currentDay.year(newYear));
     };
   }
 
-  function handleSelectMonth(newMonthIndex: number) {
+  function makeHandleSelectMonth(newMonthIndex: number) {
     return () => {
       setCurrentDay(currentDay.month(newMonthIndex));
     };
@@ -108,7 +109,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
     const contentDiv = contentRef.current;
     if (contentDiv && showYearPicker) {
       const rowIndexOfCurrentYear = Math.ceil((currentDay.year() - 1900) / 3);
-      const scrollY = 78 * (rowIndexOfCurrentYear - 2);
+      const scrollY = 74 * (rowIndexOfCurrentYear - 2);
       contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
     }
   }, [contentRef.current, showYearPicker]);
@@ -146,57 +147,9 @@ export default function DateRangePicker(props: DateRangePickerProps) {
         }}
       >
         {showMonthPicker ? (
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-            {[...Array(4).keys()].map((row) => {
-              return (
-                <Box
-                  key={`month-${row}`}
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    padding: '20px 12px',
-                    width: '100%',
-                  }}
-                >
-                  {[...Array(3).keys()].map((col) => {
-                    const monthIndex = row * 3 + col;
-                    const isSelected = monthIndex === currentDay.month();
-                    return (
-                      <DateElement key={monthIndex} wide selected={isSelected} onClick={handleSelectMonth(monthIndex)}>
-                        {dayjs().month(monthIndex).format('MM')}
-                      </DateElement>
-                    );
-                  })}
-                </Box>
-              );
-            })}
-          </Box>
+          <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} />
         ) : showYearPicker ? (
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
-            {[...Array(67).keys()].map((row) => {
-              return (
-                <Box
-                  key={`year-${row}`}
-                  sx={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    padding: '20px 12px',
-                    width: '100%',
-                  }}
-                >
-                  {[...Array(3).keys()].map((col) => {
-                    const year = 1900 + row * 3 + col;
-                    const isSelected = year === currentDay.year();
-                    return (
-                      <DateElement key={year} wide selected={isSelected} onClick={handleSelectYear(year)}>
-                        {dayjs().year(year).format('YYYY')}
-                      </DateElement>
-                    );
-                  })}
-                </Box>
-              );
-            })}
-          </Box>
+          <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} />
         ) : (
           <Box
             sx={{
