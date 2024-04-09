@@ -1,0 +1,80 @@
+import { Canvas, Controls, Meta, Story, Source } from '@storybook/blocks';
+import * as ModalStories from './Modal.stories';
+
+<Meta of={ModalStories} />
+
+# Modal
+
+주로 버튼 또는 텍스트 등 특정 요소의 상호작용을 통해 표시되며, 화면 중앙에 위치해 컨텐츠를 노출합니다.
+
+### Props
+
+- `size`: 컴포넌트의 너비를 결정합니다. `M` 과 `S` 옵션이 존재합니다.
+- `renderTitle`: 제목을 표시하는 영역을 렌더링하는 함수입니다. **빈 값일경우 제목 영역이 표시되지 않습니다.**
+- `renderContent`: 콘텐츠를 표시하는 영역을 렌더링하는 함수입니다. **빈 값일경우 콘텐츠 영역이 표시되지 않습니다.**
+- `renderActions`: 액션 버튼을 표시하는 영역을 렌더링하는 함수입니다. **빈 값일경우 액션 버튼 영역이 표시되지 않습니다.**
+
+### CSS Classes
+
+Modal 컴포넌트는 아래와 같은 Class를 제공하며, 해당 클래스들을 사용하여 커스텀 스타일을 적용할 수 있습니다.
+- `.modal-title`: 제목 영역을 감싸고 있는 영역입니다.
+- `.modal-content`: 콘텐츠 영역을 감싸고 있는 영역입니다.
+- `.modal-title-content-wrapper`: 제목과 콘텐츠 영역을 감싸고 있는 영역입니다.
+- `.modal-actions`: 액션 버튼을 감싸고 있는 영역입니다.
+
+<Canvas of={ModalStories.Default} sourceState={'hidden'} />
+
+<Controls include={['size', 'renderTitle', 'renderContent', 'renderActions', 'sx']} />
+
+`Title` + `Description`이 적용된 버튼은 아래 코드와 같이 구성됩니다.
+
+<Source dark code={`
+  <Modal
+    size={'M'}
+    renderTitle={(
+      <Stack justifyContent={'center'} flexDirection={'row'}>
+        <Typography variant={'typography/title/small/bold'}>title 영역입니다.</Typography>
+      </Stack>
+    )}
+    renderContent={(
+      <Typography variant={'typography/body/medium/regular'} display={'block'} width={'100%'} textAlign={'center'}>
+        content 영역입니다. <br />
+        안내 문구를 작성해주세요.
+      </Typography>
+    )}
+    renderActions={(
+      <Stack gap={'8px'}>
+        <Button color={'primary'} size={'L'} variant={'contained'}>
+          취소
+        </Button>
+        <Button color={'default'} size={'L'} variant={'outlined'}>
+          확인
+        </Button>
+      </Stack>
+    )}
+  />
+`} />
+
+### Button Vertical
+좌측 버튼은 Title + Description이 적용되었으며 우측 버튼은 Description만 적용되었습니다.
+
+<Canvas>
+  <Story of={ModalStories.ButtonVerticalModal} />
+  <Story of={ModalStories.ButtonVerticalModalOnlyDescription} />
+</Canvas>
+
+### Button Horizontal
+좌측 버튼은 Title + Description이 적용되었으며 우측 버튼은 Description만 적용되었습니다.
+
+<Canvas>
+  <Story of={ModalStories.ButtonHorizontalModal} />
+  <Story of={ModalStories.ButtonHorizontalModalOnlyDescription} />
+</Canvas>
+
+### Button Single
+좌측 버튼은 Title + Description이 적용되었으며 우측 버튼은 Description만 적용되었습니다.
+
+<Canvas>
+  <Story of={ModalStories.ButtonSingleModal} />
+  <Story of={ModalStories.ButtonSingleModalOnlyDescription} />
+</Canvas>

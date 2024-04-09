@@ -15,6 +15,7 @@ import { overrideTab } from './tab/tab.ts';
 import { overrideMenuItem } from './menuItem/menuItem.ts';
 import { overrideMenu } from './menu/menu.ts';
 import { overridePagination } from './pagination/pagination.ts';
+import { overrideDialog } from './dialog/dialog.ts';
 
 // ----------------------------------------------------------------------
 
@@ -59,6 +60,7 @@ export default function ThemeMui({ children }: Props) {
       MuiMenuItem: overrideMenuItem,
       MuiMenu: overrideMenu,
       MuiPagination: overridePagination,
+      MuiDialog: overrideDialog,
     },
     typography: {
       ...CustomTypographyVariants,
