@@ -11,6 +11,7 @@ export default function DatePicker() {
 
   const today = dayjs();
 
+  const containerRef = React.useRef<HTMLDivElement>(null);
   const contentRef = React.useRef<HTMLDivElement>(null);
 
   const [currentDay, setCurrentDay] = React.useState(dayjs());
@@ -62,15 +63,6 @@ export default function DatePicker() {
     setCurrentDay(currentDay.add(1, 'month'));
   }
 
-  React.useEffect(() => {
-    const contentDiv = contentRef.current;
-    if (contentDiv && showYearPicker) {
-      const rowIndexOfCurrentYear = Math.ceil((currentDay.year() - 1900) / 3);
-      const scrollY = 78 * (rowIndexOfCurrentYear - 2);
-      contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
-    }
-  }, [contentRef.current, showYearPicker]);
-
   const toolbarProps = {
     onPreviousMonth: handlePreviousMonth,
     onNextMonth: handleNextMonth,
@@ -81,8 +73,32 @@ export default function DatePicker() {
     currentDay,
   };
 
+  // 바깥 영역 클릭시 monthPicker 혹은 yearPicker 닫기
+  React.useEffect(() => {
+    const handleDropdownHide = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        if (showYearPicker) setShowYearPicker(false);
+        if (showMonthPicker) setShowMonthPicker(false);
+      }
+    };
+    document.addEventListener('mousedown', handleDropdownHide);
+    return () => {
+      document.removeEventListener('mousedown', handleDropdownHide);
+    };
+  }, [showYearPicker, showMonthPicker]);
+
+  React.useEffect(() => {
+    const contentDiv = contentRef.current;
+    if (contentDiv && showYearPicker) {
+      const rowIndexOfCurrentYear = Math.ceil((currentDay.year() - 1900) / 3);
+      const scrollY = 78 * (rowIndexOfCurrentYear - 2);
+      contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
+    }
+  }, [contentRef.current, showYearPicker]);
+
   return (
     <Box
+      ref={containerRef}
       sx={{
         boxShadow: theme.shadows[2],
         borderRadius: '12px',
