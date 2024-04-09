@@ -5,8 +5,11 @@ import { useTheme } from '@mui/material/styles';
 import DateElement from '../DateElement/DateElement.tsx';
 import Toolbar from '../Toolbar/Toolbar.tsx';
 import DayLabel from '../DayLabel/DayLabel.tsx';
+import { DatePickerProps } from './DatePicker.types.ts';
 
-export default function DatePicker() {
+export default function DatePicker(props: DatePickerProps) {
+  const { value, setValue } = props;
+
   const theme = useTheme();
 
   const today = dayjs();
@@ -15,7 +18,6 @@ export default function DatePicker() {
   const contentRef = React.useRef<HTMLDivElement>(null);
 
   const [currentDay, setCurrentDay] = React.useState(dayjs());
-  const [selectedDay, setSelectedDay] = React.useState(dayjs());
   const [showYearPicker, setShowYearPicker] = React.useState(false);
   const [showMonthPicker, setShowMonthPicker] = React.useState(false);
 
@@ -29,7 +31,7 @@ export default function DatePicker() {
 
   function handleSelectDate(newDate: number) {
     return () => {
-      setSelectedDay(currentDay.date(newDate));
+      setValue(currentDay.date(newDate));
     };
   }
 
@@ -203,7 +205,7 @@ export default function DatePicker() {
                           );
                         const date = col - convertedStartIndexOfMonth + 1;
                         const isToday = today.isSame(currentDay.date(date), 'day');
-                        const isSelected = selectedDay.isSame(currentDay.date(date), 'day');
+                        const isSelected = value?.isSame(currentDay.date(date), 'day');
                         return (
                           <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
                             {String(date).padStart(2, '0')}
@@ -223,7 +225,7 @@ export default function DatePicker() {
                             />
                           );
                         const isToday = today.isSame(currentDay.date(date), 'day');
-                        const isSelected = selectedDay.isSame(currentDay.date(date), 'day');
+                        const isSelected = value?.isSame(currentDay.date(date), 'day');
                         return (
                           <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate(date)}>
                             {String(date).padStart(2, '0')}

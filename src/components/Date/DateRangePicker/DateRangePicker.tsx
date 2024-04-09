@@ -8,11 +8,14 @@ import Toolbar from '../Toolbar/Toolbar.tsx';
 import DayLabel from '../DayLabel/DayLabel.tsx';
 import DateElement from '../DateElement/DateElement.tsx';
 import DateRangeElement from '../DateRangeElement/DateRangeElement.tsx';
+import { DateRangePickerProps } from './DateRangePicker.types.ts';
 
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
 
-export default function DateRangePicker() {
+export default function DateRangePicker(props: DateRangePickerProps) {
+  const { startDay, setStartDay, endDay, setEndDay } = props;
+
   const theme = useTheme();
 
   const today = dayjs();
@@ -21,8 +24,6 @@ export default function DateRangePicker() {
   const contentRef = React.useRef<HTMLDivElement>(null);
 
   const [currentDay, setCurrentDay] = React.useState(dayjs());
-  const [startDay, setStartDay] = React.useState<Dayjs | null>(dayjs());
-  const [endDay, setEndDay] = React.useState<Dayjs | null>(dayjs());
   const [clickCount, setClickCount] = React.useState(0);
   const [showYearPicker, setShowYearPicker] = React.useState(false);
   const [showMonthPicker, setShowMonthPicker] = React.useState(false);
