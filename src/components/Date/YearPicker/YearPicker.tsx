@@ -5,10 +5,10 @@ import { YearPickerProps } from './YearPicker.types.ts';
 import WideElement from '../WideElement/WideElement.tsx';
 
 export default function YearPicker(props: YearPickerProps) {
-  const { currentDay, makeOnSelectYear } = props;
+  const { currentDay, makeOnSelectYear, sx: sxOverride } = props;
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2px', ...sxOverride }}>
       {[...Array(67).keys()].map((row) => {
         return (
           <Box

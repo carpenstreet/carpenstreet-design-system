@@ -1,4 +1,5 @@
 import { Dayjs } from 'dayjs';
+import { SxProps, Theme } from '@mui/material';
 
 export type DateRangePickerContentProps = {
   startDay: Dayjs | null;
@@ -9,4 +10,5 @@ export type DateRangePickerContentProps = {
   numberOfWeeks: number;
   daysInMonth: number;
   makeOnSelectDate: (newDate: number) => () => void;
+  sx?: SxProps<Theme>;
 };

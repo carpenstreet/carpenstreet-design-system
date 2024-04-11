@@ -9,7 +9,7 @@ import ChevronRightIcon from '../../Icon/ChevronRight/ChevronRightIcon.tsx';
 import { ToolbarProps } from './Toolbar.types.ts';
 
 export default function Toolbar(props: ToolbarProps) {
-  const { onPreviousMonth, onNextMonth, showMonthPicker, onShowMonthPicker, showYearPicker, onShowYearPicker, currentDay, locale } = props;
+  const { onPreviousMonth, onNextMonth, showMonthPicker, onShowMonthPicker, showYearPicker, onShowYearPicker, currentDay, locale, sx: sxOverride } = props;
 
   return (
     <Box
@@ -19,6 +19,7 @@ export default function Toolbar(props: ToolbarProps) {
         justifyContent: 'center',
         gap: '16px',
         padding: '16px 12px',
+        ...sxOverride,
       }}
     >
       <IconButton color={'default'} size={'S'} onClick={onPreviousMonth}>

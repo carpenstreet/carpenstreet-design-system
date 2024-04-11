@@ -10,7 +10,7 @@ import YearPicker from '../YearPicker/YearPicker.tsx';
 import DatePickerContent from '../DatePickerContent/DatePickerContent.tsx';
 
 export default function DatePicker(props: DatePickerProps) {
-  const { value, setValue, onClose, locale } = props;
+  const { value, setValue, onClose, locale, sx: sxOverride, toolbarSx, dayLabelSx, monthPickerSx, yearPickerSx, contentSx } = props;
 
   const theme = useTheme();
 
@@ -77,6 +77,7 @@ export default function DatePicker(props: DatePickerProps) {
     onShowMonthPicker: handleShowMonthPicker,
     currentDay,
     locale,
+    sx: toolbarSx,
   };
 
   const contentProps = {
@@ -87,6 +88,7 @@ export default function DatePicker(props: DatePickerProps) {
     numberOfWeeks: weekRowsInMonth,
     daysInMonth,
     makeOnSelectDate: makeHandleSelectDate,
+    sx: contentSx,
   };
 
   // 바깥 영역 클릭시 onClose 실행
@@ -119,10 +121,11 @@ export default function DatePicker(props: DatePickerProps) {
         borderRadius: '12px',
         width: '320px',
         height: '360px',
+        ...sxOverride,
       }}
     >
       <Toolbar {...toolbarProps} />
-      {!showMonthPicker && !showYearPicker && <DayLabel locale={locale} />}
+      {!showMonthPicker && !showYearPicker && <DayLabel locale={locale} sx={dayLabelSx} />}
       {/* content */}
       <Box
         ref={contentRef}
@@ -134,9 +137,9 @@ export default function DatePicker(props: DatePickerProps) {
         }}
       >
         {showMonthPicker ? (
-          <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} />
+          <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} sx={monthPickerSx} />
         ) : showYearPicker ? (
-          <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} />
+          <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
         ) : (
           <DatePickerContent {...contentProps} />
         )}

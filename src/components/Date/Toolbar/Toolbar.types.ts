@@ -1,4 +1,5 @@
 import { Dayjs } from 'dayjs';
+import { SxProps, Theme } from '@mui/material';
 
 export type ToolbarProps = {
   onPreviousMonth: () => void;
@@ -9,4 +10,5 @@ export type ToolbarProps = {
   onShowMonthPicker: () => void;
   currentDay: Dayjs;
   locale: 'ko' | 'en';
+  sx?: SxProps<Theme>;
 };

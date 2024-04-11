@@ -4,9 +4,9 @@ import dayjs from 'dayjs';
 import { MonthPickerProps } from './MonthPicker.types.ts';
 import WideElement from '../WideElement/WideElement.tsx';
 
-export default function MonthPicker({ currentDay, makeOnSelectMonth, locale }: MonthPickerProps) {
+export default function MonthPicker({ currentDay, makeOnSelectMonth, locale, sx: sxOverride }: MonthPickerProps) {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2px', ...sxOverride }}>
       {[...Array(4).keys()].map((row) => {
         return (
           <Box

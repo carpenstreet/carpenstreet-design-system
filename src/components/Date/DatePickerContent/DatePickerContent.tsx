@@ -4,7 +4,7 @@ import DateElement from '../DateElement/DateElement.tsx';
 import { DatePickerContentProps } from './DatePickerContent.types.ts';
 
 export default function DatePickerContent(props: DatePickerContentProps) {
-  const { value, today, currentDay, numberOfWeeks, daysInMonth, startDayIndex, makeOnSelectDate } = props;
+  const { value, today, currentDay, numberOfWeeks, daysInMonth, startDayIndex, makeOnSelectDate, sx: sxOverride } = props;
 
   return (
     <Box
@@ -12,6 +12,7 @@ export default function DatePickerContent(props: DatePickerContentProps) {
         display: 'flex',
         flexDirection: 'column',
         gap: '4px',
+        ...sxOverride,
       }}
     >
       {[...Array(numberOfWeeks).keys()].map((row, index) => {

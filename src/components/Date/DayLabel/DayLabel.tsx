@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import { dayIndicesOfWeek, daysOfWeek } from '../DatePicker/DatePicker.constants.ts';
 import Typography from '../../Typography/Typography.tsx';
 
-export default function DayLabel({ locale }: DayLabelProps) {
+export default function DayLabel({ locale, sx: sxOverride }: DayLabelProps) {
   return (
     <Box
       sx={{
@@ -13,6 +13,7 @@ export default function DayLabel({ locale }: DayLabelProps) {
         justifyContent: 'space-between',
         paddingLeft: '28px',
         paddingRight: '28px',
+        ...sxOverride,
       }}
     >
       {dayIndicesOfWeek.map((dayIndex) => (

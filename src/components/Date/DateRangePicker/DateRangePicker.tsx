@@ -15,7 +15,7 @@ dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
 
 export default function DateRangePicker(props: DateRangePickerProps) {
-  const { startDay, setStartDay, endDay, setEndDay, onClose, locale } = props;
+  const { startDay, setStartDay, endDay, setEndDay, onClose, locale, sx: sxOverride, toolbarSx, dayLabelSx, monthPickerSx, yearPickerSx, contentSx } = props;
 
   const theme = useTheme();
 
@@ -90,6 +90,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
     onShowMonthPicker: handleShowMonthPicker,
     currentDay,
     locale,
+    sx: toolbarSx,
   };
 
   const contentProps = {
@@ -101,6 +102,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
     numberOfWeeks: weekRowsInMonth,
     daysInMonth,
     makeOnSelectDate: makeHandleSelectDate,
+    sx: contentSx,
   };
 
   // 바깥 영역 클릭시 onClose 실행
@@ -141,11 +143,12 @@ export default function DateRangePicker(props: DateRangePickerProps) {
         borderRadius: '12px',
         width: '320px',
         height: '360px',
+        ...sxOverride,
       }}
     >
       <Toolbar {...toolbarProps} />
 
-      {!showMonthPicker && !showYearPicker && <DayLabel locale={locale} />}
+      {!showMonthPicker && !showYearPicker && <DayLabel locale={locale} sx={dayLabelSx} />}
 
       {/* content */}
       <Box
@@ -158,9 +161,9 @@ export default function DateRangePicker(props: DateRangePickerProps) {
         }}
       >
         {showMonthPicker ? (
-          <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} />
+          <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} sx={monthPickerSx} />
         ) : showYearPicker ? (
-          <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} />
+          <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
         ) : (
           <DateRangePickerContent {...contentProps} />
         )}
