@@ -56,6 +56,8 @@ import MenuItem from './MenuItem/MenuItem';
 import Pagination from './Pagination/Pagination';
 import Modal from './Modal/Modal';
 import BottomSheet from './BottomSheet/BottomSheet';
+import DatePicker from './Date/DatePicker/DatePicker.tsx';
+import DateRangePicker from './Date/DateRangePicker/DateRangePicker.tsx';
 
 export {
   Button,
@@ -116,6 +118,8 @@ export {
   Pagination,
   Modal,
   BottomSheet,
+  DatePicker,
+  DateRangePicker,
 };
 
 export default {
@@ -177,4 +181,6 @@ export default {
   Pagination,
   Modal,
   BottomSheet,
+  DatePicker,
+  DateRangePicker,
 };
