@@ -10,7 +10,7 @@ import YearPicker from '../YearPicker/YearPicker.tsx';
 import DatePickerContent from '../DatePickerContent/DatePickerContent.tsx';
 
 export default function DatePicker(props: DatePickerProps) {
-  const { value, setValue } = props;
+  const { value, setValue, onClose } = props;
 
   const theme = useTheme();
 
@@ -88,12 +88,11 @@ export default function DatePicker(props: DatePickerProps) {
     makeOnSelectDate: makeHandleSelectDate,
   };
 
-  // 바깥 영역 클릭시 monthPicker 혹은 yearPicker 닫기
+  // 바깥 영역 클릭시 onClose 실행
   React.useEffect(() => {
     const handleDropdownHide = (e) => {
-      if (containerRef.current && !containerRef.current.contains(e.target)) {
-        if (showYearPicker) setShowYearPicker(false);
-        if (showMonthPicker) setShowMonthPicker(false);
+      if (containerRef.current && !containerRef.current.contains(e.target) && onClose) {
+        onClose();
       }
     };
     document.addEventListener('mousedown', handleDropdownHide);
@@ -122,9 +121,7 @@ export default function DatePicker(props: DatePickerProps) {
       }}
     >
       <Toolbar {...toolbarProps} />
-
       <DayLabel show={!showMonthPicker && !showYearPicker} />
-
       {/* content */}
       <Box
         ref={contentRef}

@@ -5,4 +5,5 @@ export type DateRangePickerProps = {
   setStartDay: (newValue: Dayjs | null) => void;
   endDay: Dayjs | null;
   setEndDay: (newValue: Dayjs | null) => void;
+  onClose?: () => void;
 };

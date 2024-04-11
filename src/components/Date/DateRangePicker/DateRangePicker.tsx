@@ -15,7 +15,7 @@ dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
 
 export default function DateRangePicker(props: DateRangePickerProps) {
-  const { startDay, setStartDay, endDay, setEndDay } = props;
+  const { startDay, setStartDay, endDay, setEndDay, onClose } = props;
 
   const theme = useTheme();
 
@@ -102,12 +102,11 @@ export default function DateRangePicker(props: DateRangePickerProps) {
     makeOnSelectDate: makeHandleSelectDate,
   };
 
-  // 바깥 영역 클릭시 monthPicker 혹은 yearPicker 닫기
+  // 바깥 영역 클릭시 onClose 실행
   React.useEffect(() => {
     const handleDropdownHide = (e) => {
-      if (containerRef.current && !containerRef.current.contains(e.target)) {
-        if (showYearPicker) setShowYearPicker(false);
-        if (showMonthPicker) setShowMonthPicker(false);
+      if (containerRef.current && !containerRef.current.contains(e.target) && onClose) {
+        onClose();
       }
     };
     document.addEventListener('mousedown', handleDropdownHide);
