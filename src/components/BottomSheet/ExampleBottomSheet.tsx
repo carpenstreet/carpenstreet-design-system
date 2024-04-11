@@ -6,8 +6,13 @@ import BottomSheet from '../BottomSheet/BottomSheet.tsx';
 export default function ExampleBottomSheet(props: BottomSheetProps) {
   const [showModal, setShowModal] = React.useState(false);
 
-  const handleButtonClick = () => setShowModal(true);
-  const handleModalClose = () => setShowModal(false);
+  const handleButtonClick = () => {
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
 
   return (
     <React.Fragment>
