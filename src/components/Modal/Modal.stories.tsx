@@ -37,10 +37,10 @@ export const Default: Story = {
     renderActions: (
       <Stack gap={'8px'}>
         <Button color={'primary'} size={'L'} variant={'contained'}>
-          취소
+          확인
         </Button>
         <Button color={'default'} size={'L'} variant={'outlined'}>
-          확인
+          취소
         </Button>
       </Stack>
     ),
@@ -65,10 +65,10 @@ export const ButtonVerticalModal: Story = {
     renderActions: (
       <Stack gap={'8px'}>
         <Button color={'primary'} size={'L'} variant={'contained'}>
-          취소
+          확인
         </Button>
         <Button color={'default'} size={'L'} variant={'outlined'}>
-          확인
+          취소
         </Button>
       </Stack>
     ),
@@ -89,10 +89,10 @@ export const ButtonVerticalModalOnlyDescription: Story = {
     renderActions: (
       <Stack gap={'8px'}>
         <Button color={'primary'} size={'L'} variant={'contained'}>
-          취소
+          확인
         </Button>
         <Button color={'default'} size={'L'} variant={'outlined'}>
-          확인
+          취소
         </Button>
       </Stack>
     ),
@@ -116,10 +116,10 @@ export const ButtonHorizontalModal: Story = {
     ),
     renderActions: (
       <Stack gap={'8px'} direction={'row'}>
-        <Button color={'primary'} size={'L'} variant={'contained'} fullWidth>
+        <Button color={'default'} size={'L'} variant={'outlined'} fullWidth>
           취소
         </Button>
-        <Button color={'default'} size={'L'} variant={'outlined'} fullWidth>
+        <Button color={'primary'} size={'L'} variant={'contained'} fullWidth>
           확인
         </Button>
       </Stack>
@@ -140,10 +140,10 @@ export const ButtonHorizontalModalOnlyDescription: Story = {
     ),
     renderActions: (
       <Stack gap={'8px'} direction={'row'}>
-        <Button color={'primary'} size={'L'} variant={'contained'} fullWidth>
+        <Button color={'default'} size={'L'} variant={'outlined'} fullWidth>
           취소
         </Button>
-        <Button color={'default'} size={'L'} variant={'outlined'} fullWidth>
+        <Button color={'primary'} size={'L'} variant={'contained'} fullWidth>
           확인
         </Button>
       </Stack>
@@ -168,7 +168,7 @@ export const ButtonSingleModal: Story = {
     ),
     renderActions: (
       <Button color={'primary'} size={'L'} variant={'contained'} fullWidth>
-        취소
+        확인
       </Button>
     ),
     sx: {},
@@ -186,7 +186,7 @@ export const ButtonSingleModalOnlyDescription: Story = {
       </Typography>
     ),
     renderActions: (
-      <Button color={'default'} size={'L'} variant={'outlined'} fullWidth>
+      <Button color={'primary'} size={'L'} variant={'contained'} fullWidth>
         확인
       </Button>
     ),
