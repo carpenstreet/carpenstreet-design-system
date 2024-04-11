@@ -76,6 +76,7 @@ export default function DatePicker(props: DatePickerProps) {
     showMonthPicker,
     onShowMonthPicker: handleShowMonthPicker,
     currentDay,
+    locale,
   };
 
   const contentProps = {
@@ -133,7 +134,7 @@ export default function DatePicker(props: DatePickerProps) {
         }}
       >
         {showMonthPicker ? (
-          <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} />
+          <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} />
         ) : showYearPicker ? (
           <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} />
         ) : (

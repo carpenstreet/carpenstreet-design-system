@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import { MonthPickerProps } from './MonthPicker.types.ts';
 import WideElement from '../WideElement/WideElement.tsx';
 
-export default function MonthPicker({ currentDay, makeOnSelectMonth }: MonthPickerProps) {
+export default function MonthPicker({ currentDay, makeOnSelectMonth, locale }: MonthPickerProps) {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
       {[...Array(4).keys()].map((row) => {
@@ -24,7 +24,9 @@ export default function MonthPicker({ currentDay, makeOnSelectMonth }: MonthPick
               const handleSelectMonth = makeOnSelectMonth(monthIndex);
               return (
                 <WideElement key={monthIndex} selected={isSelected} onClick={handleSelectMonth}>
-                  {dayjs().month(monthIndex).format('MM')}
+                  {dayjs()
+                    .month(monthIndex)
+                    .format(locale === 'ko' ? 'MM' : 'MMM')}
                 </WideElement>
               );
             })}

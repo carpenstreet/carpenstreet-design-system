@@ -8,4 +8,5 @@ export type ToolbarProps = {
   showMonthPicker: boolean;
   onShowMonthPicker: () => void;
   currentDay: Dayjs;
+  locale: 'ko' | 'en';
 };
