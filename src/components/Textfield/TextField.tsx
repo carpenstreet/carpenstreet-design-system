@@ -70,7 +70,7 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
   const InputLabelProps: InputLabelProps = {
     id: inputLabelId,
     htmlFor: id,
-    withStartIcon: InputPropsOverride.startAdornment !== undefined,
+    withStartIcon: InputPropsOverride?.startAdornment !== undefined,
     size,
     ...InputLabelPropsOverride,
   };
