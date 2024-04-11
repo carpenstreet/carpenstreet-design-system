@@ -57,6 +57,8 @@ import {
   Menu,
   MenuItem,
   Pagination,
+  Modal,
+  BottomSheet,
 } from './components';
 
 export {
@@ -118,6 +120,8 @@ export {
   Menu,
   MenuItem,
   Pagination,
+  Modal,
+  BottomSheet,
 };
 
 export default {
@@ -179,4 +183,6 @@ export default {
   Menu,
   MenuItem,
   Pagination,
+  Modal,
+  BottomSheet,
 };

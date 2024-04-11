@@ -54,6 +54,8 @@ import Tab from './Tab/Tab';
 import Menu from './Menu/Menu';
 import MenuItem from './MenuItem/MenuItem';
 import Pagination from './Pagination/Pagination';
+import Modal from './Modal/Modal';
+import BottomSheet from './BottomSheet/BottomSheet';
 
 export {
   Button,
@@ -112,6 +114,8 @@ export {
   Menu,
   MenuItem,
   Pagination,
+  Modal,
+  BottomSheet,
 };
 
 export default {
@@ -171,4 +175,6 @@ export default {
   Menu,
   MenuItem,
   Pagination,
+  Modal,
+  BottomSheet,
 };
