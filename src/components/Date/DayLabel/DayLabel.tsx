@@ -4,9 +4,7 @@ import { Box } from '@mui/material';
 import { dayIndicesOfWeek, daysOfWeek } from '../DatePicker/DatePicker.constants.ts';
 import Typography from '../../Typography/Typography.tsx';
 
-export default function DayLabel({ show }: DayLabelProps) {
-  if (!show) return null;
-
+export default function DayLabel({ locale }: DayLabelProps) {
   return (
     <Box
       sx={{
@@ -30,7 +28,7 @@ export default function DayLabel({ show }: DayLabelProps) {
             alignItems: 'center',
           }}
         >
-          {daysOfWeek[dayIndex]}
+          {daysOfWeek[locale][dayIndex]}
         </Typography>
       ))}
     </Box>

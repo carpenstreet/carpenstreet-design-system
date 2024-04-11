@@ -15,7 +15,7 @@ dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
 
 export default function DateRangePicker(props: DateRangePickerProps) {
-  const { startDay, setStartDay, endDay, setEndDay, onClose } = props;
+  const { startDay, setStartDay, endDay, setEndDay, onClose, locale } = props;
 
   const theme = useTheme();
 
@@ -144,7 +144,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
     >
       <Toolbar {...toolbarProps} />
 
-      <DayLabel show={!showMonthPicker && !showYearPicker} />
+      {!showMonthPicker && !showYearPicker && <DayLabel locale={locale} />}
 
       {/* content */}
       <Box

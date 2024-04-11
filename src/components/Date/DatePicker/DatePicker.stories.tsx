@@ -17,4 +17,8 @@ const meta: Meta<typeof ExampleDatePicker> = {
 export default meta;
 type Story = StoryObj<typeof ExampleDatePicker>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    locale: 'ko',
+  },
+};

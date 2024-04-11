@@ -6,4 +6,5 @@ export type DateRangePickerProps = {
   endDay: Dayjs | null;
   setEndDay: (newValue: Dayjs | null) => void;
   onClose?: () => void;
+  locale: 'ko' | 'en';
 };

@@ -1,3 +1,3 @@
 export type DayLabelProps = {
-  show: boolean;
+  locale: 'ko' | 'en';
 };

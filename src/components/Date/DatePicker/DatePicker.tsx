@@ -10,7 +10,7 @@ import YearPicker from '../YearPicker/YearPicker.tsx';
 import DatePickerContent from '../DatePickerContent/DatePickerContent.tsx';
 
 export default function DatePicker(props: DatePickerProps) {
-  const { value, setValue, onClose } = props;
+  const { value, setValue, onClose, locale } = props;
 
   const theme = useTheme();
 
@@ -121,7 +121,7 @@ export default function DatePicker(props: DatePickerProps) {
       }}
     >
       <Toolbar {...toolbarProps} />
-      <DayLabel show={!showMonthPicker && !showYearPicker} />
+      {!showMonthPicker && !showYearPicker && <DayLabel locale={locale} />}
       {/* content */}
       <Box
         ref={contentRef}

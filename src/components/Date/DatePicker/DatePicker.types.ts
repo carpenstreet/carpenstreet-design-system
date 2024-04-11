@@ -4,4 +4,5 @@ export type DatePickerProps = {
   value: Dayjs | null;
   setValue: (newValue: Dayjs | null) => void;
   onClose?: () => void;
+  locale: 'ko' | 'en';
 };
