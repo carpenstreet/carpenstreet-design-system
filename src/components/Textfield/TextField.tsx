@@ -6,6 +6,7 @@ import {
   Box,
   FormControlProps as MUIFormControlProps,
   OutlinedInputProps as MUIOutlinedInputProps,
+  Select as MUISelect,
 } from '@mui/material';
 import { TextFieldProps, HelperTextProps, InputLabelProps, InputMore, CustomTextFieldVariants } from './TextField.types.ts';
 import { useTheme } from '@mui/material/styles';
@@ -17,6 +18,7 @@ import InformationIcon from '../Icon/Information/InformationIcon';
 import NoticeIcon from '../Icon/Notice/NoticeIcon';
 import { unstable_useId } from '@mui/utils';
 import { variantInputComponent } from './Textfield.constants.ts';
+import ChevronDownIcon from '../Icon/ChevronDown/ChevronDownIcon.tsx';
 
 export default function TextField<Variant extends CustomTextFieldVariants>(props: TextFieldProps<Variant>) {
   const {
@@ -50,8 +52,15 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
     variant,
     success,
     withHelperTextIcon,
+    select,
+    SelectProps,
+    children,
     ...rest
   } = props;
+
+  if (select && !children) {
+    console.error('Design system TextField props error: `select`가 true일 경우, 반드시 `children`이 필요합니다');
+  }
 
   const id = unstable_useId(idOverride);
   const helperTextId = helperText && id ? `${id}-helper-text` : undefined;
@@ -106,6 +115,10 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
     }
     InputMore.label = label;
   }
+  if (select) {
+    // unset defaults from textbox inputs
+    InputMore['aria-describedby'] = undefined;
+  }
 
   const FormHelperTextProps: HelperTextProps = {
     id: helperTextId,
@@ -117,7 +130,29 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
   return (
     <MUIFormControl {...FormControlProps}>
       {label && <InputLabel {...InputLabelProps}>{label}</InputLabel>}
-      <Input {...InputProps} {...InputMore} />
+      {select ? (
+        <MUISelect
+          aria-describedby={helperTextId}
+          id={id}
+          labelId={inputLabelId}
+          value={value}
+          input={<Input {...InputProps} {...InputMore} />}
+          IconComponent={() => <ChevronDownIcon width={24} height={24} />}
+          MenuProps={{
+            sx: {
+              '& .MuiPaper-root': {
+                marginTop: '8px',
+                height: 'fit-content',
+              },
+            },
+          }}
+          {...SelectProps}
+        >
+          {children}
+        </MUISelect>
+      ) : (
+        <Input {...InputProps} {...InputMore} />
+      )}
       {helperText && <HelperText {...FormHelperTextProps}>{helperText}</HelperText>}
     </MUIFormControl>
   );
@@ -260,8 +295,8 @@ function Input(props: MUIOutlinedInputProps) {
       },
 
       '&:hover': {
-        color: theme.palette['color/gray/800'],
-        borderColor: theme.palette['color/gray/dim/600'],
+        color: theme.palette['color/gray/400'],
+        borderColor: theme.palette['color/gray/600'],
       },
 
       '&.Mui-focused': {
