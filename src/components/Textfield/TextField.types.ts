@@ -4,11 +4,13 @@ import {
   OutlinedTextFieldProps as MUIOutlinedTextFieldProps,
   StandardTextFieldProps as MUIStandardTextFieldProps,
 } from '@mui/material';
-import { SelectProps } from '../Select/Select.types.ts';
+import { BaseSelectProps as MUIBaseSelectProps, OutlinedSelectProps as MUIOutlinedSelectProps } from '@mui/material/Select/Select';
 
 export type CustomTextFieldVariants = 'standard' | 'outlined';
 
 type GetTextFieldProps<Variant extends CustomTextFieldVariants> = Variant extends 'standard' ? MUIStandardTextFieldProps : MUIOutlinedTextFieldProps;
+
+type CustomMUISelectProps<Value = unknown> = MUIBaseSelectProps<Value> & MUIOutlinedSelectProps;
 
 export type TextFieldProps<Variant extends CustomTextFieldVariants = CustomTextFieldVariants> = Omit<GetTextFieldProps<Variant>, 'color' | 'variant' | 'size' | 'SelectProps'> & {
   // override
@@ -17,7 +19,7 @@ export type TextFieldProps<Variant extends CustomTextFieldVariants = CustomTextF
   // custom
   success?: boolean;
   withHelperTextIcon?: boolean;
-  SelectProps?: SelectProps;
+  SelectProps?: CustomMUISelectProps;
 };
 
 export type InputLabelProps = MUIInputLabelProps & { withStartIcon: boolean };
