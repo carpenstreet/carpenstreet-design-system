@@ -14,8 +14,7 @@ export default function DatePicker(props: DatePickerProps) {
 
   const theme = useTheme();
 
-  const today = dayjs();
-
+  const { current: today } = React.useRef(dayjs());
   const containerRef = React.useRef<HTMLDivElement>(null);
   const contentRef = React.useRef<HTMLDivElement>(null);
 
