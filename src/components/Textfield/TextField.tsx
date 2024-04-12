@@ -296,7 +296,10 @@ function Input(props: MUIOutlinedInputProps) {
 
       '&:hover': {
         color: theme.palette['color/gray/400'],
-        borderColor: theme.palette['color/gray/600'],
+        '.MuiOutlinedInput-notchedOutline': {
+          borderColor: theme.palette['color/gray/600'],
+          borderWidth: '1px',
+        },
       },
 
       '&.Mui-focused': {
