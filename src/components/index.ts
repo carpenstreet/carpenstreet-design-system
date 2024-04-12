@@ -58,6 +58,7 @@ import Modal from './Modal/Modal';
 import BottomSheet from './BottomSheet/BottomSheet';
 import DatePicker from './Date/DatePicker/DatePicker.tsx';
 import DateRangePicker from './Date/DateRangePicker/DateRangePicker.tsx';
+import Select from './Select/Select.tsx';
 
 export {
   Button,
@@ -120,6 +121,7 @@ export {
   BottomSheet,
   DatePicker,
   DateRangePicker,
+  Select,
 };
 
 export default {
@@ -183,4 +185,5 @@ export default {
   BottomSheet,
   DatePicker,
   DateRangePicker,
+  Select,
 };
