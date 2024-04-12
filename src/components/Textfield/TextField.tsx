@@ -105,6 +105,14 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
     type,
     value,
     size,
+    ...(select && {
+      sx: {
+        '& > svg': {
+          top: 'calc(50% - 12px)',
+          right: '8px',
+        },
+      },
+    }),
     ...InputPropsOverride,
   };
 
@@ -137,7 +145,7 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
           labelId={inputLabelId}
           value={value}
           input={<Input {...InputProps} {...InputMore} />}
-          IconComponent={() => <ChevronDownIcon width={24} height={24} />}
+          IconComponent={(props) => <ChevronDownIcon {...props} width={24} height={24} />}
           MenuProps={{
             sx: {
               '& .MuiPaper-root': {
@@ -215,7 +223,7 @@ function InputLabel(props: InputLabelProps) {
 }
 
 function Input(props: MUIOutlinedInputProps) {
-  const { size, inputProps, sx: sxOverride } = props;
+  const { size, inputProps, sx: sxOverride, value } = props;
 
   const theme = useTheme();
 
@@ -293,6 +301,15 @@ function Input(props: MUIOutlinedInputProps) {
         width: '24px',
         height: '24px',
       },
+
+      // activated (value가 있는 경우)
+      ...(value && {
+        color: theme.palette['color/gray/800'],
+        '.MuiOutlinedInput-notchedOutline': {
+          borderColor: theme.palette['color/gray/600'],
+          borderWidth: '1px',
+        },
+      }),
 
       '&:hover': {
         color: theme.palette['color/gray/400'],
