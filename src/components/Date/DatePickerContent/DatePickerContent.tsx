@@ -42,7 +42,7 @@ export default function DatePickerContent(props: DatePickerContentProps) {
                   const handleSelectDate = makeOnSelectDate(date);
                   return (
                     <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate}>
-                      {String(date).padStart(2, '0')}
+                      {date}
                     </DateElement>
                   );
                 })
@@ -63,7 +63,7 @@ export default function DatePickerContent(props: DatePickerContentProps) {
                   const handleSelectDate = makeOnSelectDate(date);
                   return (
                     <DateElement key={`week-${index}-date-${date}`} today={isToday} selected={isSelected} onClick={handleSelectDate}>
-                      {String(date).padStart(2, '0')}
+                      {date}
                     </DateElement>
                   );
                 })}
