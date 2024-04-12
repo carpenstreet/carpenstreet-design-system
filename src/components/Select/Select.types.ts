@@ -1,3 +1,3 @@
-import { BaseSelectProps as MUIBaseSelectProps, OutlinedSelectProps as MUIOutlinedSelectProps } from '@mui/material/Select/Select';
+import { TextFieldProps } from '../Textfield/TextField.types.ts';
 
-export type SelectProps<Value = unknown> = MUIBaseSelectProps<Value> & MUIOutlinedSelectProps;
+export type SelectProps = Omit<TextFieldProps, 'variant' | 'select'>;
