@@ -132,7 +132,7 @@ export default function DatePicker(props: DatePickerProps) {
           paddingLeft: '28px',
           paddingRight: '28px',
           maxHeight: '294px',
-          overflow: 'scroll',
+          overflow: 'auto',
         }}
       >
         {showMonthPicker ? (
