@@ -110,7 +110,7 @@ export default function DatePicker(props: DatePickerProps) {
       const scrollY = 74 * (rowIndexOfCurrentYear - 2);
       contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
     }
-  }, [contentRef.current, showYearPicker]);
+  }, [showYearPicker]);
 
   return (
     <Box

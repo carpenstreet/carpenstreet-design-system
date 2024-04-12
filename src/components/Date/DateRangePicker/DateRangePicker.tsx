@@ -124,7 +124,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
       const scrollY = 74 * (rowIndexOfCurrentYear - 2);
       contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
     }
-  }, [contentRef.current, showYearPicker]);
+  }, [showYearPicker]);
 
   React.useEffect(() => {
     if (startDay?.isSameOrAfter(endDay)) {
