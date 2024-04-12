@@ -61,6 +61,7 @@ import {
   BottomSheet,
   DatePicker,
   DateRangePicker,
+  Select,
 } from './components';
 
 export {
@@ -126,6 +127,7 @@ export {
   BottomSheet,
   DatePicker,
   DateRangePicker,
+  Select,
 };
 
 export default {
@@ -191,4 +193,5 @@ export default {
   BottomSheet,
   DatePicker,
   DateRangePicker,
+  Select,
 };
