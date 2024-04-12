@@ -20,7 +20,7 @@ export const overrideButton = {
       '& > .MuiButton-endIcon': {
         marginLeft: '4px',
       },
-      ...((ownerState.size === 'XL' || ownerState.size === 'L') && {
+      ...(ownerState.size === 'L' && {
         '& > .MuiButton-icon': {
           '& > svg': {
             width: '24px',
@@ -56,8 +56,7 @@ export const overrideButton = {
       },
 
       // Size
-      // contained의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
-      ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
+      ...(ownerState.size === 'L' && {
         borderRadius: '8px',
         paddingLeft: '22px',
         paddingRight: '22px',
@@ -119,8 +118,7 @@ export const overrideButton = {
     }),
     outlined: ({ ownerState, theme }) => ({
       // Size
-      // outlined의 경우 XL 사이즈를 지원하지 않으므로 XL 입력받을 경우 fallback으로 L 사이즈 적용함
-      ...((ownerState.size === 'L' || ownerState.size === 'XL') && {
+      ...(ownerState.size === 'L' && {
         borderRadius: '8px',
         paddingLeft: '21px', // border 값만큼 빼줌 (22 - 1) box-shadow css 로도 설정할 수 있지만, hover 시에 스타일이 깨지는 문제가 있어서 보류
         paddingRight: '21px', // border 값만큼 빼줌 (22 - 1)
@@ -195,8 +193,7 @@ export const overrideButton = {
       backgroundColor: 'transparent',
 
       // Size
-      // text 버튼은 XL 사이즈를 지원하지 않음
-      ...((ownerState.size === 'XL' || ownerState.size === 'L') && {
+      ...(ownerState.size === 'L' && {
         height: '24px',
       }),
       ...(ownerState.size === 'M' && {
