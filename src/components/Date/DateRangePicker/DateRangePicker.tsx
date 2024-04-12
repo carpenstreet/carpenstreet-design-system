@@ -24,7 +24,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
   const contentRef = React.useRef<HTMLDivElement>(null);
 
   const [currentDay, setCurrentDay] = React.useState(dayjs());
-  const [clickCount, setClickCount] = React.useState(0);
+  const [isFirstClick, setIsFirstClick] = React.useState(true);
   const [showYearPicker, setShowYearPicker] = React.useState(false);
   const [showMonthPicker, setShowMonthPicker] = React.useState(false);
 
@@ -38,14 +38,14 @@ export default function DateRangePicker(props: DateRangePickerProps) {
 
   function makeHandleSelectDate(newDate: number) {
     return () => {
-      if (clickCount === 0) {
+      if (isFirstClick) {
         setStartDay(null);
         setEndDay(null);
         setStartDay(currentDay.date(newDate));
-        setClickCount(1);
-      } else if (clickCount === 1) {
+        setIsFirstClick(false);
+      } else {
         setEndDay(currentDay.date(newDate));
-        setClickCount(0);
+        setIsFirstClick(true);
       }
     };
   }
