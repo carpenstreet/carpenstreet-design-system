@@ -40,12 +40,14 @@ export default function DatePicker(props: DatePickerProps) {
   function makeHandleSelectYear(newYear: number) {
     return () => {
       setCurrentDay(currentDay.year(newYear));
+      setShowYearPicker(false);
     };
   }
 
   function makeHandleSelectMonth(newMonthIndex: number) {
     return () => {
       setCurrentDay(currentDay.month(newMonthIndex));
+      setShowMonthPicker(false);
     };
   }
 
