@@ -1,8 +1,9 @@
 import { Tab as MUITab } from '@mui/material';
 import { TabProps } from './Tab.types.ts';
 import Typography from '../Typography/Typography.tsx';
+import React from 'react';
 
-export default function Tab(props: TabProps) {
+const Tab = React.forwardRef((props: TabProps, ref: React.ForwardedRef<HTMLDivElement>) => {
   const { label, size, sx: sxOverride, ...rest } = props;
 
   const labelToRender = (
@@ -17,5 +18,7 @@ export default function Tab(props: TabProps) {
     ...sxOverride,
   };
 
-  return <MUITab {...rest} label={labelToRender} sx={sx} />;
-}
+  return <MUITab {...rest} label={labelToRender} sx={sx} ref={ref} />;
+});
+
+export default Tab;
