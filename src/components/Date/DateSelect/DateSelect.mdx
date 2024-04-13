@@ -1,0 +1,14 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as DateSelectStories from './DateSelect.stories';
+
+<Meta of={DateSelectStories} />
+
+# DateSelect
+
+입력된 날짜를 표시하는 UI입니다.
+
+`<DatePicker>` 또는 `<DateRangePicker>`와 함께 사용합니다.
+
+<Canvas of={DateSelectStories.Default} />
+
+<Controls include={['locale', 'isRange', 'focused', 'error', 'disabled']} />
