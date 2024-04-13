@@ -14,4 +14,5 @@ export type DateRangePickerProps = {
   monthPickerSx?: SxProps<Theme>;
   yearPickerSx?: SxProps<Theme>;
   contentSx?: SxProps<Theme>;
+  anchorEl?: Element;
 };
