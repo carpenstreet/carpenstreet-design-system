@@ -59,6 +59,7 @@ import BottomSheet from './BottomSheet/BottomSheet';
 import DatePicker from './Date/DatePicker/DatePicker.tsx';
 import DateRangePicker from './Date/DateRangePicker/DateRangePicker.tsx';
 import Select from './Select/Select.tsx';
+import DateSelect from './Date/DateSelect/DateSelect.tsx';
 
 export {
   Button,
@@ -122,6 +123,7 @@ export {
   DatePicker,
   DateRangePicker,
   Select,
+  DateSelect,
 };
 
 export default {
@@ -186,4 +188,5 @@ export default {
   DatePicker,
   DateRangePicker,
   Select,
+  DateSelect,
 };

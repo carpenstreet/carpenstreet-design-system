@@ -62,6 +62,7 @@ import {
   DatePicker,
   DateRangePicker,
   Select,
+  DateSelect,
 } from './components';
 
 export {
@@ -128,6 +129,7 @@ export {
   DatePicker,
   DateRangePicker,
   Select,
+  DateSelect,
 };
 
 export default {
@@ -194,4 +196,5 @@ export default {
   DatePicker,
   DateRangePicker,
   Select,
+  DateSelect,
 };
