@@ -19,7 +19,7 @@ type Story = StoryObj<typeof ExampleDivider>;
 
 export const Default: Story = {
   args: {
-    color: 200,
+    light: false,
     orientation: 'horizontal',
     sx: {},
   },
@@ -27,7 +27,7 @@ export const Default: Story = {
 
 export const DividerColor100AndHorizontal: Story = {
   args: {
-    color: 100,
+    light: true,
     orientation: 'horizontal',
     sx: {},
   },
@@ -35,7 +35,7 @@ export const DividerColor100AndHorizontal: Story = {
 
 export const DividerColor100AndVertical: Story = {
   args: {
-    color: 100,
+    light: true,
     orientation: 'vertical',
     sx: {},
   },
@@ -43,7 +43,7 @@ export const DividerColor100AndVertical: Story = {
 
 export const DividerColor200AndHorizontal: Story = {
   args: {
-    color: 200,
+    light: false,
     orientation: 'horizontal',
     sx: {},
   },
@@ -51,7 +51,7 @@ export const DividerColor200AndHorizontal: Story = {
 
 export const DividerColor200AndVertical: Story = {
   args: {
-    color: 200,
+    light: false,
     orientation: 'vertical',
     sx: {},
   },

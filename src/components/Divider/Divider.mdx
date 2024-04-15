@@ -10,28 +10,20 @@ import * as DividerStories from './Divider.stories';
 기본적으로 너비 또는 높이는 100%로 설정되어 있습니다.
 
 ### Props
-- `color`는 100과 200이 있으며 `colo/gray/dim`을 사용합니다. (필수)
+- `light` true일 경우 색상이 더 밝아집니다. (필수)
 - `orientation` 옵션은 `horizontal`과 `vertical`이 있습니다. (필수)
 - `sx` 옵션으로 Divider 스타일을 커스텀할 수 있습니다.
 
 <Canvas of={DividerStories.Default} />
 
-<Controls include={['color', 'orientation', 'sx']} />
+<Controls include={['light', 'orientation', 'sx']} />
 
-### Color 100
-
-color 100을 적용한 Horizontal, Vertical 예시입니다.
+서로 다른 light 옵션과 orientation 옵션을 적용한 Divider 예제입니다.
 
 <Canvas>
   <Story of={DividerStories.DividerColor100AndHorizontal} />
   <Story of={DividerStories.DividerColor100AndVertical} />
-</Canvas>
 
-### Color 200
-
-color 200을 적용한 Horizontal, Vertical 예시입니다.
-
-<Canvas>
   <Story of={DividerStories.DividerColor200AndHorizontal} />
   <Story of={DividerStories.DividerColor200AndVertical} />
 </Canvas>
