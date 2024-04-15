@@ -1,0 +1,29 @@
+import { Canvas, Controls, Meta, Story } from '@storybook/blocks';
+import * as DividerStories from './Divider.stories';
+
+<Meta of={DividerStories} />
+
+# Divider
+
+눈에 잘 띄지 않는 얇은 선으로 컨텐츠를 구분할 때 사용합니다.
+
+기본적으로 너비 또는 높이는 100%로 설정되어 있습니다.
+
+### Props
+- `light` true일 경우 색상이 더 밝아집니다.
+- `orientation` 옵션은 `horizontal`과 `vertical`이 있습니다.
+- `sx` 옵션으로 Divider 스타일을 커스텀할 수 있습니다.
+
+<Canvas of={DividerStories.Default} />
+
+<Controls include={['light', 'orientation', 'sx']} />
+
+서로 다른 light 옵션과 orientation 옵션을 적용한 Divider 예제입니다.
+
+<Canvas>
+  <Story of={DividerStories.DividerColor100AndHorizontal} />
+  <Story of={DividerStories.DividerColor100AndVertical} />
+
+  <Story of={DividerStories.DividerColor200AndHorizontal} />
+  <Story of={DividerStories.DividerColor200AndVertical} />
+</Canvas>

@@ -60,6 +60,7 @@ import DatePicker from './Date/DatePicker/DatePicker.tsx';
 import DateRangePicker from './Date/DateRangePicker/DateRangePicker.tsx';
 import Select from './Select/Select.tsx';
 import DateSelect from './Date/DateSelect/DateSelect.tsx';
+import Divider from './Divider/Divider';
 
 export {
   Button,
@@ -124,6 +125,7 @@ export {
   DateRangePicker,
   Select,
   DateSelect,
+  Divider,
 };
 
 export default {
@@ -189,4 +191,5 @@ export default {
   DateRangePicker,
   Select,
   DateSelect,
+  Divider,
 };

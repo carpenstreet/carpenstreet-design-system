@@ -61,6 +61,7 @@ import {
   BottomSheet,
   DatePicker,
   DateRangePicker,
+  Divider,
   Select,
   DateSelect,
 } from './components';
@@ -130,6 +131,7 @@ export {
   DateRangePicker,
   Select,
   DateSelect,
+  Divider,
 };
 
 export default {
@@ -197,4 +199,5 @@ export default {
   DateRangePicker,
   Select,
   DateSelect,
+  Divider,
 };
