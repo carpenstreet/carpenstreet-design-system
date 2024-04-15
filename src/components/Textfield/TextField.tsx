@@ -20,7 +20,7 @@ import { unstable_useId } from '@mui/utils';
 import { variantInputComponent } from './Textfield.constants.ts';
 import ChevronDownIcon from '../Icon/ChevronDown/ChevronDownIcon.tsx';
 
-export default function TextField<Variant extends CustomTextFieldVariants>(props: TextFieldProps<Variant>) {
+const TextField = React.forwardRef(<Variant extends CustomTextFieldVariants>(props: TextFieldProps<Variant>, ref) => {
   const {
     autoComplete,
     autoFocus = false,
@@ -136,7 +136,7 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
   };
 
   return (
-    <MUIFormControl {...FormControlProps}>
+    <MUIFormControl {...FormControlProps} ref={ref}>
       {label && <InputLabel {...InputLabelProps}>{label}</InputLabel>}
       {select ? (
         <MUISelect
@@ -164,7 +164,7 @@ export default function TextField<Variant extends CustomTextFieldVariants>(props
       {helperText && <HelperText {...FormHelperTextProps}>{helperText}</HelperText>}
     </MUIFormControl>
   );
-}
+});
 
 function InputLabel(props: InputLabelProps) {
   const { withStartIcon, children, ...rest } = props;
@@ -430,3 +430,5 @@ function HelperText(props: HelperTextProps) {
     </MUIFormHelperText>
   );
 }
+
+export default TextField;
