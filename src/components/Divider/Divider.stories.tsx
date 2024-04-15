@@ -5,6 +5,22 @@ import ExampleDivider from './ExampleDivider';
 const meta: Meta<typeof ExampleDivider> = {
   title: 'Component/Divider',
   component: ExampleDivider,
+  argTypes: {
+    light: {
+      table: {
+        defaultValue: {
+          summary: false,
+        },
+      },
+    },
+    orientation: {
+      table: {
+        defaultValue: {
+          summary: 'horizontal',
+        },
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <ThemeMui>
