@@ -243,7 +243,7 @@ function Input(props: MUIOutlinedInputProps) {
       padding: 'unset',
 
       '&.Mui-disabled': {
-        '-webkit-text-fill-color': 'unset',
+        WebkitTextFillColor: 'unset',
       },
     }),
   };
