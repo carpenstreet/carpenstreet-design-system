@@ -1,5 +1,6 @@
 import { Dayjs } from 'dayjs';
 import { SxProps, Theme } from '@mui/material';
+import React from 'react';
 
 export type DateRangePickerProps = {
   startDay: Dayjs | null;
@@ -14,5 +15,5 @@ export type DateRangePickerProps = {
   monthPickerSx?: SxProps<Theme>;
   yearPickerSx?: SxProps<Theme>;
   contentSx?: SxProps<Theme>;
-  anchorEl?: Element;
+  anchorRef?: React.MutableRefObject<any>;
 };

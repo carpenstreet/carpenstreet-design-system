@@ -9,7 +9,7 @@ import DateRangePicker from '../DateRangePicker/DateRangePicker.tsx';
 export default function ExampleDateSelect(props: DateSelectProps) {
   const { isRange, locale, focused } = props;
 
-  const { current: dateSelectElement } = React.useRef(null);
+  const dateSelectRef = React.useRef(null);
 
   const [day, setDay] = React.useState(dayjs());
   const [startDay, setStartDay] = React.useState(dayjs());
@@ -37,19 +37,13 @@ export default function ExampleDateSelect(props: DateSelectProps) {
         height: '450px',
       }}
     >
-      <DateSelect
-        ref={dateSelectElement}
-        {...props}
-        value={!isRange ? day : { startDay, endDay }}
-        onClick={handleClick}
-        focused={focused || showDatePicker || showDateRangePicker}
-      />
+      <DateSelect ref={dateSelectRef} {...props} value={!isRange ? day : { startDay, endDay }} onClick={handleClick} focused={focused || showDatePicker || showDateRangePicker} />
       {showDatePicker && (
         <DatePicker
           value={day}
           setValue={setDay}
           locale={locale}
-          anchorEl={dateSelectElement}
+          anchorRef={dateSelectRef}
           onClose={handleShowDatePicker}
           sx={{
             position: 'absolute',
@@ -64,7 +58,7 @@ export default function ExampleDateSelect(props: DateSelectProps) {
           setEndDay={setEndDay}
           locale={locale}
           onClose={handleShowDateRangePicker}
-          anchorEl={dateSelectElement}
+          anchorRef={dateSelectRef}
           sx={{
             position: 'absolute',
           }}
