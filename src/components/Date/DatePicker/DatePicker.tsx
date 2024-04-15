@@ -10,7 +10,10 @@ import YearPicker from '../YearPicker/YearPicker.tsx';
 import DatePickerContent from '../DatePickerContent/DatePickerContent.tsx';
 
 export default function DatePicker(props: DatePickerProps) {
-  const { value, setValue, onClose, locale, sx: sxOverride, toolbarSx, dayLabelSx, monthPickerSx, yearPickerSx, contentSx } = props;
+  const { value, setValue, onClose, locale, sx: sxOverride, toolbarSx, dayLabelSx, monthPickerSx, yearPickerSx, contentSx, anchorRef } = props;
+
+  if (onClose && !anchorRef) console.error('Design system DatePicker props error: onClose props는 anchorRef props와 함께 사용되어야 합니다.');
+  if (!onClose && anchorRef) console.error('Design system DatePicker props error: anchorRef props는 onClose props와 함께 사용되어야 합니다.');
 
   const theme = useTheme();
 
@@ -95,7 +98,9 @@ export default function DatePicker(props: DatePickerProps) {
   // 바깥 영역 클릭시 onClose 실행
   React.useEffect(() => {
     const handleDropdownHide = (e) => {
-      if (containerRef.current && !containerRef.current.contains(e.target) && onClose) {
+      if (containerRef.current && !containerRef.current.contains(e.target) && anchorRef.current && !anchorRef.current.contains(e.target) && onClose) {
+        // onClose가 두 번 동작하여 닫혔다가 다시 열리는 것을 방지하기 위해 anchorEl을 클릭했을 땐 onClose 실행하지 않음
+        // 단, anchorEl에선 onClose가 정상적으로 작동해야 함
         onClose();
       }
     };
