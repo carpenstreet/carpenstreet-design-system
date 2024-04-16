@@ -74,7 +74,9 @@ export default function ThemeMui({ children }: Props) {
     breakpoints: {
       values: {
         mobile: 0,
-        desktop: 768,
+        smallTablet: 600,
+        largeTablet: 1024,
+        desktop: 1440,
       },
     },
     shadows,
