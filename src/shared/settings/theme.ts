@@ -77,6 +77,8 @@ declare module '@mui/material/styles' {
     lg: false;
     xl: false;
     mobile: true;
+    smallTablet: true;
+    largeTablet: true;
     desktop: true;
   }
 }
