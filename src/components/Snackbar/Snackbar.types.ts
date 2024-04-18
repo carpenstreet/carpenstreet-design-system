@@ -2,7 +2,7 @@ import { SnackbarProps as MUISnackbarProps } from '@mui/material/Snackbar/Snackb
 
 export type SnackbarProps = MUISnackbarProps & {
   variant?: 'default' | 'white' | 'info' | 'success' | 'warning' | 'error';
-  close?: boolean;
+  showCloseIcon?: boolean;
   align?: 'horizontal' | 'vertical';
   iconToTop?: boolean;
 };

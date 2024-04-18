@@ -22,7 +22,7 @@ export const Default: Story = {
   args: {
     variant: 'default',
     message: 'Snackbar Message',
-    close: false,
+    showCloseIcon: false,
     align: 'horizontal',
     iconToTop: false,
   },
@@ -32,7 +32,7 @@ export const WithButton: Story = {
   args: {
     variant: 'success',
     message: 'WITH BUTTON',
-    close: true,
+    showCloseIcon: true,
     align: 'horizontal',
     iconToTop: false,
     action: (
