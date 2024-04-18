@@ -22,7 +22,7 @@ export const overrideSnackbar = {
         borderRadius: '8px',
         flexWrap: 'nowrap',
         padding: '12px',
-        '> div': { padding: 0, minHeight: '24px' },
+        '> div': { padding: 0, minHeight: '24px', display: 'flex', alignItems: 'center' },
       },
       '&.MuiSnackbar-anchorOriginTopLeft': { ...left },
       '&.MuiSnackbar-anchorOriginTopCenter': { ...center },
@@ -32,6 +32,7 @@ export const overrideSnackbar = {
       '&.MuiSnackbar-anchorOriginBottomRight': { ...right },
       '& .MuiSnackbarContent-action': {
         padding: '8px 0',
+        marginRight: 0,
       },
     }),
   },
