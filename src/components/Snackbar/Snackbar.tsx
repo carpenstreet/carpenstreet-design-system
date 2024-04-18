@@ -18,19 +18,14 @@ export default function Snackbar(props: SnackbarProps) {
   const theme = useTheme();
 
   const sx = {
-    ...(variant === 'default' && {
-      '& .MuiPaper-root': {
-        backgroundColor: theme.palette['color/gray/700'],
-        ...(iconToTop && { alignItems: 'start' }),
-      },
-    }),
-
     ...(iconToTop && {
       '& .MuiPaper-root': {
         alignItems: 'start',
+        ...(variant === 'default' && {
+          backgroundColor: theme.palette['color/gray/700'],
+        }),
       },
     }),
-
     ...sxOverride,
   };
 
