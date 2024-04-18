@@ -26,6 +26,11 @@ export default function Snackbar(props: SnackbarProps) {
         }),
       },
     }),
+    ...(variant === 'default' && {
+      '& .MuiPaper-root': {
+        backgroundColor: theme.palette['color/gray/700'],
+      },
+    }),
     ...sxOverride,
   };
 
