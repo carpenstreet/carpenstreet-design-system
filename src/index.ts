@@ -64,6 +64,7 @@ import {
   Divider,
   Select,
   DateSelect,
+  Snackbar,
 } from './components';
 
 export {
@@ -132,6 +133,7 @@ export {
   Select,
   DateSelect,
   Divider,
+  Snackbar,
 };
 
 export default {
@@ -200,4 +202,5 @@ export default {
   Select,
   DateSelect,
   Divider,
+  Snackbar,
 };
