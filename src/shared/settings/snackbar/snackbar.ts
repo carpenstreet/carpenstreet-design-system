@@ -15,7 +15,15 @@ export const overrideSnackbar = {
     root: ({ theme }) => ({
       boxShadow: theme.shadows[2],
       borderRadius: '8px',
-      '& .MuiPaper-root': { backgroundColor: theme.palette['color/white'], gap: '16px', borderRadius: '8px', flexWrap: 'nowrap' },
+      padding: '0',
+      '& .MuiPaper-root': {
+        backgroundColor: theme.palette['color/white'],
+        gap: '16px',
+        borderRadius: '8px',
+        flexWrap: 'nowrap',
+        padding: '12px',
+        '> div': { padding: 0, minHeight: '24px' },
+      },
       '&.MuiSnackbar-anchorOriginTopLeft': { ...left },
       '&.MuiSnackbar-anchorOriginTopCenter': { ...center },
       '&.MuiSnackbar-anchorOriginTopRight': { ...right },
