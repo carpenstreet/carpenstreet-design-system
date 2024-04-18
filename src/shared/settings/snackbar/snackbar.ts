@@ -23,7 +23,7 @@ export const overrideSnackbar = {
       '&.MuiSnackbar-anchorOriginBottomCenter': { ...center },
       '&.MuiSnackbar-anchorOriginBottomRight': { ...right },
       '& .MuiSnackbarContent-action': {
-        padding: 'unset',
+        padding: '8px 0',
       },
     }),
   },
