@@ -11,7 +11,7 @@ import CloseIcon from '../Icon/Close/CloseIcon.tsx';
 import { SnackbarProps } from './Snackbar.types.ts';
 
 export default function Snackbar(props: SnackbarProps) {
-  const { variant = 'default', showCloseIcon = false, align = 'horizontal', iconToTop, ...muiSnackbarProps } = props;
+  const { variant = 'default', showCloseIcon = false, align = 'horizontal', iconToTop, onCloseIconClick, ...muiSnackbarProps } = props;
   const { message, action, sx: sxOverride, ...rest } = muiSnackbarProps;
   const { onClose } = rest;
 
@@ -111,9 +111,7 @@ export default function Snackbar(props: SnackbarProps) {
           <IconButton
             size={'S'}
             color={'default'}
-            onClick={(e) => {
-              onClose(e, 'clickaway');
-            }}
+            onClick={onCloseIconClick}
             sx={{
               ...(variant === 'default' && {
                 '&:hover': {

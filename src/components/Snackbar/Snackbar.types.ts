@@ -5,4 +5,5 @@ export type SnackbarProps = MUISnackbarProps & {
   showCloseIcon?: boolean;
   align?: 'horizontal' | 'vertical';
   iconToTop?: boolean;
+  onCloseIconClick?: () => void;
 };

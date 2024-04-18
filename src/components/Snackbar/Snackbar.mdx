@@ -15,6 +15,9 @@ MUI `Snackbar`의 기본 props 외에 아래와 같은 props를 추가하였습�
 
 - variant: 스낵바의 외형을 결정합니다. (default, white, info, success, warning, error)
 - showCloseIcon: true일 때, 스낵바에 닫기 버튼을 추가합니다.
+- onCloseIconClick: 닫기 버튼을 클릭했을 때 수행할 동작을 지정합니다.
+  - `Snackbar`의 `onClose`와는 다르게, `onCloseIconClick`은 닫기 버튼을 클릭했을 때만 호출됩니다.
+  - `Snackbar`는 기본적으로 다른 영역을 클릭했을 때 `onClose`가 동작하는데, 이를 원치 않고 닫기 버튼으로만 제어하고 싶은 경우 위 props를 사용하면 됩니다.
 - align: 스낵바 내용의 정렬을 결정합니다. (vertical, horizontal)
 - iconToTop: true일 때, 아이콘과 버튼의 위치 상단으로 끌어올립니다.
 
