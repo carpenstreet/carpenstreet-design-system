@@ -17,6 +17,7 @@ import { overrideMenu } from './menu/menu.ts';
 import { overridePagination } from './pagination/pagination.ts';
 import { overrideDialog } from './dialog/dialog.ts';
 import { overrideDivider } from './divider/divider.ts';
+import { overrideSnackbar } from './snackbar/snackbar.ts';
 
 // ----------------------------------------------------------------------
 
@@ -63,6 +64,7 @@ export default function ThemeMui({ children }: Props) {
       MuiPagination: overridePagination,
       MuiDialog: overrideDialog,
       MuiDivider: overrideDivider,
+      MuiSnackbar: overrideSnackbar,
     },
     typography: {
       ...CustomTypographyVariants,
