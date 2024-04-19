@@ -10,12 +10,29 @@ import { DateRangePickerProps } from './DateRangePicker.types.ts';
 import MonthPicker from '../MonthPicker/MonthPicker.tsx';
 import YearPicker from '../YearPicker/YearPicker.tsx';
 import DateRangePickerContent from '../DateRangePickerContent/DateRangePickerContent.tsx';
+import Controller from '../Controller/Controller.tsx';
 
 dayjs.extend(isSameOrAfter);
 dayjs.extend(isBetween);
 
 export default function DateRangePicker(props: DateRangePickerProps) {
-  const { startDay, setStartDay, endDay, setEndDay, onClose, locale, sx: sxOverride, toolbarSx, dayLabelSx, monthPickerSx, yearPickerSx, contentSx, anchorRef } = props;
+  const {
+    startDay,
+    setStartDay,
+    endDay,
+    setEndDay,
+    onClose,
+    locale,
+    sx: sxOverride,
+    toolbarSx,
+    dayLabelSx,
+    monthPickerSx,
+    yearPickerSx,
+    contentSx,
+    anchorRef,
+    showController,
+    controllerSx,
+  } = props;
 
   if (onClose && !anchorRef) console.error('Design system DatePicker props error: onClose props는 anchorRef props와 함께 사용되어야 합니다.');
   if (!onClose && anchorRef) console.error('Design system DatePicker props error: anchorRef props는 onClose props와 함께 사용되어야 합니다.');
@@ -85,6 +102,11 @@ export default function DateRangePicker(props: DateRangePickerProps) {
     setCurrentDay(currentDay.add(1, 'month'));
   }
 
+  function handleResetDate() {
+    setStartDay(null);
+    setEndDay(null);
+  }
+
   const toolbarProps = {
     onPreviousMonth: handlePreviousMonth,
     onNextMonth: handleNextMonth,
@@ -148,7 +170,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
         boxShadow: theme.shadows[2],
         borderRadius: '12px',
         width: '320px',
-        height: '360px',
+        paddingBottom: '12px',
         ...sxOverride,
       }}
     >
@@ -174,6 +196,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
           <DateRangePickerContent {...contentProps} />
         )}
       </Box>
+      {showController && <Controller onResetDate={handleResetDate} onClose={onClose} sx={controllerSx} locale={locale} />}
     </Box>
   );
 }

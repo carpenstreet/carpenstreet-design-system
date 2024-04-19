@@ -20,6 +20,7 @@ type Story = StoryObj<typeof ExampleDatePicker>;
 export const Default: Story = {
   args: {
     locale: 'ko',
+    showController: false,
     sx: {},
     toolbarSx: {},
     dayLabelSx: {},
@@ -85,5 +86,16 @@ export const Content: Story = {
       border: `2px solid #4e4eff`,
       borderRadius: '8px',
     },
+  },
+};
+
+export const Controller: Story = {
+  args: {
+    locale: 'ko',
+    controllerSx: {
+      border: `2px solid #4e4eff`,
+      borderRadius: '8px',
+    },
+    showController: true,
   },
 };
