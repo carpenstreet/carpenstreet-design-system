@@ -1,12 +1,13 @@
 import React from 'react';
 import { Dayjs } from 'dayjs';
 import { SxProps, Theme } from '@mui/material';
+import { Locale } from '../date.types.ts';
 
 export type DatePickerProps = {
   value: Dayjs | null;
   setValue: (newValue: Dayjs | null) => void;
   onClose?: () => void;
-  locale: 'ko' | 'en';
+  locale: Locale;
   showController?: boolean;
   sx?: SxProps<Theme>;
   toolbarSx?: SxProps<Theme>;

@@ -1,6 +1,7 @@
 import { SxProps, Theme } from '@mui/material';
+import { Locale } from '../date.types.ts';
 
 export type DayLabelProps = {
-  locale: 'ko' | 'en';
+  locale: Locale;
   sx?: SxProps<Theme>;
 };
