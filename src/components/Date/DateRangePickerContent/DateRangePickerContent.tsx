@@ -12,6 +12,7 @@ export default function DateRangePickerContent(props: DateRangePickerContentProp
         display: 'flex',
         flexDirection: 'column',
         gap: '4px',
+        paddingBottom: '12px',
         ...sxOverride,
       }}
     >
