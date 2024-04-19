@@ -45,6 +45,7 @@ export default function ExampleDateSelect(props: DateSelectProps) {
           locale={locale}
           anchorRef={dateSelectRef}
           onClose={handleShowDatePicker}
+          showController={true}
           sx={{
             position: 'absolute',
           }}
@@ -59,6 +60,7 @@ export default function ExampleDateSelect(props: DateSelectProps) {
           locale={locale}
           onClose={handleShowDateRangePicker}
           anchorRef={dateSelectRef}
+          showController={true}
           sx={{
             position: 'absolute',
           }}

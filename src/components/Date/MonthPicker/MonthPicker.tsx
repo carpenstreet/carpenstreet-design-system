@@ -6,7 +6,15 @@ import WideElement from '../WideElement/WideElement.tsx';
 
 export default function MonthPicker({ currentDay, makeOnSelectMonth, locale, sx: sxOverride }: MonthPickerProps) {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', gap: '2px', ...sxOverride }}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '2px',
+        paddingBottom: '18px',
+        ...sxOverride,
+      }}
+    >
       {[...Array(4).keys()].map((row) => {
         return (
           <Box
@@ -14,7 +22,7 @@ export default function MonthPicker({ currentDay, makeOnSelectMonth, locale, sx:
             sx={{
               display: 'flex',
               justifyContent: 'space-between',
-              padding: '20px 12px',
+              padding: '12px 12px',
               width: '100%',
             }}
           >

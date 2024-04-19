@@ -87,3 +87,14 @@ export const Content: Story = {
     },
   },
 };
+
+export const Controller: Story = {
+  args: {
+    locale: 'ko',
+    controllerSx: {
+      border: `2px solid #4e4eff`,
+      borderRadius: '8px',
+    },
+    showController: true,
+  },
+};
