@@ -41,6 +41,7 @@ import {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -110,6 +111,7 @@ export {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -179,6 +181,7 @@ export default {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,

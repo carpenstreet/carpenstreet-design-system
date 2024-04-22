@@ -35,6 +35,7 @@ import SecurityIcon from './Icon/Security/SecurityIcon';
 import CheckOutlineIcon from './Icon/CheckOutline/CheckOutlineIcon';
 import CheckIcon from './Icon/Check/CheckIcon';
 import AlertIcon from './Icon/Alert/AlertIcon';
+import ManualIcon from './Icon/Manual/ManualIcon';
 // Logos
 import CarpenstreetLogo from './BICI/CarpenstreetLogo/CarpenstreetLogo';
 import AconLogo from './BICI/AconLogo/AconLogo';
@@ -104,6 +105,7 @@ export {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -171,6 +173,7 @@ export default {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
