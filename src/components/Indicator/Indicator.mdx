@@ -1,0 +1,12 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as IndicatorStories from './Indicator.stories'
+
+<Meta of={IndicatorStories} />
+
+# Indicator
+
+MUI의 Box 컴포넌트를 이용해 직접 스타일링하여 제작된 컴포넌트입니다.
+
+<Canvas of={IndicatorStories.Default} />
+
+<Controls include={['count', 'currentIndex', 'dotProps', 'renderDot']} />
