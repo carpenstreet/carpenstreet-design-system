@@ -1,4 +1,3 @@
-import React, { MouseEvent } from 'react';
 import { BoxProps, SxProps, Theme } from '@mui/material';
 import { DotPropsType } from './dot/Dot.types.ts';
 
