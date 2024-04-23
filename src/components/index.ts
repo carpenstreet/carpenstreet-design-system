@@ -35,6 +35,7 @@ import SecurityIcon from './Icon/Security/SecurityIcon';
 import CheckOutlineIcon from './Icon/CheckOutline/CheckOutlineIcon';
 import CheckIcon from './Icon/Check/CheckIcon';
 import AlertIcon from './Icon/Alert/AlertIcon';
+import ManualIcon from './Icon/Manual/ManualIcon';
 // Logos
 import CarpenstreetLogo from './BICI/CarpenstreetLogo/CarpenstreetLogo';
 import AconLogo from './BICI/AconLogo/AconLogo';
@@ -62,6 +63,7 @@ import Select from './Select/Select.tsx';
 import DateSelect from './Date/DateSelect/DateSelect.tsx';
 import Divider from './Divider/Divider';
 import Snackbar from './Snackbar/Snackbar.tsx';
+import Indicator from './Indicator/Indicator';
 
 export {
   Button,
@@ -104,6 +106,7 @@ export {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -128,6 +131,7 @@ export {
   DateSelect,
   Divider,
   Snackbar,
+  Indicator,
 };
 
 export default {
@@ -171,6 +175,7 @@ export default {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -195,4 +200,5 @@ export default {
   DateSelect,
   Divider,
   Snackbar,
+  Indicator,
 };
