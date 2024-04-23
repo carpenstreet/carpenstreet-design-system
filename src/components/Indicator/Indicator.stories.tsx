@@ -21,9 +21,6 @@ const meta: Meta<typeof ExampleIndicator> = {
     dotProps: {
       description: '`Dot` 컴포넌트에 전달할 prop을 나타냅니다. Mui의 Box Props와 동일합니다.',
     },
-    renderDot: {
-      description: '`Dot`을 렌더링할 때 사용되는 콜백 함수입니다. 해당 콜백함수로 컴포넌트를 직접 넘길 수 있으며, 매개변수로 isFocus와 index 값이 제공됩니다.',
-    },
   },
   decorators: [
     (Story) => (
