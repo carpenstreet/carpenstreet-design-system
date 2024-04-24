@@ -2,6 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import DateRangeElement from '../DateRangeElement/DateRangeElement.tsx';
 import { DateRangePickerContentProps } from './DateRangePickerContent.types.ts';
+import dayjs from 'dayjs';
 
 export default function DateRangePickerContent(props: DateRangePickerContentProps) {
   const { startDay, endDay, today, currentDay, numberOfWeeks, daysInMonth, startDayIndex, makeOnSelectDate, sx: sxOverride } = props;
@@ -41,7 +42,7 @@ export default function DateRangePickerContent(props: DateRangePickerContentProp
                   const isToday = today.isSame(currentDay.date(date), 'day');
                   const isStart = startDay?.isSame(currentDay.date(date), 'day');
                   const isEnd = endDay?.isSame(currentDay.date(date), 'day');
-                  const isBetween = startDay && endDay && currentDay.date(date).isBetween(startDay, endDay);
+                  const isBetween = startDay && endDay && currentDay.date(date).isBetween(startDay, endDay, 'day');
                   const handleSelectDate = makeOnSelectDate(date);
                   return (
                     <DateRangeElement key={`week-${index}-date-${date}`} today={isToday} start={isStart} end={isEnd} between={isBetween} onClick={handleSelectDate}>
@@ -64,7 +65,7 @@ export default function DateRangePickerContent(props: DateRangePickerContentProp
                   const isToday = today.isSame(currentDay.date(date), 'day');
                   const isStart = startDay?.isSame(currentDay.date(date), 'day');
                   const isEnd = endDay?.isSame(currentDay.date(date), 'day');
-                  const isBetween = startDay && endDay && currentDay.date(date).isBetween(startDay, endDay);
+                  const isBetween = startDay && endDay && currentDay.date(date).isBetween(startDay, endDay, 'day');
                   const handleSelectDate = makeOnSelectDate(date);
                   return (
                     <DateRangeElement key={`week-${index}-date-${date}`} today={isToday} start={isStart} end={isEnd} between={isBetween} onClick={handleSelectDate}>
