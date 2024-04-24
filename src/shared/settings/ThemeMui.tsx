@@ -18,20 +18,12 @@ import { overridePagination } from './pagination/pagination.ts';
 import { overrideDialog } from './dialog/dialog.ts';
 import { overrideDivider } from './divider/divider.ts';
 import { overrideSnackbar } from './snackbar/snackbar.ts';
-import dayjs from 'dayjs';
-import isSameOrAfter from 'dayjs/plugin/isSameOrAfter';
-import isBetween from 'dayjs/plugin/isBetween';
-
-// ----------------------------------------------------------------------
 
 type Props = {
   children: ReactNode;
 };
 
 export default function ThemeMui({ children }: Props) {
-  dayjs.extend(isSameOrAfter);
-  dayjs.extend(isBetween);
-
   const theme = createTheme({
     palette: {
       ...colorPalette,
