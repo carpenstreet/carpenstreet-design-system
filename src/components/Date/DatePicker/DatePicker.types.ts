@@ -5,7 +5,7 @@ import { Locale } from '../date.types.ts';
 
 export type DatePickerProps = {
   value: Dayjs | null;
-  setValue: (newValue: Dayjs | null) => void;
+  onSelectValue: (newValue: Dayjs | null) => void;
   onClose?: () => void;
   locale: Locale;
   showController?: boolean;

@@ -12,15 +12,12 @@ import YearPicker from '../YearPicker/YearPicker.tsx';
 import DateRangePickerContent from '../DateRangePickerContent/DateRangePickerContent.tsx';
 import Controller from '../Controller/Controller.tsx';
 
-dayjs.extend(isSameOrAfter);
-dayjs.extend(isBetween);
-
 export default function DateRangePicker(props: DateRangePickerProps) {
   const {
     startDay,
-    setStartDay,
+    onSelectStartDay,
     endDay,
-    setEndDay,
+    onSelectEndDay,
     onClose,
     locale,
     sx: sxOverride,
@@ -59,12 +56,12 @@ export default function DateRangePicker(props: DateRangePickerProps) {
   function makeHandleSelectDate(newDate: number) {
     return () => {
       if (isFirstClick) {
-        setStartDay(null);
-        setEndDay(null);
-        setStartDay(currentDay.date(newDate));
+        onSelectStartDay(null);
+        onSelectEndDay(null);
+        onSelectStartDay(currentDay.date(newDate));
         setIsFirstClick(false);
       } else {
-        setEndDay(currentDay.date(newDate));
+        onSelectEndDay(currentDay.date(newDate));
         setIsFirstClick(true);
       }
     };
@@ -103,8 +100,8 @@ export default function DateRangePicker(props: DateRangePickerProps) {
   }
 
   function handleResetDate() {
-    setStartDay(null);
-    setEndDay(null);
+    onSelectStartDay(null);
+    onSelectEndDay(null);
   }
 
   const toolbarProps = {
@@ -158,8 +155,8 @@ export default function DateRangePicker(props: DateRangePickerProps) {
   React.useEffect(() => {
     if (startDay?.isSameOrAfter(endDay)) {
       const tmp = endDay;
-      setEndDay(startDay);
-      setStartDay(tmp);
+      onSelectEndDay(startDay);
+      onSelectStartDay(tmp);
     }
   }, [startDay?.format('YYYY-MM-DD'), endDay?.format('YYYY-MM-DD')]);
 

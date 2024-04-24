@@ -7,5 +7,13 @@ export default function ExampleDateRangePicker(props: DateRangePickerProps) {
   const [startDay, setStartDay] = React.useState<Dayjs | null>(null);
   const [endDay, setEndDay] = React.useState<Dayjs | null>(null);
 
-  return <DateRangePicker {...props} startDay={startDay} setStartDay={setStartDay} endDay={endDay} setEndDay={setEndDay} />;
+  function handleSelectStartDay(value: Dayjs) {
+    setStartDay(value);
+  }
+
+  function handleSelectEndDay(value: Dayjs) {
+    setEndDay(value);
+  }
+
+  return <DateRangePicker {...props} startDay={startDay} onSelectStartDay={handleSelectStartDay} endDay={endDay} onSelectEndDay={handleSelectEndDay} />;
 }

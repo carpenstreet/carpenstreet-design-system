@@ -1,6 +1,6 @@
 import DateSelect from './DateSelect.tsx';
 import React from 'react';
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import { DateSelectProps } from './DateSelect.types.ts';
 import { Box } from '@mui/material';
 import DatePicker from '../DatePicker/DatePicker.tsx';
@@ -30,6 +30,18 @@ export default function ExampleDateSelect(props: DateSelectProps) {
     else handleShowDateRangePicker();
   }
 
+  function handleSelectValue(value: Dayjs) {
+    setDay(value);
+  }
+
+  function handleSelectStartDay(value: Dayjs) {
+    setStartDay(value);
+  }
+
+  function handleSelectEndDay(value: Dayjs) {
+    setEndDay(value);
+  }
+
   return (
     <Box
       sx={{
@@ -41,7 +53,7 @@ export default function ExampleDateSelect(props: DateSelectProps) {
       {showDatePicker && (
         <DatePicker
           value={day}
-          setValue={setDay}
+          onSelectValue={handleSelectValue}
           locale={locale}
           anchorRef={dateSelectRef}
           onClose={handleShowDatePicker}
@@ -54,9 +66,9 @@ export default function ExampleDateSelect(props: DateSelectProps) {
       {showDateRangePicker && (
         <DateRangePicker
           startDay={startDay}
-          setStartDay={setStartDay}
+          onSelectStartDay={handleSelectStartDay}
           endDay={endDay}
-          setEndDay={setEndDay}
+          onSelectEndDay={handleSelectEndDay}
           locale={locale}
           onClose={handleShowDateRangePicker}
           anchorRef={dateSelectRef}

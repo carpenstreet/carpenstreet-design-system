@@ -5,9 +5,9 @@ import { Locale } from '../date.types.ts';
 
 export type DateRangePickerProps = {
   startDay: Dayjs | null;
-  setStartDay: (newValue: Dayjs | null) => void;
+  onSelectStartDay: (newValue: Dayjs | null) => void;
   endDay: Dayjs | null;
-  setEndDay: (newValue: Dayjs | null) => void;
+  onSelectEndDay: (newValue: Dayjs | null) => void;
   onClose?: () => void;
   locale: Locale;
   showController?: boolean;

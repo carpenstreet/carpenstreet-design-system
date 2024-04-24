@@ -11,7 +11,7 @@ import DatePickerContent from '../DatePickerContent/DatePickerContent.tsx';
 import Controller from '../Controller/Controller.tsx';
 
 export default function DatePicker(props: DatePickerProps) {
-  const { value, setValue, onClose, locale, sx: sxOverride, toolbarSx, dayLabelSx, monthPickerSx, yearPickerSx, contentSx, anchorRef, showController, controllerSx } = props;
+  const { value, onSelectValue, onClose, locale, sx: sxOverride, toolbarSx, dayLabelSx, monthPickerSx, yearPickerSx, contentSx, anchorRef, showController, controllerSx } = props;
 
   if (onClose && !anchorRef) console.error('Design system DatePicker props error: onClose props는 anchorRef props와 함께 사용되어야 합니다.');
   if (!onClose && anchorRef) console.error('Design system DatePicker props error: anchorRef props는 onClose props와 함께 사용되어야 합니다.');
@@ -36,7 +36,7 @@ export default function DatePicker(props: DatePickerProps) {
 
   function makeHandleSelectDate(newDate: number) {
     return () => {
-      setValue(currentDay.date(newDate));
+      onSelectValue(currentDay.date(newDate));
     };
   }
 
@@ -73,7 +73,7 @@ export default function DatePicker(props: DatePickerProps) {
   }
 
   function handleResetDate() {
-    setValue(null);
+    onSelectValue(null);
   }
 
   const toolbarProps = {
