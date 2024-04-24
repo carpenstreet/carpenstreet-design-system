@@ -41,6 +41,7 @@ import {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -65,6 +66,7 @@ import {
   Select,
   DateSelect,
   Snackbar,
+  Indicator,
 } from './components';
 
 export {
@@ -110,6 +112,7 @@ export {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -134,6 +137,7 @@ export {
   DateSelect,
   Divider,
   Snackbar,
+  Indicator,
 };
 
 export default {
@@ -179,6 +183,7 @@ export default {
   CheckOutlineIcon,
   CheckIcon,
   AlertIcon,
+  ManualIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -203,4 +208,5 @@ export default {
   DateSelect,
   Divider,
   Snackbar,
+  Indicator,
 };
