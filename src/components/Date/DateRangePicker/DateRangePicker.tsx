@@ -12,6 +12,9 @@ import YearPicker from '../YearPicker/YearPicker.tsx';
 import DateRangePickerContent from '../DateRangePickerContent/DateRangePickerContent.tsx';
 import Controller from '../Controller/Controller.tsx';
 
+dayjs.extend(isSameOrAfter);
+dayjs.extend(isBetween);
+
 export default function DateRangePicker(props: DateRangePickerProps) {
   const {
     startDay,
