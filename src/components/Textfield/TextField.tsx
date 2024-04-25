@@ -223,7 +223,7 @@ function InputLabel(props: InputLabelProps) {
 }
 
 function Input(props: MUIOutlinedInputProps) {
-  const { size, inputProps, sx: sxOverride, value } = props;
+  const { size, inputProps, sx: sxOverride, value, startAdornment, endAdornment } = props;
 
   const theme = useTheme();
 
@@ -251,6 +251,23 @@ function Input(props: MUIOutlinedInputProps) {
   const sx = {
     typography: theme.typography['typography/body/medium/regular'],
     gap: '8px',
+
+    '& svg': {
+      width: '24px',
+      height: '24px',
+    },
+
+    ...(startAdornment && endAdornment
+      ? { '&>*:nth-child(1)': { flexShrink: 0 }, '&>*:nth-child(3)': { flexShrink: 0 } }
+      : startAdornment && !endAdornment
+        ? {
+            '&>*:nth-child(1)': { flexShrink: 0 },
+          }
+        : !startAdornment && endAdornment
+          ? {
+              '&>*:nth-child(2)': { flexShrink: 0 },
+            }
+          : {}),
 
     ...(variant === 'standard' && {
       color: theme.palette['color/gray/800'],
@@ -296,11 +313,6 @@ function Input(props: MUIOutlinedInputProps) {
       borderRadius: '8px',
       border: theme.palette['color/gray/dim/400'],
       color: theme.palette['color/gray/400'],
-
-      '& svg': {
-        width: '24px',
-        height: '24px',
-      },
 
       // activated (value가 있는 경우)
       ...(value && {
