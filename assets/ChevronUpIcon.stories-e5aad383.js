@@ -1,7 +1,0 @@
-import{j as r}from"./jsx-runtime-29545a09.js";import{a as m}from"./ThemeMui-aad13025.js";import{R as d}from"./index-76fb7be0.js";import{u as h}from"./useTheme-efc0693e.js";const t=d.forwardRef(({width:e=24,height:s=24,color:p="color/gray/800"},i)=>{const l=h().palette[p];return r("svg",{ref:i,width:e,height:s,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:r("path",{d:"M12.0223 8.50237C12.2559 8.50191 12.4824 8.58328 12.6623 8.73237L18.6623 13.7324C19.0875 14.0858 19.1457 14.7171 18.7923 15.1424C18.4388 15.5676 17.8075 15.6258 17.3823 15.2724L12.0223 10.7924L6.66228 15.1124C6.45569 15.2801 6.19074 15.3586 5.9261 15.3305C5.66145 15.3023 5.41895 15.1698 5.25228 14.9624C5.06714 14.7545 4.97702 14.4789 5.00359 14.2018C5.03016 13.9247 5.17102 13.6713 5.39228 13.5024L11.3923 8.67237C11.5774 8.54685 11.7992 8.48699 12.0223 8.50237Z",fill:l})})});try{t.displayName="ChevronUpIcon",t.__docgenInfo={description:"",displayName:"ChevronUpIcon",props:{}}}catch{}const g={title:"Foundation/Icon/ChevronUp",component:t,decorators:[e=>r(m,{children:r(e,{})})]},o={args:{width:24,height:24,color:"color/gray/800"}};var n,a,c;o.parameters={...o.parameters,docs:{...(n=o.parameters)==null?void 0:n.docs,source:{originalSource:`{
-  args: {
-    width: 24,
-    height: 24,
-    color: 'color/gray/800'
-  }
-}`,...(c=(a=o.parameters)==null?void 0:a.docs)==null?void 0:c.source}}};const C=["Default"],w=Object.freeze(Object.defineProperty({__proto__:null,Default:o,__namedExportsOrder:C,default:g},Symbol.toStringTag,{value:"Module"}));export{w as C,o as D};
