@@ -67,6 +67,7 @@ import {
   DateSelect,
   Snackbar,
   Indicator,
+  Progress,
 } from './components';
 
 export {
@@ -138,6 +139,7 @@ export {
   Divider,
   Snackbar,
   Indicator,
+  Progress,
 };
 
 export default {
@@ -209,4 +211,5 @@ export default {
   Divider,
   Snackbar,
   Indicator,
+  Progress,
 };

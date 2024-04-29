@@ -18,6 +18,7 @@ import { overridePagination } from './pagination/pagination.ts';
 import { overrideDialog } from './dialog/dialog.ts';
 import { overrideDivider } from './divider/divider.ts';
 import { overrideSnackbar } from './snackbar/snackbar.ts';
+import { overrideCircularProgress } from './circularProgress/circularProgress.ts';
 
 type Props = {
   children: ReactNode;
@@ -63,6 +64,7 @@ export default function ThemeMui({ children }: Props) {
       MuiDialog: overrideDialog,
       MuiDivider: overrideDivider,
       MuiSnackbar: overrideSnackbar,
+      MuiCircularProgress: overrideCircularProgress,
     },
     typography: {
       ...CustomTypographyVariants,

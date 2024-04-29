@@ -64,6 +64,7 @@ import DateSelect from './Date/DateSelect/DateSelect.tsx';
 import Divider from './Divider/Divider';
 import Snackbar from './Snackbar/Snackbar.tsx';
 import Indicator from './Indicator/Indicator';
+import Progress from './Progress/Progress.tsx';
 
 export {
   Button,
@@ -132,6 +133,7 @@ export {
   Divider,
   Snackbar,
   Indicator,
+  Progress,
 };
 
 export default {
@@ -201,4 +203,5 @@ export default {
   Divider,
   Snackbar,
   Indicator,
+  Progress,
 };
