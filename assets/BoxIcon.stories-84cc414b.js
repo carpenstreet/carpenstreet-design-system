@@ -1,0 +1,7 @@
+import{j as r}from"./jsx-runtime-29545a09.js";import{a as p}from"./ThemeMui-aad13025.js";import{R as m}from"./index-76fb7be0.js";import{u}from"./useTheme-efc0693e.js";const t=m.forwardRef(({width:e=24,height:s=24,color:l="color/gray/800"},i)=>{const d=u().palette[l];return r("svg",{ref:i,width:e,height:s,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:r("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M2 5C2 3.89543 2.89543 3 4 3H20C21.1046 3 22 3.89543 22 5V7C22 7.74028 21.5978 8.38663 21 8.73244V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V8.73244C2.4022 8.38663 2 7.74028 2 7V5ZM5 9V19H19V9H5ZM20 5H4V7H20V5ZM9 13C9 12.4477 9.44772 12 10 12H14C14.5523 12 15 12.4477 15 13C15 13.5523 14.5523 14 14 14H10C9.44772 14 9 13.5523 9 13Z",fill:d})})});try{t.displayName="BoxIcon",t.__docgenInfo={description:"",displayName:"BoxIcon",props:{}}}catch{}const f={title:"Foundation/Icon/Box",component:t,decorators:[e=>r(p,{children:r(e,{})})]},o={args:{width:24,height:24,color:"color/gray/800"}};var a,n,c;o.parameters={...o.parameters,docs:{...(a=o.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    width: 24,
+    height: 24,
+    color: 'color/gray/800'
+  }
+}`,...(c=(n=o.parameters)==null?void 0:n.docs)==null?void 0:c.source}}};const g=["Default"],w=Object.freeze(Object.defineProperty({__proto__:null,Default:o,__namedExportsOrder:g,default:f},Symbol.toStringTag,{value:"Module"}));export{w as B,o as D};
