@@ -2,7 +2,7 @@ import { IconCommonPropsType } from '../Icon.types.ts';
 import { useTheme } from '@mui/material/styles';
 import React from 'react';
 
-const AlertIcon = React.forwardRef<SVGSVGElement>(({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType, ref) => {
+const AlertIcon = React.forwardRef<SVGSVGElement, IconCommonPropsType>(({ width = 24, height = 24, color = 'color/gray/800' }, ref) => {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 

@@ -3,7 +3,7 @@ import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
 // Select에서 props를 넘겨받기 위해 ChevronDownIcon만 ...rest를 넘겨받는다.
-const ChevronDownIcon = React.forwardRef<SVGSVGElement>(({ width = 24, height = 24, color = 'color/gray/800', ...rest }: IconCommonPropsType, ref) => {
+const ChevronDownIcon = React.forwardRef<SVGSVGElement, IconCommonPropsType>(({ width = 24, height = 24, color = 'color/gray/800', ...rest }, ref) => {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
