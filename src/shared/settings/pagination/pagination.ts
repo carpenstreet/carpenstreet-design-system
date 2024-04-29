@@ -3,6 +3,9 @@ import { Components, Theme } from '@mui/material';
 export const overridePagination = {
   styleOverrides: {
     root: ({ theme, ownerState }) => ({
+      '& .MuiPagination-ul': {
+        gap: '4px',
+      },
       '& .MuiButtonBase-root': {
         padding: 0,
         margin: 0,
