@@ -2,12 +2,12 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-export default function DownloadIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
+const DownloadIcon = React.forwardRef<SVGSVGElement>(({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType, ref) => {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
   return (
-    <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg ref={ref} width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M4 19C4 18.4477 4.44772 18 5 18H19C19.5523 18 20 18.4477 20 19C20 19.5523 19.5523 20 19 20H5C4.44772 20 4 19.5523 4 19Z" fill={iconColor} />
       <path d="M5 20C4.44772 20 4 19.5523 4 19V17C4 16.4477 4.44772 16 5 16C5.55228 16 6 16.4477 6 17V19C6 19.5523 5.55228 20 5 20Z" fill={iconColor} />
       <path d="M19 20C18.4477 20 18 19.5523 18 19V17C18 16.4477 18.4477 16 19 16C19.5523 16 20 16.4477 20 17V19C20 19.5523 19.5523 20 19 20Z" fill={iconColor} />
@@ -18,4 +18,6 @@ export default function DownloadIcon({ width = 24, height = 24, color = 'color/g
       <path d="M12 13C11.4477 13 11 12.5523 11 12V4C11 3.44772 11.4477 3 12 3C12.5523 3 13 3.44772 13 4V12C13 12.5523 12.5523 13 12 13Z" fill={iconColor} />
     </svg>
   );
-}
+});
+
+export default DownloadIcon;

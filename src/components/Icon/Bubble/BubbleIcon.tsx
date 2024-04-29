@@ -2,12 +2,12 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-export default function BubbleIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
+const BubbleIcon = React.forwardRef<SVGSVGElement>(({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType, ref) => {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
   return (
-    <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg ref={ref} width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M6.32822 18.1522L6.70455 18.4388V18.9117V20.806L9.02826 19.7972L9.32742 19.6673L9.64352 19.7476C10.3937 19.9382 11.1834 20.0402 12 20.0402C17.0426 20.0402 21.0455 16.1697 21.0455 11.4974C21.0455 6.82509 17.0426 2.95455 12 2.95455C6.95735 2.95455 2.95455 6.82509 2.95455 11.4974C2.95455 14.175 4.25971 16.5774 6.32822 18.1522ZM6.06681 21.0829L6.0678 21.0825L6.06681 21.0829Z"
         stroke={iconColor}
@@ -22,4 +22,6 @@ export default function BubbleIcon({ width = 24, height = 24, color = 'color/gra
       />
     </svg>
   );
-}
+});
+
+export default BubbleIcon;

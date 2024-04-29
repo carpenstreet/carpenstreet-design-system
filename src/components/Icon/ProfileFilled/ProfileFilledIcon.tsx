@@ -1,12 +1,13 @@
 import { IconCommonPropsType } from '../Icon.types.ts';
 import { useTheme } from '@mui/material/styles';
+import React from 'react';
 
-export default function ProfileFilledIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
+const ProfileFilledIcon = React.forwardRef<SVGSVGElement>(({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType, ref) => {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
   return (
-    <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg ref={ref} width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_4337_1980)">
         <path
           fillRule="evenodd"
@@ -28,4 +29,6 @@ export default function ProfileFilledIcon({ width = 24, height = 24, color = 'co
       </defs>
     </svg>
   );
-}
+});
+
+export default ProfileFilledIcon;

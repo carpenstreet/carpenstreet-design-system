@@ -2,12 +2,12 @@ import React from 'react';
 import { IconCommonPropsType } from '../Icon.types';
 import { useTheme } from '@mui/material/styles';
 
-export default function CopyIcon({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType) {
+const CopyIcon = React.forwardRef<SVGSVGElement>(({ width = 24, height = 24, color = 'color/gray/800' }: IconCommonPropsType, ref) => {
   const theme = useTheme();
   const iconColor = theme.palette[color];
 
   return (
-    <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg ref={ref} width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -22,4 +22,6 @@ export default function CopyIcon({ width = 24, height = 24, color = 'color/gray/
       />
     </svg>
   );
-}
+});
+
+export default CopyIcon;
