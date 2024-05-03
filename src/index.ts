@@ -68,6 +68,7 @@ import {
   Snackbar,
   Indicator,
   Progress,
+  Information,
 } from './components';
 
 export {
@@ -140,6 +141,7 @@ export {
   Snackbar,
   Indicator,
   Progress,
+  Information,
 };
 
 export default {
@@ -212,4 +214,5 @@ export default {
   Snackbar,
   Indicator,
   Progress,
+  Information,
 };
