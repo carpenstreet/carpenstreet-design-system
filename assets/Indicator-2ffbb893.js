@@ -1,5 +1,0 @@
-import{j as t,a as m,F as e}from"./jsx-runtime-29545a09.js";import{M as s,C as a,b as p}from"./index-92bd863b.js";import{I as c,D as d}from"./Indicator.stories-411ad3c9.js";import{u as i}from"./index-a1cf9e47.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./iframe-bf6a8b56.js";import"../sb-preview/runtime.js";import"./extends-623938b0.js";import"./index-d3ea75b5.js";import"./index-11d98b33.js";import"./assertThisInitialized-081f9914.js";import"./inheritsLoose-c82a83d4.js";import"./index-8fd8397b.js";import"./index-356e4a49.js";import"./ThemeMui-9d263c2a.js";import"./color-d4584655.js";import"./Box-d8b18064.js";import"./generateUtilityClasses-780caa6d.js";import"./styled-3c366820.js";function n(o){const r=Object.assign({h1:"h1",p:"p"},i(),o.components);return m(e,{children:[t(s,{of:c}),`
-`,t(r.h1,{id:"indicator",children:"Indicator"}),`
-`,t(r.p,{children:"MUI의 Box 컴포넌트를 이용해 직접 스타일링하여 제작된 컴포넌트입니다."}),`
-`,t(a,{of:d}),`
-`,t(p,{include:["count","currentIndex","dotProps"]})]})}function L(o={}){const{wrapper:r}=Object.assign({},i(),o.components);return r?t(r,Object.assign({},o,{children:t(n,o)})):n(o)}export{L as default};
