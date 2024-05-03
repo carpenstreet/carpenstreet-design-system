@@ -1,0 +1,20 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as InformationStories from './Information.stories';
+
+<Meta of={InformationStories} />
+
+# Information
+
+중요한 정보를 표시할 때 사용하는 UI입니다.
+
+`variant` prop에 따라 기본 스타일링이 변경되며, 기본 `icon`은 `InformationOutlined`입니다.
+
+`Information`에 들어가는 아이콘은 `icon` prop을 통해 변경할 수 있으며, `icon`을 감싸는 `Box`의 스타일은 `iconBoxSx` prop을 통해 설정할 수 있습니다.
+
+`contents` prop을 통해 우측에 들어갈 요소를 자유롭게 설정할 수 있으며, 기본적으로 설정된 글씨 색 등의 스타일은 `sx` prop을 통해 변경할 수 있습니다.
+
+`contents`가 길어질 경우, `iconToTop` prop을 통해 `icon`의 위치를 최상단으로 조정할 수 있습니다.
+
+<Canvas of={InformationStories.Default} />
+
+<Controls include={['variant', 'iconToTop', 'sx', 'iconBoxSx']} />

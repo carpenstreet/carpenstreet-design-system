@@ -65,6 +65,7 @@ import Divider from './Divider/Divider';
 import Snackbar from './Snackbar/Snackbar.tsx';
 import Indicator from './Indicator/Indicator';
 import Progress from './Progress/Progress.tsx';
+import Information from './Information/Information.tsx';
 
 export {
   Button,
@@ -134,6 +135,7 @@ export {
   Snackbar,
   Indicator,
   Progress,
+  Information,
 };
 
 export default {
@@ -204,4 +206,5 @@ export default {
   Snackbar,
   Indicator,
   Progress,
+  Information,
 };
