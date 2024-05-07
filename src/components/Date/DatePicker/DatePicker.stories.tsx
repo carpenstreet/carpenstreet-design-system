@@ -21,6 +21,7 @@ export const Default: Story = {
   args: {
     locale: 'ko',
     showController: false,
+    unit: 'day',
     sx: {},
     toolbarSx: {},
     dayLabelSx: {},

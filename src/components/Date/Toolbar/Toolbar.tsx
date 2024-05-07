@@ -9,7 +9,20 @@ import ChevronRightIcon from '../../Icon/ChevronRight/ChevronRightIcon.tsx';
 import { ToolbarProps } from './Toolbar.types.ts';
 
 export default function Toolbar(props: ToolbarProps) {
-  const { onPreviousMonth, onNextMonth, showMonthPicker, onShowMonthPicker, showYearPicker, onShowYearPicker, currentDay, locale, sx: sxOverride } = props;
+  const {
+    onPreviousMonth,
+    onNextMonth,
+    onPreviousYear,
+    onNextYear,
+    showMonthPicker,
+    onShowMonthPicker,
+    showYearPicker,
+    onShowYearPicker,
+    currentDay,
+    locale,
+    sx: sxOverride,
+    unit = 'day',
+  } = props;
 
   return (
     <Box
@@ -22,7 +35,7 @@ export default function Toolbar(props: ToolbarProps) {
         ...sxOverride,
       }}
     >
-      <IconButton color={'default'} size={'S'} onClick={onPreviousMonth}>
+      <IconButton color={'default'} size={'S'} onClick={unit === 'day' ? onPreviousMonth : onPreviousYear}>
         <ChevronLeftIcon />
       </IconButton>
       <Box
@@ -32,27 +45,35 @@ export default function Toolbar(props: ToolbarProps) {
           gap: '16px',
         }}
       >
-        {locale === 'ko' ? (
-          <>
-            <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showYearPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={onShowYearPicker}>
-              {currentDay.format('YYYY')}
-            </Button>
-            <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showMonthPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={onShowMonthPicker}>
-              {currentDay.format('MM')}
-            </Button>
-          </>
+        {unit === 'day' ? (
+          locale === 'ko' ? (
+            <>
+              <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showYearPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={onShowYearPicker}>
+                {currentDay.format('YYYY')}
+              </Button>
+              <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showMonthPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={onShowMonthPicker}>
+                {currentDay.format('MM')}
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showMonthPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={onShowMonthPicker}>
+                {currentDay.format('MMM')}
+              </Button>
+              <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showYearPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={onShowYearPicker}>
+                {currentDay.format('YYYY')}
+              </Button>
+            </>
+          )
+        ) : unit === 'month' ? (
+          <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showYearPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={onShowYearPicker}>
+            {currentDay.format('YYYY')}
+          </Button>
         ) : (
-          <>
-            <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showMonthPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={onShowMonthPicker}>
-              {currentDay.format('MMM')}
-            </Button>
-            <Button variant={'text'} size={'L'} weight={'bold'} endIcon={showYearPicker ? <CaretUpIcon /> : <CaretDownIcon />} onClick={onShowYearPicker}>
-              {currentDay.format('YYYY')}
-            </Button>
-          </>
+          <></>
         )}
       </Box>
-      <IconButton color={'default'} size={'S'} onClick={onNextMonth}>
+      <IconButton color={'default'} size={'S'} onClick={unit === 'day' ? onNextMonth : onNextYear}>
         <ChevronRightIcon />
       </IconButton>
     </Box>
