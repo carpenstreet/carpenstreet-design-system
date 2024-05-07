@@ -25,6 +25,30 @@ export const overrideTooltip = {
       padding: '6px 8px',
       display: 'flex',
 
+      '&.MuiTooltip-tooltipPlacementBottom': {
+        '& .MuiTooltip-arrow::before': {
+          borderRadius: '2px 0 0 0',
+        },
+      },
+
+      '&.MuiTooltip-tooltipPlacementRight': {
+        '& .MuiTooltip-arrow::before': {
+          borderRadius: '0 0 0 2px',
+        },
+      },
+
+      '&.MuiTooltip-tooltipPlacementLeft': {
+        '& .MuiTooltip-arrow::before': {
+          borderRadius: '0 2px 0 0',
+        },
+      },
+
+      '&.MuiTooltip-tooltipPlacementTop': {
+        '& .MuiTooltip-arrow::before': {
+          borderRadius: '0 0 2px 0',
+        },
+      },
+
       ...(ownerState.color === 'default' && {
         backgroundColor: theme.palette['color/gray/700'],
       }),
@@ -42,10 +66,6 @@ export const overrideTooltip = {
       }),
     }),
     arrow: ({ ownerState, theme }) => ({
-      '&:before': {
-        borderRadius: '2px',
-      },
-
       ...(ownerState.color === 'default' && {
         color: theme.palette['color/gray/700'],
       }),
