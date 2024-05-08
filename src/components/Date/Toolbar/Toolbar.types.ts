@@ -6,8 +6,8 @@ import { DatePickerProps } from '../DatePicker/DatePicker.types.ts';
 export type ToolbarProps = {
   onPreviousMonth: () => void;
   onNextMonth: () => void;
-  onPreviousYear: () => void;
-  onNextYear: () => void;
+  onPreviousYear?: () => void;
+  onNextYear?: () => void;
   showYearPicker: boolean;
   onShowYearPicker: () => void;
   showMonthPicker: boolean;
