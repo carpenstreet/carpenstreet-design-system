@@ -11,7 +11,22 @@ import DatePickerContent from '../DatePickerContent/DatePickerContent.tsx';
 import Controller from '../Controller/Controller.tsx';
 
 export default function DatePicker(props: DatePickerProps) {
-  const { value, onSelectValue, onClose, locale, sx: sxOverride, toolbarSx, dayLabelSx, monthPickerSx, yearPickerSx, contentSx, anchorRef, showController, controllerSx } = props;
+  const {
+    value,
+    onSelectValue,
+    onClose,
+    locale,
+    unit = 'day',
+    sx: sxOverride,
+    toolbarSx,
+    dayLabelSx,
+    monthPickerSx,
+    yearPickerSx,
+    contentSx,
+    anchorRef,
+    showController,
+    controllerSx,
+  } = props;
 
   if (onClose && !anchorRef) console.error('Design system DatePicker props error: onClose props는 anchorRef props와 함께 사용되어야 합니다.');
   if (!onClose && anchorRef) console.error('Design system DatePicker props error: anchorRef props는 onClose props와 함께 사용되어야 합니다.');
@@ -72,6 +87,14 @@ export default function DatePicker(props: DatePickerProps) {
     setCurrentDay(currentDay.add(1, 'month'));
   }
 
+  function handlePreviousYear() {
+    setCurrentDay(currentDay.subtract(1, 'year'));
+  }
+
+  function handleNextYear() {
+    setCurrentDay(currentDay.add(1, 'year'));
+  }
+
   function handleResetDate() {
     onSelectValue(null);
   }
@@ -79,12 +102,15 @@ export default function DatePicker(props: DatePickerProps) {
   const toolbarProps = {
     onPreviousMonth: handlePreviousMonth,
     onNextMonth: handleNextMonth,
+    onPreviousYear: handlePreviousYear,
+    onNextYear: handleNextYear,
     showYearPicker,
     onShowYearPicker: handleShowYearPicker,
     showMonthPicker,
     onShowMonthPicker: handleShowMonthPicker,
     currentDay,
     locale,
+    unit,
     sx: toolbarSx,
   };
 
@@ -116,12 +142,12 @@ export default function DatePicker(props: DatePickerProps) {
 
   React.useEffect(() => {
     const contentDiv = contentRef.current;
-    if (contentDiv && showYearPicker) {
+    if (contentDiv && (showYearPicker || unit === 'year')) {
       const rowIndexOfCurrentYear = Math.ceil((currentDay.year() - 1900) / 3);
       const scrollY = 74 * (rowIndexOfCurrentYear - 2);
       contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
     }
-  }, [showYearPicker]);
+  }, [showYearPicker, unit]);
 
   return (
     <Box
@@ -134,8 +160,8 @@ export default function DatePicker(props: DatePickerProps) {
         ...sxOverride,
       }}
     >
-      <Toolbar {...toolbarProps} />
-      {!showMonthPicker && !showYearPicker && <DayLabel locale={locale} sx={dayLabelSx} />}
+      {unit !== 'year' && <Toolbar {...toolbarProps} />}
+      {!showMonthPicker && !showYearPicker && unit === 'day' && <DayLabel locale={locale} sx={dayLabelSx} />}
       {/* content */}
       <Box
         ref={contentRef}
@@ -146,12 +172,22 @@ export default function DatePicker(props: DatePickerProps) {
           overflow: 'auto',
         }}
       >
-        {showMonthPicker ? (
-          <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} sx={monthPickerSx} />
-        ) : showYearPicker ? (
-          <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
+        {unit === 'day' ? (
+          showMonthPicker ? (
+            <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} sx={monthPickerSx} />
+          ) : showYearPicker ? (
+            <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
+          ) : (
+            <DatePickerContent {...contentProps} />
+          )
+        ) : unit === 'month' ? (
+          showYearPicker ? (
+            <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
+          ) : (
+            <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} sx={monthPickerSx} />
+          )
         ) : (
-          <DatePickerContent {...contentProps} />
+          <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
         )}
       </Box>
       {showController && <Controller onResetDate={handleResetDate} onClose={onClose} sx={controllerSx} locale={locale} />}

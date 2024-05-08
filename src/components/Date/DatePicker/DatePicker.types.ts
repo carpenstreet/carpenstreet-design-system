@@ -9,6 +9,7 @@ export type DatePickerProps = {
   onClose?: () => void;
   locale: Locale;
   showController?: boolean;
+  unit?: 'year' | 'month' | 'day';
   sx?: SxProps<Theme>;
   toolbarSx?: SxProps<Theme>;
   dayLabelSx?: SxProps<Theme>;

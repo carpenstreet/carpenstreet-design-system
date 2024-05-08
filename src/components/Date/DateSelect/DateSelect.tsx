@@ -7,7 +7,7 @@ import dayjs, { Dayjs } from 'dayjs';
 import React from 'react';
 
 const DateSelect = React.forwardRef((props: DateSelectProps, ref: React.ForwardedRef<HTMLButtonElement>) => {
-  const { focused, error, disabled, locale, isRange = false, value, onClick, sx: sxOverride } = props;
+  const { focused, error, disabled, locale, isRange = false, value, onClick, sx: sxOverride, format: formatOverride } = props;
 
   if (isRange && dayjs.isDayjs(value)) console.error('Design system DateSelect props error: range = true 일 땐, value의 타입이 { startDay: Dayjs; endDay: Dayjs } 이어야 합니다.');
 
@@ -15,7 +15,7 @@ const DateSelect = React.forwardRef((props: DateSelectProps, ref: React.Forwarde
 
   const typoColor = focused || error ? 'color/gray/800' : 'color/gray/400';
 
-  const format = locale === 'ko' ? 'YYYY-MM-DD' : 'MM-DD-YYYY';
+  const format = formatOverride ? formatOverride : locale === 'ko' ? 'YYYY-MM-DD' : 'MM-DD-YYYY';
 
   const valueToRender = (() => {
     if (isRange)

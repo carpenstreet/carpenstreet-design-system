@@ -10,5 +10,6 @@ export type DateSelectProps = {
   isRange?: boolean;
   value: Dayjs | { startDay?: Dayjs; endDay?: Dayjs };
   onClick?: () => void;
+  format?: string;
   sx?: SxProps<Theme>;
 };

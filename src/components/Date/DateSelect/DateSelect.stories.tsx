@@ -24,5 +24,6 @@ export const Default: Story = {
     focused: false,
     error: false,
     disabled: false,
+    format: '',
   },
 };
