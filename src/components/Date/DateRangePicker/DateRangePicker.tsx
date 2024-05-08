@@ -150,7 +150,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
     const contentDiv = contentRef.current;
     if (contentDiv && showYearPicker) {
       const rowIndexOfCurrentYear = Math.ceil((currentDay.year() - 1900) / 3);
-      const scrollY = 74 * (rowIndexOfCurrentYear - 2);
+      const scrollY = 58 * (rowIndexOfCurrentYear - 2);
       contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
     }
   }, [showYearPicker]);
@@ -184,7 +184,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
         sx={{
           paddingLeft: '28px',
           paddingRight: '28px',
-          maxHeight: '294px',
+          maxHeight: '248px',
           overflow: 'auto',
         }}
       >

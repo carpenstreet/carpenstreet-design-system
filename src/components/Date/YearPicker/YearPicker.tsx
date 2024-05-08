@@ -16,7 +16,7 @@ export default function YearPicker(props: YearPickerProps) {
             sx={{
               display: 'flex',
               justifyContent: 'space-between',
-              padding: '20px 12px',
+              padding: '12px',
               width: '100%',
             }}
           >

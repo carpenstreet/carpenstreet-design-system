@@ -144,7 +144,7 @@ export default function DatePicker(props: DatePickerProps) {
     const contentDiv = contentRef.current;
     if (contentDiv && (showYearPicker || unit === 'year')) {
       const rowIndexOfCurrentYear = Math.ceil((currentDay.year() - 1900) / 3);
-      const scrollY = 74 * (rowIndexOfCurrentYear - 2);
+      const scrollY = 58 * (rowIndexOfCurrentYear - 2);
       contentDiv.scrollTo({ top: scrollY, behavior: 'instant' });
     }
   }, [showYearPicker, unit]);
@@ -168,7 +168,7 @@ export default function DatePicker(props: DatePickerProps) {
         sx={{
           paddingLeft: '28px',
           paddingRight: '28px',
-          maxHeight: '294px',
+          maxHeight: '248px',
           overflow: 'auto',
         }}
       >
