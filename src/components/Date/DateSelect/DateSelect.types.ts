@@ -8,7 +8,7 @@ export type DateSelectProps = {
   disabled?: boolean;
   locale: Locale;
   isRange?: boolean;
-  value: Dayjs | { startDay?: Dayjs; endDay?: Dayjs };
+  value: Dayjs | { startDay?: Dayjs; endDay?: Dayjs } | null;
   onClick?: () => void;
   format?: string;
   sx?: SxProps<Theme>;

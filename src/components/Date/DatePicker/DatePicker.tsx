@@ -37,7 +37,7 @@ export default function DatePicker(props: DatePickerProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const contentRef = React.useRef<HTMLDivElement>(null);
 
-  const [currentDay, setCurrentDay] = React.useState(dayjs());
+  const [currentDay, setCurrentDay] = React.useState(value);
   const [showYearPicker, setShowYearPicker] = React.useState(false);
   const [showMonthPicker, setShowMonthPicker] = React.useState(false);
 
@@ -56,17 +56,27 @@ export default function DatePicker(props: DatePickerProps) {
   }
 
   function makeHandleSelectYear(newYear: number) {
-    return () => {
-      setCurrentDay(currentDay.year(newYear));
-      setShowYearPicker(false);
-    };
+    return unit === 'day'
+      ? () => {
+          setCurrentDay(currentDay.year(newYear));
+          setShowYearPicker(false);
+        }
+      : () => {
+          setCurrentDay(currentDay.year(newYear));
+          onSelectValue(currentDay.year(newYear));
+        };
   }
 
   function makeHandleSelectMonth(newMonthIndex: number) {
-    return () => {
-      setCurrentDay(currentDay.month(newMonthIndex));
-      setShowMonthPicker(false);
-    };
+    return unit === 'day'
+      ? () => {
+          setCurrentDay(currentDay.month(newMonthIndex));
+          setShowMonthPicker(false);
+        }
+      : () => {
+          setCurrentDay(currentDay.month(newMonthIndex));
+          onSelectValue(currentDay.month(newMonthIndex));
+        };
   }
 
   function handleShowYearPicker() {
@@ -89,10 +99,12 @@ export default function DatePicker(props: DatePickerProps) {
 
   function handlePreviousYear() {
     setCurrentDay(currentDay.subtract(1, 'year'));
+    onSelectValue(currentDay.subtract(1, 'year'));
   }
 
   function handleNextYear() {
     setCurrentDay(currentDay.add(1, 'year'));
+    onSelectValue(currentDay.add(1, 'year'));
   }
 
   function handleResetDate() {
