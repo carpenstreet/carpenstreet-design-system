@@ -10,7 +10,6 @@ export const overrideMenu = {
         backgroundColor: theme.palette['color/white'],
         boxShadow: theme.shadows[4],
         borderRadius: '8px',
-        height: '160px',
 
         '&::-webkit-scrollbar': {
           width: '14px',
