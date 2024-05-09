@@ -37,7 +37,7 @@ export default function DatePicker(props: DatePickerProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const contentRef = React.useRef<HTMLDivElement>(null);
 
-  const [currentDay, setCurrentDay] = React.useState(value);
+  const [currentDay, setCurrentDay] = React.useState(value || today);
   const [showYearPicker, setShowYearPicker] = React.useState(false);
   const [showMonthPicker, setShowMonthPicker] = React.useState(false);
 

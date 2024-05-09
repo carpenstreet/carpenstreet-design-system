@@ -43,7 +43,7 @@ export default function DateRangePicker(props: DateRangePickerProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const contentRef = React.useRef<HTMLDivElement>(null);
 
-  const [currentDay, setCurrentDay] = React.useState(endDay);
+  const [currentDay, setCurrentDay] = React.useState(endDay || today);
   const [isFirstClick, setIsFirstClick] = React.useState(true);
   const [showYearPicker, setShowYearPicker] = React.useState(false);
   const [showMonthPicker, setShowMonthPicker] = React.useState(false);
