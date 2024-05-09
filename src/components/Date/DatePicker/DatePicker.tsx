@@ -194,12 +194,12 @@ export default function DatePicker(props: DatePickerProps) {
           )
         ) : unit === 'month' ? (
           showYearPicker ? (
-            <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
+            <YearPicker currentDay={value} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
           ) : (
-            <MonthPicker currentDay={currentDay} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} sx={monthPickerSx} />
+            <MonthPicker currentDay={value} makeOnSelectMonth={makeHandleSelectMonth} locale={locale} sx={monthPickerSx} />
           )
         ) : (
-          <YearPicker currentDay={currentDay} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
+          <YearPicker currentDay={value} makeOnSelectYear={makeHandleSelectYear} sx={yearPickerSx} />
         )}
       </Box>
       {showController && <Controller onResetDate={handleResetDate} onClose={onClose} sx={controllerSx} locale={locale} />}
