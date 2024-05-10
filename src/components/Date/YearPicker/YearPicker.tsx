@@ -22,7 +22,7 @@ export default function YearPicker(props: YearPickerProps) {
           >
             {[...Array(3).keys()].map((col) => {
               const year = 1900 + row * 3 + col;
-              const isSelected = year === currentDay.year();
+              const isSelected = currentDay && year === currentDay.year();
               const handleSelectYear = makeOnSelectYear(year);
               return (
                 <WideElement key={year} selected={isSelected} onClick={handleSelectYear}>

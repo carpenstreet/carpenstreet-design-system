@@ -28,7 +28,7 @@ export default function MonthPicker({ currentDay, makeOnSelectMonth, locale, sx:
           >
             {[...Array(3).keys()].map((col) => {
               const monthIndex = row * 3 + col;
-              const isSelected = monthIndex === currentDay.month();
+              const isSelected = currentDay && monthIndex === currentDay.month();
               const handleSelectMonth = makeOnSelectMonth(monthIndex);
               return (
                 <WideElement key={monthIndex} selected={isSelected} onClick={handleSelectMonth}>

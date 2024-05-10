@@ -58,7 +58,6 @@ export default function ExampleDateSelect(props: DateSelectProps) {
           anchorRef={dateSelectRef}
           onClose={handleShowDatePicker}
           showController={true}
-          unit={'year'}
           sx={{
             position: 'absolute',
           }}
