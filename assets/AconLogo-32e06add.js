@@ -1,0 +1,5 @@
+import{j as o,a as m,F as a}from"./jsx-runtime-29545a09.js";import{M as e,C as s,b as p}from"./index-245d8cdc.js";import{A as c,D as f}from"./AconLogo.stories-703d32b4.js";import{u as i}from"./index-a1cf9e47.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./iframe-c9dc8560.js";import"../sb-preview/runtime.js";import"./extends-623938b0.js";import"./index-d3ea75b5.js";import"./index-11d98b33.js";import"./assertThisInitialized-081f9914.js";import"./inheritsLoose-c82a83d4.js";import"./index-8fd8397b.js";import"./index-356e4a49.js";import"./ThemeMui-2ef3ce30.js";import"./color-d4584655.js";import"./ExampleWrapper-7cd02055.js";import"./useTheme-15712d8b.js";import"./Box-2d164775.js";import"./generateUtilityClasses-99f8ebdb.js";function n(t){const r=Object.assign({h1:"h1",p:"p"},i(),t.components);return m(a,{children:[o(e,{of:c}),`
+`,o(r.h1,{id:"acon",children:"Acon"}),`
+`,o(r.p,{children:"배경색(color/gray/400)은 포함되지 않습니다"}),`
+`,o(s,{of:f}),`
+`,o(p,{incldue:["variant","width","height"]})]})}function k(t={}){const{wrapper:r}=Object.assign({},i(),t.components);return r?o(r,Object.assign({},t,{children:o(n,t)})):n(t)}export{k as default};
