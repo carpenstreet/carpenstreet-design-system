@@ -9,6 +9,7 @@ import { overrideTypography } from './typography/typography.ts';
 import { overrideButton } from './button/button.ts';
 import { overrideIconButton } from './iconButton/iconButton.ts';
 import { overrideCheckbox } from './checkbox/checkbox.ts';
+import { overrideRadio } from './radio/radio.ts';
 import { overrideTooltip } from './tooltip/tooltip.ts';
 import { overrideAvatar } from './avatar/avatar.ts';
 import { overrideTab } from './tab/tab.ts';
@@ -53,6 +54,7 @@ export default function ThemeMui({ children }: Props) {
       },
       MuiTypography: overrideTypography,
       MuiButton: overrideButton,
+      MuiRadio: overrideRadio,
       MuiIconButton: overrideIconButton,
       MuiCheckbox: overrideCheckbox,
       MuiTooltip: overrideTooltip,
