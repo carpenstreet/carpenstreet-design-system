@@ -119,6 +119,7 @@ export {
   PartnerhubLogo,
   // ---
   Checkbox,
+  Radio,
   Tooltip,
   Label,
   LabelPartnership,

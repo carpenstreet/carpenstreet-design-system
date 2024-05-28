@@ -49,6 +49,7 @@ import {
   PartnerhubLogo,
   // ---
   Checkbox,
+  Radio,
   Tooltip,
   Label,
   LabelPartnership,
@@ -195,6 +196,7 @@ export default {
   PartnerhubLogo,
   // ---
   Checkbox,
+  Radio,
   Tooltip,
   Label,
   LabelPartnership,
