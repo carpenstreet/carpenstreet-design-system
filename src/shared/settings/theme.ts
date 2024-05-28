@@ -137,6 +137,12 @@ declare module '@mui/material/Checkbox/Checkbox' {
     S: true;
   }
 }
+declare module '@mui/material/Radio/Radio' {
+  interface RadioPropsSizeOverrides {
+    M: true;
+    S: true;
+  }
+}
 
 declare module '@mui/material/FormControl/FormControl' {
   interface FormControlPropsSizeOverrides {

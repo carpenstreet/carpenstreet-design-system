@@ -7,6 +7,7 @@ import CategoryIcon from './Icon/Cateogry/CategoryIcon';
 import StarIcon from './Icon/Star/StarIcon';
 import ImageIcon from './Icon/Image/ImageIcon';
 import DownloadIcon from './Icon/Download/DownloadIcon';
+import CreditCardIcon from './Icon/CreditCard/CreditCardIcon.tsx';
 import MinusIcon from './Icon/Minus/MinusIcon';
 import CloseIcon from './Icon/Close/CloseIcon';
 import VVIPIcon from './Icon/Vvip/VVIPIcon';
@@ -66,6 +67,7 @@ import Snackbar from './Snackbar/Snackbar.tsx';
 import Indicator from './Indicator/Indicator';
 import Progress from './Progress/Progress.tsx';
 import Information from './Information/Information.tsx';
+import Radio from './Radio/Radio.tsx';
 
 export {
   Button,
@@ -78,6 +80,7 @@ export {
   CategoryIcon,
   StarIcon,
   ImageIcon,
+  CreditCardIcon,
   DownloadIcon,
   MinusIcon,
   CloseIcon,
@@ -187,6 +190,7 @@ export default {
   PartnerhubLogo,
   // ---
   Checkbox,
+  Radio,
   Tooltip,
   Label,
   LabelPartnership,

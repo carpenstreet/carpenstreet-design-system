@@ -17,9 +17,9 @@
     "emitDeclarationOnly": true,
     "jsx": "react-jsx",
     "declaration": true,
-    "declarationDir": "./dist",
+    "declarationDir": "./dist/*",
     "baseUrl": "./",
-    "types": ["node"],
+    "types": ["node"]
   },
   "include": ["src", "types/**/*.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
