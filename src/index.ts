@@ -71,6 +71,7 @@ import {
   Indicator,
   Progress,
   Information,
+  Skeleton,
 } from './components';
 
 export {
@@ -146,6 +147,7 @@ export {
   Indicator,
   Progress,
   Information,
+  Skeleton,
 };
 
 export default {
@@ -221,4 +223,5 @@ export default {
   Indicator,
   Progress,
   Information,
+  Skeleton,
 };

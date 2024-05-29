@@ -68,6 +68,7 @@ import Indicator from './Indicator/Indicator';
 import Progress from './Progress/Progress.tsx';
 import Information from './Information/Information.tsx';
 import Radio from './Radio/Radio.tsx';
+import Skeleton from './Skeleton/Skeleton.tsx';
 
 export {
   Button,
@@ -140,6 +141,7 @@ export {
   Indicator,
   Progress,
   Information,
+  Skeleton,
 };
 
 export default {
@@ -212,4 +214,5 @@ export default {
   Indicator,
   Progress,
   Information,
+  Skeleton,
 };
