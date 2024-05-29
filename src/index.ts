@@ -42,6 +42,7 @@ import {
   CheckIcon,
   AlertIcon,
   ManualIcon,
+  CreditCardIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -116,6 +117,7 @@ export {
   CheckIcon,
   AlertIcon,
   ManualIcon,
+  CreditCardIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -123,6 +125,7 @@ export {
   PartnerhubLogo,
   // ---
   Checkbox,
+  Radio,
   Tooltip,
   Label,
   LabelPartnership,
@@ -189,6 +192,7 @@ export default {
   CheckIcon,
   AlertIcon,
   ManualIcon,
+  CreditCardIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
