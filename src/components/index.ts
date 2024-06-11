@@ -34,6 +34,7 @@ import ArrowRightIcon from './Icon/ArrowRight/ArrowRightIcon';
 import ArrowLeftIcon from './Icon/ArrowLeft/ArrowLeftIcon';
 import SecurityIcon from './Icon/Security/SecurityIcon';
 import CheckOutlineIcon from './Icon/CheckOutline/CheckOutlineIcon';
+import CheckMarkIcon from './Icon/CheckMark/CheckMarkIcon';
 import CheckIcon from './Icon/Check/CheckIcon';
 import AlertIcon from './Icon/Alert/AlertIcon';
 import ManualIcon from './Icon/Manual/ManualIcon';
@@ -110,6 +111,7 @@ export {
   SecurityIcon,
   BubbleIcon,
   CheckOutlineIcon,
+  CheckMarkIcon,
   CheckIcon,
   AlertIcon,
   ManualIcon,
@@ -183,6 +185,7 @@ export default {
   SecurityIcon,
   BubbleIcon,
   CheckOutlineIcon,
+  CheckMarkIcon,
   CheckIcon,
   AlertIcon,
   ManualIcon,
