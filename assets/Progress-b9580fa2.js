@@ -1,0 +1,6 @@
+import{j as o,a as n,F as s}from"./jsx-runtime-29545a09.js";import{M as m,C as p,b as a}from"./index-68707fe9.js";import{P as c,D as d}from"./Progress.stories-b3c2386a.js";import{u as i}from"./index-a1cf9e47.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./iframe-86372c8b.js";import"../sb-preview/runtime.js";import"./extends-623938b0.js";import"./index-d3ea75b5.js";import"./index-11d98b33.js";import"./assertThisInitialized-081f9914.js";import"./inheritsLoose-c82a83d4.js";import"./index-8fd8397b.js";import"./index-356e4a49.js";import"./ThemeMui-50822afc.js";import"./color-d4584655.js";import"./generateUtilityClasses-9f81b694.js";import"./styled-97de0f75.js";import"./composeClasses-b42b2e69.js";function e(t){const r=Object.assign({h1:"h1",p:"p",code:"code"},i(),t.components);return n(s,{children:[o(m,{of:c}),`
+`,o(r.h1,{id:"progress",children:"Progress"}),`
+`,o(r.p,{children:"로딩 상태를 표현하는 컴포넌트입니다."}),`
+`,n(r.p,{children:["MUI의 ",o(r.code,{children:"CircularProgress"})," 컴포넌트를 사용합니다."]}),`
+`,o(p,{of:d}),`
+`,o(a,{include:["thickness"]})]})}function I(t={}){const{wrapper:r}=Object.assign({},i(),t.components);return r?o(r,Object.assign({},t,{children:o(e,t)})):e(t)}export{I as default};
