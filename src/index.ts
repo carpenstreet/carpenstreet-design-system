@@ -44,6 +44,7 @@ import {
   AlertIcon,
   ManualIcon,
   CreditCardIcon,
+  NewIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
@@ -115,6 +116,7 @@ export {
   ArrowLeftIcon,
   SecurityIcon,
   BubbleIcon,
+  NewIcon,
   CheckOutlineIcon,
   CheckMarkIcon,
   CheckIcon,
@@ -198,6 +200,7 @@ export default {
   AlertIcon,
   ManualIcon,
   CreditCardIcon,
+  NewIcon,
   // Logos
   CarpenstreetLogo,
   AconLogo,
